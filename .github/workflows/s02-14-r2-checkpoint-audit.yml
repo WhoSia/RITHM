@@ -1,0 +1,249 @@
+name: RITHM S02.14-R2 checkpoint exactness audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/s02-14-r2-checkpoint-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Exact SUMO 1.14.0 MoST T120 checkpoint-resume adversarial probe
+    runs-on: ubuntu-22.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reconstruct exact frozen S02.14 frame and p100 cohort
+        run: |
+          set -euo pipefail
+          git clone --no-checkout https://github.com/lcodeca/MoSTScenario.git most-source
+          git -C most-source checkout --detach b29b2f65f1096a9c69a601ec62a724815cb4a43f
+          test "$(git -C most-source rev-parse HEAD)" = 'b29b2f65f1096a9c69a601ec62a724815cb4a43f'
+          mkdir demand
+          cp most-source/scenario/in/route/{most.buses.flows.xml,most.commercial.rou.xml,most.highway.flows.xml,most.pedestrian.rou.xml,most.special.rou.xml,most.trains.flows.xml} demand/
+          python scripts/s02_14_compile_frame.py --demand-dir demand --out-dir seal
+          test "$(sha256sum seal/s02-14-eligible-frame.tsv | cut -d' ' -f1)" = 'e62c94e400e4e868c8ec2d3f734801c56dd0ba03fa2c050f32e223e876c43293'
+          test "$(sha256sum seal/s02-14-p100-explicit.txt | cut -d' ' -f1)" = '21d0db278e7c39d9403520b10ab471470a03c30cd908c587677a1d5249f8f634'
+
+      - name: Build exact SUMO v1.14.0 with GDAL
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends cmake g++ git libxerces-c-dev libgdal-dev libproj-dev zlib1g-dev
+          git clone --depth 1 --branch v1_14_0 https://github.com/eclipse-sumo/sumo.git sumo-src
+          test "$(git -C sumo-src rev-parse HEAD)" = '58abfe34cdaf638c696ebd4d3660934f061ad94a'
+          cmake -S sumo-src -B sumo-build -DCMAKE_BUILD_TYPE=Release
+          cmake --build sumo-build --target sumo -j2
+          mkdir -p runtime/bin runtime/data
+          cp sumo-src/bin/sumo runtime/bin/sumo
+          cp -a sumo-src/data/. runtime/data/
+          runtime/bin/sumo --version | tee r2-sumo-version.txt
+          grep -Eiq 'Version[[:space:]]+1\.14\.0([^0-9]|$)' r2-sumo-version.txt
+          grep -Eq 'GDAL' r2-sumo-version.txt
+          sha256sum runtime/bin/sumo | tee r2-sumo-binary.sha256
+
+      - name: Checkout exact MoST and materialize observed T120 p100 diagnostic control
+        run: |
+          set -euo pipefail
+          git clone --no-checkout https://github.com/lcodeca/MoSTScenario.git most
+          git -C most checkout --detach b29b2f65f1096a9c69a601ec62a724815cb4a43f
+          test "$(git -C most rev-parse HEAD)" = 'b29b2f65f1096a9c69a601ec62a724815cb4a43f'
+          test "$(git -C most hash-object scenario/most.sumocfg)" = '03dbc535acd7057731a1de8924115a9276842426'
+          test "$(git -C most hash-object scenario/in/most.net.xml)" = '6ffae75cfe63992c04a6395fbbe86cc39166140c'
+          test "$(git -C most hash-object scenario/in/add/basic.vType.xml)" = 'd9aebbde5cfeb8dbee6203d6c5fdf3b1f4666a21'
+          python - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET, json, hashlib
+
+          cohort=[x for x in Path('seal/s02-14-p100-explicit.txt').read_text().splitlines() if x]
+          assert len(cohort)==45822 and len(set(cohort))==45822
+
+          tree=ET.parse('most/scenario/most.sumocfg')
+          root=tree.getroot()
+          routing=root.find('routing')
+          proc=root.find('processing')
+          time=root.find('time')
+          out=root.find('output')
+          assert routing is not None and proc is not None and time is not None and out is not None
+
+          def setv(parent,name,value):
+              e=parent.find(name)
+              if e is None:
+                  e=ET.SubElement(parent,name)
+              e.set('value',str(value))
+
+          setv(routing,'device.rerouting.probability','0')
+          setv(routing,'device.rerouting.period','300')
+          setv(routing,'device.rerouting.pre-period','300')
+          old=routing.find('device.rerouting.explicit')
+          if old is not None:
+              routing.remove(old)
+          explicit=ET.SubElement(routing,'device.rerouting.explicit')
+          explicit.set('value',','.join(cohort))
+
+          setv(proc,'time-to-teleport','120')
+          setv(time,'begin','14400')
+          setv(time,'end','16200.25')
+          setv(time,'step-length','.25')
+
+          cfg=Path('most/scenario/r2-t120-p100-control.sumocfg')
+          tree.write(cfg,encoding='utf-8',xml_declaration=True)
+
+          receipt={
+              'stage':'RITHM-ORIGIN-S02.14-R2',
+              'role':'checkpoint-resume diagnostic only; not TNEG target',
+              'most_commit':'b29b2f65f1096a9c69a601ec62a724815cb4a43f',
+              'sumo_source_commit':'58abfe34cdaf638c696ebd4d3660934f061ad94a',
+              'treatment':'already-observed E2 T120 p100',
+              'time_to_teleport':120,
+              'cohort_n':45822,
+              'diagnostic_begin':14400,
+              'checkpoint_times':[15000,15600],
+              'diagnostic_terminal_state_time':16200,
+              'diagnostic_end':16200.25,
+              'save_state_rng':True,
+              'save_state_transportables':True,
+              'save_state_constraints':True,
+              'save_state_precision':16,
+              'B_NEG_read':False,
+              'R_B_NEG_read':False,
+              'C_B_NEG_read':False,
+              'config_sha256':hashlib.sha256(cfg.read_bytes()).hexdigest(),
+          }
+          Path('r2-probe-constitution.json').write_text(json.dumps(receipt,indent=2,sort_keys=True))
+          PY
+
+      - name: Uninterrupted control with two checkpoints and terminal state
+        working-directory: most/scenario
+        env:
+          SUMO_HOME: ${{ github.workspace }}/runtime
+        run: |
+          set -euo pipefail
+          ../../runtime/bin/sumo             -c r2-t120-p100-control.sumocfg             --save-state.times 15000,15600,16200             --save-state.files r2-checkpoint-15000.xml.gz,r2-checkpoint-15600.xml.gz,r2-cont-final.xml.gz             --save-state.rng true             --save-state.transportables true             --save-state.constraints true             --save-state.precision 16             --no-step-log true             > r2-cont.stdout.txt 2> r2-cont.stderr.txt
+          find . -maxdepth 1 -type f -name '*r2-*.xml.gz' -print | sort
+          test -s most.r2-checkpoint-15000.xml.gz
+          test -s most.r2-checkpoint-15600.xml.gz
+          test -s most.r2-cont-final.xml.gz
+
+      - name: Resume from checkpoint 15000 with identical inputs
+        working-directory: most/scenario
+        env:
+          SUMO_HOME: ${{ github.workspace }}/runtime
+        run: |
+          set -euo pipefail
+          ../../runtime/bin/sumo             -c r2-t120-p100-control.sumocfg             --load-state most.r2-checkpoint-15000.xml.gz             --begin 15000             --end 16200.25             --save-state.times 16200             --save-state.files r2-resume15000-final.xml.gz             --save-state.rng true             --save-state.transportables true             --save-state.constraints true             --save-state.precision 16             --no-step-log true             > r2-resume15000.stdout.txt 2> r2-resume15000.stderr.txt
+          test -s most.r2-resume15000-final.xml.gz
+
+      - name: Resume from checkpoint 15600 with identical inputs
+        working-directory: most/scenario
+        env:
+          SUMO_HOME: ${{ github.workspace }}/runtime
+        run: |
+          set -euo pipefail
+          ../../runtime/bin/sumo             -c r2-t120-p100-control.sumocfg             --load-state most.r2-checkpoint-15600.xml.gz             --begin 15600             --end 16200.25             --save-state.times 16200             --save-state.files r2-resume15600-final.xml.gz             --save-state.rng true             --save-state.transportables true             --save-state.constraints true             --save-state.precision 16             --no-step-log true             > r2-resume15600.stdout.txt 2> r2-resume15600.stderr.txt
+          test -s most.r2-resume15600-final.xml.gz
+
+      - name: Compare terminal states and apply R2 checkpoint authority rule
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import gzip, hashlib, json, xml.etree.ElementTree as ET
+
+          base=Path('most/scenario')
+          files={
+              'continuous':base/'most.r2-cont-final.xml.gz',
+              'resume15000':base/'most.r2-resume15000-final.xml.gz',
+              'resume15600':base/'most.r2-resume15600-final.xml.gz',
+          }
+
+          def read(p):
+              with gzip.open(p,'rb') as f:
+                  return f.read()
+
+          def records(data):
+              root=ET.fromstring(data)
+              out=[]
+              for e in root.iter():
+                  text=(e.text or '').strip()
+                  out.append((e.tag,tuple(sorted(e.attrib.items())),text))
+              return out
+
+          raw={k:read(v) for k,v in files.items()}
+          sha={k:hashlib.sha256(v).hexdigest() for k,v in raw.items()}
+          rec={k:records(v) for k,v in raw.items()}
+
+          def compare(a,b):
+              ra,rb=rec[a],rec[b]
+              n=min(len(ra),len(rb))
+              mismatch=[]
+              mismatch_n=0
+              for i in range(n):
+                  if ra[i]!=rb[i]:
+                      mismatch_n+=1
+                      if len(mismatch)<20:
+                          mismatch.append({'index':i,'continuous':ra[i],'resumed':rb[i]})
+              mismatch_n += abs(len(ra)-len(rb))
+              return {
+                  'raw_equal':raw[a]==raw[b],
+                  'ordered_xml_record_equal':ra==rb,
+                  'continuous_record_n':len(ra),
+                  'resumed_record_n':len(rb),
+                  'record_mismatch_n':mismatch_n,
+                  'first_mismatches':mismatch,
+              }
+
+          c15000=compare('continuous','resume15000')
+          c15600=compare('continuous','resume15600')
+          empirical_equal=c15000['ordered_xml_record_equal'] and c15600['ordered_xml_record_equal']
+
+          if empirical_equal:
+              probe='PROBE-EQUIVALENCE-WITHOUT-EXACT-AUTHORITY'
+          else:
+              probe='DEFEAT-DETERMINISTIC-CHECKPOINT-RESUME'
+
+          out={
+              'stage':'RITHM-ORIGIN-S02.14-R2',
+              'probe_role':'already-observed T120 p100 control; no TNEG target read',
+              'terminal_state_sha256':sha,
+              'checkpoint_15000_comparison':c15000,
+              'checkpoint_15600_comparison':c15600,
+              'empirical_probe_equivalence':empirical_equal,
+              'probe_verdict':probe,
+              'sumo_v1_14_documented_internal_lanechange_state_saved':False,
+              'sumo_v1_14_documented_internal_carfollow_state_complete':False,
+              'checkpoint_exact_authority':False,
+              'tneg_checkpoint_stitching_authorized':False,
+              'reason':'SUMO v1.14.0 explicitly documents unsaved lane-change internal state and incomplete car-follow internal state; empirical probe equality, if observed, cannot establish universal exact-state sufficiency.',
+              'longer_uninterrupted_compute_candidate':True,
+              'B_NEG':None,
+              'R_B_NEG':None,
+              'C_B_NEG':None,
+              'target_curvature_read':False,
+          }
+          Path('r2-checkpoint-audit.json').write_text(json.dumps(out,indent=2,sort_keys=True))
+          print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload R2 checkpoint audit receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: s02-14-r2-checkpoint-audit
+          path: |
+            r2-sumo-version.txt
+            r2-sumo-binary.sha256
+            r2-probe-constitution.json
+            r2-checkpoint-audit.json
+            most/scenario/r2-cont.stdout.txt
+            most/scenario/r2-cont.stderr.txt
+            most/scenario/r2-resume15000.stdout.txt
+            most/scenario/r2-resume15000.stderr.txt
+            most/scenario/r2-resume15600.stdout.txt
+            most/scenario/r2-resume15600.stderr.txt
+          if-no-files-found: error
+          retention-days: 90
