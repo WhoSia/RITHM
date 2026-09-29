@@ -143,7 +143,7 @@ jobs:
               'p':p,'regime':regime,'time_to_teleport':float(teleport),
               'begin':14400,'diagnostic_end':21600,'step':0.25,'seed':42,
               'max_depart_delay':900,'cohort_n':len(cohort),
-              'output_prefix':'most.','summary_period':10,'queue_period':60,
+              'output_prefix':'most.','summary_period':'every-step','queue_period':60,
               'B_opened':False,'R_B_opened':False,'C_B_opened':False,
               'config_sha256':hashlib.sha256(cfg.read_bytes()).hexdigest(),
               'sumo_binary_sha256':'75c5556e52dd48953a7b6b75c3bb508df89a1e5690f7e32c962eac4587da864b'
@@ -160,7 +160,7 @@ jobs:
           ../../runtime/bin/sumo -c s02-15-p${{ matrix.p }}-${{ matrix.regime }}.sumocfg -C roundtrip.sumocfg
           test -s roundtrip.sumocfg
           ../../runtime/bin/sumo --help > help.txt
-          grep -q -- '--summary-output.period' help.txt
+          grep -q -- '--summary-output' help.txt
           grep -q -- '--queue-output.period' help.txt
 
       - name: Execute bounded paired mechanism probe
@@ -171,7 +171,7 @@ jobs:
         run: |
           set +e
           start=$(date +%s)
-          timeout --signal=INT --kill-after=30s 9000s             ../../runtime/bin/sumo               -c s02-15-p${{ matrix.p }}-${{ matrix.regime }}.sumocfg               --no-step-log true               --summary-output probe-summary.xml               --summary-output.period 10               --queue-output probe-queue.xml               --queue-output.period 60               --statistic-output probe-statistic.xml               > stdout.txt 2> stderr.txt
+          timeout --signal=INT --kill-after=30s 9000s             ../../runtime/bin/sumo               -c s02-15-p${{ matrix.p }}-${{ matrix.regime }}.sumocfg               --no-step-log true               --summary-output probe-summary.xml               --queue-output probe-queue.xml               --queue-output.period 60               --statistic-output probe-statistic.xml               > stdout.txt 2> stderr.txt
           rc=$?
           end=$(date +%s)
           echo "$rc" > exitcode.txt
