@@ -1,0 +1,101 @@
+{
+  "schema": "rithm-s02.15-phase-a-teleport-census.v1",
+  "stage": "RITHM-ORIGIN-S02.15",
+  "phase": "existing-E2-T120-timeout-teleport-activation-census",
+  "source_authority": {
+    "historical_repository": "WhoSia/ChatGPT-Web-HWPX-MCP",
+    "run_id": 35045109451,
+    "head_sha": "effda7390a06d076efc4f125ff3389c2c128038a",
+    "sumo_version": "1.14.0",
+    "time_to_teleport": 120,
+    "preseal_artifact": {
+      "id": 10334506045,
+      "reported_digest": "sha256:6fee5d738b0ea25c50ca72367ff1aa4d72a5ae9587522d1813b3015a73b83491"
+    },
+    "cell_artifacts": {
+      "000": {"id": 10429611262, "reported_digest": "sha256:ac33c62547408851d4b9af55ea6de8a88e765fe34993ca6f11a006572e5497c7"},
+      "030": {"id": 10427939701, "reported_digest": "sha256:0c636352a64506600b121ef974f080dbe5e61328c0be171375804346f40d21d2"},
+      "070": {"id": 10428440351, "reported_digest": "sha256:ecf129e1aea64f6017ee40660551cf4d716f3782a826a0e7f1f78280b360d98e"},
+      "100": {"id": 10427864825, "reported_digest": "sha256:f1e02196a72e4335cfd4b4c878f896b9e49d240111d71a1c9d6954a65def92ba"}
+    },
+    "eligible_frame_n": 45822,
+    "cohort_n": {"000": 0, "030": 13746, "070": 32075, "100": 45822}
+  },
+  "parser": {
+    "start_event_definition": "Exact SUMO stderr warning matching: Teleporting vehicle '<id>'; waited too long (<reason>), lane='<lane>', time=<t>.",
+    "excluded_from_start_count": [
+      "Vehicle '<id>' ends teleporting ...",
+      "Teleporting person ... destination-edge messages"
+    ]
+  },
+  "cells": {
+    "000": {
+      "timeout_teleport_start_count": 2055,
+      "unique_timeout_teleported_vehicle_count": 1524,
+      "first_time": 19705.25,
+      "last_time": 41360.0,
+      "reason_counts": {"jam": 1576, "yield": 433, "wrong lane": 46},
+      "eligible_frame_start_count": 1983,
+      "eligible_frame_unique_vehicle_count": 1463,
+      "eligible_frame_unique_vehicle_share": 0.03192789489764742,
+      "assigned_cohort_start_count": 0,
+      "assigned_cohort_unique_vehicle_count": 0
+    },
+    "030": {
+      "timeout_teleport_start_count": 532,
+      "unique_timeout_teleported_vehicle_count": 462,
+      "first_time": 19467.0,
+      "last_time": 41518.25,
+      "reason_counts": {"jam": 378, "yield": 144, "wrong lane": 10},
+      "eligible_frame_start_count": 507,
+      "eligible_frame_unique_vehicle_count": 439,
+      "eligible_frame_unique_vehicle_share": 0.009580550827113614,
+      "assigned_cohort_start_count": 18,
+      "assigned_cohort_unique_vehicle_count": 18
+    },
+    "070": {
+      "timeout_teleport_start_count": 168,
+      "unique_timeout_teleported_vehicle_count": 164,
+      "first_time": 19030.0,
+      "last_time": 40234.0,
+      "reason_counts": {"jam": 83, "yield": 75, "wrong lane": 10},
+      "eligible_frame_start_count": 149,
+      "eligible_frame_unique_vehicle_count": 146,
+      "eligible_frame_unique_vehicle_share": 0.0031862424163065775,
+      "assigned_cohort_start_count": 72,
+      "assigned_cohort_unique_vehicle_count": 70
+    },
+    "100": {
+      "timeout_teleport_start_count": 159,
+      "unique_timeout_teleported_vehicle_count": 151,
+      "first_time": 19791.0,
+      "last_time": 40099.25,
+      "reason_counts": {"jam": 66, "yield": 81, "wrong lane": 12},
+      "eligible_frame_start_count": 137,
+      "eligible_frame_unique_vehicle_count": 131,
+      "eligible_frame_unique_vehicle_share": 0.0028588887433983676,
+      "assigned_cohort_start_count": 137,
+      "assigned_cohort_unique_vehicle_count": 131
+    }
+  },
+  "cross_cell_geometry": {
+    "timeout_start_ratio_vs_p000": {"000": 1.0, "030": 0.25888077858880776, "070": 0.08175182481751825, "100": 0.07737226277372262},
+    "timeout_start_reduction_vs_p000": {"030": 0.7411192214111922, "070": 0.9182481751824818, "100": 0.9226277372262773},
+    "observation": "Timeout-teleport activation is strongly penetration-dependent and collapses mainly by p=0.30, with a much smaller late margin from p=0.70 to p=1.00."
+  },
+  "target_firewall": {
+    "B_recomputed": false,
+    "R_B_recomputed": false,
+    "C_B_recomputed": false,
+    "historical_E2_target_values_used_for_census": false
+  },
+  "verdict": "ACTIVE_REGULARIZER_WITH_P_DEPENDENT_ACTIVATION",
+  "authority": [
+    "The E2 T120 timeout-teleport operator is demonstrably active.",
+    "Activation is strongly associated with the rerouting-penetration cell.",
+    "This census alone does not identify the causal contribution of teleporting to E2 burden or curvature.",
+    "The zero-activation PASS-INERT-REGULARIZER branch is defeated.",
+    "Event-centered/local mechanism decomposition is required before authorizing any full TNEG four-cell rerun."
+  ],
+  "next": "RAVEL event-level mechanism attack and minimal paired threshold probes; target aggregation remains closed."
+}
