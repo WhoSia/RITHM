@@ -1,0 +1,112 @@
+{
+  "schema": "rithm-s02.15-bounded-mechanism-probe-final.v1",
+  "stage": "RITHM-ORIGIN-S02.15",
+  "source_run": {
+    "repository": "WhoSia/RITHM",
+    "run_id": 36526557153,
+    "head_sha": "7be48e8fb7e145066ac7f56cb5b9d6c7fa8b51cd",
+    "conclusion": "success",
+    "final_artifact_id": 11014872326,
+    "final_artifact_digest": "sha256:bbed9e9a044838acec5b255c95e04dfb5573c9c8272c8b590360838ac25820e1"
+  },
+  "target_firewall": {
+    "B": null,
+    "R_B": null,
+    "C_B": null,
+    "target_aggregation_opened": false
+  },
+  "admission_pass": true,
+  "cells": {
+    "p000_t120": {
+      "runtime_seconds": 274,
+      "timeout_teleport_start_count": 2,
+      "first_timeout_teleport": {
+        "id": "pedestrian_1-2_3883_tr",
+        "reason": "yield",
+        "lane": "152672#2_1",
+        "time": 19705.25
+      },
+      "artifact_id": 11015171269,
+      "artifact_digest": "sha256:6bc57d347e9c2f9576acfb935ed65e42cce2d69114ec0d51ec0bfc02b49dd46f"
+    },
+    "p000_tneg": {
+      "runtime_seconds": 151,
+      "timeout_teleport_start_count": 0,
+      "artifact_id": 11015066312,
+      "artifact_digest": "sha256:89b0ee6ed90280e548064294abc5679c65d9fdb13751843391d49d4e82b234f8"
+    },
+    "p100_t120": {
+      "runtime_seconds": 359,
+      "timeout_teleport_start_count": 2,
+      "first_timeout_teleport": {
+        "id": "special_1-3_53",
+        "reason": "yield",
+        "lane": "152672#2_1",
+        "time": 19791.0
+      },
+      "artifact_id": 11015281256,
+      "artifact_digest": "sha256:124641cb4b7c89b90be5d4d05381b4e456e91ca992762043884f558d7339d523"
+    },
+    "p100_tneg": {
+      "runtime_seconds": 272,
+      "timeout_teleport_start_count": 0,
+      "artifact_id": 11015375571,
+      "artifact_digest": "sha256:fdcce39bfeda2691a7c6ff5d39ed3ea298d1e4372a66c241d1cd9cd1fd4d4663"
+    }
+  },
+  "paired_results": {
+    "p000": {
+      "historical_first_event_reproduced_exactly": true,
+      "pre_tau_summary_exact": true,
+      "tneg_timeout_starts_zero": true,
+      "tau": 19705.25,
+      "window_end": 20605.25,
+      "summary_delta_at_window_end_t120_minus_tneg": {
+        "ended": -2,
+        "halting": 1,
+        "running": 2,
+        "waiting": 0,
+        "teleports": 2,
+        "meanSpeed": -0.20000000000000107
+      },
+      "queue_delta_last_sample_t120_minus_tneg": {
+        "time": 20580.0,
+        "queued_lanes": -1,
+        "total_queue_length": 44.030000000000086,
+        "max_queue_length": 0.0
+      },
+      "persistent_global_aggregate_footprint_at_window_end": true
+    },
+    "p100": {
+      "historical_first_event_reproduced_exactly": true,
+      "pre_tau_summary_exact": true,
+      "tneg_timeout_starts_zero": true,
+      "tau": 19791.0,
+      "window_end": 20691.0,
+      "summary_delta_at_window_end_t120_minus_tneg": {
+        "ended": 5,
+        "halting": -3,
+        "running": -5,
+        "waiting": 0,
+        "teleports": 2,
+        "meanSpeed": -0.030000000000001137
+      },
+      "queue_delta_last_sample_t120_minus_tneg": {
+        "time": 20640.0,
+        "queued_lanes": 2,
+        "total_queue_length": 95.6600000000002,
+        "max_queue_length": -26.860000000000014
+      },
+      "persistent_global_aggregate_footprint_at_window_end": true
+    }
+  },
+  "verdict": "PASS-PERSISTENT-REGULARIZATION-FOOTPRINT",
+  "scientific_interpretation": [
+    "Finite T120 teleporting creates a reproducible state intervention at both penetration extremes.",
+    "Paired T120 and TNEG summaries are exact before the anchored first timeout-teleport event.",
+    "After the event, aggregate and queue observables remain different 900 seconds later in both p=0 and p=1.",
+    "Therefore timeout teleporting is not merely an output-label difference or an inert regularizer in the bounded window.",
+    "This result does not by itself determine the sign or magnitude of the full-horizon S02.14 burden effect."
+  ],
+  "next_authority": "Extend the same paired event-local design to p=.30 and p=.70, reusing the admitted p=0/p=1 receipts, before any full-horizon TNEG burden rerun or six-threshold sweep."
+}
