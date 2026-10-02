@@ -1,0 +1,108 @@
+{
+  "schema": "rithm-s02.15-final.v1",
+  "stage": "RITHM-ORIGIN-S02.15",
+  "title": "Teleport-Regularization Mechanism Decomposition, Threshold-Sweep Burden Geometry, Localized Congestion Attribution, Complete-Set Necessity Reassessment & Robustness-Question Reconstitution",
+  "source_runs": {
+    "phase_a_historical_e2": {
+      "repository": "WhoSia/ChatGPT-Web-HWPX-MCP",
+      "run_id": 35045109451,
+      "head_sha": "effda7390a06d076efc4f125ff3389c2c128038a"
+    },
+    "extreme_p_probe": {
+      "repository": "WhoSia/RITHM",
+      "run_id": 36526557153,
+      "head_sha": "7be48e8fb7e145066ac7f56cb5b9d6c7fa8b51cd",
+      "conclusion": "success",
+      "artifact_id": 11014872326,
+      "artifact_digest": "sha256:bbed9e9a044838acec5b255c95e04dfb5573c9c8272c8b590360838ac25820e1"
+    },
+    "all_p_geometry": {
+      "repository": "WhoSia/RITHM",
+      "run_id": 37015765484,
+      "head_sha": "f0bed21a1019aa4c81651c10cf286a6f7a7a84af",
+      "conclusion": "success",
+      "artifact_id": 11229834410,
+      "artifact_digest": "sha256:7d133c65e718965a85b5dece503e99be34d2e803da12e33d94cc95e688109a65"
+    }
+  },
+  "phase_a": {
+    "verdict": "ACTIVE_REGULARIZER_WITH_P_DEPENDENT_ACTIVATION",
+    "timeout_teleport_start_count": {
+      "000": 2055,
+      "030": 532,
+      "070": 168,
+      "100": 159
+    },
+    "interpretation": "The finite T120 timeout-teleport operator is active and its activation frequency is strongly penetration-dependent. This alone does not identify its contribution to burden curvature."
+  },
+  "all_p_event_local_geometry": {
+    "admission_pass": true,
+    "verdict": "PASS-ALLP-PERSISTENT-REGULARIZATION-FOOTPRINT",
+    "pairs": {
+      "000": {
+        "tau": 19705.25,
+        "anchor_exact": true,
+        "pre_tau_summary_exact": true,
+        "tneg_timeout_starts_zero": true,
+        "summary_divergence_occupancy": 0.9994445987225771,
+        "queue_divergence_occupancy": 1.0,
+        "queue_delta_last_total_length": 44.030000000000086
+      },
+      "030": {
+        "tau": 19467.0,
+        "anchor_exact": true,
+        "pre_tau_summary_exact": true,
+        "tneg_timeout_starts_zero": true,
+        "summary_divergence_occupancy": 0.9969452929741739,
+        "queue_divergence_occupancy": 1.0,
+        "queue_delta_last_total_length": -249.50999999999988
+      },
+      "070": {
+        "tau": 19030.0,
+        "anchor_exact": true,
+        "pre_tau_summary_exact": true,
+        "tneg_timeout_starts_zero": true,
+        "summary_divergence_occupancy": 0.9997222993612885,
+        "queue_divergence_occupancy": 1.0,
+        "queue_delta_last_total_length": -115.80000000000007
+      },
+      "100": {
+        "tau": 19791.0,
+        "anchor_exact": true,
+        "pre_tau_summary_exact": true,
+        "tneg_timeout_starts_zero": true,
+        "summary_divergence_occupancy": 0.9994445987225771,
+        "queue_divergence_occupancy": 1.0,
+        "queue_delta_last_total_length": 95.6600000000002
+      }
+    }
+  },
+  "complete_set_necessity_reassessment": {
+    "finite_T_activates": true,
+    "activation_varies_with_p": true,
+    "persistent_event_local_footprint_all_p": true,
+    "event_local_sign_is_not_monotone_across_p": true,
+    "bounded_probe_sufficient_for_full_horizon_burden_sign_or_curvature": false,
+    "full_threshold_sweep_required_before_burden_test": false,
+    "full_horizon_tneg_burden_comparison_authorized": true,
+    "reason": "The mechanism is active, penetration-dependent, and persistently alters state trajectories across all four cells. Because local queue effects change sign across p, the full-horizon burden/curvature consequence cannot be inferred from event-local diagnostics. A full threshold sweep is not needed to answer the narrower robustness question; the decisive next object is the full-horizon TNEG burden comparison against the already-canonical E2 T120 baseline."
+  },
+  "target_firewall": {
+    "B_recomputed_in_s02_15": false,
+    "R_B_recomputed_in_s02_15": false,
+    "C_B_recomputed_in_s02_15": false,
+    "historical_e2_target_values_remain_canonical": true
+  },
+  "execution_surface": {
+    "personal_laptop_long_compute": "retired",
+    "github_hosted_short_bounded_probes": "validated",
+    "next_long_compute_requirement": "stable continuously available non-laptop surface"
+  },
+  "final_verdict": "CLOSED-PASS-ALLP-PERSISTENT-REGULARIZATION-FOOTPRINT-AND-ESCALATE-FULL-HORIZON-BURDEN-SENSITIVITY",
+  "authority_ceiling": [
+    "T120 timeout teleporting is an active state-transition intervention in the frozen SUMO/MoST regime.",
+    "The intervention produces persistent event-local trajectory changes at p=0,.3,.7,1.",
+    "The local footprint alone does not establish the sign or magnitude of the full-horizon burden effect or human/field claims."
+  ],
+  "successor_authority": "Open S02.16 as a full-horizon TNEG burden-sensitivity stage using a stable execution surface, reusing canonical E2 T120 rather than rerunning it."
+}
