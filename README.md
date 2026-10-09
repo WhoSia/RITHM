@@ -28,14 +28,40 @@ Rscript R/check_study1.R path/to/study1.csv
 
 Python 3.11+ only needs its standard library; the optional base-R script independently verifies the group aggregation/payoff identity. CI runs only the synthetic 2-round fixture and **does not** itself re-run the human dataset. The research has not admitted an information→live-group welfare causal estimand or causal habit/memory mechanism.
 
-## Retired code and exact archival identity
+## Retired science and minimal Git branch lifecycle
 
-The old S02 SUMO/MoST runner and scoring scripts, all old Actions workflows, and historical receipts were retired from the active main tree. Two immutable legacy references preserve old HEADs, and their per-file source-text snapshots and Git blob SHA values were read back in [Drive RITHM code backups](https://drive.google.com/drive/folders/16T5wRdLx_nSMgiMSZ7K1e6EugJqum9mJ).
+The S02 SUMO/MoST programs and historical scientific receipts are **not**
+active RITHM-2.0 code. The original pre-2.0 Git history is not rewritten.
+Tracked source backups in
+[Drive RITHM Code Backups](https://drive.google.com/drive/folders/16T5wRdLx_nSMgiMSZ7K1e6EugJqum9mJ)
+were independently compared by Git blob identity and content:
+**21/21 old-main blobs** and **26/26 experimental-runner blobs**.
+A [30-commit historical lineage ledger](https://docs.google.com/document/d/10scZkn3ANdHBzFjWI8vWnEvlFYz2iZRQphdEu9cTBtY/edit)
+records both old branch heads, Git parent/tree hashes, authors and commit
+messages.
 
-- [Old main](https://github.com/WhoSia/RITHM/tree/archive/pre-rithm-2.0-main-20261009)
-- [Old experimental runner](https://github.com/WhoSia/RITHM/tree/archive/pre-rithm-2.0-experimental-20261009)
+Historical frozen head IDs:
 
-The historical S02.16 outcome remains **CLOSED / CONDITIONAL_POSITIVE_EVIDENCE / NATIVE_ADMISSION_HOLD**; the missing original p000 supervisor receipt has not been fabricated.
+- Old scientific main: `0f857e34fa1203acd62f84139a0e614c597865b4`
+  (ancestor of the present `main`).
+- Experimental SUMO runner: `c5f219d63b01dbb197afe2f6a968cc1f745c3bca`
+  (source and commit metadata preserved in Drive).
+
+**Git branch policy:** `main` is the only persistent live branch.
+Temporary branches exist solely to carry one open PR and must be pruned
+after merge or closure. Never retain duplicate experimental/archive refs
+as permanent repository clutter. Notion and Drive preserve the full
+historical research context; GitHub `main` contains minimal executable
+current science. Do not regenerate branch sprawl in order to archive it.
+
+**Archive limitation:** content-preserving Google Docs and commit-metadata
+ledgers are **not** a complete Git bundle. If exact restoration of a
+historical Git commit graph is required, obtain and verify a `git bundle`
+*before* retiring its last branch ref. Do not mistake a recorded SHA for
+a still-resolvable remote commit object.
+
+The frozen S02.16 verdict remains
+**CLOSED — CONDITIONAL_POSITIVE_EVIDENCE / NATIVE_ADMISSION_HOLD**.
 
 ## Polyglot doctrine
 
