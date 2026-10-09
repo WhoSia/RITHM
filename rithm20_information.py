@@ -105,7 +105,20 @@ def describe(csv_path, strict=False):
         # explicitly, rather than treating the initial absent switch as zero.
         pre_switches = [x["switches"] for x in first if x["period"] >= 2]
         post_switches = [x["switches"] for x in last]
+        # Exact (not causal) payoff-change decomposition:
+        # W(s) = -36 + 66*s - 5*s*s
+        # change E[W] = change W(E[s]) - 5*change Var(s).
+        mu0, mu1 = mean(pre_s), mean(post_s)
+        v0, v1 = popvar(pre_s), popvar(post_s)
+        smooth = lambda s: -36 + 66*s - 5*s*s
+        allocation = smooth(mu1) - smooth(mu0)
+        volatility = -5 * (v1-v0)
+        if not math.isclose(mean(post_w)-mean(pre_w),
+                            allocation+volatility, abs_tol=1e-8):
+            raise ValueError("Group payoff decomposition mismatch")
         summaries.append({
+            "delta_mean_allocation_component": allocation,
+            "delta_occupancy_volatility_component": volatility,
             "session": session, "treatment": treatment,
             "label": TREATMENTS[treatment], "n_informed": len(treated),
             "pre_welfare": mean(pre_w), "post_welfare": mean(post_w),
@@ -135,7 +148,11 @@ def describe(csv_path, strict=False):
                      "n_sessions": len(data), "mean_pre_post_delta_welfare": dw,
                      "descriptive_delta_vs_control": dw - control,
                      "mean_change_side_variance":
-                         mean([s["delta_side_variance"] for s in data])})
+                         mean([s["delta_side_variance"] for s in data]),
+                     "mean_allocation_change_component":
+                         mean([s["delta_mean_allocation_component"] for s in data]),
+                     "mean_volatility_change_component":
+                         mean([s["delta_occupancy_volatility_component"] for s in data])})
     return {"version": "RITHM-2.0", "status": "DESCRIPTIVE_NOT_CAUSAL",
             "input_sha256": base["input_sha256"],
             "sessions": summaries, "treatment_summaries": arms,
