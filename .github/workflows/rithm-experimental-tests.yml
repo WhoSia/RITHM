@@ -1,0 +1,29 @@
+name: RITHM Experimental Runner Tests
+on:
+  pull_request:
+    paths:
+      - 'experimental/**'
+      - '.github/workflows/rithm-experimental-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolated-process-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check Out Source (Read Only)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Experimental Python Sources
+        run: python -m py_compile experimental/*.py
+      - name: Test Disposable Parallel Workers
+        run: python -m unittest discover -s experimental/tests -v
+      - name: Confirm Source Is Unchanged
+        run: git diff --exit-code && git status --short
+# CI must not create commits, tags, PRs, or modify frozen scientific artifacts.
