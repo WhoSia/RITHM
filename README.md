@@ -16,7 +16,13 @@ This repository is the canonical code/execution surface for reproducible RITHM c
 - Generated summaries and derived receipts do not replace primary source bytes.
 - External runner timeout is a resource boundary, not evidence of traffic gridlock.
 
-## Current active lineage
+## S02.16 closure — recovered-evidence result (2026-10-09)
+
+**CLOSED — CONDITIONAL_POSITIVE_EVIDENCE / NATIVE_ADMISSION_HOLD.** Four TNEG full-horizon source/frame artifacts were independently checked. The recovered-evidence court gives `C_TNEG = +0.12296849594621062`, `C_T120 = +0.028238190134892482`, and `delta_C = +0.09473030581131814` at the unchanged threshold `epsilon = 0.005`. This is a **conditional model-internal positive curvature result**, not an unqualified presealed `PASS-TELEPORT-ROBUST`: p000 was recovered from intact source XML and kernel child exit evidence but lacks its original supervisor-generated status receipt.
+
+See [S02.16 recovered-evidence closure](receipts/RITHM-ORIGIN-S02.16-recovered-evidence-closure.md) for complete provenance, per-cell values, original-custody SHA, censoring warnings, the explicit frozen admission boundary, and next-route decision. Do not rerun four cells, retune epsilon after revealing the result, or infer unobserved real-world policy effects.
+
+## Historical pre-closure lineage
 
 `RITHM-ORIGIN-S02.14-E3 — Teleport-Absent TNEG Execution Preseal, Frame-Complete Burden Replay, Runtime-Censoring Separation & Regularization-Sensitivity Closure`
 
