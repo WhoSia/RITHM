@@ -38,3 +38,13 @@ E3 inherits S02.14 and the successful E2 frame-complete T120 result. It changes 
 ## Historical repository boundary
 
 Earlier S02.13/S02.14 exploratory workflows were mistakenly executed in `WhoSia/ChatGPT-Web-HWPX-MCP`, an unrelated MCP-development repository. That dependency is retired. Historical commit/run identifiers remain provenance references only; no new RITHM writes belong there.
+
+## S02.16 execution recovery and isolated runner prototype (2026-10-09)
+
+Three of four cells (p030, p070, p100) have full native runner receipts and independently verified eligible-frame IDs, hashes and numerical burden arithmetic. The remaining p000 reached `Simulation ended at time: 50400.00`; raw TripInfo SHA-256 `0f5b52d154d51e0269e3bb08670da5b71077703c6fefcb3cf9a515f9602af65c` and whole XML parse passed. An independent read-only reconstruction matched 45,822 eligible IDs (39,068 eligible XML tripinfos, 6,754 absent, 21,768 unfinished/invalid arrivals mapped to horizon). Parent PID 420832 was intentionally stopped; its zombie child PID 420845 had Linux wait status 0. Native p000 `status.json`, `exitcode.txt`, and `framecomplete.tsv` have not been created; kernel child exit evidence does not authorize fabricating these files.
+
+**Science gate:** 4/4 native scientific admission and curvature score remain on HOLD. Never resume PID 420832, relaunch a finished cell, open the score, or overwrite frozen results as a side effect of engineering tests.
+
+`experimental/resilient_parallel.py` is a **disposable test-only** POSIX job coordinator. It has detached workers, bounded launches, exclusive dispatcher flock and conservative LAUNCHING/RUNNING/UNKNOWN no-retry semantics. `experimental/tests/test_runner.py` has seven disposable local tests (manager returns, worker completion, nonzero failure, worker SIGKILL, fail-closed unresolved state, unsafe job name, no duplicate restarts). These tests are **not** proof of power-loss durability, exact native SUMO checkpoint resume, nor owner-approved elastic scaling. Run with `python3 -m unittest discover -s experimental/tests -v`. The prototype is not part of a scientific runner and must not be deployed onto Sean's live host.
+
+Source and test ZIP backups are kept in Google Drive folder `RITHM_Code_Backups_2026` (v1 original and v2 with tests); historical frozen original scripts remain unchanged. Commits are to be authored by WhoSia, never `github-actions[bot]`; CI should only execute read-only tests and upload artifacts, not author commits.
