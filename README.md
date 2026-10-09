@@ -16,6 +16,28 @@ Across 990 successive within-session group transitions, 5.58 of 18 participants 
 
 Study 2's earlier +12.07 percentage-point randomized information-onset switching result involves **prerecorded opponent distributions**, not simultaneous live-group congestion, and cannot be relabeled a causal group-welfare improvement.
 
+## Information onset, selection and group welfare (continued 2.0)
+
+Reconstructed all 10 live human sessions by treatment and checked the
+round-51 information onset. Study 1 has two control groups, two groups
+with all 18 informed, three with the four most frequent *baseline*
+switchers informed, and three with the four least frequent baseline
+switchers informed.
+
+Late-minus-early group-payoff changes (experimental currency units per
+group-round; **descriptive session means only**) were: Control +12.23,
+All +2.39, Frequent-4 -0.19 and Infrequent-4 +0.81. These do **not**
+establish that information lowers group welfare: session counts are
+2/2/3/3, the untreated groups also learn over time, and the informed
+individuals in both four-person treatments were selected on prior behavior.
+
+See [Information timing and welfare](docs/INFORMATION_TIMING.md)
+for exact definitions, author-paper comparison and limitations.
+
+```sh
+python rithm20_information.py path/to/study1.csv --strict-source
+```
+
 ## Run
 
 Download the original Ashraf et al. Study 1 CSV (`study1.csv`) through the legitimate source. Raw human participant data and any credentials are intentionally absent here.
