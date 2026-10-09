@@ -1,46 +1,44 @@
-# RITHM
+# RITHM-2.0
 
-**RITHM — Route-choice Inertia and Traffic Hysteresis Modeling** is the dedicated execution and provenance repository for the RITHM research program.
+**RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
 
-## Repository role
+**RITHM-2.0 — Behavioral–Structural Reconciliation: History-Causality Discrimination, Micro-to-Macro Welfare Mediation & Independent-Witness Admission Court**
 
-This repository is the canonical code/execution surface for reproducible RITHM computational world-contact. Scientific constitutions, authority decisions, and long-form reasoning remain separately preserved in the Research OS / Notion record; this repository stores executable compilers, workflows, frozen parameter receipts, and machine-verifiable artifacts.
+This is the active, human-choice research repository. The explanandum is why people retain or revise familiar routes and how those decisions interact to cause collective traffic outcomes. Measurement, custody and CI serve that question; they are not the question itself.
 
-## Governance
+## First human-network empirical result
 
-- `main` is the canonical branch. RITHM does not depend on unrelated development repositories.
-- Scientific parameters are frozen prospectively before target exposure.
-- Execution failure is not scientific defeat or support.
-- Infrastructure changes may not silently alter a frozen scientific estimand.
-- Partial-cell results are not aggregated when the constitution requires complete-set admission.
-- Generated summaries and derived receipts do not replace primary source bytes.
-- External runner timeout is a resource boundary, not evidence of traffic gridlock.
+Ashraf et al. (2023) Study 1, the original author-provided 18-player live-group repeated-route-choice experiment, contains 10 sessions × 100 rounds × 18 participants (18,000 choices). The game payoff identity is `W(s)=-36+66s-5s²`, where `s` is side-road occupancy. The unique pure-strategy Nash occupancy is 6, with group welfare 180. Integer social optimum is 7, with welfare 181.
 
-## S02.16 closure — recovered-evidence result (2026-10-09)
+A direct descriptive replay of the original 1,000 group-rounds found average side occupancy 5.986, population variance 3.957804 and mean group payoff 160.126. Consequently `181 - E[W(s)] = 20.874 = 1.08498 + 19.78902`: 94.80% of the observed optimum shortfall is the exact occupancy-variance term. This is an algebraic, descriptive allocation/dispersion decomposition, **not** evidence that individual habit caused that loss or that new information would improve welfare.
 
-**CLOSED — CONDITIONAL_POSITIVE_EVIDENCE / NATIVE_ADMISSION_HOLD.** Four TNEG full-horizon source/frame artifacts were independently checked. The recovered-evidence court gives `C_TNEG = +0.12296849594621062`, `C_T120 = +0.028238190134892482`, and `delta_C = +0.09473030581131814` at the unchanged threshold `epsilon = 0.005`. This is a **conditional model-internal positive curvature result**, not an unqualified presealed `PASS-TELEPORT-ROBUST`: p000 was recovered from intact source XML and kernel child exit evidence but lacks its original supervisor-generated status receipt.
+Across 990 successive within-session group transitions, 5.58 of 18 participants changed their road on average; 118 transitions had some switching without any net change in side-road occupancy. Source and method are described in the [active Notion lab record](https://app.notion.com/p/3f4ef561cf9281da9fa5ef9084913994).
 
-See [S02.16 recovered-evidence closure](receipts/RITHM-ORIGIN-S02.16-recovered-evidence-closure.md) for complete provenance, per-cell values, original-custody SHA, censoring warnings, the explicit frozen admission boundary, and next-route decision. Do not rerun four cells, retune epsilon after revealing the result, or infer unobserved real-world policy effects.
+Study 2's earlier +12.07 percentage-point randomized information-onset switching result involves **prerecorded opponent distributions**, not simultaneous live-group congestion, and cannot be relabeled a causal group-welfare improvement.
 
-## Historical pre-closure lineage
+## Run
 
-`RITHM-ORIGIN-S02.14-E3 — Teleport-Absent TNEG Execution Preseal, Frame-Complete Burden Replay, Runtime-Censoring Separation & Regularization-Sensitivity Closure`
+Download the original Ashraf et al. Study 1 CSV (`study1.csv`) through the legitimate source. Raw human participant data and any credentials are intentionally absent here.
 
-E3 inherits S02.14 and the successful E2 frame-complete T120 result. It changes only SUMO `time-to-teleport` from `120` to `-1` for the scientific TNEG comparison. Exact frame, treatment cohorts, model bytes, simulated horizon, burden functional, and frozen decision threshold remain unchanged.
+```sh
+python rithm20.py path/to/study1.csv --strict-source
+python -m unittest discover -s tests -v
+Rscript R/check_study1.R path/to/study1.csv
+```
 
-## Frozen external authorities
+Python 3.11+ only needs its standard library; the optional base-R script independently verifies the group aggregation/payoff identity. CI runs only the synthetic 2-round fixture and **does not** itself re-run the human dataset. The research has not admitted an information→live-group welfare causal estimand or causal habit/memory mechanism.
 
-- MoST scenario commit: `b29b2f65f1096a9c69a601ec62a724815cb4a43f`
-- SUMO: `1.14.0`, source commit `58abfe34cdaf638c696ebd4d3660934f061ad94a`
-- Eligible source-derived frame: `N=45,822`
-- Nested explicit cohorts: `0 / 13,746 / 32,075 / 45,822`
-- S02.14 eligible-frame SHA-256: `e62c94e400e4e868c8ec2d3f734801c56dd0ba03fa2c050f32e223e876c43293`
-- Cohort SHA-256:
-  - p000: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-  - p030: `1b9fba0675825b770afe24159fc39c4ba12b6f78fa05e432d77ad8e7556f83f5`
-  - p070: `f4855d4965e9d7268f97a2d0c90f11b4d9632cd6cd8d22ff2d15ed4804cd9270`
-  - p100: `21d0db278e7c39d9403520b10ab471470a03c30cd908c587677a1d5249f8f634`
+## Retired code and exact archival identity
 
-## Historical repository boundary
+The old S02 SUMO/MoST runner and scoring scripts, all old Actions workflows, and historical receipts were retired from the active main tree. Two immutable legacy references preserve old HEADs, and their per-file source-text snapshots and Git blob SHA values were read back in [Drive RITHM code backups](https://drive.google.com/drive/folders/16T5wRdLx_nSMgiMSZ7K1e6EugJqum9mJ).
 
-Earlier S02.13/S02.14 exploratory workflows were mistakenly executed in `WhoSia/ChatGPT-Web-HWPX-MCP`, an unrelated MCP-development repository. That dependency is retired. Historical commit/run identifiers remain provenance references only; no new RITHM writes belong there.
+- [Old main](https://github.com/WhoSia/RITHM/tree/archive/pre-rithm-2.0-main-20261009)
+- [Old experimental runner](https://github.com/WhoSia/RITHM/tree/archive/pre-rithm-2.0-experimental-20261009)
+
+The historical S02.16 outcome remains **CLOSED / CONDITIONAL_POSITIVE_EVIDENCE / NATIVE_ADMISSION_HOLD**; the missing original p000 supervisor receipt has not been fabricated.
+
+## Polyglot doctrine
+
+Python owns the group-level analysis and data validation. Base R independently audits the payoff identity using a separate parser and evaluator. GitHub Actions YAML controls read-only tests; CSV and JSON carry research data/results; Markdown/Notion carry the scientific claims. Legacy Stata, SUMO, shell and XML execution belong to the archive. No Rust/Lean/Julia language adoption without an actual new computational or proof requirement. See [polyglot ledger](docs/POLYGLOT.md).
+
+No automated next research version or expensive server replay is implied by this codebase.
