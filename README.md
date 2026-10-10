@@ -35,6 +35,19 @@ Read the [full 2.6 Notion source-bound research court](https://app.notion.com/p/
 
 **Version policy:** main-only permanent branch; no Actions for exploratory work; source authority and genuine held-out group welfare take precedence over version proliferation. **RITHM-2.6 OPEN · HABIT-CAUSALITY HOLD · GROUP-DEPENDENCE HOLD · INTERVENTION-WELFARE HOLD.**
 
+## New: source-bound personal-persistence rivalry and pre-incident welfare (P3–P4)
+
+The [P3–P4 original-human-choice research court](docs/rithm26_p3_p4_history_and_clock_20261010.md) goes beyond “previous route predicts next route” by separating an individual's **older revealed route frequency (up to t−2)** from their immediately previous route (t−1). Six held-out sessions with the original staged A–C → C–B/C–D information clock yield:
+
+| Model | Upstream binary log loss ↓ | Node-C binary log loss ↓ | **Pre-incident** group-cost MAE ↓ |
+|:--|--:|--:|--:|
+| Structural/time/state S0 | .666493 | .550630 | 12.80750 |
+| Older choice-frequency history only | .634149 | .520310 | 12.74898 |
+| Older history **plus immediate previous route** | **.629044** | **.506456** | **12.68130** |
+| Full revealed-frequency + recent route + cost experience | .629866 | .506880 | 12.88616 |
+
+The finite incident clock explicitly respects **4 incidents per 20 rounds**: forecast before the shock by weighting the two conditional node-C paths by `(4 − previous incidents)/(21 − current period)`. Current incidents never enter the upstream choice. The 12.68130 improvement over 12.80750 is SMALL. Stage-C behavior for hypothetical A–B travelers and **cross-person conditional independence** remain UNIDENTIFIED modeling assumptions. **Neither state-dependent habit causality nor intervention welfare is identified.** The individual's historical route share is endogenous; it must not be mislabeled immutable “type.” No actual S2 participant records or raw spreadsheet are in GitHub. The tests (27/27 local PASS) and full executable source-audit package are maintained as a separate chat artifact, not a CI dependency.
+
 ---
 
 ## Historical RITHM-2.0 README (preserved in place)
