@@ -99,6 +99,22 @@ See [P7 mathematical, numerical and source custody court](docs/rithm26_p7_joint_
 
 ---
 
+## New: P8 — Independent external group-welfare *source gate*, not yet a score (2026-10-11)
+
+**RITHM-2.6 remains OPEN. Fresh external HUMAN group-welfare validation is STILL BLOCKED because original new participant×group×round records have not been ingested.** Frozen evidence/engineering gate [P8 external transfer contract](docs/rithm26_p8_external_source_admissibility_and_frozen_welfare_20261011.md) was created BEFORE seeing any individual original outcomes from the new candidate, but the 2025 paper's **published aggregate results are already known**; not globally outcome-blind.
+
+- [Noussair–Qiao 2025](https://doi.org/10.1287/mnsc.2023.00056): independent **six-player**, 2-route network, four 40-round treatments, 24 sessions/48 six-player groups; full original export expected 46,080 choices and 7,680 group-rounds, but these are DESIGN COUNTS, NOT obtained records. Information concerns PREVIOUS-period route occupancy after simultaneous route choice, **not** 2017 incident at node C within the journey. P7's node-C coefficients cannot be exported as if a matching second-stage label existed.
+- Published source private travel cost a=k and b=2(6-k) gives source group C(k)=k²+2(6−k)²=24+3(k−4)². If each of six people has P(a)=2/3, identical marginals support exact mean system costs **24** (balanced k=4 coupling), **28** (independent) and **48** (all choose the same road). This is source-specific CLASSICAL expectation/covariance/transport algebra, not human observations or an innovative general theorem.
+- [Bode et al. 2015 public Dryad dataset](https://doi.org/10.5061/dryad.7m645): original README fetched and inspected, 464 people, 29-column processed history of simulated exit queues; download of actual data ZIP blocked HTTP 403 in this environment. Other 89 agents are simulated, so this is a separate dynamic human **choice-only** candidate, NOT a live-human joint-traffic congestion welfare dataset.
+- Historical Ashraf 2023 was already explored in RITHM 2.0–2.3: **cannot** be passed off as untouched replication.
+- **Frozen P8 original-data interface**: 6 person IDs/group, 40 periods/arm, 4 arms, stable membership, 24 sessions/48 groups if complete; predictions use only earlier observed own routes, independent online Beta(4,2) person marginals, source optimum C=24, and an ANALYST-only last-occupancy cost comparator. Exact 64-profile LP gives sharp *EXPECTED* welfare sensitivity to unknown dependence, NOT observed round prediction intervals. Synthetic-fixture and source-math tests **18/18 PASS**; original participant data NEVER supplied as test fixtures. External real-group MAE, 40-round cumulative error and session-level uncertainty: **NOT SCORED**.
+- Full locally tested P8 source, source registry and SHA-256 manifest in conversation archive `RITHM-2.6_P8_Frozen_Independent_GroupWelfare_Transfer_Gate_20261011.zip`, SHA256 `da4be3453f0bf9a200545baaffaf7bad91bbe430f79aefd4008b73e19492350a`; no original source participant ZIP/PDF redistributed. [Current Notion scientific court](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021) · [P8 parallel Harvest](https://app.notion.com/p/3f5ef561cf9281fea38cfbc043cabe48).
+
+**P8 GATES:** SOURCE INFORMATION CLOCK CORRECT / CROSS-TOPOLOGY MATHEMATICAL COUPLING PASS / ORIGINAL EXTERNAL GROUP HUMAN DATA BLOCKED / EXTERNAL HUMAN WELFARE SCORE NO SCORE / HABIT CAUSALITY HOLD. Do not tune 2017 P7 model or claim external success until new human group data pass admission.
+
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**

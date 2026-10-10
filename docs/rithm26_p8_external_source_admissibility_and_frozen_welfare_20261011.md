@@ -1,0 +1,31 @@
+# RITHM-2.6 P8 — Independent Source-Data Admission, Topology-Legal Information Clock and Frozen Welfare Transfer
+
+**2026-10-11 · RITHM-2.6 OPEN · only mathematical SOURCE TRANSFER; new actual human group-data scores BLOCKED.**
+
+Source registry and full reproduction in chat-local ZIP `RITHM-2.6_P8_Frozen_Independent_GroupWelfare_Transfer_Gate_20261011.zip` (SHA-256 `da4be3453f0bf9a200545baaffaf7bad91bbe430f79aefd4008b73e19492350a`). ZIP contains source-specific Python evaluator, 18 regression tests with synthetic fixtures, archived test log, machine-readable original source catalog, SHA manifest, and 10k-byte scientific report. It deliberately does **not** contain original copyright-held papers or human participant-level datasets. No GitHub tests/Actions run by this documentation commit.
+
+## New genuine independent external candidate: source, not human row data
+
+[Noussair and Qiao 2025](https://doi.org/10.1287/mnsc.2023.00056) · [2026-07-24 author manuscript](https://drive.google.com/file/d/1rTL9qTpYV6zwee6pC3nZy64H07oSWzlK/view) · [publisher supplemental listing](https://pubsonline.informs.org/doi/suppl/10.1287/mnsc.2023.00056) · [author appendix landing](https://sites.google.com/view/liangqiao/research).
+
+Actual author paper describes 288 distinct people in 24 laboratory sessions, 48 stable six-person groups, 4 within-group arms No/Partial/Full/Endogenous, 40 periods each (expected full source original 46,080 person-rounds and 7,680 group-rounds). Person-group-period ROWS NOT ACQUIRED. Info No/Partial/Full treatment delivers **preceding round** group route occupation AFTER the simultaneous choice, unlike [Wijayaratna 2017](https://doi.org/10.1371/journal.pone.0184191), where CURRENT incident arrives at C only after first A–C choice. **Stage-specific 2017 P7 node C model is NONTRANSPORTABLE** as a literal second-stage policy here; transport only new source's correctly mapped congestion-welfare geometry.
+
+Source-specific 6-person network: k take road a, six-k b. Their realized own travel costs are k or 2(6-k), so source total system cost C(k)=k²+2(6−k)²=24+3(k−4)², min 24 at k=4. Exact attained mixed-policy demonstration for six people each with P(a)=2/3: exactly-four, independent and all-synchronous couplings yield expected group cost respectively 24, 28, 48. **Classical covariance/Fréchet identity, no human-data empirical measurement.** Exact 64-binary-profile linear program computes sharp welfare bounds for heterogeneous fixed marginals.
+
+## Another genuinely separate HUMAN route-choice dataset, but not valid live GROUP traffic welfare
+
+[Bode–Kemloh Wagoum–Codling (2015)](https://doi.org/10.5061/dryad.7m645) includes 464-human raw-data and processed-data public archive links; [official processed file README](https://datadryad.org/downloads/file_stream/858) was scraped and directly inspected. It describes 29 columns: human exit choice over time, distances, histories of simulated exit queues up to ten steps. All 89 other scene pedestrians are COMPUTER agents, NOT simultaneously route-choosing people. ZIP raw download via available remote execution attempted and returned HTTP 403; no actual 464-person raw files parsed or scored. This source may eventually support independent *choice dynamics* but never directly test six-person human congestion spillovers.
+
+Mak et al. 2015 offer a published route-vs-segment experiment but no independently downloaded participant dataset; Yu–Gao 2019 paper held but no new public person records; Ashraf 2023 source used to select RITHM 2.0–2.3 models, so no untouched confirmatory testing.
+
+## Frozen pre-raw-record evaluation protocol P8-GATE-01 (not globally publication-outcome-blind)
+
+1. **Data admission:** obtain genuinely original NQ per-participant session/group/treatment/period/route source and codebook, hash bytes and map names rather than pretending original native columns have known names. Require exactly 6 distinct real people each group-round, stable group membership across 40 periods and across four arms; ideally source design total 24 sessions / 48 stable groups / 192 group-treatment panels / 7680 group-rounds / 46080 individual choices. Structural validator refuses incomplete panels, conflicting person IDs, duplicate people, illegal A–C–B–D route labels.
+2. **Clock:** at time t, no model can know current group road counts; each traveler may recall own prior actions. Only info treatments receive past group occupancy to use at subsequent rounds. Analyst-only carryforward group counts may be used to benchmark forecasts but are not an implementable policy for No-arm travelers. Do not export 2017 current-accident or node-C stage coefficients.
+3. **Untuned frozen challengers** from original source cost: ideal structural source cost=24; prior observed group occupancy source cost (analyst baseline); previous-own-route Beta(4,2) marginals and independent expected source C; optional sharp coupling expectation bounds (NOT observed cost intervals).
+4. **Outcomes:** individual route-logloss (when full row model admitted), group traffic-cost MAE, **group-specific cumulative 40-round traffic cost forecast errors**, session-level comparisons and uncertainty with group nesting. Group welfare improvement is DISTINCT from person choice improvement; no source book payoff random-value transfer. Distinguish one-step teacher-forced prior from autonomous rollout of a new policy.
+5. **No source row, no score.** Current 18/18 tests exercised only exact mathematical examples and SYNTHETIC fixture cells. The published 2025 aggregate result is already known, so even later participant-raw results are not a wholly outcome-blind novel finding.
+
+**Harvest:** [P8 five-fragment source transfer adversarial record](https://app.notion.com/p/3f5ef561cf9281fea38cfbc043cabe48). **Canonical Notion:** [RITHM-2.6 P1–P8](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021).
+
+**STATUS:** EXTERNAL PUBLISHER/DATASET DISCOVERY PASS; OFFICIAL 2015 README PASS; USER-DATA 2025 6-PERSON ORIGINAL BYTES NOT OBTAINED; DRYAD ZIP HTTP403; CROSS-NETWORK WELFARE COUPLING ALGEBRA EXACT PASS; ORIGINAL EXTERNAL HUMAN GROUP COST SCORE NONE; POLICY TRANSFER NOT ADMISSIBLE; RITHM-2.6 OPEN.
