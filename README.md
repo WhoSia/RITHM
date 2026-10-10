@@ -79,6 +79,26 @@ See [P6 executed court and 2.0–2.6 retrospective](docs/rithm26_p6_initial_sele
 
 ---
 
+## New: P7 — legally staged initial-effect joint likelihood and external-welfare HARD HOLD (2026-10-11)
+
+**The P7 model LOST to the simpler P6 source-bound rival.** Six-session-heldout rounds 2–20, not the original 20-round P6 score. A shared Gaussian individual effect conditioned on initial upstream A–C choice and jointly integrated across observed upstream and eligible node-C choices is a working **Wooldridge-inspired** correlated-effect likelihood (9-node Gaussian quadrature); **NOT** an identified psychological habit effect, formally certified strict-exogeneity model, or counterfactual C-choice imputation.
+
+| Matched model | Upstream LL ↓ | Eligible C-stage LL ↓ | Final 3-route LL ↓ | Pre-incident group-cost MAE ↓ | Train-only shock-error-corrected MAE ↓ |
+|:--|--:|--:|--:|--:|--:|
+| P6 structural clock | .666175 | .546658 | .999065 | 12.860869 | 12.466254 |
+| P6 older-person history + last + initial/C eligibility | **.626311** | **.498962** | **.929999** | **12.695040** | **12.330329** |
+| P7 shared Gaussian person effect | .629784 | .509076 | .939630 | 12.921752 | 12.509932 |
+
+P7 final route log loss was worse on **6/6** sessions. The P7 joint group-cost adjusted MAE was worse on **5/6** sessions, mean difference +.17960 source cost units; tiny number of sessions and extensive prior model selection preclude a confirmatory inference. Optimizers all converged, independent gradient check and 30/30 combined regression tests passed. A more complicated latent effect has NO automatic predictive or causal value.
+
+**Exact node-C nonentrant selection cut:** from original flow (6,0,6), one hypothetical former A–B entrant rerouted A–C while remaining 11 people fixed has group cost 194 if she chooses C–D and 196 if C–B without incident, versus 194 or 215 with incident. No original A–B choice reveals her potential C–B/C–D response; at incident chance 1/5, attained policy-effect interval for this one-person hypothetical is [+2,+7.8] source group-cost units. Classical local nonidentification witness, NOT treatment effect estimation or novel universal theorem.
+
+**Independent group-welfare external confirmation remains BLOCKED.** The user acquired 10 key historical original papers; all were source-identified, renamed and moved from Drive 00_INTAKE to canonical 10_PAPERS with unchanged IDs. Original *papers* are NOT original person-by-round external source *data*. The same 2017 S2 six sessions have already guided iterative model development. Ashraf 2023 original 18-person data were already studied and have a different topology. Noussair–Qiao (2025, author revised 2026-07-24) publisher references supplemental data, but its raw independent participant group data were not fetched or tested here. **No new external transport score should be claimed.**
+
+See [P7 mathematical, numerical and source custody court](docs/rithm26_p7_joint_initial_conditions_external_transfer_20261011.md), [2.6 canonical Notion](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021) and [independent P7 Harvest record](https://app.notion.com/p/3f5ef561cf928127a7dbf7e7b6dde6d1). Full executable + JSON + tested evidence are available in the user-chat P7 ZIP without the raw original human XLSX or copyrighted papers. **RITHM-2.6 OPEN · P7 COMPLEXITY-PREDICTION FAIL · FRESH EXTERNAL GROUP-WELFARE HOLD · CAUSAL HABIT HOLD.**
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
