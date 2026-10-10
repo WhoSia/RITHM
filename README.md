@@ -60,6 +60,25 @@ The finite incident clock explicitly respects **4 incidents per 20 rounds**: for
 
 ---
 
+## New: P6 — source-clock-legal joint welfare and initial/selection rival (2026-10-11)
+
+Source: [original S2 2017 human route-choice workbook](https://docs.google.com/spreadsheets/d/1Kv-fWLa6kP_tv9PpgNDUYIV3oiC-zmRc/edit), 6 sessions, 144 humans, 5,760 routes, 3,511 actually eligible node-C responses, 480 group-rounds. Source XLSX excluded from repository. First A–B/A–C choice PRECEDES current accident signal; only online C entrants learn current accident at node C; a valid 4-in-20 finite shock quota is used for pre-incident forecasts.
+
+| Six-session-heldout model | Upstream LL ↓ | Eligible node-C LL ↓ | Pre-incident group-cost MAE independent ↓ | Group residual-corrected MAE ↓ |
+|---|---:|---:|---:|---:|
+| S0 structure/time | .666493 | .550630 | 12.807504 | 12.406005 |
+| Older choice history + last route | .629044 | .506456 | **12.681299** | 12.375989 |
+| Above + initial observed choice + real C eligibility history | **.628568** | .505493 | 12.694375 | **12.373013** |
+| Above + experienced cost history | .629135 | **.505210** | **12.818099 (FAIL)** | 12.502330 |
+
+**This is exploratory, not a full initial-conditions-corrected random-effects estimator.** The first-choice covariate is merely a predictive initial-state proxy. C-stage likelihood uses only actual entrants; full group forecast combines model-predicted conditional choices with an unverified observational transport assumption. Residual correction estimates a TRAIN-ONLY pair-residual adjustment and can absorb individual probability miscalibration; it is NOT a purified covariance estimate or causal social-coordination effect. Compared with a simpler train-only intercept calibration, the older+last model had MAE 12.624710 versus residual correction 12.375989; all six sessions improved, but these six sessions were also used throughout model development. No untouched confirmatory dataset remains. **Full P6 focused regression court: 17/17 PASS**; executable parser/code/JSON/test log are in a separate user chat archive, not auto-triggered by this documentation commit.
+
+**Novelty hard-stop:** [Yu & Gao (2019)](https://doi.org/10.1016/j.trc.2019.07.014) already treats learning contingent routing policies, memory and one-step versus full-trajectory forecasting. Generic dynamic fixed effects, true state dependence, social interaction and partial identification have established econometric/optimal-transport predecessors. The paper-worthy target is *new independently validated staged human-choice → aggregate congestion-welfare transfer*, not a claim to have invented habit-aware routing.
+
+See [P6 executed court and 2.0–2.6 retrospective](docs/rithm26_p6_initial_selection_jointwelfare_20261011.md), [RITHM-2.6 Notion canonical](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021) and [parallel Literature Harvest](https://app.notion.com/p/3f5ef561cf9281489be4c0d410e357dd). The full historical RITHM-2.0 README remains below. **RITHM-2.6 OPEN / CAUSAL HABIT HOLD / NEW GROUP WELFARE HOLD / NOVELTY HOLD.**
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
