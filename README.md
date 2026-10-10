@@ -1,4 +1,43 @@
-# RITHM-2.0
+# RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
+
+**Current scientific stage: RITHM-2.6 OPEN (2026-10-10).**  
+**When Guidance Changes Habits: Identifiable Route-Choice Learning, Congestion Externalities & Horizon-Dependent Welfare**
+
+RITHM asks how repeated individual route choice, learned cost, switching resistance, information timing and congestion feedback interact to shape collective welfare. The original traffic-habit question—not archive infrastructure or machine observability—is the scientific target. **OPEN ≠ identified human habit causality, identified guidance effects, or novel universal theorem.**
+
+## Current evidence: real 2017 staged human route-choice data
+
+The current experimental analysis uses the original [Wijayaratna et al. (2017)](https://doi.org/10.1371/journal.pone.0184191) six-session [S2 participant workbook](https://docs.google.com/spreadsheets/d/1Kv-fWLa6kP_tv9PpgNDUYIV3oiC-zmRc/edit) (**not redistributed here**): 144 participants, 12 independent groups of 12, 20 rounds per information condition, **5,760 recorded route decisions and 480 group-rounds**. Three sessions were no-information-first and three information-first.
+
+**The causal clock matters:** travelers choose A–B or A–C before seeing the current C–B incident; travelers on A–C learn the current incident **only at node C in the online-information condition**, before choosing C–B versus C–D. Everyone is informed of the previous round's outcomes afterward. Do not insert future incident information into a pre-departure model.
+
+The original private travel costs are c(ABD)=10+n1+n2, c(ACBD)=13+n2+19z, c(ACD)=22−n1 with n1+n2+n3=12 and actual incident z∈{0,1}. The group-cost identity is
+
+`C=264−24n1−9n2+2n1²+2n1n2+n2²+19zn2`.
+
+**P1 source warning:** in **6/480** group-rounds the source's sum of individual recorded Cost entries differs from count-derived group cost. The paper's reported aggregate costs **210.629 (no info) / 219.163 (info)** agree with count-derived means **210.6291667 / 219.1625**, *not* directly summed participant-cost means **210.8625 / 219.1250**. Preserve both outcomes; never silently alter the original source.
+
+## RITHM-2.6 initial behavioral prediction court (P1–P2)
+
+Six **leave-one-session-out** folds; regularized logistic models evaluated separately for (A) upstream A–C choice and (C) downstream C–B choice *conditional on entering A–C*:
+
+| Nested information set | Upstream log loss ↓ | Node-C log loss ↓ |
+|:--|--:|--:|
+| S0: past public state + experiment clock | 0.666493 | 0.550630 |
+| S1: S0 + individual's previous routes and streak | **0.653405** | 0.524417 |
+| S2: S1 + experienced individual/relative costs | 0.653507 | **0.524148** |
+
+The independent-individual group-cost diagnostic (under **cross-person conditional independence and unvalidated hypothetical-node-C extrapolation**) has held-out MAE S0 **9.77335**, S1 **9.70436**, S2 **9.84203**. Personal history predicts individual decisions better, but adding experience history **worsens** the group-welfare projection. Group MAE uses the **realized shock for ex-post cost assessment**; it is not a genuinely pre-shock welfare forecast.
+
+This is exploratory prediction from actual people, **not** an estimate that memory causes route choices or that changing public guidance causes group welfare. Group correlation, no-info incident ignorance, dynamic adaptation and treatment order remain central rivals. Preserve the original RITHM S02.6 behavioral-PHASE forecasting defeat and the 2.5-D negative memory-necessity result.
+
+Read the [full 2.6 Notion source-bound research court](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021) and the [P1–P2 concise GitHub court](docs/rithm26_source_bound_behavior_20261010.md). The complete read-only source parser, exploratory prediction script, results JSON and eight local contract tests were produced as a **chat-local research ZIP**, not as a repository CI dependency. Full source XLSX remains only in the cited Drive.
+
+**Version policy:** main-only permanent branch; no Actions for exploratory work; source authority and genuine held-out group welfare take precedence over version proliferation. **RITHM-2.6 OPEN · HABIT-CAUSALITY HOLD · GROUP-DEPENDENCE HOLD · INTERVENTION-WELFARE HOLD.**
+
+---
+
+## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
 
