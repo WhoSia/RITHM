@@ -5,14 +5,32 @@ from decimal import Decimal, ROUND_HALF_UP
 import json
 import unittest
 from pathlib import Path
-import numpy as np
-import pandas as pd
-from rithm23_welfare_bridge import read_model_rounds, decomp, predicted_path_cost, predicted_social_cost
+try:
+    import numpy as np
+    import pandas as pd
+    from rithm23_welfare_bridge import read_model_rounds, decomp, predicted_path_cost, predicted_social_cost
+    HAS_ANALYSIS_DEPS = True
+except ImportError:
+    HAS_ANALYSIS_DEPS = False
+
+class NoDependencyAlgebraTests(unittest.TestCase):
+    def test_network_identity_stdlib(self):
+        # Always runnable in the legacy base-Python Actions environment.
+        for n1 in range(13):
+            for n2 in range(13-n1):
+                n3 = 12-n1-n2
+                for z in (0,1):
+                    direct = n1*(10+n1+n2) + n2*(13+n2+19*z) + n3*(22-n1)
+                    poly = 264-24*n1-9*n2+2*n1*n1+2*n1*n2+n2*n2+19*z*n2
+                    self.assertEqual(direct,poly)
+    def test_marginals_do_not_identify_network_cost_stdlib(self):
+        # Twelve people choose road 1 or 3 with fixed marginal p=1/2.
+        self.assertEqual([192+2*v for v in (0,3,36)],[192,198,264])
 
 D=Path(__file__).parent
 ROOT=D.parent # in standalone package the 2023 Ashraf author CSV is not bundled
 
-
+@unittest.skipUnless(HAS_ANALYSIS_DEPS, "optional scientific packages numpy and pandas not installed")
 class ReconciliationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
