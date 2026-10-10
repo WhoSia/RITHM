@@ -35,6 +35,16 @@ Read the [full 2.6 Notion source-bound research court](https://app.notion.com/p/
 
 **Version policy:** main-only permanent branch; no Actions for exploratory work; source authority and genuine held-out group welfare take precedence over version proliferation. **RITHM-2.6 OPEN · HABIT-CAUSALITY HOLD · GROUP-DEPENDENCE HOLD · INTERVENTION-WELFARE HOLD.**
 
+## New: P5 — stable personal propensity versus recent action and observed group covariance
+
+The [P5 source-bound human panel audit](docs/rithm26_p5_state_dependence_and_covariance_20261010.md) makes a new, narrower comparison of **restricted** individual preference models and observed route-change persistence. In six session-heldout folds with source-valid information timing, an online empirical-Bayes personal-propensity predictor (prior strength 6) scored 0.626045 upstream and 0.519175 conditional at node C; adding a *training-selected* last-action term scored **0.626267 (worse)** upstream and **0.513161 (better)** at C. This is NOT an identified dynamic random-effects causal estimator, and Stage C's “last” means last previously eligible C decision, which may be more than one day ago. The classical dynamic-panel *initial conditions problem* remains OPEN.
+
+The original twelve-driver system cost admits an **exact** conditional mean/count-variance/pairwise-covariance decomposition. On the real 480-group-round S2 source panels (holding shock strata separate), original-paper group mean cost INFO−BLIND = **+8.533333** comprises **+8.219531** due to mean-count cost, **−0.619531** from individual dispersion, and **+0.933333** from cross-person covariances. Both absolute covariance contributions are **negative** (−1.334375 blind, −0.401042 information); these observations do NOT prove information causally weakened coordination. Across six sessions the exploratory paired covariance contrast has an approximate interval spanning zero.
+
+A fixed-margin stress test preserved each driver's **total A–C choices** and each group-date's **A–C occupancy**, and randomized only the intertemporal binary assignment through 2×2 switches. The actual same-route transition count modestly exceeded Monte Carlo null means in the information arm; TWO seeds gave informative but sampling/mixing-sensitive Monte Carlo upper tails ≈0.020 and 0.042. These are NOT exact randomization p-values and do NOT identify habit causality.
+
+**Hard interpretation ceiling:** the data support descriptive personal propensity and temporal-order information, plus an exact algebraic welfare decomposition. They do not yet identify innate traits, causal route inertia, learned response, cross-person policy spillovers, or a superior guidance policy. Original S2 raw participant rows remain in Drive only. No new GitHub Actions have been run for P5.
+
 ## New: source-bound personal-persistence rivalry and pre-incident welfare (P3–P4)
 
 The [P3–P4 original-human-choice research court](docs/rithm26_p3_p4_history_and_clock_20261010.md) goes beyond “previous route predicts next route” by separating an individual's **older revealed route frequency (up to t−2)** from their immediately previous route (t−1). Six held-out sessions with the original staged A–C → C–B/C–D information clock yield:
