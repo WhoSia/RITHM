@@ -117,6 +117,23 @@ See [P7 mathematical, numerical and source custody court](docs/rithm26_p7_joint_
 
 ---
 
+## P8-E2 — Real archived Lyon source recovered; historical evidence corrected (2026-10-11)
+
+**Source recovery matters more than an unnecessary new agency inquiry.** The original author [Figshare 2019 Lyon choice experiment](https://doi.org/10.6084/m9.figshare.9791285) had already been preserved in [RITHM's canonical Drive source ZIP](https://drive.google.com/file/d/1E7kuUOqEZa5lw6z5OenkMj9sm4byR804/view) since 2026-08-31. Its version-2 original CSV and data dictionary are now actually read and matched by published **MD5 checksums**. The *specific preserved subset* has **10,002 alternative rows = 3,334 3-route decisions**, **483 participant IDs**, **30 ODs**; t1/no information 1,069, t3/visible travel-time information 2,265. Original raw data not copied into GitHub. A 2017 PLOS node-C policy, Korean aggregated VMS/VDS flows, and 2019 Lyon alternative route choices are DIFFERENT source geometries.
+
+**A historical-error correction:** Lyon was ALREADY analyzed in old RITHM origin M05.2, M05.133R, S02.7 and S02.8. Thus this is exploratory *reanalysis*, NOT untouched external confirmation. M05.133R retained a non-significant history-versus-stable-frailty challenge; S02.7 allowed Lyon as human choice evidence but NOT collective-welfare validation.
+
+| Fixed 5-fold out-of-sample logloss ↓ | Person-disjoint | OD-disjoint |
+|---|---:|---:|
+| Route label + experiment arm prior | 1.05768 | 1.06108 |
+| Add route geometry and **only actually visible** travel times | 1.02378 | 1.02917 |
+| Add last and older **same participant × same OD** routes | **0.98886** | **0.99325** |
+
+**Scientific distinction:** A previous `R1` chosen for another OD is NOT the same actual road; cross-OD route-label 'inertia' would be an erroneous interpretation. Train/test splits separate people or 30 ODs, and observed previous actions in the heldout stream are teacher-forced sequential history (not hidden future data). For t1, TT_INFO appears in the source CSV but is explicitly **MASKED** in the estimator since no participant received it. Improvements 5/5 folds in both designs are descriptive; **stable individual route preferences versus causal habit remain unidentified**, there is no original simultaneous real human group-cost outcome and no new independent welfare score. [Full P8-E2 source-data court](docs/rithm26_p8_e2_recovered_lyon_source_20261011.md) · [RITHM-2.6 scientific Notion court](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021). Reproduction source/tests/aggregate score JSON are delivered separately as chat archive, not as new GitHub Actions dependencies. **RITHM-2.6 OPEN / HUMAN CHOICE REANALYSIS PASS / NEW HUMAN GROUP WELFARE HOLD / CAUSAL HABIT HOLD.**
+
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
