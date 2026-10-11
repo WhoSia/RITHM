@@ -134,6 +134,27 @@ See [P7 mathematical, numerical and source custody court](docs/rithm26_p7_joint_
 
 ---
 
+## P9 — Within-OD stationary preference versus recency, plus Korean public road-flow admission (2026-10-11)
+
+**A real negative/rival model competition:** 2019 author Lyon source has 3,334 choices / 483 people / 30 ODs. This source is ALREADY EXPOSED to RITHM since Aug 2026 (M05.2, M05.133R, S02.7/8); numbers below are exploratory reanalysis and DO NOT constitute untouched independent human or group-welfare validation. Source [CC BY Figshare](https://doi.org/10.6084/m9.figshare.9791285) · [existing original raw ZIP in Drive](https://drive.google.com/file/d/1E7kuUOqEZa5lw6z5OenkMj9sm4byR804/view).
+
+| Same three-route softmax, fixed source-clock-legal features | Person-heldout 5-fold logloss ↓ | OD-heldout 5-fold logloss ↓ |
+|---|---:|---:|
+| M2 route geometry + t3-only actually disclosed time | 1.023783 | 1.029168 |
+| **S stationary taste proxy**: same person×OD prior choice share | **.987709** | **.992261** |
+| L last same-person×OD choice only | 1.000011 | 1.004431 |
+| O older history EXCLUDING the last choice | 1.002330 | 1.007627 |
+| **OL older history + last separated** | **.987424** | **.991844** |
+| SL entire prefix share PLUS extra last | .988059 | .992620 |
+
+The *incremental* separate-recency gain S→OL is **+0.000285 person / +0.000417 OD** LL, 3 of 5 fold gains each; illustrative 2500-bootstrap intervals resampling 483 people **[−.001146,+.001722]**, resampling 30 ODs **[−.001287,+.002277]**, both include zero. SL direct extra last indicator even worsens S. S is a **HISTORY-BASED prefix taste proxy**, NOT a causal immutable individual trait; *psychological habit and true state dependence remain unidentified*. Within named person×OD actual adjacent stays 837 of 1567, exact choice-count-constrained exchange expectation 825.153, 2500 shuffle two-sided diagnostic p≈.274 (cannot control changing travel-time and info). NO causal finding.
+
+**Public Korean source contact-free, but bounded:** Verified actual [한국도로공사 2025 3,100-row section×vehicle×month CSV](https://www.data.go.kr/data/15062523/fileData.do) metadata says **no-login file download**, but raw full CSV was inaccessible from this runtime. Public-page preview's **FIRST FOUR ROWS ONLY** comprise 서울~신갈JC 2025 small/medium/large/subtotal ×12 months; all 12 class sums match, day-weighted published annual mean **199,479.756 →199,480 vehicles/day**. Nov 206,330 vs Jan 184,436 is a **flow-volume** contrast, NOT measured congestion speed, system travel-time cost, guide-effect or group-welfare score. For full Korean time series the only manual need is one original full 2025 CSV; for fine-grain congestion, original continuous [five-minute VDS speed/count/occupancy](https://www.bigdata-transportation.kr/frn/prdt/detail?prdtId=PRDTNUM_000000000024), optionally with [detector-zone mapping](https://www.data.go.kr/data/15087182/fileData.do). Agency emails remain lowest-priority and **none were sent**. NQ English author permission request user-reported sent independently.
+
+**Tests**: 18/18 local source/clock/rounding/cluster-contract tests PASS. [Full P9 science and acquisition court](docs/rithm26_p9_stable_taste_recent_choice_korean_flow_20261011.md), [Notion canonical P1–P9](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021), [P9 parallel Harvest](https://app.notion.com/p/3f6ef561cf9281d8a536ef973546a15c). Source code, aggregated result JSON, public **preview-only** CSV, integrity manifest and tests in separate chat ZIP `RITHM-2.6_P9_Trait_Recency_and_Korea_Public_Flow_20261011.zip`, SHA256 `987ab7b639804590d19697d33fcda251445870f5fcce6616ac4356e53b3e13b5`. No original human participant table in ZIP. **RITHM-2.6 OPEN; incremental recent effect HOLD; true external group welfare HOLD.**
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
