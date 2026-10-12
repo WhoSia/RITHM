@@ -183,6 +183,18 @@ The *incremental* separate-recency gain S→OL is **+0.000285 person / +0.000417
 
 ---
 
+## P12 — Project-source custody, large-CSV sharding and real 2022 Seoul sensor pilot (2026-10-12)
+
+**Already completed with connected Drive:** the actual `00_INTAKE — Literature Radar` folder is now **EMPTY** after 28 direct entries (3 source CSVs, one EvoNOMOS archive folder containing 55 direct descendants and nested history, and project-specific source papers/handoffs) were MOVED WITHOUT DELETIONS, preserving file IDs. The whole original EvoNOMOS archive resides under `EvoNOMOS/06_Legacy_Runner_and_Artifacts`; original source hierarchy was not flattened. Other materials were assigned to established NOMOS/MQR/KSGT/RITHM/EvoNOMOS folder types after primary-title examination. RITHM source corpus [P11_2025_Seoul_Expressway_5min_Source](https://drive.google.com/drive/folders/1cmkEb841P5MIf4kKhl1DTBg2V3DNcH30) holds the existing original 2025 H1 **707,465,536 B**, 2025 H2 **709,564,285 B**, and historical small 2022 CSV **6,326,958 B**.
+
+**Actual Google Drive MCP limitation verified:** trying streamed H1 download fails HTTP **413**: source 707465536 bytes exceeds connector **268435456-byte** limit. This is NOT a missing CSV and does NOT require an agency email. A tested [row-safe user-side streaming shard program](tools/traffic_sources/split_csv_stream.py) outputs original-order, UTF-8 BOM CSV parts capped at **45 MB** including repeated header and checksum/row-count manifest. Source encoding auto-detects UTF8 or CP949. When uploaded into `00_INTAKE`, verify all shard hashes/rows, then move them into the existing RITHM dataset folder. Original 700MB authoritative CSVs remain untouched.
+
+**Real historical original ingested and checked:** small CSV is **2022-08-01 ONE DAY**, not a 2024 or 2025 longitudinal cohort: CP949, SHA256 `6755647fd5b73b340693898bf9ff4bd8f0320bc540087f2c5135dee3af6b768e`, **56,732** actual records across **197** distinct source links, 288 nominal five-minute bins; four missing link × bin combinations. **5,760** original count cells blank on 20 entire links; **8,640** occupancy cells blank on 30 entire links; ZERO missing speed. Missing IS NOT zero. Matched within source links, 07h vs 01h hourly speed median difference **−17.625 km/h**, 178/197 link differences negative (one day descriptive). Posted source length units have not been certified: **no fabricated vehicle-hour social cost**. One day forbids P11's prospective 21-day training + 7-day test. Source original shard program actually passed original 56,732-record 7-part 1 MB smoke run and independent sha/header verifier; quote/newline case tested.
+
+**Science and reproducibility:** Real one-day read/missingness proof is observational; no truly external 2025 high-frequency group-welfare score and no causal guidance response. The source audit and code/tests are preserved in conversation-local ZIP, SHA256 `6dd36b12a36535a67d4587a693e476af805435f8ae7d76fd878b0795ea1d02ef`; see [P12 scientific handoff](docs/rithm26_p12_source_custody_and_seoul_2022.md). No automatic CI or bot-authored commits. **RITHM-2.6 OPEN.**
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
