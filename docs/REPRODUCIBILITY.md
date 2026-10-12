@@ -31,7 +31,7 @@ On PowerShell use `$env:PYTHONPATH = "src"` before the Python commands. The 2.3 
 From repo root, with no synthetic fixtures beyond tests and no source file for the pure theory:
 
 ```bash
-PYTHONPATH=src python -m unittest tests.test_p17_phase_network -v
+PYTHONPATH=src python -m unittest discover -s tests -p 'test_p17_phase_network.py' -v
 ```
 
 If running the six REAL 2025 source days, FIRST verify original shard hashes against the two user-owned manifests using the P15 source gate, then:
