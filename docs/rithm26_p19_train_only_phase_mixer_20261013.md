@@ -24,6 +24,9 @@ The added training freedom gains **0.382445 vehicles/10min (1.096%)** over P18 l
 
 Exploratory month-block bootstrap (5,000 resamples of 12 repeated months) gives a relative improvement range **0.680%–1.564% versus P18 last10**, and **−0.143%–0.315% versus simple fixed .75**, the latter including zero. Same links recur throughout the year. This is **not confirmatory statistical significance, nor a newly untouched source test**; 2025 source and its period-two anomaly were previously inspected.
 
+
+**Selection-history correction:** The fixed alpha=.75 comparison was ADDED as an adversarial rival after observing the initial train-only adaptive result, and the 2025 source was already exposed in P13–P18. It is a valuable simplicity/overfitting stress test, but NOT a prespecified untouched confirmatory outcome. The adaptive grid itself was specified without using evaluation labels in its coefficient selection, which is a narrower guarantee.
+
 ## Phase invariance and human-welfare impossibility
 
 For a stipulated unchanged source T=q0+q1, arbitrary within-pair transfer (q0+δ,q1−δ) leaves T invariant, so forecasting entirely from preceding complete T history is algebraically invariant to that SOURCE nuisance. The double-last5 rival is not invariant. This conditional property does not certify actual latent physical count if the published 10-minute total is biased. City VOL/SPD/OCC may share an unresolved observation operator; no original calibrated independent sensor, actual driver trajectories, measured individual travel times, route-choice interventions or VMS treatment. The 2025 10-minute forecast is a SENSOR forecast, not an effect of motorist information, not physical welfare and not a justification for traffic control.
