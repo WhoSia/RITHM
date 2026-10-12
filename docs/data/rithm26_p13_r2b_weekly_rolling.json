@@ -1,0 +1,61 @@
+{
+  "source": "real 2025 Seoul expressway source",
+  "shards": {
+    "H1": 19,
+    "H2": 19,
+    "all_sha256_verified": true,
+    "original_pretranscode_byte_sha_reverifiable": false
+  },
+  "rows": {
+    "H1": 9176088,
+    "H2": 9244619,
+    "all": 18420707,
+    "links": 178
+  },
+  "zero_data_dates": [
+    "2025-06-09",
+    "2025-07-10",
+    "2025-07-11",
+    "2025-07-15"
+  ],
+  "candidate_test_weeks": 49,
+  "excluded_for_entire_date_missing": 8,
+  "accepted_test_weeks": 41,
+  "matched_target_rows": 14605993,
+  "methods": [
+    "calendar_train_only",
+    "last5_observed",
+    "training_fit_two_lag"
+  ],
+  "mae": {
+    "speed_kmh": [
+      6.736392583678494,
+      2.6802483353203033,
+      2.666550433723335
+    ],
+    "flow_vehicles_per_5min": [
+      38.40702535583852,
+      21.246511142563193,
+      19.064057219355096
+    ],
+    "q_div_speed_proxy_vehicle_hour_per_km": [
+      1.3961154631717267,
+      0.5819143858655828,
+      0.5488231093823611
+    ]
+  },
+  "volume_april14to20": {
+    "calendar": 46.4926,
+    "last5": 60.5079,
+    "train_smoothed": 39.4184
+  },
+  "smoothing_week_wins_over_last5": {
+    "speed": 37,
+    "flow": 41,
+    "proxy": 41
+  },
+  "empirical_human_welfare_score": null,
+  "causal_guidance_effect": null,
+  "complete_local_test_suite": "20/20 PASS",
+  "reproduction_zip_sha256": "d0f7bcecfbe891ab0daa468402d6cefb1386517823daf195314db19bd9f9828e"
+}

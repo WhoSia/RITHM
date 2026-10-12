@@ -215,6 +215,16 @@ Runnable GitHub annual source: tools/traffic_sources/p13_annual.py ; tests/test_
 
 ---
 
+## P13-R2b — Full 2025 41-week rolling sensor prediction (2026-10-12)
+
+**Different and complementary to P13-R2, not an independent experiment.** Original 38/38 SHA256-verified 2025 UTF8-BOM Seoul source shards; 18,420,707 records, 178 native link IDs, zero duplicate link-time keys; four fully missing days (Jun 9; Jul 10, 11, 15) are blocked, never zero-filled. A 21d train/7d forward-test rolling calendar from Jan22 to Dec30 yields 49 candidate weeks, 8 blocked, **41** evaluated; tests are nonoverlapping while training periods overlap, with **14,605,993** identical source sensor/bin targets for each model.
+
+Weekly observation-weighted speed MAE km/h, calendar/prior5/trained two-lag smoothing: **6.7364 / 2.6802 / 2.6666**. Flow MAE vehicles/5min: **38.4070 / 21.2465 / 19.0641**. Proxy q/v (vehicle-hours/km per 5min) MAE: **1.3961 / 0.5819 / 0.5488**. Smoothing beats last5 in 37/41 speed weeks, 41/41 flow and proxy weeks. Its fitted lag-difference coefficient is usually NEGATIVE for volume: a smoothing effect, NOT positive trend extrapolation. Crucial April14–20 falsifier: prior5 volume MAE 60.508 WORSE than fixed weekday/clock 46.493, but train-fit two-lag smoothing 39.418. Earlier P13-R2 used a different 13 block/9 valid-week strict 28d portfolio and therefore differs in denominators; neither is externally untouched. Seven-day test week is a sequence of one-step forecasts receiving the latest observed five-minute state, NOT a 7-day policy forecast or human welfare evaluation.
+
+[Scientific audit](docs/rithm26_p13_r2b_weekly_rolling_crosscheck.md) · [Aggregate summary JSON](docs/data/rithm26_p13_r2b_weekly_rolling.json) · [GitHub source summary program](tools/traffic_sources/p13_weekly_rolling_report.py). Original completed C++17 source walker and actual 20/20 local source contracts, per-link aggregates/manifests/run logs are in verified chat ZIP SHA256 d0f7bcecfbe891ab0daa468402d6cefb1386517823daf195314db19bd9f9828e. Gigabyte original human-free sensor source stays in Drive. Actual individual group travel time, habitual human decisions, VMS causal policy effect remain UNIDENTIFIED. RITHM-2.6 OPEN.
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
