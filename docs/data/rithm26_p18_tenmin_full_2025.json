@@ -1,0 +1,140 @@
+{
+  "source_publisher": "Seoul City Open Data Urban Expressways 2025",
+  "ref_scope": "source-exposed historical retrospective 21day train/7day future source nowcast",
+  "source_file_shards": 38,
+  "source_shard_sha256_integrity_pass": true,
+  "h1_rows": 9176088,
+  "h2_rows": 9244619,
+  "full_2025_source_rows": 18420707,
+  "source_directed_link_id_pairs": 178,
+  "calendar_2025_observed_days": 361,
+  "whole_day_blackouts": [
+    "2025-06-09",
+    "2025-07-10",
+    "2025-07-11",
+    "2025-07-15"
+  ],
+  "source_row_absence_vs_full_178_by_365_by_288": 290653,
+  "q_blank_source_cells": 152,
+  "occ_blank_source_cells": 52,
+  "complete_real_10min_pairs": 9196409,
+  "matched_10min_test_rows": 2136298,
+  "unit": "source measured section-passage vehicles / 10minutes",
+  "models_weighted_MAE": {
+    "calendar": 67.64949248653512,
+    "last10": 34.90020838709757,
+    "twice_last5": 39.269881215254635,
+    "last20avg": 36.75397533704546
+  },
+  "monthly_columns": [
+    "month",
+    "matched_10min_rows",
+    "calendar_MAE",
+    "last10_MAE",
+    "twice_last5_MAE",
+    "last20avg_MAE"
+  ],
+  "monthly": [
+    [
+      1,
+      179416,
+      74.91449201854907,
+      31.764814376831055,
+      33.98042678833008,
+      33.671424865722656
+    ],
+    [
+      2,
+      179360,
+      44.227715209634255,
+      33.315738677978516,
+      35.31935119628906,
+      35.97500991821289
+    ],
+    [
+      3,
+      178906,
+      100.36690776161784,
+      54.061790466308594,
+      82.60588073730469,
+      52.07018280029297
+    ],
+    [
+      4,
+      179173,
+      56.9138932763307,
+      33.904239654541016,
+      35.79449462890625,
+      36.65961837768555
+    ],
+    [
+      5,
+      164599,
+      75.63965455440191,
+      41.05344009399414,
+      44.8724365234375,
+      42.35090255737305
+    ],
+    [
+      6,
+      179400,
+      47.11065496098105,
+      33.406795501708984,
+      35.161075592041016,
+      36.23656463623047
+    ],
+    [
+      7,
+      179316,
+      46.93437841575766,
+      33.39194869995117,
+      35.20182418823242,
+      36.17691421508789
+    ],
+    [
+      8,
+      179331,
+      48.42382521705673,
+      36.92554473876953,
+      40.555931091308594,
+      38.557464599609375
+    ],
+    [
+      9,
+      179296,
+      56.90732643226843,
+      34.18529510498047,
+      35.74559783935547,
+      37.16896057128906
+    ],
+    [
+      10,
+      179413,
+      109.72810498681812,
+      28.86888313293457,
+      30.540451049804688,
+      30.74936866760254
+    ],
+    [
+      11,
+      178880,
+      32.234948009838995,
+      26.00900650024414,
+      27.469432830810547,
+      27.0501766204834
+    ],
+    [
+      12,
+      179208,
+      119.04784384625687,
+      32.4457893371582,
+      34.52632141113281,
+      34.85597610473633
+    ]
+  ],
+  "no_new_source_or_independent_detector": true,
+  "real_human_welfare_identified": false,
+  "operator_hypothesis": "T=q_even+q_odd invariant to within-pair signed zero-sum transfer; source T remains observationally defined",
+  "tests_local": "P13 9 PASS + P18 7 PASS; GitHub test code not run by Actions",
+  "source_artifact_sha256": "342c4f76b0976e02eadffb80d48c79cabf99086416812729333056126e5cffc1"
+}
