@@ -155,6 +155,20 @@ The *incremental* separate-recency gain S→OL is **+0.000285 person / +0.000417
 
 ---
 
+## P10 — Real 2025 Korean Expressway full section-month source (2026-10-12)
+
+**SOURCE DATA MOVED, INGESTED AND ANALYZED; NOT WELFARE.** The user-supplied [Korea Expressway 2025 original CSV](https://drive.google.com/file/d/1FZ6UtY50W6r6Fy6wgmDePHrfqK9foGpx/view) is now in the existing Google Drive [RITHM](https://drive.google.com/drive/folders/1jn7NxAXAKSvBW64IREX3dB4EC81OuWhu) folder (original file ID retained, source parent removed, verified). Government [original annual official data](https://www.data.go.kr/data/15062523/fileData.do), SHA256 `8b76bb06a2d874bddce5d0fd2885154f72fdcffc0a14f8e9163847d0ff030292`, **3100** source rows = **775** consecutive 4-vehicle-type blocks.
+
+- For every block, all 12 monthly source `small + medium + large = subtotal` exactly, 0 blank numeric cells. **715** blocks have positive counts all 12 months; **40** partial with a zero month; **20** all-zero months. The latter 60 are quarantined from complete-year trends. Annual AADT reconstitution error in 715 complete blocks is at most **1.447 vehicles/day**; incomplete/horizon-changing blocks do NOT match 365-day calendar zero-imputation and source zero semantics are unverified.
+- Spatial keys unobserved: **766 different label strings** for 775 blocks. `~` occurs 9 times; `서세종~남세종` repeats twice with all four original source rows identical (block ids 326/332). The trace block ID is file order, not a physical unique road-link ID, and source rows were NOT deduplicated or fabricated.
+- Within the 715 complete blocks, **467/715 peak in October**, **415/715 trough in February**. Median section traffic as fraction of its source AADT: October **110.872%**, February **90.167%**. Across same 715 entry IDs, October-to-February ratio of summed section-level average daily counts **+19.561%** (this is a comparison index, NOT number of unique national vehicles). Excluding suspect duplicated block 332 has only tiny effect **+19.562%**, but not geolocational duplicate certification.
+- Among **706/715** source full-year sections with positive 2024 source AADT, 2025 source annual change positive for **294** and negative for **412**, section median **−0.686%**, arithmetic mean **+3.816%**, ratio of same-section yearly AADT sums **−0.435%**; these are descriptive without source link-history or speed. Repeated vehicles across adjacent sections preclude describing sum as Korean individual drivers or VKT.
+- Complete [P10 full-source scientific court](docs/rithm26_p10_korea_2025_section_month_fullsource_20261012.md), [RITHM 2.6 Notion canonical](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021). Local chat zip `RITHM-2.6_P10_Korea_2025_Full_SectionMonth_Court_20261012.zip` SHA256 `bc56f1bf65d289097427ef115adb8b7d694b0a940454077df3623d45f186d405` includes tested source parser, Excel evidence review workbook with real formulas, source-section aggregate CSV preserving all 775, machine output, 18/18 real-source checks and full report; raw government CSV remains Drive-only.
+
+**P10 PASS:** full 2025 source reconstruction and bounded seasonality. **P10 HOLD:** VDS speeds, individual route-choice, VMS message exposure, incident exogeneity, actual traffic welfare and any causal information effect. Annual 2019–2024 versions exist on government's source page but raw bytes have NOT been acquired or measured in this court. RITHM-2.6 OPEN.
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
