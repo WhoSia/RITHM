@@ -23,9 +23,9 @@ class RootSourceLayoutContract(unittest.TestCase):
         self.assertTrue((ROOT/"docs"/"REPRODUCIBILITY.md").is_file())
 
     def test_exact_previous_readme_blob_preserved(self):
-        # Git blob framing: sha1("blob "+length+"\\0"+exact bytes).
+        # Git blob framing: sha1("blob "+length+NUL+exact bytes).
         raw=(ROOT/"docs"/"PROJECT_HISTORY_20261012.md").read_bytes()
-        obj=b"blob "+str(len(raw)).encode()+b"\\0"+raw
+        obj=b"blob "+str(len(raw)).encode()+bytes([0])+raw
         self.assertEqual(hashlib.sha1(obj).hexdigest(),
                          OLD_ROOT_README_GIT_BLOB)
 
