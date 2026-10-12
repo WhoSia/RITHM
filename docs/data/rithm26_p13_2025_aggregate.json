@@ -1,0 +1,70 @@
+{
+  "project": "RITHM-2.6 P13",
+  "original_half_rows": {
+    "H1": 9176088,
+    "H2": 9244619
+  },
+  "actual_utf8_shards_sha_verified": 38,
+  "total_logical_rows": 18420707,
+  "source_observed_days": 361,
+  "missing_calendar_dates": [
+    "2025-06-09",
+    "2025-07-10",
+    "2025-07-11",
+    "2025-07-15"
+  ],
+  "old_cp949_original_sha_recheck_possible": false,
+  "source_courts": [
+    {
+      "train": "2025-01-01/2025-01-21",
+      "test": "2025-01-22/2025-01-28",
+      "links": 178,
+      "matched": 358663,
+      "clock": {
+        "speedMAE": 7.44583,
+        "flowMAE": 39.69303,
+        "proxyMAE": 1.60088
+      },
+      "prior5": {
+        "speedMAE": 2.43879,
+        "flowMAE": 17.98506,
+        "proxyMAE": 0.47555
+      }
+    },
+    {
+      "train": "2025-09-12/2025-10-02",
+      "test": "2025-10-03/2025-10-09",
+      "links": 178,
+      "matched": 358463,
+      "clock": {
+        "speedMAE": 12.58031,
+        "flowMAE": 53.2448,
+        "proxyMAE": 2.54294
+      },
+      "prior5": {
+        "speedMAE": 2.3772,
+        "flowMAE": 16.92545,
+        "proxyMAE": 0.43564
+      }
+    },
+    {
+      "train": "2025-10-03/2025-10-23",
+      "test": "2025-10-24/2025-10-30",
+      "links": 178,
+      "matched": 358621,
+      "clock": {
+        "speedMAE": 7.55433,
+        "flowMAE": 49.52468,
+        "proxyMAE": 1.50212
+      },
+      "prior5": {
+        "speedMAE": 2.93736,
+        "flowMAE": 16.24071,
+        "proxyMAE": 0.50097
+      },
+      "post_hoc_exploratory": true
+    }
+  ],
+  "human_welfare_observed": false,
+  "causal_information_policy_effect_observed": false
+}

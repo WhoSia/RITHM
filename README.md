@@ -195,6 +195,17 @@ The *incremental* separate-recency gain S→OL is **+0.000285 person / +0.000417
 
 ---
 
+## New: P13 — full original 2025 Seoul sensor shard fixity & actual 21d+7d forward benchmark (2026-10-12)
+
+**RITHM-2.6 OPEN.** All original 2025 Seoul city five-minute source **38/38 user-preserved UTF-8 BOM shards**, 18,420,707 real observations, had actual shard SHA-256/record-count and native nine-column chronological checks. **Not** 365 source days: 4 completely unrecorded dates **June 9 / July 10–11 / July 15**. The CP949 originals were deleted to save Drive storage after UTF-8 transcoding; their original binary SHA cannot be recomputed from the shards. [Verified source custody](https://drive.google.com/drive/folders/1cmkEb841P5MIf4kKhl1DTBg2V3DNcH30).
+
+Actual link-level **future sensor** source tests use 21 train-days then 7 test-days, 178 stable source IDs, comparison on same actual five-minute t bins. January Jan22–28: clock-only speed MAE **7.446 km/h** vs actually observed t−5 source state **2.439** (358,663 paired bins). October Chuseok Oct3–9: **12.580 vs 2.377** (358,463). Exploratory posthoc normal Oct24–30 **7.554 vs 2.937** (358,621). Volume/flow and q/v error improve similarly; q/v is **vehicle-hour/km sensor PROXY**, **not** individual/group true travel-time welfare. Source 5min persistence error increases at 15/30/60/120 min horizons; simple t−5 is a demanding prospective challenger. Neither human route-choice causality nor VMS information effect estimated.
+
+[Executable P13 source CLI](tools/traffic_sources/p13_2025_forward.py) · [Detailed scientific source court](docs/rithm26_p13_seoul_2025_verified_highfreq.md) · [Machine summary JSON](docs/data/rithm26_p13_2025_aggregate.json). Original 38 data chunks and their unmodified Drive IDs remain external to GitHub; full independent locally tested code, 15/15 source/mathematical tests and per-link results in accompanying chat ZIP. No bot contributor/Actions via docs commit (`[skip ci]`).
+
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
