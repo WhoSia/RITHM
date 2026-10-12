@@ -169,6 +169,20 @@ The *incremental* separate-recency gain S→OL is **+0.000285 person / +0.000417
 
 ---
 
+## P11 — High-frequency congestion source joinability and true-welfare nonidentification (2026-10-12)
+
+**P11 VERIFIED EXECUTION: 20/20 source-contract/math/synthetic temporal tests; 2025 Korea Expressway original CSV unchanged and SHA checked. NO NEW 5-MIN ORIGINAL LINK DATA OBTAINED AND NO EXTERNAL COST SCORE.** RITHM-2.6 OPEN.
+
+- Official [Seoul 5-minute urban expressway link dataset](https://data.seoul.go.kr/dataList/OA-22351/F/1/datasetView.do) lists 2025 semiannual 690.88MB/692.93MB and importantly a **6.18MB small older CSV**, named 서울특별시_도시고속도로 5분단위 링크 속도.csv, posted 2024-05-22. Published dataset covers link ID/date/time/volume/speed/occupancy; exact small-file columns and period remain unverified until source bytes are acquired. [Seoul service-link distances and IDs](https://t-data.seoul.go.kr/dataprovide/trafficdataviewfile.do?data_id=1) may supply length. [Korea Expressway VDS 1-hour sample](https://www.data.go.kr/data/15103522/fileData.do) has only 9 publicly listed rows; full platform requires login. No government email or API key requested.
+- Official 2024 [KEC monthly version metadata](https://www.data.go.kr/data/15062523/fileData.do) reports **2,808 source rows**, whereas the actually read 2025 original has **3,100**. If four vehicle-class rows per section hold in both, these correspond to 702 and 775 file-order blocks; **NOT 73 verified newly opened roads**. Section-label and block-order geographic identity changes prohibit uncontrolled multi-year matching.
+- Mathematical construction: hypothetical 1km link, two cars, same count 2 and arithmetic mean speed 60km/h: individual speeds (60,60) give 2.00 vehicle-minutes, (40,80) give 2.25. Thus mean speed + count alone do not identify actual sum of individual constant-speed travel times. Classical Jensen bound applies only under same-individual arithmetic speed and constant-link-speed assumptions, **not verified for real VDS aggregation**.
+- Executable [P11 source and mathematical court](docs/rithm26_p11_highfreq_congestion_joinability_20261012.md) gates explicit link+direction identity, 5-minute chronology, unique observations, speed >0, volume counts >=0, occupancy 0..100, source-specific link length or per-km output; prospectively trains first 21 days, scores next 7 days against fixed clock baseline and observed previous 5-minute measurement. Output is expressly an **operational proxy** in vehicle-hours/km and NOT human group welfare. Source absent => NO_EXTERNAL_SOURCE_SCORE, not a synthetic score masquerading as evidence.
+- Chat-local validated P11 code+machine audit+source registry ZIP SHA256 **e329323fa52a1b07b9844d954483eb7eafa39f5ab5b412dd707f67d600b1f255**, no raw original source copied. [Notion scientific canonical](https://app.notion.com/p/3f5ef561cf9281cf912ee6f52f532021). One source file needed before any new actual speed-flow score: the official 6.18MB Seoul CSV from the linked published dataset. No causal guidance/behavior/welfare claims.
+
+**P11 VERDICT:** real original monthly source read PASS / source-heterogeneity and mathematical counterexample PASS / 20/20 tests PASS / high-frequency original speed-flow not ingested / exact travel-time welfare not identified / RITHM-2.6 OPEN.
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
