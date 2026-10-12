@@ -1,6 +1,6 @@
 # Reproducibility & data authority — RITHM
 
-**Current P16 / 2026-10-12.** Previously top-level `README_REPRO.md` covered only the historical 2.3 court and is replaced by this complete project guide. [Verbatim historical README](PROJECT_HISTORY_20261012.md) preserves older source-era instructions and receipts.
+**Current P17 / 2026-10-12.** Previously top-level `README_REPRO.md` covered only the historical 2.3 court and is replaced by this complete project guide. [Verbatim historical README](PROJECT_HISTORY_20261012.md) preserves older source-era instructions and receipts.
 
 ## Python quick start
 
@@ -24,6 +24,25 @@ On PowerShell use `$env:PYTHONPATH = "src"` before the Python commands. The 2.3 
 - P13/P14/P15 numerical retrospective findings are summarized in `docs/data/` and corresponding `docs/rithm26_*.md`, not generically re-certified by synthetic Actions tests. P16 source-specific six-day audit is a distinct partial-identification sensitivity analysis.
 - P2.3: [Wijayaratna et al. 2017](https://doi.org/10.1371/journal.pone.0184191.s002) licensed source-derived compact route/cost tables under `data/`; original workbook is the source of record.
 - P2.0/2.2: Original 2023 Ashraf individual human records are **not distributed** in GitHub; CI fixture is synthetic.
+
+
+## P17 reproducible phase-proxy and micro-to-macro tests
+
+From repo root, with no synthetic fixtures beyond tests and no source file for the pure theory:
+
+```bash
+PYTHONPATH=src python -m unittest tests.test_p17_phase_network -v
+```
+
+If running the six REAL 2025 source days, FIRST verify original shard hashes against the two user-owned manifests using the P15 source gate, then:
+
+```bash
+PYTHONPATH=src python tools/traffic_sources/p17_phase_proxy_audit.py \\
+  --input /local/path/to/2025-shard-csvs \\
+  --output /scratch/p17_phase_proxy.json
+```
+
+This audit STRICTLY rehashes H1 parts 005,009,011,012 (not all 38 at run time), checks 2,027,915 source rows, and computes six previously P15/P16-exposed days. The phase rearrangement cap is a hypothetical sensitivity budget, **not calibrated error**. It holds source speed constant; therefore these are only source proxy envelopes, not independently measured human welfare. The independent static network externality/Braess tests NEVER act on physical Seoul traffic.
 
 ## Critical interpretive restrictions
 

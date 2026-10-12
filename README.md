@@ -1,6 +1,6 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
-**Research status: RITHM-2.6 OPEN · P16 observation-operator identification.**
+**Research status: RITHM-2.6 OPEN · P17 phase-robust mesoscopic externalities (real source proxy / synthetic traffic game).**
 
 How do human route-choice persistence, information clocks, congestion feedback and social welfare interact? Human causal state dependence and interventions remain **unidentified**. Separate observational urban sensor dynamics from actual group travel-time welfare.
 
@@ -9,6 +9,7 @@ How do human route-choice persistence, information clocks, congestion feedback a
 - **2025 Seoul 5-minute sensor source:** 18,420,707 previously verified shard observations, 178 links, four network blackout days. Strong observed March–April odd/even 5-minute *volume* phase alternation; the underlying physical cause is unresolved.
 - **P15:** [operator nonidentification, common network phase, negative controls and 32 retrospective candidate days](docs/rithm26_p15_observation_operator_phase_20261012.md).
 - **P16:** [integer-constrained phase-reallocation budget and independent-reference partial-identification criteria](docs/rithm26_p16_integer_operator_bounds_20261012.md). On 2025-04-18 source measurements, a hypothetical near-flat within-10-minute latent count would require 10.51% of observed section-passage counts to be reassigned between successive 5-minute bins, **not** a measured error rate.
+- **P17:** [phase-robust 10-minute conserved proxy bounds, 2025 six-day source audit, exact Braess/dispersion mathematical tests and CPU-local marginal updates](docs/rithm26_p17_phase_robust_mesoscopic_externalities_20261012.md). On 2025-04-18 a deliberately hypothetical P16-scale redistribution budget permits a fixed-source-speed **proxy** interval −3.64% to +3.91%; not an observed sensor error, driver's actual time or a policy benefit. Static 40-car Braess model separate from Seoul source; [six-day compact result](docs/data/rithm26_p17_source_phase_sensitivity_20261012.json).
 - **Earlier source courts:** [P14 network aliasing](docs/rithm26_p14_network_coherent_aliasing_20261012.md), [P13-R3 independent replication](docs/rithm26_p13_r3_clock_parity_independent_replication_20261012.md), [2017 choice/welfare reconstruction](docs/rithm23_origin_to_welfare_bridge.md).
 
 ## Repository navigation
