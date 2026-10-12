@@ -1,0 +1,71 @@
+{
+  "title": "RITHM-2.6 P13-R3 independent 2025 source parity audit",
+  "original_rows": 18420707,
+  "verified_shards": 38,
+  "links": 178,
+  "eligible_rolling_weeks": 41,
+  "blackout_weeks": 8,
+  "joint_120min_lag_eval_rows": 14493248,
+  "same_cohort_flow_mae": {
+    "5": 21.083529,
+    "10": 21.709471,
+    "15": 25.454849,
+    "30": 30.699689,
+    "60": 40.745675,
+    "120": 60.129389
+  },
+  "same_cohort_speed_mae_kmh": {
+    "5": 2.676984,
+    "10": 3.590535,
+    "15": 4.316256,
+    "30": 6.019476,
+    "60": 7.986574,
+    "120": 10.999551
+  },
+  "ridge_smoothed_flow_mae": 18.903509,
+  "fixed_two_lag_mean_flow_mae": 18.986139,
+  "april16_22": {
+    "n": 354194,
+    "flow_lags_5_to_40": [
+      57.1732,
+      26.6069,
+      57.6676,
+      33.5549,
+      59.1171,
+      38.8347,
+      61.1139,
+      42.5585
+    ],
+    "odd_minus_even_lag_mae": 24.9871,
+    "lag10_better_links": 177,
+    "source_cross_sensor_volume_speed_delta_corr": 0.0013001285,
+    "link_daily_rms_parity_gt20": 140
+  },
+  "ordinary_feb_odd_minus_even_lag_mae": -2.3914,
+  "ordinary_aug_odd_minus_even_lag_mae": -2.3397,
+  "daily_events_exploratory": [
+    [
+      "2025-03-22",
+      "2025-03-27"
+    ],
+    [
+      "2025-04-03",
+      "2025-04-07"
+    ],
+    [
+      "2025-04-09",
+      "2025-04-09"
+    ],
+    [
+      "2025-04-15",
+      "2025-04-19"
+    ]
+  ],
+  "historical_r2b_matched_count_different": 14605993,
+  "concurrent_p14_matched_count_different": 14520028,
+  "physical_instrument_cause_identified": false,
+  "human_individual_welfare_identified": false,
+  "verified_original_cp949_bytes": false,
+  "independent_source_tests_local": "11/11 PASS",
+  "source_zip_sha256": "1ec4ce5c463077f61a1d13c3ca94fa7975ccd6153e1cf49acb5f759412e6ccd0"
+}

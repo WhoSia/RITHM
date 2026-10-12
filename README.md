@@ -239,6 +239,16 @@ Weekly observation-weighted speed MAE km/h, calendar/prior5/trained two-lag smoo
 
 ---
 
+## P13-R3 — Independent exact source clock-parity regime replication (2026-10-12)
+
+[Full P13-R3 source-level scientific court](docs/rithm26_p13_r3_clock_parity_independent_replication_20261012.md) · [compact machine values](docs/data/rithm26_p13_r3_source_regime_compact.json) · [aggregate checker](tools/traffic_sources/p13_r3_regime_crosscheck.py). This **does not supersede** [P13-R2b 41-week source court](docs/rithm26_p13_r2b_weekly_rolling_crosscheck.md) or concurrent [P14 independent C++ whole-network alias court](docs/rithm26_p14_network_coherent_aliasing_20261012.md): the original P14 anomaly was already discovered and published while this second-language check was underway.
+
+All **38** surviving user-provided 2025 5-min Seoul CSV shard SHA256+rows independently rechecked, **18,420,707** actual source readings and 178 links. 41 eligible weekly 21d/7d tests and 8 entire-date-blackout rejections. On a new *more restrictive common* 14,493,248-cell 5-to-120-minute-lag cohort, flow MAE 5/10/15/30/60/120 lag: 21.084/21.709/25.455/30.700/40.746/60.129 vehicles/bin; speed 2.677/3.591/4.316/6.019/7.987/11.000 km/h. Different target masks preclude treating P13-R2b and P14 pooled MAEs as direct paired results.
+
+Apr16–22 exact 354,194 common 5-to-40 minute target cells expose alternating volume lag loss: 5/10/15/20/25/30/35/40 minute volume MAE 57.17/26.61/57.67/33.55/59.12/38.83/61.11/42.56; 177/178 links prefer lag10 over lag5; speed remains 5-min preferable (2.786 versus 3.648 km/h). Retrospectively localized daily bursts March22–27, April3–7, April9, April15–19, with no a priori threshold guarantee. Across links April16–22, 140/178 show daily RMS even/odd volume phase gap above 20 vehicles/bin, versus zero ordinary February/August. Contemporaneous differenced volume-speed correlation near zero (+.0013) in the April episode. Source-production physical cause still **not identified**, nor individual travel-time welfare or causal human guidance. Original deleted CP949 large-source hashes remain a manifest witness only, not recomputable. Full original-source code and **11/11 locally passing** source/assumption tests in chat ZIP SHA256 `1ec4ce5c463077f61a1d13c3ca94fa7975ccd6153e1cf49acb5f759412e6ccd0`; no raw source CSV redistributed; GitHub compact checker alone is not a fresh source-read.
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
