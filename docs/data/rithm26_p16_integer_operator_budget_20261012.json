@@ -1,0 +1,17 @@
+{
+  "status": "ORIGINAL_2025_SIX_DAY_CONDITIONAL_SENSITIVITY_NOT_PHYSICAL_ERROR",
+  "description": "Each quantity is matched source-pair counts; integer two-bin reallocation needed IF unknown latent counts were near-flat within each 10-minute pair",
+  "original_source": "2025 Seoul traffic source; 38 source shards verified in P15; six-day independent P16 scan of six dates",
+  "days": [
+    {"date":"20250212","links":178,"matched_ten_min_pairs":25632,"section_passages":12106016,"minimum_reallocations":215731,"fraction":0.017820148263475},
+    {"date":"20250323","links":178,"matched_ten_min_pairs":25596,"section_passages":9285542,"minimum_reallocations":789180,"fraction":0.084990192279568},
+    {"date":"20250416","links":178,"matched_ten_min_pairs":25209,"section_passages":11035175,"minimum_reallocations":973384,"fraction":0.088207391364432},
+    {"date":"20250418","links":178,"matched_ten_min_pairs":25384,"section_passages":11126802,"minimum_reallocations":1169133,"fraction":0.105073587181654},
+    {"date":"20250419","links":178,"matched_ten_min_pairs":25624,"section_passages":10713400,"minimum_reallocations":1101039,"fraction":0.102772135829895},
+    {"date":"20250421","links":178,"matched_ten_min_pairs":25632,"section_passages":13281989,"minimum_reallocations":229771,"fraction":0.017299442124218}
+  ],
+  "phase_inversion_20250418":{"8h":"16/16 groups even-higher","9h":"16/16 even-higher","10h":"16/16 even-higher","11h":"16/16 odd-higher","12h":"16/16 odd-higher"},
+  "independent_calibrated_reference_collected":false,
+  "source_error_bound_collected":false,
+  "claim":"conditional minimal correction cost, not detected error count, causal cause or actual human group welfare"
+}
