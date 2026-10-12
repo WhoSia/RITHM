@@ -1,0 +1,63 @@
+{
+  "source": "2025 Seoul city original author H1 shards 005,009,011,012",
+  "origin": "source sha gated but original CP949 full csv deleted",
+  "source_observations": 2027915,
+  "scoring": "conditional / fixed speed / integer 10min conservation / budget based on nearflat rival only",
+  "human_welfare": false,
+  "rows": [
+    {
+      "date": "20250212",
+      "pairs": 25632,
+      "scenario_integer_budget": 215731,
+      "observed_fixed_speed_proxy": 232395.8434,
+      "conditional_min_proxy": 229731.767,
+      "conditional_max_proxy": 235196.829,
+      "phase_invariant_spatial_cv2": 0.167496
+    },
+    {
+      "date": "20250323",
+      "pairs": 25596,
+      "scenario_integer_budget": 789180,
+      "observed_fixed_speed_proxy": 163770.1474,
+      "conditional_min_proxy": 159368.704,
+      "conditional_max_proxy": 168472.723,
+      "phase_invariant_spatial_cv2": 0.196086
+    },
+    {
+      "date": "20250416",
+      "pairs": 25209,
+      "scenario_integer_budget": 973384,
+      "observed_fixed_speed_proxy": 231711.4684,
+      "conditional_min_proxy": 224097.969,
+      "conditional_max_proxy": 240009.259,
+      "phase_invariant_spatial_cv2": 0.187075
+    },
+    {
+      "date": "20250418",
+      "pairs": 25384,
+      "scenario_integer_budget": 1169133,
+      "observed_fixed_speed_proxy": 238755.2629,
+      "conditional_min_proxy": 230073.841,
+      "conditional_max_proxy": 248083.496,
+      "phase_invariant_spatial_cv2": 0.180003
+    },
+    {
+      "date": "20250419",
+      "pairs": 25624,
+      "scenario_integer_budget": 1101039,
+      "observed_fixed_speed_proxy": 218144.3044,
+      "conditional_min_proxy": 211824.227,
+      "conditional_max_proxy": 225027.132,
+      "phase_invariant_spatial_cv2": 0.180524
+    },
+    {
+      "date": "20250421",
+      "pairs": 25632,
+      "scenario_integer_budget": 229771,
+      "observed_fixed_speed_proxy": 270089.8124,
+      "conditional_min_proxy": 266620.577,
+      "conditional_max_proxy": 273748.558,
+      "phase_invariant_spatial_cv2": 0.165295
+    }
+  ]
+}
