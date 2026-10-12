@@ -1,0 +1,28 @@
+{
+  "source_real_2025_rows": 18420707,
+  "verified_shards": 38,
+  "links": 178,
+  "full_missing_calendar_days": [
+    "2025-06-09",
+    "2025-07-10",
+    "2025-07-11",
+    "2025-07-15"
+  ],
+  "eligible_windows": 9,
+  "source_rejected_windows": 4,
+  "matched_sensor_rows": 3223365,
+  "speed_clock_mae": 6.313523438865413,
+  "speed_prior5_mae": 2.6808382107849593,
+  "flow_clock_mae": 36.55979155323707,
+  "flow_prior5_mae": 25.757077153843888,
+  "proxy_clock_mae": 1.300412212930285,
+  "proxy_prior5_mae": 0.6574294543181396,
+  "joint_clock_cohort_rows": 3222378,
+  "flow_prior5_joint": 25.7428601284219,
+  "flow_prior10_joint": 22.741740549898505,
+  "train_selected_joint": 22.624912464977875,
+  "online_24h_joint": 20.967186114069257,
+  "source_vol5_sentinel_status": "UNKNOWN",
+  "causal_route_welfare": "NOT_IDENTIFIED",
+  "fresh_model_policy_claim": "EXPLORATORY_POST_SOURCE"
+}

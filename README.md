@@ -206,6 +206,15 @@ Actual link-level **future sensor** source tests use 21 train-days then 7 test-d
 
 ---
 
+## RITHM P13-R2 — 2025 whole-year traffic sensor clock regime (2026-10-12)
+
+Original 38/38 SHA-256 validated UTF8-BOM CSV shards, 18,420,707 source observations, 178 stable link IDs; four complete network-observation absent days. 13 fixed nonoverlapping 21-day training/7-day test periods: 9 pass strict 90% daily coverage, 4 reject. On 3,223,365 paired future source points, train-only clock baseline vs prior5 sensor state speed MAE 6.314 vs 2.681 km/h, flow 36.560 vs25.757 vehicles/5min, proxy q/v 1.300 vs0.657. April16-22 DISCONFIRMS flow prior5 generalization (57.44 vs clock44.25); prior10 flow 26.58 vs prior5 57.18 on a matched clock cohort while speed still favors prior5. Train-only lag chooser catches April but misses March; source-exposed online trailing24h rival pooled 20.967 flow MAE vs prior5 25.743 but wins only 3/9 weeks. No intervention, physical sensor-fault proof, person-level route choice or group welfare inference.
+
+Runnable GitHub annual source: tools/traffic_sources/p13_annual.py ; tests/test_p13_annual_source.py ; docs/rithm26_p13_r2_sensor_clock_regime.md ; docs/data/rithm26_p13_r2_annual_summary.json. The fully rerun local source, 12/12 local test case suite, manifests, all outcome folds and scientific report in conversation ZIP SHA256 58823b8b1f634728fe0971596a2fb449cec996a3e68c0ac39c18eed00c0694f4. Historic P13 source and README preserved. No bot contributions and skip ci used. RITHM-2.6 OPEN.
+
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
