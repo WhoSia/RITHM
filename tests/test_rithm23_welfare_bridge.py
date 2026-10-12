@@ -8,7 +8,7 @@ from pathlib import Path
 try:
     import numpy as np
     import pandas as pd
-    from rithm23_welfare_bridge import read_model_rounds, decomp, predicted_path_cost, predicted_social_cost
+    from rithm.legacy.rithm23_welfare_bridge import read_model_rounds, decomp, predicted_path_cost, predicted_social_cost
     HAS_ANALYSIS_DEPS = True
 except ImportError:
     HAS_ANALYSIS_DEPS = False

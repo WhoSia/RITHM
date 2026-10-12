@@ -1,6 +1,6 @@
 import unittest
 from fractions import Fraction
-from rithm24_identification import (traffic_cost,exact_rank,identification_rank,
+from rithm.legacy.rithm24_identification import (traffic_cost,exact_rank,identification_rank,
                                     execution_equivalence,joint_cost_counterexample,opening_contract)
 class RITHM24Math(unittest.TestCase):
  def test_all_feasible_flow_identities(self):

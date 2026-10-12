@@ -11,7 +11,7 @@ import math
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from rithm20 import analyze, mean, welfare
+from .rithm20 import analyze, mean, welfare
 
 TREATMENTS = {1: "Control", 2: "All", 3: "Frequent-4", 4: "Infrequent-4"}
 EXPECTED = {1: 2, 2: 2, 3: 3, 4: 3}

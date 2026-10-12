@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from rithm20_information import describe, selection_check
+from rithm.legacy.rithm20_information import describe, selection_check
 
 COLUMNS = ["Period","Subject","Profit","LaneM","LaneS","S","M",
            "Session","Treatment","switch","infotreat"]

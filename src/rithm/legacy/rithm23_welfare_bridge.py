@@ -10,8 +10,8 @@ import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from rithm23_source_decode import decode
-BASE=Path(__file__).resolve().parent
+from .rithm23_source_decode import decode
+BASE=Path.cwd()  # write generated output to current working directory, never src/
 
 def predicted_path_cost(n1,n2,z,route):
     # Study network; n3=12-n1-n2.

@@ -8,7 +8,7 @@ from pathlib import Path
 import csv
 import pandas as pd
 
-ROOT=Path(__file__).resolve().parent
+ROOT=Path(__file__).resolve().parents[3]  # repo root; source data remain data/
 DIGITS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def decode(routes=None,costs=None):

@@ -4,8 +4,8 @@ import tempfile
 import unittest
 import sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT))
-from rithm20 import welfare,nash_side_counts,analyze,pay_main,pay_side
+sys.path.insert(0,str(ROOT/'src'))
+from rithm.legacy.rithm20 import welfare,nash_side_counts,analyze,pay_main,pay_side
 FIX=ROOT/"tests/fixtures/study1-mini.csv"
 class HumanGroupTests(unittest.TestCase):
  def test_game(self):
