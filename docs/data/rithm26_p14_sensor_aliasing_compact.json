@@ -1,0 +1,61 @@
+{
+  "status": "SOURCE_REAL_P14_EXPLORATORY",
+  "source_rows": 18420707,
+  "source_links": 178,
+  "p14_six_rule_matched": 14520028,
+  "admitted_weeks": 41,
+  "source_mae": {
+    "speed": {
+      "calendar": 6.7360031,
+      "last5": 2.6775318,
+      "mean2": 2.8799614,
+      "fit": 2.6638506
+    },
+    "volume": {
+      "calendar": 38.1040872,
+      "last5": 21.2105922,
+      "mean2": 19.0998544,
+      "mean3": 19.6151232,
+      "shrink25": 19.5494334,
+      "fit": 19.0174077
+    },
+    "proxy_q_over_v": {
+      "calendar": 1.3925442,
+      "last5": 0.581585,
+      "mean2": 0.5877174,
+      "fit": 0.5483672
+    }
+  },
+  "source_20250418": {
+    "last5_mae": 92.6764869,
+    "lag10_mae": 29.1862146,
+    "links": 178,
+    "odd_greater": 178,
+    "even_greater": 0,
+    "lag10_better_sufficient_links": 173,
+    "sufficient_links": 174,
+    "speed_ratio": 0.79439227,
+    "occupancy_ratio": 1.10883257
+  },
+  "source_20250419": {
+    "volume_5to10_ratio": 3.582533,
+    "even_greater": 171,
+    "odd_greater": 7
+  },
+  "trained_volume_beta_at_lower_bound": 1378,
+  "trained_volume_beta_link_weeks": 7270,
+  "local_adaptive_matched": 14537369,
+  "local_adaptive_baseline_mae": 19.05165139,
+  "local_adaptive_mae": 19.22232718,
+  "citywide_adaptive_mae": 18.51525299,
+  "citywide_alert_fraction": 0.05313,
+  "citywide_annual_relative_gain_pct": 2.815,
+  "citywide_excluding_five_event_weeks_gain_pct": 0.134,
+  "citywide_weeks_better_than_baseline": 10,
+  "observational_not_causal": true,
+  "actual_individual_traffic_welfare": null,
+  "source_original_CP949_bytes_deleted_by_user": true,
+  "original_H1_source_sha256": "f2f563c97a0595cc0e8b36cbaca2d39276818665e93b2b8bc5137c182049e9d3",
+  "original_H2_source_sha256": "8e0d8ae273dda90ff8cb36187bf2e7a348248488d5b6ecc07051d20843c252db",
+  "provenance": "actual original Seoul urban expressway source 2025; 38 verified translated source shards; C++ local pass"
+}

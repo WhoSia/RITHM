@@ -225,6 +225,20 @@ Weekly observation-weighted speed MAE km/h, calendar/prior5/trained two-lag smoo
 
 ---
 
+## P14 — Network-synchronous five-minute volume oscillation and memory-rival defeat (2026-10-12)
+
+**New source-based finding:** Reparsed all 38 existing user-owned Seoul 2025 CSV fragments in independently authored C++17: **18,420,707 real sensor observations**, **178 stable route×link IDs**, 0 duplicate five-minute records, 0 invalid source keys. This source was previously used in P13: **P14 is exploratory and cannot be called an untouched human-intervention replication**. Four whole-network empty source dates remain June 9, July 10–11 and July 15, NEVER zero-filled.
+
+**Found mechanism-relevant anomaly:** April **16–19, 2025** link vehicle counts reveal near-network-synchronous 5-minute alternation. On April 18, 5-minute-lag count MAE **92.676**, 10-minute-lag **29.186**; **173 of 174 adequately observed links** have lower lag10 source error, and **178/178 links across 16 route groups** have higher odd-slot than even-slot mean volume. April 19 parity reverses on **171/178** links. Speed does **not** show comparable period-two dominance; occupancy mostly does not either. These are negative-control observations motivating a **source-aggregation/measurement-clock hypothesis**, NOT identification of a faulty device or a real collective traffic wave. [Actual source witness C++17](tools/traffic_sources/p14_parity_witness.cpp), [scientific falsification court](docs/rithm26_p14_network_coherent_aliasing_20261012.md).
+
+**Six pre-existing temporal baselines on identical 14,520,028 actual sensor targets** (21d train/7d rolling test, 41 weeks, all third-lag-present): volume MAE last5 **21.2106**, fixed mean(last5,last10) **19.0999**, training-only fitted ridge/bounded coefficient **19.0174**. Roughly **9.95%** source forecast improvement comes from plain two-bin averaging; the fitted coefficient adds only **0.43%** relative to mean2 (descriptive weekly resampling interval for MAE gain includes zero). Speed is different: fixed two-bin average **2.880** km/h MAE, WORSE than last5 **2.678**.
+
+**Adversarial policy trial:** Link-local online past36-bin choice between last10 and fitted source smoothing improves the exceptional April test but WORSENS pooled annual volume source MAE (19.052→19.222). More restrictive prior-2h *citywide-synchronous* source detector with ratio cutoff 1.2 yields 19.052→**18.515** volume units (−2.815%) on identical 14,537,369 source sensor targets, but wins only **10/41 weeks** and almost all improvement is March–April concentration; after excluding the five abnormal test weeks the pooled source reduction is merely **0.134%**. Nine cutoff/window variants were inspected after discovering April; **none are sealed independent confirmation**.
+
+**Scientific status:** original-source C++17 ingestion and daily parity witness plus actual 2025 dataset tests (**21 source/mathematical tests + 3 C++ synthetic-fixture tests pass locally**), downloadable complete code/results archive under chat (P14, SHA256 published there); GitHub commits source witness, aggregate data and scientific court WITHOUT uploading 1.6GB sensor originals. Human path choices, VMS information assignment, actual individual trip times and welfare effects remain **NOT IDENTIFIED**. **RITHM-2.6 OPEN.**
+
+---
+
 ## Historical RITHM-2.0 README (preserved in place)
 
 **RITHM — Route-choice Inertia and Traffic Hysteresis Modeling**
