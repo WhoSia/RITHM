@@ -5,6 +5,29 @@
 
 RITHM asks how repeated individual route choice, learned cost, switching resistance, information timing and congestion feedback interact to shape collective welfare. The original traffic-habit question—not archive infrastructure or machine observability—is the scientific target. **OPEN ≠ identified human habit causality, identified guidance effects, or novel universal theorem.**
 
+## P15 — Observation-operator phase, source-regime detection and independent-measurement gate (2026-10-12)
+
+**18,420,707 real Seoul 2025 source rows re-read; 38/38 surviving shard hashes/row counts checked against both original split manifests, 178 source links and 16 ROUTE_ID direction groups.** Previous [P13-R3](docs/rithm26_p13_r3_clock_parity_independent_replication_20261012.md) and [P14](docs/rithm26_p14_network_coherent_aliasing_20261012.md) ALREADY established period-two source aliasing and Apr18-19 network phase inversion. P15 does not relabel their discovery a new theorem.
+
+P15 newly quantified 16-direction **synchronous odd-minus-even 5min flow** as median pairwise temporal group correlation, contrasting with group speed phase:
+
+| 2025 source day | q odd/even group correlation | speed odd/even group correlation |
+|---|---:|---:|
+| Feb12 ordinary | .140 | .149 |
+| Mar23 anomalous | .976 | .096 |
+| Apr18 | **.968** | .120 |
+| Apr19 opposite sign | **.973** | .111 |
+| Apr21 recovered | .186 | .116 |
+
+Apr18 every 177 source-eligible link has positive signed day phase; Apr19 171/177 have NEGATIVE signed phase; hourly sign can flip synchronously even within a day. From **59 Jan–Feb calibration days**, a retrospective three-part route correlation+lag10 advantage+amplitude screen found **32 candidate days among 302 subsequent source-available days** (March 7, April 13, May 1, August 3, September 8), including **Sep 5–11 seven-day candidate**. The statistic and its three-part structure were motivated by already-inspected P13/P14 dates, so Jan–Feb calibration is NOT an untouched prospective discovery. May21 large synchronized fluctuations are a *counterexample*: only ~1.1% links had smaller lag10 error, and the combined alarm did not fire. 2022 source one-day historical temporal control has q lag5 MAE 19.505 < lag10 22.470; same publisher, NOT independent hardware.
+
+**Mathematical identifiability:** ten-minute sum operator B has a 5min parity kernel `(a,-a)`. Any observed two-bin (315,557) source counts can be either true traffic (315,557) plus zero sensor residual, or physical (436,436) plus a zero-sum measurement term (-121,+121). Even an independently measured 10-minute total 872 cannot identify which 5-minute component is physical; independent FIVE-minute events, aligned detector/probe readings and certified noise/clock contracts are necessary. Classical linear algebra, NOT source evidence of equipment malfunction. Published source SPD/OCC columns also emerge from the same source-processing system and are not independent instrument proof.
+
+**[Full P15 source court](docs/rithm26_p15_observation_operator_phase_20261012.md)** · **[P15 compact aggregate source outcome](docs/data/rithm26_p15_observation_operator_compact.json)** · **[10min phase kernel code](tools/traffic_sources/p15_phase_operator.py)** · **[38-piece manifest integrity script](tools/traffic_sources/p15_source_manifest_gate.py)**. Executed local reproducer/15 tests are in the conversation ZIP `RITHM-2.6_P15_Phase_Operator_Regime_Falsification_20261012.zip` SHA256 `cef6835756349338087a13eee10c0b4a6e4056a28ac315eb7e69f445d0c010bf` (no original 2025 or 2022 raw sensor files bundled). **Source actual-rows PASS, 15/15 local PASS, physical sensor cause HOLD, individual group-travel-time welfare HOLD, guidance causal effect HOLD, RITHM-2.6 OPEN.**
+
+
+---
+
 ## Current evidence: real 2017 staged human route-choice data
 
 The current experimental analysis uses the original [Wijayaratna et al. (2017)](https://doi.org/10.1371/journal.pone.0184191) six-session [S2 participant workbook](https://docs.google.com/spreadsheets/d/1Kv-fWLa6kP_tv9PpgNDUYIV3oiC-zmRc/edit) (**not redistributed here**): 144 participants, 12 independent groups of 12, 20 rounds per information condition, **5,760 recorded route decisions and 480 group-rounds**. Three sessions were no-information-first and three information-first.

@@ -1,0 +1,57 @@
+{
+  "study": "RITHM-2.6 P15 source-typed observational operator court",
+  "date": "2026-10-12",
+  "original_2025_rows": 18420707,
+  "verified_utf8_shards": 38,
+  "source_links": 178,
+  "source_route_directions": 16,
+  "comparison_by_source_day": {
+    "2025-02-12": {
+      "q": 0.13964,
+      "speed": 0.14933
+    },
+    "2025-03-23": {
+      "q": 0.97586,
+      "speed": 0.09598
+    },
+    "2025-04-16": {
+      "q": 0.9632,
+      "speed": 0.10639
+    },
+    "2025-04-18": {
+      "q": 0.9679,
+      "speed": 0.11969
+    },
+    "2025-04-19": {
+      "q": 0.97262,
+      "speed": 0.11092
+    },
+    "2025-04-21": {
+      "q": 0.18629,
+      "speed": 0.1163
+    }
+  },
+  "calibration_Jan_Feb_2025_days": 59,
+  "posthoc_3_criterion_daily_candidates": 32,
+  "candidate_month_counts": {
+    "2025-03": 7,
+    "2025-04": 13,
+    "2025-05": 1,
+    "2025-08": 3,
+    "2025-09": 8
+  },
+  "new_exploratory_sequence": "2025-09-05 to 2025-09-11",
+  "historical_2022": {
+    "source_rows": 56732,
+    "volume_lag5_mae": 19.505483,
+    "volume_lag10_mae": 22.469969
+  },
+  "not_an_original_period2_discovery": "P14 and P13 already identified period2",
+  "blind_prospective_test": false,
+  "independent_instrument_crosscheck": false,
+  "identified_physical_volume": false,
+  "observed_human_group_welfare": false,
+  "original_deleted_CP949_bytes_rehashed": false,
+  "local_full_source_tests_passed": "15/15 separate runs",
+  "complete_reproduction_archive_sha256": "cef6835756349338087a13eee10c0b4a6e4056a28ac315eb7e69f445d0c010bf"
+}
