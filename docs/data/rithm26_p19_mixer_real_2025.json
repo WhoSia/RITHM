@@ -1,0 +1,38 @@
+{
+  "status": "P19_REAL_2025_SOURCE_EXPOSED_EXPLORATORY",
+  "N": 2136298,
+  "source_links": 178,
+  "months": 12,
+  "MAE": {
+    "calendar": 67.64949248653512,
+    "twice_last5": 39.26988135550377,
+    "last10": 34.900208678751746,
+    "last20avg": 36.75397580300127,
+    "fixed_mix50": 34.785165739985715,
+    "fixed_mix75": 34.560136507172686,
+    "train_only_adaptive": 34.517763205320605
+  },
+  "train_selected_alpha_link_months": {
+    "0": 1,
+    "1": 467,
+    "0.25": 9,
+    "0.5": 572,
+    "0.75": 1087
+  },
+  "adaptive_vs_last10_relative_percent": 1.095815,
+  "adaptive_vs_fixed75_relative_percent": 0.122608,
+  "month_bootstrap_95pct_relative_adaptive_vs_last10": [
+    0.67960815,
+    1.56401199
+  ],
+  "month_bootstrap_95pct_relative_adaptive_vs_fixed75": [
+    -0.14281257,
+    0.31496811
+  ],
+  "monthwise_adaptive_better_than_last10": 12,
+  "monthwise_adaptive_better_than_fixed75": 10,
+  "human_welfare": "NOT_IDENTIFIED",
+  "guidance_causality": "NOT_ESTIMATED",
+  "data_provenance": "2025 Seoul RITHM owner Drive 38 verified shards; raw deleted CP949 file hash uncheckable",
+  "note": "Same-source 2025 observational retrospective; not independent source, no real traffic control."
+}

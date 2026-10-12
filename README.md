@@ -4,6 +4,10 @@
 
 How do human route-choice persistence, information clocks, congestion feedback and social welfare interact? Human causal state dependence and interventions remain **unidentified**. Separate observational urban sensor dynamics from actual group travel-time welfare.
 
+## P19 — Train-only vs fixed mixing of conserved 10-minute source flow (2026-10-13)
+
+**New exploratory adversarial test after the already-present P18 source results:** on the same **2,136,298 actual 2025 future 10min source bins**, P18 previous-ten-minute persistence MAE **34.9002** vehicles/10min, simple fixed 75:25 mix with preceding-two-bin average **34.5601**, and link-wise train-only five-point mixing **34.5178**. Extra link fitting over fixed mix is only **0.0424** vehicles/10min, 12-month resampling band for the *relative* additional effect **−0.143% to +0.315%** includes zero. No independent physical source/human group welfare success. [Scientific P19 court](docs/rithm26_p19_train_only_phase_mixer_20261013.md) · [actual engine](tools/traffic_sources/p19_train_only_phase_mixer.py) · [compact data](docs/data/rithm26_p19_mixer_real_2025.json). Prior P13–P18 findings below remain authoritative, not overwritten.
+
 ## Current evidence
 
 - **P18 source-clock-legal 10-minute forecasting, after P17 phase algebra:** [real 2025 12-month empirical source court](docs/rithm26_p18_tenminute_phase_invariant_forecast_20261012.md), [portable executable](tools/traffic_sources/p18_tenmin_source_forecast.py), [compact source scores](docs/data/rithm26_p18_tenmin_full_2025.json). 38/38 source shard SHA passes; 18,420,707 five-minute readings, 361 observed calendar dates; 9,196,409 complete ten-minute source pairs. On strictly matched 2,136,298 ten-minute future target cells, previous **complete ten-minute total** MAE **34.900** source vehicles/10min, versus **39.270** for 2 × last observed five-minute source count and **67.649** for train-only seasonal calendar. Twelve of twelve exposed-source monthly windows favor pair aggregation. This is source-count forecasting, **NOT independent physical truth, route-choice habit, or driver social welfare**.
