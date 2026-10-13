@@ -1,5 +1,12 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## P29 — Theoretical computer science and automata pivot (2026-10-13)
+
+**Permanent RITHM scope: NO NEW HUMAN RECRUITMENT OR PARTICIPANT EXPERIMENTS.** Existing public human-choice, traffic sensors and GPS datasets may be analyzed as historical observational sources only. Single active mainline **RITHM-2.7 OPEN**, RITHM-2.6 CLOSED by NOMOS Flowing. Research engine: automata, partial-observation strategy synthesis, algorithmic congestion/market games, finite-memory policies, formal verification, mean-payoff and economic-welfare bounds.
+
+[Formal P29 scientific contract](docs/rithm27_p29_finite_memory_congestion_automata_20261013.md) · [Go explicit state enumeration](go/p29/automata.go) · [unit tests](go/p29/automata_test.go). Source-free constructed 12-agent 2-route example C(x)=192+2(x-6)^2: naive threshold yields cycle (6,7) and limiting mean cost 193; guarded threshold converges to 6 and mean 192 for every x0=0..12. Go 2/2 tests PASS locally. **Elementary baseline, not a novelty or memory-improvement proof or human causal effect.** Next: true partial-observation finite-memory controller synthesis and provable worst-case long-run welfare, with existing data as separate observational constraints. Ruby · Rust · Go · C++ · R remain lead languages; Python legacy only.
+
+
 **Lead development languages: Ruby · Rust · Go · C++ · R.** Ruby owns source provenance and orchestration; Rust defines the exact integer-network policy envelope; Go executes typed group/source checks; C++ independently checks the kernel; R audits group/session inference. Existing Python remains a **legacy scientific replay adapter**, not the recommended lead language for new RITHM work. **Verified in P27:** Ruby/Go/C++ executed PASS; Rust and R source authored but **not run** in this container (compilers/interpreters absent), and no global software installation was attempted.
 
 ## P28 — Twenty-round person-linked welfare reachability and independent GPS field audit (2026-10-13)
