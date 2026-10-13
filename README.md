@@ -1,8 +1,18 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
-**Research status: RITHM-2.6 OPEN; P23 receipt availability METHODS P0; RITHM-2.7 P24 exact synthetic receipt-to-route welfare METHODS P1. Human causal policy welfare HOLD.**
+**Current formal mainline: RITHM-2.7 OPEN · RITHM-2.6 CLOSED (NOMOS-style FLOWING HANDOFF, 2026-10-13).** Full behavioral, sensor/source, observation/receipt and collective-welfare research now belongs to 2.7; causal human guidance/group welfare remains **HOLD**.
 
 How do human route-choice persistence, information clocks, congestion feedback and social welfare interact? Human causal state dependence and interventions remain **unidentified**. Separate observational urban sensor dynamics from actual group travel-time welfare.
+
+## RITHM-2.7 — Sole active research mainline (Flowing)
+
+**Formal name:** *Availability-Constrained Traffic Feedback: Interval-Censored Observation, Endogenous Routing Response & Robust Collective-Cost Identification*.
+
+The transfer from 2.6 is a **change in the focus of the same research**, not a methods-only fork and not a declaration that 2.6's unresolved scientific questions passed. All original 2017 human-choice work P1–P9, 2025 Korean sensor/measurement work P10–P19, delay and publication-clock evaluation P20–P22, P23 source-conditioned selection, P24 receipt-to-human-welfare counterexamples and adverse results continue within 2.7. The 2.6 original records remain immutable-style historical evidence. For exact inherited tasks, limitations and next falsifier see [Flowing transition and complete inheritance](docs/rithm27_flowing_transition_20261013.md) and [active Notion RITHM-2.7](https://app.notion.com/p/3f8ef561cf9281829b60c1085605448d).
+
+**Remaining HOLD:** authentic per-version source release and receipt events, causal personal learning versus stable route preference, observed advice-stage compliance, independent group-level human welfare transfer, calibrated real physical travel-time cost, and broad mathematical novelty. A valid receipt and an exact synthetic theorem cannot certify a field intervention.
+
+**The dated P24/P23/P22/P21/P20 sections below preserve their original as-of-stage status labels** (including the then-open 2.6). They must not be read as superseding the current Flowing handoff.
 
 ## P24 — Human-response welfare bridge (2026-10-13)
 
