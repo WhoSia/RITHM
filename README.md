@@ -1,8 +1,12 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
-**Research status: RITHM-2.6 OPEN · P23 source-conditioned receipt-clock falsification; RITHM-2.7 METHODS P0 ACTIVE ONLY.**
+**Research status: RITHM-2.6 OPEN; P23 receipt availability METHODS P0; RITHM-2.7 P24 exact synthetic receipt-to-route welfare METHODS P1. Human causal policy welfare HOLD.**
 
 How do human route-choice persistence, information clocks, congestion feedback and social welfare interact? Human causal state dependence and interventions remain **unidentified**. Separate observational urban sensor dynamics from actual group travel-time welfare.
+
+## P24 — Human-response welfare bridge (2026-10-13)
+
+Receipt authorization is not causal welfare identification. The exact P24 synthetic example reuses the 2017 12-person cost geometry: the same hypothetical receipt/advice and partial upstream sensor value 8 admit group costs 206/212/220, with a **restricted** improvement interval [−8,+6]. Human response and receipt events are constructed; there is NO cross-source 2017-human/2025-Seoul causal join. P24 code: [synthetic witness](tools/traffic_sources/p24_receipt_to_welfare_bridge.py), [12 offline tests](tests/test_p24_receipt_to_welfare_bridge.py), [methods note](docs/rithm27_p24_receipt_to_response_welfare_bridge_20261013.md). Tests are local; Actions unrun. RITHM-2.6 OPEN; RITHM-2.7 METHODS P1 only; causal group welfare HOLD.
 
 ## P23 — RITHM-2.7 methods P0: receipt-admissible informative delivery (2026-10-13)
 
