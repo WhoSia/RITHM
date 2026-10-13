@@ -1,0 +1,37 @@
+{
+  "checked_on":"2026-10-13",
+  "graphmasters_field_2022":{
+    "source_repo":"https://github.com/Graphmasters/traffic-lab",
+    "specific_2022_report":"https://github.com/Graphmasters/traffic-lab/blob/main/route-choice-2022/report.md",
+    "license":"BSD-3-Clause; original source remains with publisher; no GPS coordinates in user replay archive",
+    "published_design":"2022-05-10 Hanover; 39 independent vehicles in one field session; interleaved departures, Google Maps (22) versus NUNAV load balancing (17)",
+    "source_geojson_google":"https://github.com/Graphmasters/traffic-lab/blob/main/route-choice-2022/trajectory-geojson_route-choice_GoogleMaps.json",
+    "sha1_git_blob_google":"026a768f376c2cdfa43ca47f073bd0cb0c3bc636",
+    "source_geojson_nunav":"https://github.com/Graphmasters/traffic-lab/blob/main/route-choice-2022/trajectory-geojson_route-choice_NunavSwarm.json",
+    "sha1_git_blob_nunav":"5d35eda3a41a9fa6d31dc724f4bef2628a7be104",
+    "geojson_features_total":[24,21],
+    "geojson_finite_strictly_positive_start_end_timestamp":[22,17],
+    "gps_features_missing_valid_time":[2,4],
+    "published_mean_moving_car_travel_minutes":[34.4,30.6],
+    "published_minutes_not_recomputed_from_geojson":true,
+    "actual_observed":"public original GPS route traces, vehicle groups and timestamps, not human per-decision advice view logs",
+    "NOT_IDENTIFIED":"unobserved advice rendering/cognitive view; independent multiple-day people; cluster-randomized treatment assignment; causal city-wide/group welfare",
+    "admitted_role":"independent ORIGINAL field-route trajectories and report, descriptive external contact only; no joint linkage to 2017 human session"
+  },
+  "snopkova_2025_virtual_evacuation":{
+    "doi":"10.1038/s41597-025-04440-y",
+    "open_dataset":"https://springernature.figshare.com/articles/dataset/Predictors_of_evacuation_behavior_dataset_on_respondents_route_choice_and_web_interaction/27705402",
+    "reported_humans":208,
+    "original_individual_data_bytes_acquired":false,
+    "measurement_role":"browser rotation, route clicks and decision times for independent individual wayfinding, not a displayed traffic-routing policy nor joint congestion welfare",
+    "status":"independent observation-modality candidate; not an eligible RITHM 2017 C-stage group-welfare transplant"
+  },
+  "noussair_qiao_2025_2026":{
+    "doi":"10.1287/mnsc.2023.00056",
+    "publisher":"https://pubsonline.informs.org/doi/10.1287/mnsc.2023.00056",
+    "author_working_paper_original_read_in_user_Drive":true,
+    "original_participant_round_data_bytes_verified":false,
+    "per_person_info_render_attestation_verified":false,
+    "status":"original independent repeated group experiment candidate; historically distinct information timing; no raw outcome score, no C-stage exposure validation"
+  }
+}

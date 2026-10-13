@@ -1,0 +1,27 @@
+{
+  "source_sha256": "5926158a1a83172b1a4e119eb369140299a43fbceb2b1ba0321710c0f6723484",
+  "source": "Wijayaratna 2017 original human route panel compact; no individual identity exported",
+  "panels": 24,
+  "source_sessions": 6,
+  "panel_person_slots": 288,
+  "total_eligible_C_visits": 3511,
+  "total_incident_group_rounds": 96,
+  "slots_with_any_C_visit": 285,
+  "slots_with_at_least_1_historical_CB_CD_switch": 251,
+  "slots_with_at_least_2_historical_CB_CD_switches": 231,
+  "observed_C_branch_switches_across_successive_eligible_visits": 1069,
+  "distribution": {
+    "0": 37,
+    "1": 20,
+    "2": 43,
+    "3": 35,
+    "4": 52,
+    "5": 38,
+    "6": 22,
+    "7": 17,
+    "8": 13,
+    "9": 5,
+    "10": 6
+  },
+  "WARNING": "Observed branch changes between eligible visits are ordinary route-choice dynamics, not additional advice-induced compliance. Per-person one *extra* switch is an unverified counterfactual restriction; history cannot identify response budget."
+}
