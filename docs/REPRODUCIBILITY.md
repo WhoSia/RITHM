@@ -1,6 +1,6 @@
 # Reproducibility & data authority — RITHM
 
-**Current P17 / 2026-10-12.** Previously top-level `README_REPRO.md` covered only the historical 2.3 court and is replaced by this complete project guide. [Verbatim historical README](PROJECT_HISTORY_20261012.md) preserves older source-era instructions and receipts.
+**Current entry covers P24 as of 2026-10-13; P17 procedures below remain preserved.** Previously top-level `README_REPRO.md` covered only the historical 2.3 court and is replaced by this complete project guide. [Verbatim historical README](PROJECT_HISTORY_20261012.md) preserves older source-era instructions and receipts.
 
 ## Python quick start
 
@@ -61,3 +61,15 @@ python -m unittest discover -s tests -p 'test_p20_latency_authority.py' -v
 ```
 
 The actual full 2025 execution verified 38/38 original shard SHA256 and generated 2,121,699 strictly same-mask future ten-minute source outcomes. This is source information-delay SCENARIO analysis; publication latency NOT measured. The high-memory intermediate tensor belongs in scratch, NEVER GitHub. Passes on actual original 2025 source were run locally, offline test code committed with [skip ci] without CI claims. No physical sensor or human welfare identified. [P20 source report](rithm26_p20_observation_delay_authority_welfare_20261013.md).
+
+
+## P23–P24: receipt evidence and exact synthetic human-welfare bridge
+
+P23 reads 2025 Seoul measured traffic but assigns entirely **synthetic receipt events**. It does not establish actual client-source receipt authority. P24 uses the separate 2017 human experimental *cost geometry*, not a joined human/2025 sensor cohort.
+
+```bash
+python tools/traffic_sources/p24_receipt_to_welfare_bridge.py
+python -m unittest discover -s tests -p 'test_p24_receipt_to_welfare_bridge.py' -v
+```
+
+In P24's three specified toy human-response worlds, a hypothetical timely receipt and upstream A-C total 8 accompany group costs 206/212/220. The restricted baseline-minus-policy cost improvement is in [-8,+6], an exact **synthetic** counterexample, not measured behavior or field welfare. GitHub Actions has not been run for this P24 commit. See [P24 note](rithm27_p24_receipt_to_response_welfare_bridge_20261013.md).
