@@ -49,3 +49,15 @@ This audit STRICTLY rehashes H1 parts 005,009,011,012 (not all 38 at run time), 
 `VOL` and `SPD` are source sensor measurements and can share an unverified data-processing pipeline. Even independent ten-minute totals do not identify how a ten-minute flow was allocated to two five-minute bins. P16 operator bounds condition on hypothetical *certified independent five-minute count* error bounds, which have NOT been supplied. `q/speed` is a source congestion proxy, not true individual travel-time welfare; detector behavior and human guidance effects remain unproven.
 
 `RITHM-2.6 OPEN`; passing source/schema/math tests ≠ causal traffic result.
+
+
+## P20 2025 source delay-scenario re-execution (new 2026-10-13)
+
+Obtain the source-authority H1/H2 manifest JSON and all 38 unchanged UTF8 CSV shards from the user's private Drive RITHM 2025 source folder; no original CP949 files. Python 3.12+, numpy and pandas. Example:
+
+```bash
+python tools/traffic_sources/p20_latency_court.py --shards-dir /local/2025-shards --h1-manifest /local/H1/manifest.json --h2-manifest /local/H2/manifest.json --output-dir /scratch/p20
+python -m unittest discover -s tests -p 'test_p20_latency_authority.py' -v
+```
+
+The actual full 2025 execution verified 38/38 original shard SHA256 and generated 2,121,699 strictly same-mask future ten-minute source outcomes. This is source information-delay SCENARIO analysis; publication latency NOT measured. The high-memory intermediate tensor belongs in scratch, NEVER GitHub. Passes on actual original 2025 source were run locally, offline test code committed with [skip ci] without CI claims. No physical sensor or human welfare identified. [P20 source report](rithm26_p20_observation_delay_authority_welfare_20261013.md).

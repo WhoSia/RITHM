@@ -1,8 +1,12 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
-**Research status: RITHM-2.6 OPEN · P17 phase-robust mesoscopic externalities (real source proxy / synthetic traffic game).**
+**Research status: RITHM-2.6 OPEN · P20 source publication-delay robustness (real 2025 sensor exposure / unmeasured provider delay / welfare HOLD).**
 
 How do human route-choice persistence, information clocks, congestion feedback and social welfare interact? Human causal state dependence and interventions remain **unidentified**. Separate observational urban sensor dynamics from actual group travel-time welfare.
+
+## P20 — Observation-delay robust source forecasting, not yet deployable (2026-10-13)
+
+Re-read **all 38 SHA-matched UTF8 original owner shards** and **18,420,707** 2025 five-minute SOURCE observations. Hypothesized post-interval public release delay Δ changes the latest legal ten-minute count from lag1 (Δ=0) to lag2 (5–10 min), lag4 (30 min), lag5 (40 min) and lag7 (60 min). All source delay scenarios compared on the **same 2,121,699** real future source ten-minute target bins, stricter than the 2,136,298 original P19 mask. Source MAE for fixed posthoc .75 mixer: **34.249** (Δ=0), **44.955** (5–10 min), **61.715** (30 min), **68.998** (40 min), **82.417** (60 min), vs train-only calendar **66.649**. Thus aggregate crossover in this retrospective source cohort between Δ=30 and40, but at 30 min the mixer wins only **4/12 months**, with month-bootstrap improvement interval across zero. **Actual per-bin provider publish delay has NOT been measured**; official file publication is historical/nonperiodic and cannot certify real-time deployment. Bayes information dominance applies to optimized predictors, not individual fixed lag rules. Independent 5-min calibrated physical source and human policy welfare remain **UNIDENTIFIED**. [P20 research court](docs/rithm26_p20_observation_delay_authority_welfare_20261013.md) · [actual source-derived result](docs/data/rithm26_p20_latency_source_2025.json) · [portable replay](tools/traffic_sources/p20_latency_court.py) · [conditional bounds and 13 offline tests](tests/test_p20_latency_authority.py). Earlier P1–P19 history and P19 negative freedom comparison preserved.
 
 ## P19 — Train-only vs fixed mixing of conserved 10-minute source flow (2026-10-13)
 

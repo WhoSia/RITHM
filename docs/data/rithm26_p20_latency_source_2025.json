@@ -1,0 +1,117 @@
+{
+  "research": "RITHM-2.6 P20 delay-scenario source forecast; same 2025 sensor used in P13–P19",
+  "latest_commit_base": "a2ffb7eb7d16a488a6fe054f412e6855c55f1eb8",
+  "real_2025_source_rows": 18420707,
+  "verified_owner_sha_shards": 38,
+  "source_link_ids": 178,
+  "matched_tenmin_intervals": 2121699,
+  "train_month_days": "1-21",
+  "heldout_month_days": "22-28",
+  "historical_source_original_CP949_deleted": true,
+  "real_publication_latency_measured": false,
+  "publication_scenarios_minutes": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    30,
+    40,
+    50,
+    60
+  ],
+  "required_prior_pair_lags": [
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "same_mask_calendar_source_count_mae": 66.64875154298512,
+  "source_count_mae_by_delay": [
+    {
+      "delay": 0,
+      "persist": 34.56632868281505,
+      "mix75": 34.249213307354154,
+      "month_wins": 12
+    },
+    {
+      "delay": 5,
+      "persist": 45.216032057327645,
+      "mix75": 44.95469314921674,
+      "month_wins": 10
+    },
+    {
+      "delay": 10,
+      "persist": 45.216032057327645,
+      "mix75": 44.95469314921674,
+      "month_wins": 10
+    },
+    {
+      "delay": 15,
+      "persist": 54.178196813025785,
+      "mix75": 53.9274028149139,
+      "month_wins": 6
+    },
+    {
+      "delay": 20,
+      "persist": 54.178196813025785,
+      "mix75": 53.9274028149139,
+      "month_wins": 6
+    },
+    {
+      "delay": 30,
+      "persist": 61.92462220135844,
+      "mix75": 61.71502402084367,
+      "month_wins": 4
+    },
+    {
+      "delay": 40,
+      "persist": 69.20211349489254,
+      "mix75": 68.99825187267373,
+      "month_wins": 4
+    },
+    {
+      "delay": 50,
+      "persist": 75.8850030093807,
+      "mix75": 75.72079698863976,
+      "month_wins": 4
+    },
+    {
+      "delay": 60,
+      "persist": 82.51407904702788,
+      "mix75": 82.41748935640729,
+      "month_wins": 3
+    }
+  ],
+  "exploratory_month_resampling_95pct_mix_improvement_vs_calendar_pct": {
+    "lag1": [
+      35.73573299866238,
+      58.67516708790809
+    ],
+    "lag2": [
+      14.95603921627596,
+      46.055849034715784
+    ],
+    "lag3": [
+      -2.9101141477563433,
+      35.02594750181035
+    ],
+    "lag4": [
+      -18.185708428371516,
+      26.383293517656778
+    ],
+    "lag5": [
+      -31.737021663226844,
+      17.859297742122518
+    ]
+  },
+  "interpretation": "Exploratory reporting-delay counterfactual; 0..60minute release lag not actually measured. 2,121,699 stricter common mask differs from P19 2,136,298 source test targets. This is not human welfare, physical-flow certification, or causal guidance.",
+  "true_vehicle_travel_time": "NOT_IDENTIFIED",
+  "independent_calibration": "ABSENT",
+  "control_effect": "NOT_ESTIMATED"
+}
