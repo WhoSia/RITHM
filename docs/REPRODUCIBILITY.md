@@ -1,5 +1,8 @@
 # Reproducibility & data authority — RITHM
 
+**Active research implementation:** Ruby, Rust, Go, C++ and R — not Python-first. [P27 exact-network five-language reference](RITHM_P27_MULTILANGUAGE_REPLAY.md). P27 Ruby, Go and C++ were independently executed on original-source-derived 480 group states; Rust and R **not executed** due to missing runtime in the current analysis environment. Existing Python commands below reproduce HISTORICAL stages only; do not represent the new recommended architecture. All original source data and original compiler versions preserved without globally modifying any server.
+
+
 **CURRENT: RITHM-2.7 OPEN; RITHM-2.6 CLOSED by Flowing handoff on 2026-10-13.** Original P1–P24 scripts/tests/data custody and prior HOLDs continue in the single 2.7 mainline. [Full scientific transfer](rithm27_flowing_transition_20261013.md). Historical P17 and older commands below remain reproducible and labeled by their original stage. Previously top-level `README_REPRO.md` covered only the historical 2.3 court and is replaced by this complete project guide. [Verbatim historical README](PROJECT_HISTORY_20261012.md) preserves older source-era instructions and receipts.
 
 ## Python quick start

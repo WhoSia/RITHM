@@ -1,5 +1,14 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+**Lead development languages: Ruby · Rust · Go · C++ · R.** Ruby owns source provenance and orchestration; Rust defines the exact integer-network policy envelope; Go executes typed group/source checks; C++ independently checks the kernel; R audits group/session inference. Existing Python remains a **legacy scientific replay adapter**, not the recommended lead language for new RITHM work. **Verified in P27:** Ruby/Go/C++ executed PASS; Rust and R source authored but **not run** in this container (compilers/interpreters absent), and no global software installation was attempted.
+
+## P27 — Human-source conditional guidance/welfare signs (2026-10-13)
+
+[P27 source-conditional research](docs/rithm27_p27_source_conditional_welfare_bounds_20261013.md) · [Five-language replay contract](docs/RITHM_P27_MULTILANGUAGE_REPLAY.md) · [Ruby source transform](ruby/derive_group_states.rb) · [Rust exact enumerator](rust/exact_bounds.rs) · [Go verified enumerator](go/bounds.go) · [C++ independent enumerator](cpp/exact_bounds.cpp) · [R group audit](R/validate_group_welfare.R).
+
+On the same original 2017 **observed** 480 human group-round profiles: any ≤1 eligible C-stage branch switch gives exact average group-cost improvement range **[−10.645833,+6.845833]**; assuming incident-only C–B→C–D deviation and *no other response* shrinks it to **[0,+2.233333]**; ALSO encouraging normal-day C–D→C–B broadens it to **[−6.116667,+2.237500]**. These are **sharp statewise hypothetical behavioral restriction bounds**, not a causal new guidance experiment, individual attention/viewing evidence or one globally feasible learned policy. Go versus C++ 9/9 numerical cases PASS and Ruby validator confirms; Rust/R not executed. Independent Noussair–Qiao published human experiment data are **not admitted as individual source**: supplement listings found but participant rows and view telemetry not acquired/verified. RITHM-2.7 remains sole active version; real intervention causal welfare HOLD.
+
+
 **Current formal mainline: RITHM-2.7 OPEN · RITHM-2.6 CLOSED (NOMOS-style FLOWING HANDOFF, 2026-10-13).** Full behavioral, sensor/source, observation/receipt and collective-welfare research now belongs to 2.7; causal human guidance/group welfare remains **HOLD**.
 
 How do human route-choice persistence, information clocks, congestion feedback and social welfare interact? Human causal state dependence and interventions remain **unidentified**. Separate observational urban sensor dynamics from actual group travel-time welfare.
