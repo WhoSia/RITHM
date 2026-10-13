@@ -1,8 +1,18 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
-**Research status: RITHM-2.6 OPEN · P20 source publication-delay robustness (real 2025 sensor exposure / unmeasured provider delay / welfare HOLD).**
+**Research status: RITHM-2.6 OPEN · P22 authenticated publication/receipt-clock nonidentification; 2.7 METHODS PROPOSAL ONLY.**
 
 How do human route-choice persistence, information clocks, congestion feedback and social welfare interact? Human causal state dependence and interventions remain **unidentified**. Separate observational urban sensor dynamics from actual group travel-time welfare.
+
+## P22 — Three-clock evidence and 2.7 transition judgment (2026-10-13)
+
+**EXACT SOURCE BOUNDARY:** P21 original 2025 source (18,420,707 five-minute rows; 38 original shards; 178 links) has native measurement times but no per-bin provider publication event or authenticated client receipt. P22 DOES NOT replay the original 38 files: it computes conditional scenario contrasts from the P21 source table, N=**2,121,699**, preserving the canonical mask. Mathematical and source-contract tests executed **30/30 locally** (the GitHub source/test pair carries its own offline tests; no Actions claimed).
+
+Separate observation end e, provider initial release p, client first confirmed receipt r. Reliable uncached negative provider poll l followed by trusted first-positive client receipt u only localizes p∈(l,u]; when decision time t lies inside this interval, provider availability is ambiguous, and absent client receipt **r≤t** the source cannot be used regardless. A two-5min source pair is legal only if both actual component receipts preceded t. Historical CSV archive upload/HTTP Date is NOT source first-release time.
+
+**Conditional illustrative source arithmetic, NOT actual deployment:** Under **hypothetically independently CERTIFIED max client delivery D≤60min**, P21's single frozen lag7 validation-only link gate has retrospective 2025 MAE **61.849** versus calendar **66.649**, advantage **4.800 vehicles/10min**; lag2 gate LOSES to fixed mix (45.957 vs44.955), so no uniform dominance. Relative to a per-lag **illegal ex-post** best over the three P21 candidates, lag7 policy max scenario mean loss gap 27.600 vs calendar 32.400. Not a minimax theorem. No real D60 certificate, month-uniform guarantee or human policy/welfare causal inference.
+
+[Full science court](docs/rithm26_p22_publication_clock_censoring_and_rithm27_gate_20261013.md) · [reproducible code](tools/traffic_sources/p22_availability_court.py) · [30 offline tests](tests/test_p22_availability_court.py) · [round-P21 source numbers](docs/data/rithm26_p22_conditional_scenario_20261013.json). Old P20/P21 preserved. **RITHM-2.7 formal name proposed:** *Availability-Constrained Traffic Feedback: Interval-Censored Observation, Endogenous Routing Response & Robust Collective-Cost Identification*. Methods can start as a distinct P0; **2.6 not closed and 2.7 not empirically promoted** until independent source-clock, physical sensor and intervention/group-welfare gates.
 
 ## P21 — Publication-bound policy switching and nonuniform operational admissibility (2026-10-13)
 

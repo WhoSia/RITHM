@@ -1,0 +1,52 @@
+{
+  "source": "P21 GitHub published table",
+  "matched_N": 2121699,
+  "scenarios": [
+    {
+      "lag": 1,
+      "fixed": 34.249,
+      "link_gate": 34.249
+    },
+    {
+      "lag": 2,
+      "fixed": 44.955,
+      "link_gate": 45.957
+    },
+    {
+      "lag": 3,
+      "fixed": 53.927,
+      "link_gate": 52.653
+    },
+    {
+      "lag": 4,
+      "fixed": 61.715,
+      "link_gate": 55.887
+    },
+    {
+      "lag": 5,
+      "fixed": 68.998,
+      "link_gate": 58.128
+    },
+    {
+      "lag": 6,
+      "fixed": 75.721,
+      "link_gate": 60.165
+    },
+    {
+      "lag": 7,
+      "fixed": 82.417,
+      "link_gate": 61.849
+    }
+  ],
+  "calendar": 66.649,
+  "actual_release_clock_observed": false,
+  "actual_client_delivery_bound_certified": false,
+  "conditional_D60_frozen_gate_MAE": 61.849,
+  "gain_vs_calendar": 4.8,
+  "max_scenario_mean_gap_against_illegal_expost_best": {
+    "calendar": 32.4,
+    "D60_gate": 27.6
+  },
+  "independent_human_group_welfare": false,
+  "source_clock_P22_replay": false
+}
