@@ -1,0 +1,35 @@
+{
+  "authority": "REAL_TRAFFIC_VALUES_WITH_SYNTHETIC_RECEIPT_ONLY",
+  "source_part_sha256": "a00df20a4c35c3943ed3a1a247521fa456a49896bffc731d873317276f775efc",
+  "link_id": "LBL2000010",
+  "train_days": [
+    "2025-07-01",
+    "2025-07-02"
+  ],
+  "test_day": "2025-07-03",
+  "N": 136,
+  "high_threshold": 610,
+  "source_receipts_measured": false,
+  "MAE": {
+    "always_fast": {
+      "calendar": 29.106617647058822,
+      "receipt": 30.044117647058822,
+      "lag7": 75.79411764705883
+    },
+    "high_flow_delayed": {
+      "calendar": 29.106617647058822,
+      "receipt": 33.31617647058823,
+      "lag7": 75.79411764705883
+    },
+    "uniform_60": {
+      "calendar": 29.106617647058822,
+      "receipt": 29.106617647058822,
+      "lag7": 75.79411764705883
+    }
+  },
+  "selected_high_volume_received": 0,
+  "selected_normal_received": 94,
+  "selective_receipt_available_only_MAE": 28.43617021276596,
+  "selective_receipt_all_decisions_MAE": 33.31617647058823,
+  "real_source_P21_cohort_replayed": false
+}

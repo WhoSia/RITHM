@@ -1,8 +1,14 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
-**Research status: RITHM-2.6 OPEN · P22 authenticated publication/receipt-clock nonidentification; 2.7 METHODS PROPOSAL ONLY.**
+**Research status: RITHM-2.6 OPEN · P23 source-conditioned receipt-clock falsification; RITHM-2.7 METHODS P0 ACTIVE ONLY.**
 
 How do human route-choice persistence, information clocks, congestion feedback and social welfare interact? Human causal state dependence and interventions remain **unidentified**. Separate observational urban sensor dynamics from actual group travel-time welfare.
+
+## P23 — RITHM-2.7 methods P0: receipt-admissible informative delivery (2026-10-13)
+
+**Executed:** local complete P23 code 51/51 tests PASS; actual 2025 original SHA verified for ONE link/three days, **all delivered timestamps simulated**. P20-P22 cohort N=2,121,699 NOT rerun, and 2.6 still OPEN. Three identical-source synthetic receipt worlds give all-decision latest-policy MAE 3.846/7.692/43.077 vs observed-only 3.125 under congestion-selective delivery, illustrating evaluation selection bias. An actual 2025 source traffic overlay (fixed Jul3 link/day N=136) gave calendar MAE 29.107 versus latest 30.044 (always fast) and 33.316 (high-volume-dependent synthetic delay); access to newer information does not make every fixed predictor better. Operational receipt availability, provider release history and causal human welfare NOT established.
+
+[Scientific P23 court](docs/rithm27_p23_receipt_endogeneity_methods_20261013.md) · [Executable synthetic GitHub court](tools/traffic_sources/p23_receipt_latency_court.py) · [10 GitHub smoke tests](tests/test_p23_receipt_latency_court.py) · [2025 verified-source aggregate](docs/data/rithm27_p23_source_overlay_20261013.json). The full 51 locally executed tests and original-source-overlay executable are in the P23 chat ZIP; the GitHub condensed implementation is a complement, not a claim that GitHub CI ran 51 tests. No external raw traffic upload in GitHub. **RITHM-2.7 formal name:** Availability-Constrained Traffic Feedback: Interval-Censored Observation, Endogenous Routing Response & Robust Collective-Cost Identification. METHODS P0 ACTIVE; empirical group welfare HOLD.
 
 ## P22 — Three-clock evidence and 2.7 transition judgment (2026-10-13)
 
