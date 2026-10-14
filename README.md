@@ -1,5 +1,10 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P0-R7 — Micro-friction, administrative dropout & distributional welfare (2026-10-14)
+
+[Current Notion science](https://app.notion.com/p/3f9ef561cf9281228a73d7d5609ac580) · [Ruby episode accounting model](ruby/rithm28/p0r7/administrative_court.rb) · [Ruby tests](ruby/rithm28/p0r7/test_administrative_court.rb). New **synthetic** two-cohort administrative queue distinguishes learning/compliance burden, limited shared processing capacity, pending episodes, procedural dropout, reattempts and actual benefit receipt. Eight periods, one new A and one new B application per period, one service slot/period. Without setup loss or reattempts, A priority yields A8/B0 receipts, B priority A0/B8, alternating A4/B4, FIFO with EXPLICIT A-before-B simultaneous tie yields A7/B1; same total processing capacity, unequal distribution. Setup friction in alternating case can reduce total successful episodes from 8 to 1 in the constructed model. Episode balance: cumulative applications including reattempts = final receipts + terminal dropout events + pending applications. Unlike traffic vehicles, person-level rights and eligibility cannot be inferred from episode counts; the model does not identify actual non-take-up effects. Ruby 4/4 local tests 82 assertions PASS. No new human recruitment; existing 2017/2025 data not pooled with synthetic administrative records. Literature gate: Moynihan/Herd/Harvey 2015 DOI 10.1093/jopart/muu009, Bendtsen 2026 DOI 10.1002/pam.70085. Full source-specific replication and novelty HOLD. Notion scientific canon; GitHub executable sources.
+
+
 ## RITHM-2.8 P0-R5 — Full Ruby 1-bit synthesis and information age (2026-10-14)
 
 **Scientific Notion court:** [P0-R5](https://app.notion.com/p/3f9ef561cf928190b48fdd17968cef6a). **Ruby is the primary full-controller synthesis engine:** [Ruby implementation](ruby/rithm28/p0r5/synthesis.rb) · [Ruby 4-test regression](ruby/rithm28/p0r5/test_synthesis.rb). [Go independent Karp witness verifier](go/rithm28/p0r5/main.go) checks five winning policies without invoking Ruby.
