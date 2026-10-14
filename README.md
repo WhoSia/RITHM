@@ -1,5 +1,10 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## P0-R4 — Ruby shared-queue controller synthesis (2026-10-14)
+
+[Ruby source](ruby/rithm28/p0r4/synthesis.rb) · [Ruby tests](ruby/rithm28/p0r4/test_synthesis.rb). Constructed two-queue shared-service game, 5-minute bins, one-step delayed or immediate actuator, rolling K3/B1 extra-arrival uncertainty. Within exactly 8 zero-memory and 256 restricted one-bit controllers, safe optimal worst means: immediate 0-bit 0.500 and one-bit 0.416667; delayed 0-bit 0.833333 and one-bit 0.416667. Exactly 140 safe candidates in each of the two 264-policy trials. Ruby 2 tests, 24 assertions PASS; independent Go cycle verifier matched four winning strategies. Receipt before decision is ASSUMED not verified for real Seoul sensors. No human recruitment or claim of unrestricted synthesis.
+
+
 ## RITHM-2.8 P0-R3 — Ruby-first delayed actuator and two shared queues
 
 Ruby lead implementation: [queue court](ruby/rithm28/p0r3_queue_court.rb) and [independent simple-cycle regression](ruby/rithm28/test_p0r3_queue_court.rb). Constructed two-queue/5min extra-service competition with one command delayed by one interval, rolling K3/B1 single extra-arrival budget; costs in hypothetical queued-vehicle equivalents including 0.25 per switch. Among PRESELECTED policies, sticky assignment costs 0.416667 immediate / 0.750 delayed; previous-shock reactive costs 0.500 / 0.833333; memory parity 0.583333 for both. Fixed allocation costs 3.0 and violates safety. Ruby local minitest 2 tests/22 assertions PASS and independent simple-cycle enumeration matches six adaptive cases. These are candidate comparisons NOT full memory-optimal synthesis, and assuming previous arrival observed in time is NOT justified by Seoul release/receipt timestamps. No human recruitment or source-calibrated welfare claimed. Scientific court recorded in active Notion when connector permits; no duplicate verbose GitHub research Markdown.
