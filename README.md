@@ -1,5 +1,14 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P0-R2 — Physically Dimensioned Queue (2026-10-14)
+
+[Live P0-R2 judgment in Notion](https://app.notion.com/p/3f9ef561cf9281f98f9cd6af1eddcada) · [Go exact queue synthesis](go/rithm28/p0r2/main.go) · [Go regression](go/rithm28/p0r2/main_test.go) · [Ruby independent cycle oracle](ruby/rithm28_p0r2_queue_check.rb).
+
+Source-independent 5-minute queue: A=1+w and S=1+a vehicles/interval, post-service backlog q'=max(0,q+w−a), abstract cap 4 with **physical overflow separately flagged**; assumed welfare proxy C=q'+2a vehicle-equivalents/interval, safety q≤2. W obeys a rolling K/B budget. **Hypothetically authenticated prior-interval arrival signal** permits exact 0-bit (4) / 1-bit (256) stationary synthesis (maximum reachable cycle mean). For K/B=3/0,3/1,3/2,5/1, both classes attain **0,1,2,0.6** with safety. Simple memoryless a=previous received w achieves these values: **no demonstrated memory advantage**. Without a certified signal, safe blind constant-service policy costs 2 for K3B1, compared with 1 under the assumed prior-arrival receipt. This contrast is NOT an empirically measured benefit.
+
+Existing 2025 Seoul traffic sensor records establish 5-minute native reporting intervals, **not actual provider-release or client-receipt timestamps**, calibrated disturbance K/B, link queue/service identity or physical welfare weights. P0-R2 uses historical P20 compact summary, not a fresh replay of the original 38 shards. Go 4/4 local tests and independent Ruby simple-cycle 4/4 checks PASS; no new Github Actions run, Rust/C++ execution or human recruitment claimed. These are stylized model results, not actual network deployment guarantees.
+
+
 ## RITHM-2.8 — ACTIVE mainline (2026-10-14)
 
 **Formal name:** *Observation-Legal Congestion Automata: Bounded-Memory Strategy Synthesis, Adversarial Queue Dynamics & Certified Long-Run Welfare*.
