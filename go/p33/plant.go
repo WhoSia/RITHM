@@ -7,7 +7,7 @@ func solve33(p Policy33,k,b int,queue,feedback bool)(float64,bool,int){
  states:=[]S33{};ids:=map[S33]int{};edge:=[][]E33{}
  var put func(S33)int
  put=func(s S33)int{if id,ok:=ids[s];ok{return id};id:=len(states);ids[s]=id;states=append(states,s);edge=append(edge,nil);return id}
- for z:=0;z<=1;z++{put(S33{Z:z,Prev:z,Mem:z})}
+ for z:=0;z<=1;z++{initial:=z;if p.Bits==0{initial=0};put(S33{Z:z,Prev:z,Mem:initial})}
  safe:=true
  for i:=0;i<len(states);i++{
   s:=states[i];a:=p.Act(s);d:=a^s.Z;c:=192+2*d+2*s.Q
