@@ -19,3 +19,8 @@ func TestP33TwoBitEmbedding(t *testing.T){
  q:=parity33()
  for _,fb:=range []bool{false,true}{a,_,_:=solve33(p,3,1,false,fb);b,_,_:=solve33(q,3,1,false,fb);if !approx33(a,b){t.Fatal(a,b)}}
 }
+
+func TestP33StructuredTwoBitExhaustion(t *testing.T){
+ cases:=[]struct{fb bool;k,b int;want float64}{{false,3,0,192},{false,3,1,193+1.0/3},{false,5,1,192.8},{true,3,0,192},{true,3,1,193+1.0/3},{true,5,1,192.8}}
+ for _,c:=range cases{r:=synthStructured2(c.k,c.b,c.fb);if r.Count!=4096||!approx33(r.Worst,c.want){t.Fatalf("%+v want %.6f",r,c.want)}}
+}
