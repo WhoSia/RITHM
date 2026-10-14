@@ -1,5 +1,10 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P0-R3 — Ruby-first delayed actuator and two shared queues
+
+Ruby lead implementation: [queue court](ruby/rithm28/p0r3_queue_court.rb) and [independent simple-cycle regression](ruby/rithm28/test_p0r3_queue_court.rb). Constructed two-queue/5min extra-service competition with one command delayed by one interval, rolling K3/B1 single extra-arrival budget; costs in hypothetical queued-vehicle equivalents including 0.25 per switch. Among PRESELECTED policies, sticky assignment costs 0.416667 immediate / 0.750 delayed; previous-shock reactive costs 0.500 / 0.833333; memory parity 0.583333 for both. Fixed allocation costs 3.0 and violates safety. Ruby local minitest 2 tests/22 assertions PASS and independent simple-cycle enumeration matches six adaptive cases. These are candidate comparisons NOT full memory-optimal synthesis, and assuming previous arrival observed in time is NOT justified by Seoul release/receipt timestamps. No human recruitment or source-calibrated welfare claimed. Scientific court recorded in active Notion when connector permits; no duplicate verbose GitHub research Markdown.
+
+
 ## RITHM-2.8 P0-R2 — Physically Dimensioned Queue (2026-10-14)
 
 [Live P0-R2 judgment in Notion](https://app.notion.com/p/3f9ef561cf9281f98f9cd6af1eddcada) · [Go exact queue synthesis](go/rithm28/p0r2/main.go) · [Go regression](go/rithm28/p0r2/main_test.go) · [Ruby independent cycle oracle](ruby/rithm28_p0r2_queue_check.rb).
