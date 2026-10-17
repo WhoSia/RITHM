@@ -44,3 +44,5 @@ jobs:
         run: ruby ruby/rithm28/p1p12/test.rb
       - name: P1-P18 Ruby composition court (P2 promotion HOLD)
         run: ruby ruby/rithm28/p1p18/test_composition_court.rb
+      - name: P1-P18 deadline prefix lower-bound versus Ruby exhaustive scheduling
+        run: ruby ruby/rithm28/p1p18/test_prefix_bound.rb
