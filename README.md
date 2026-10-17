@@ -2,10 +2,10 @@
 
 ## Current canonical status (2026-10-18)
 
-**RITHM-2.8 is the sole OPEN mainline; P1 OPEN.** Ruby is the primary game/synthesis implementation; Go is the independent verifier. The latest **previously CI-confirmed scientific court** is **2.8 P1-P12**. A narrow P1-P18 **Ruby synthetic composition probe** and its regression test were committed on 2026-10-18, but this does not promote P2 or establish P1-P18 as a fully verified canonical research stage. Do not label other local P1-P13–P1-P18 packages as merged or attribute historical GitHub CI success to the new HEAD. P2 and 2.9 promotion **HOLD**, subject to explicit scientific evaluation.
+**RITHM-2.8 is the sole OPEN mainline; P1 OPEN.** Ruby is the primary game/synthesis implementation; Go is the independent verifier. The most recent source-evidence trust-root court is **2.8 P1-P12**; a narrower **P1-P18 R2 Ruby→Go dynamic dual-certificate experiment** (shared recovery, priced and delayed probe, synthetic revocation/restoration epochs) now has independent replay and CI. This does not promote P2, certify a real agency, or complete the still-local historical P1-P13–P1-P18 research series. P2 and 2.9 promotion **HOLD**, subject to explicit scientific evaluation.
 
 - [P1-P12 scientific court](https://app.notion.com/p/3fcef561cf9281dead05e3697076f23e): independent **synthetic** client-log and provider roots; typed receipt→delivery links; Go checks role, identity, episode, chronology and HMAC. Public HMAC test keys **cannot attest real institutional identity**. `receipt_only_unconfirmed` and `synthetic_delivery_chain_only` never establish actual benefit receipt; `real_world_welfare_verified=false` always.
-- [Latest confirmed Ruby–Go certificate gate success](https://github.com/WhoSia/RITHM/actions/runs/39040575105) was on commit `e868be3d`; do **not** attribute that status to subsequent documentation or future HEAD commits without checking their runs.
+- [Ruby–Go Certificate Gate SUCCESS at commit `756cd8a2`](https://github.com/WhoSia/RITHM/actions/runs/39053196088), including P1-P18 R2: Ruby 7 tests/23 assertions, 8 Go independently checked upper/lower certificates, 10 adversarial mutations rejected. [Original P1-P12 gate](https://github.com/WhoSia/RITHM/actions/runs/39040575105) remains a historical synthetic-evidence verification run; neither attests reality.
 - [Ruby P1-P12 emitter](ruby/rithm28/p1p12/emit.rb) · [Ruby tests](ruby/rithm28/p1p12/test.rb) · [Go independent verifier](go/rithm28/p1p12/verify.go).
 - [P1-P9 independent policy certificate](ruby/rithm28/p1p9/export.rb) → [Go replay verifier](go/rithm28/p1p9/verify.go) · [mainline execution gate](scripts/rithm28-ruby-go-check.sh).
 
@@ -21,7 +21,7 @@
 
 **Research synthesis rule:** a successful calculation means only that the stated finite model and stated observation contract satisfy the tested property. Source provenance, physical timestamps, individual exposure, actual delivery and causal welfare are separate obligations. Negative results and counterexamples must remain citable.
 
-**Post-P1-P12 exploratory work (mostly local, not canonically promoted):** P1-P13–P1-P18 explore revocable trust, certificate reuse, endogenous paid observation, price–latency thresholds and dual winning/losing certificates. The [P1-P18 Ruby shared-capacity composition court](ruby/rithm28/p1p18/composition_court.rb) and [10-case regression](ruby/rithm28/p1p18/test_composition_court.rb), plus the [restricted deadline-prefix capacity bound](ruby/rithm28/p1p18/prefix_bound.rb) and its [282-case exhaustive Ruby test](ruby/rithm28/p1p18/test_prefix_bound.rb), are now committed; they are a synthetic counterexample, **not** a completed P2 theory or observed rights restoration. The broader certificate packages still require original-repository integration, independently verified bounds and novelty review.
+**Post-P1-P12 exploratory work (mostly local, not canonically promoted):** P1-P13–P1-P18 explore revocable trust, certificate reuse, endogenous paid observation, price–latency thresholds and dual winning/losing certificates. The [P1-P18 Ruby shared-capacity composition court](ruby/rithm28/p1p18/composition_court.rb) and [10-case regression](ruby/rithm28/p1p18/test_composition_court.rb), plus the [restricted deadline-prefix capacity bound](ruby/rithm28/p1p18/prefix_bound.rb) and its [282-case exhaustive Ruby test](ruby/rithm28/p1p18/test_prefix_bound.rb), are now committed; they are a synthetic counterexample, **not** a completed P2 theory or observed rights restoration. The [R2 Ruby certificate generator](ruby/rithm28/p1p18/dynamic.rb), [Go independent verifier](go/rithm28/p1p18/verify.go) and [CI gate](scripts/rithm28-p1p18-dual-revocation.sh) now verify a narrow **revocable-observation** game; see [Notion judgment](https://app.notion.com/p/3fcef561cf928111b863f1c9739702ba). Other local packages, actual typed institutional authority, general theorems and novelty review remain unintegrated/HOLD.
 
 ## Active reproducible Ruby/Go workflow
 
@@ -34,6 +34,7 @@ bash scripts/rithm28-p1p11-typed-evidence.sh
 bash scripts/rithm28-p1p11-linked-evidence.sh
 ruby ruby/rithm28/p1p18/test_composition_court.rb
 ruby ruby/rithm28/p1p18/test_prefix_bound.rb
+bash scripts/rithm28-p1p18-dual-revocation.sh
 ```
 
 See [Ruby–Go gate workflow](.github/workflows/rithm-ruby-go.yml) for CI invocation and pinned runtime versions. The legacy Python/R gate [rithm20-ci.yml](.github/workflows/rithm20-ci.yml) still runs historical source/fixture checks; **do not remove its dependencies without replacing its reproducibility coverage**. Earlier work under `src/`, `tools/`, `tests/`, `R/`, `cpp/`, `rust/`, `js/`, `ruby/` and `go/` is not necessarily obsolete merely because it is outside today's Ruby/Go mainline.
