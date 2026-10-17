@@ -46,3 +46,5 @@ jobs:
         run: ruby ruby/rithm28/p1p18/test_composition_court.rb
       - name: P1-P18 deadline prefix lower-bound versus Ruby exhaustive scheduling
         run: ruby ruby/rithm28/p1p18/test_prefix_bound.rb
+      - name: P1-P18 temporal revocation dual certificate proof and mutation gate
+        run: bash scripts/rithm28-p1p18-dual-revocation.sh
