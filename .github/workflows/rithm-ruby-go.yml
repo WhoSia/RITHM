@@ -6,6 +6,7 @@ on:
       - 'go/rithm28/**'
       - 'scripts/rithm28-ruby-go-check.sh'
       - 'scripts/rithm28-p1p11-typed-evidence.sh'
+      - 'scripts/rithm28-p1p11-linked-evidence.sh'
       - '.github/workflows/rithm-ruby-go.yml'
   pull_request:
     paths:
@@ -13,6 +14,7 @@ on:
       - 'go/rithm28/**'
       - 'scripts/rithm28-ruby-go-check.sh'
       - 'scripts/rithm28-p1p11-typed-evidence.sh'
+      - 'scripts/rithm28-p1p11-linked-evidence.sh'
       - '.github/workflows/rithm-ruby-go.yml'
   workflow_dispatch:
 jobs:
@@ -36,3 +38,5 @@ jobs:
           go run go/rithm28/p1p10/independent.go
       - name: P1-P11 typed receipt and delivery integrity
         run: bash scripts/rithm28-p1p11-typed-evidence.sh
+      - name: P1-P11 linked-evidence ancestry and re-signed mutation audit
+        run: bash scripts/rithm28-p1p11-linked-evidence.sh
