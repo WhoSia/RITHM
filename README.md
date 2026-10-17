@@ -1,5 +1,12 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P1-P1 — Weak versus strong fairness (2026-10-17)
+
+[Notion scientific court](https://app.notion.com/p/3fcef561cf92818fb44acf79d65e2834) · [Ruby fairness verifier](ruby/rithm28/p1p1/fair_game.rb) · [Ruby tests](ruby/rithm28/p1p1/test_fair_game.rb).
+
+**Exact constructed four-state fairness counterexample:** a person's authorized-review opportunity alternates between OFF and ON. An adversarial scheduler may choose defer when the opportunity is ON; from review-ordered, actual delivery can be delayed. Under **weak action fairness**, the off/on infinite cycle can avoid review forever because review is not continuously enabled. Under **strong action fairness**, review, if infinitely often enabled, cannot be postponed forever; delivery then remains continuously enabled and must occur. Ruby enumerates cyclic strongly connected reachable subsets and checks fairness obligations on their internal edges. Weakly fair non-restored cyclic subset exists; strongly fair non-restored subset does not. Local Ruby 4 tests / 10 assertions PASS. Not a general-purpose fair model checker or real administrative rights finding. Identity-less aggregate counts cannot preserve atomic proposition pending(B2) unless owner labels or appropriate quotient equivalence are retained. **Even eventual recovery under strong fairness does not imply a uniform finite waiting-time bound.** No actual legal competence, client notice/receipt, causal welfare, or recruited human experiment is claimed.
+
+
 ## RITHM-2.8 P1 — OPEN (2026-10-17)
 
 *Fair-Opportunity and Recovery Games: Identity-Preserving Temporal Guarantees, Administrative Friction & Congestion Welfare.* [P1 science canon](https://app.notion.com/p/3fcef561cf92815798addaf8d4b93767) · [P0-R10 court](https://app.notion.com/p/3fcef561cf92818fb3c0dde3686dff44). **P0 CLOSED as stage, P1 OPEN; all empirical/source/novelty HOLDs inherited.** P0-R10 Ruby finite CTL demonstrates EF recovered true, AF recovered false in the miniature appeal model; authority-approved repair and confirmed delivery are distinct. [Ruby CTL](ruby/rithm28/p0r10/checker.rb) · [P1 limited fairness lassos](ruby/rithm28/p1/fair.rb). Weak fairness excludes two non-restored self-loops in this restricted example ONLY; no general fair-LTL theorem, actual procedural authority finding, client receipt proof or field welfare conclusion. Ruby primary; new human recruitment excluded.
