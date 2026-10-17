@@ -1,5 +1,14 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P1-P10 — Observation Equivalence Is Not Source Attestation (2026-10-17)
+
+[Notion scientific judgment](https://app.notion.com/p/3fcef561cf92811d91c3da8acefdc47e) · [Ruby information-provenance audit](ruby/rithm28/p1p10/audit.rb) · [Ruby regressions](ruby/rithm28/p1p10/test_audit.rb) · [independent Go observation auditor](go/rithm28/p1p10/independent.go).
+
+**P1-P9 Ruby/Go GitHub Actions actual SUCCESS:** [run 39024635937](https://github.com/WhoSia/RITHM/actions/runs/39024635937), job 117373094169, Ruby synthesis and Go replay both successful. This is local-model/policy certificate CI, NOT external evidence authenticity.
+
+**P1-P10 constructed observation equivalence / provenance non-equivalence:** for each of 6 admissible hidden-outage worlds and decision times, two synthetic manifests with different provider publication times (source event+1 versus +2), same event values, same certified receipt schedule (event+4) generate **identical observation histories**, despite distinct manifest hashes. Changing actual receipt of event 0 to event+3 changes observation histories. Formal conditional induction: any observation-history-based deterministic controller receives the same inputs and chooses the same actions under both observation-equivalent manifests; this does NOT make those manifests provenance-equivalent, legally authentic, or interchangeable as evidence. Ruby 3 tests / 11 assertions PASS; independent Go same property PASS locally. An internally valid digest is not a cryptographic trust root or evidence of actual client receipt. No Python; Ruby/Go remain main execution languages. No new human recruitment. No novel general theorem or field welfare established. 2.9 promotion HOLD.
+
+
 ## RITHM-2.8 P1-P9 — Ruby/Go mainline, independent policy certificates (2026-10-17)
 
 **Project implementation direction: Ruby + Go as the default executable research languages.** Ruby owns reproducible synthesis, state/belief games and JSON witness export; Go owns independent source-contract and policy-replay verification. JS/Rust/R are optional independent specialists; prior-language code remains historical and is NOT deleted or falsely certified as migrated. Python is NOT used in this court.
