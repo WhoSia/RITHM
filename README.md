@@ -1,5 +1,10 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P1-P11 — Typed Trust Roots & Evidence-to-Welfare Non-Equivalence (2026-10-17)
+
+**Ruby + Go mainline**: [Ruby synthetic evidence emitter](ruby/rithm28/p1p11/emit.rb) → [Go independently typed HMAC/receipt verifier](go/rithm28/p1p11/verify.go) → [positive/negative replay gate](scripts/rithm28-p1p11-typed-evidence.sh). Two distinct **TEST-ONLY shared secrets** are scoped to client-receipt events and benefit-delivery events; the MAC covers domain, issuer, stable person, episode, event ID, event/publish/receipt clocks, and outcome. A valid receipt MAC does not certify benefit delivery; a valid delivery MAC from a DIFFERENT person/episode must never establish this person's outcome. Synthetic positive case PASS, mutation tests forged outcome, replayed event ID, role swap, timestamp inversion, changed person, **properly re-signed cross-subject delivery**, and absent delivery (must leave delivery unproven) all PASS locally. This is an integrity and typed-claim prototype, **NOT real institution signature, nonrepudiation, trusted client clock, proof of legal authority, or actual benefit**. Keys are public test fixtures and cannot authenticate anyone outside the constructed model. The event clock contract is order-only, not proof of physical time. Existing P1-P9 Ruby→Go policy certificate gate remains separate and must be composed only through explicit evidence assumptions. No new humans, no 2.9 promotion on this basic typed-MAC example.
+
+
 ## RITHM-2.8 P1-P10 — Observation Equivalence Is Not Source Attestation (2026-10-17)
 
 [Notion scientific judgment](https://app.notion.com/p/3fcef561cf92811d91c3da8acefdc47e) · [Ruby information-provenance audit](ruby/rithm28/p1p10/audit.rb) · [Ruby regressions](ruby/rithm28/p1p10/test_audit.rb) · [independent Go observation auditor](go/rithm28/p1p10/independent.go).
