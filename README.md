@@ -1,5 +1,10 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P1-P8 — Evidence-Carrying Observation Games (2026-10-17)
+
+[Notion scientific court](https://app.notion.com/p/3fcef561cf928126acd5c030cd9e9f2f) · [Ruby provenance contract](ruby/rithm28/p1p8/provenance.rb) · [Ruby tests](ruby/rithm28/p1p8/test_provenance.rb) · [independent JavaScript minimax](js/rithm28/p1p8/independent.js). Ruby-first, Python unused. Source event ID, ordered publication and client receipt, trust flag, duplicate idempotence, malformed ID omission, and conflicting trusted ID rejection added to inherited P1-P7 belief-game input. **The trust flag is an assumption, NOT an actual cryptographic signature or real provider attestation.** Synthetic 5/6-round two-recipient games: minimal repair boosts under clean/duplicate/missing-event0/untrusted/mislabelled-event0/reorder are H5 [1,1,1,2,1,1] and H6 [0,0,0,1,0,0]. Ruby 4 local tests / 35 assertions PASS; independently implemented JavaScript 12/12 cells PASS. Partial missingness did NOT worsen the bound *in this small model only*. Source clocks are not observational evidence, and successful synthetic beneficiary delivery is not a certified human welfare impact. No new human recruitment, 2.9 promotion HOLD. Next P1-P9: proof-carrying exported policy, externally verifiable receipt provenance, malicious/replayed evidence threat model and rigorous quotient soundness.
+
+
 ## RITHM-2.8 P1-P7 — Receipt-Contract Recovery & Out-of-Order Observations (2026-10-17)
 
 [Notion P1-P7 court](https://app.notion.com/p/3fcef561cf9281dbbe66c3d638b6fcd2) · [Ruby certified-receipt belief synthesis](ruby/rithm28/p1p7/receipt.rb) · [Ruby regressions](ruby/rithm28/p1p7/test_receipt.rb) · [independent JavaScript verifier](js/rithm28/p1p7/independent.js). Ruby 4 tests/57 assertions PASS; independent JS verified 10 horizon/schedule cases and 2 uncertified cases. ZIP replay package SHA-256 `883dc20c8455d65ec33dd458244fea0a9ccbd54091f07d0b11e9400cacd942b2`.
