@@ -40,3 +40,5 @@ jobs:
         run: bash scripts/rithm28-p1p11-typed-evidence.sh
       - name: P1-P11 linked-evidence ancestry and re-signed mutation audit
         run: bash scripts/rithm28-p1p11-linked-evidence.sh
+      - name: P1-P12 independently checked two-root compositional welfare gate
+        run: ruby ruby/rithm28/p1p12/test.rb
