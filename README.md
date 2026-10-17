@@ -2,7 +2,7 @@
 
 ## Current canonical status (2026-10-18)
 
-**RITHM-2.8 is the sole OPEN mainline; P1 OPEN.** Ruby is the primary game/synthesis implementation; Go is the independent verifier. This repository's latest **committed and previously CI-checked** research artifact is **2.8 P1-P12**, not the later locally developed P1-P13–P1-P18 experiments. Do not label local experiments as merged, as GitHub CI success, or as an actual human welfare result. P2 and 2.9 promotion **HOLD**, subject to explicit scientific evaluation.
+**RITHM-2.8 is the sole OPEN mainline; P1 OPEN.** Ruby is the primary game/synthesis implementation; Go is the independent verifier. The latest **previously CI-confirmed scientific court** is **2.8 P1-P12**. A narrow P1-P18 **Ruby synthetic composition probe** and its regression test were committed on 2026-10-18, but this does not promote P2 or establish P1-P18 as a fully verified canonical research stage. Do not label other local P1-P13–P1-P18 packages as merged or attribute historical GitHub CI success to the new HEAD. P2 and 2.9 promotion **HOLD**, subject to explicit scientific evaluation.
 
 - [P1-P12 scientific court](https://app.notion.com/p/3fcef561cf9281dead05e3697076f23e): independent **synthetic** client-log and provider roots; typed receipt→delivery links; Go checks role, identity, episode, chronology and HMAC. Public HMAC test keys **cannot attest real institutional identity**. `receipt_only_unconfirmed` and `synthetic_delivery_chain_only` never establish actual benefit receipt; `real_world_welfare_verified=false` always.
 - [Latest confirmed Ruby–Go certificate gate success](https://github.com/WhoSia/RITHM/actions/runs/39040575105) was on commit `e868be3d`; do **not** attribute that status to subsequent documentation or future HEAD commits without checking their runs.
@@ -21,7 +21,7 @@
 
 **Research synthesis rule:** a successful calculation means only that the stated finite model and stated observation contract satisfy the tested property. Source provenance, physical timestamps, individual exposure, actual delivery and causal welfare are separate obligations. Negative results and counterexamples must remain citable.
 
-**Post-P1-P12 local exploratory work (not yet merged):** P1-P13–P1-P18 explore revocable trust, certificate reuse, endogenous paid observation, price–latency thresholds and dual winning/losing certificates. They require original-repository integration, code-reviewable witnesses, checked GitHub CI, and literature novelty checks before canonical promotion. Their proposed numbering is a research ledger, not evidence of source-grounded welfare.
+**Post-P1-P12 exploratory work (mostly local, not canonically promoted):** P1-P13–P1-P18 explore revocable trust, certificate reuse, endogenous paid observation, price–latency thresholds and dual winning/losing certificates. The [P1-P18 Ruby shared-capacity composition court](ruby/rithm28/p1p18/composition_court.rb) and [10-case regression](ruby/rithm28/p1p18/test_composition_court.rb) are now committed; they are a synthetic counterexample, **not** a completed P2 theory or observed rights restoration. The broader certificate packages still require original-repository integration, independently verified bounds and novelty review.
 
 ## Active reproducible Ruby/Go workflow
 
@@ -32,6 +32,7 @@ bash scripts/rithm28-ruby-go-check.sh
 ruby ruby/rithm28/p1p12/test.rb
 bash scripts/rithm28-p1p11-typed-evidence.sh
 bash scripts/rithm28-p1p11-linked-evidence.sh
+ruby ruby/rithm28/p1p18/test_composition_court.rb
 ```
 
 See [Ruby–Go gate workflow](.github/workflows/rithm-ruby-go.yml) for CI invocation and pinned runtime versions. The legacy Python/R gate [rithm20-ci.yml](.github/workflows/rithm20-ci.yml) still runs historical source/fixture checks; **do not remove its dependencies without replacing its reproducibility coverage**. Earlier work under `src/`, `tools/`, `tests/`, `R/`, `cpp/`, `rust/`, `js/`, `ruby/` and `go/` is not necessarily obsolete merely because it is outside today's Ruby/Go mainline.
