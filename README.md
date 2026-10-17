@@ -1,5 +1,10 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P1-P2 — Bounded recovery and identity-sensitive quotient (2026-10-17)
+
+[Notion P1-P2 scientific court](https://app.notion.com/p/3fcef561cf928162b105e6ceaa60c560) · [Ruby bounded-recovery oracle](ruby/rithm28/p1p2/bounded_recovery.rb) · [Ruby test](ruby/rithm28/p1p2/test_bounded_recovery.rb) · [independent Go recurrence](go/rithm28/p1p2_independent.go). Synthetic off/on authorized-review, ordered, confirmed-delivered stage game. If review opportunity may be skipped at most r times and delivery delayed at most d times, exact worst bounded time **2(r+1)+d+1** model rounds. Ruby full finite-graph check local 4 tests / 37 assertions PASS, Go independently agrees on (r,d)=(0,0),(1,0),(2,1),(3,2), giving 3/5/8/11. Source example is model-only; **qualitative strong fairness without a quantitative skip bound does not certify a uniform maximum time**. A status-only quotient can be bisimilar for status propositions but fails to preserve personal owner-label propositions such as pending(B2). User-authorized version remains **2.8 P1 OPEN**; P1-P3 suggested to investigate adversarial resource allocation and distribution-sensitive finite-delay synthesis before contemplating 2.9. No new human subjects. Actual statutory timing, legal authority, publication or confirmed benefit receipt remain HOLD.
+
+
 ## RITHM-2.8 P1-P1 — Weak versus strong fairness (2026-10-17)
 
 [Notion scientific court](https://app.notion.com/p/3fcef561cf92818fb44acf79d65e2834) · [Ruby fairness verifier](ruby/rithm28/p1p1/fair_game.rb) · [Ruby tests](ruby/rithm28/p1p1/test_fair_game.rb).
