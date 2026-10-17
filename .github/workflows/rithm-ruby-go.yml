@@ -1,0 +1,30 @@
+name: RITHM Ruby-Go Certificate Gate
+on:
+  push:
+    paths:
+      - 'ruby/rithm28/**'
+      - 'go/rithm28/**'
+      - 'scripts/rithm28-ruby-go-check.sh'
+      - '.github/workflows/rithm-ruby-go.yml'
+  pull_request:
+    paths:
+      - 'ruby/rithm28/**'
+      - 'go/rithm28/**'
+      - 'scripts/rithm28-ruby-go-check.sh'
+      - '.github/workflows/rithm-ruby-go.yml'
+  workflow_dispatch:
+jobs:
+  certificate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+      - name: Ruby synthesis and independent Go replay
+        run: bash scripts/rithm28-ruby-go-check.sh
