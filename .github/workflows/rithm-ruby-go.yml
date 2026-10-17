@@ -5,12 +5,14 @@ on:
       - 'ruby/rithm28/**'
       - 'go/rithm28/**'
       - 'scripts/rithm28-ruby-go-check.sh'
+      - 'scripts/rithm28-p1p11-typed-evidence.sh'
       - '.github/workflows/rithm-ruby-go.yml'
   pull_request:
     paths:
       - 'ruby/rithm28/**'
       - 'go/rithm28/**'
       - 'scripts/rithm28-ruby-go-check.sh'
+      - 'scripts/rithm28-p1p11-typed-evidence.sh'
       - '.github/workflows/rithm-ruby-go.yml'
   workflow_dispatch:
 jobs:
@@ -32,3 +34,5 @@ jobs:
         run: |
           ruby ruby/rithm28/p1p10/test_audit.rb
           go run go/rithm28/p1p10/independent.go
+      - name: P1-P11 typed receipt and delivery integrity
+        run: bash scripts/rithm28-p1p11-typed-evidence.sh
