@@ -1,5 +1,14 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P1-P6 — Observation-age robust capacity repair (2026-10-17)
+
+[Notion science court](https://app.notion.com/p/3fcef561cf9281e8835ccd428446ac12) · [Ruby belief-state synthesis](ruby/rithm28/p1p6/belief.rb) · [Ruby regression](ruby/rithm28/p1p6/test_belief.rb) · [Ruby policy-certificate replay](ruby/rithm28/p1p6/certificate.rb) · [independent JavaScript verifier](js/rithm28/p1p6/independent.js). **Ruby primary; NO Python.** Ruby local tests 3 tests / 42 assertions PASS; JavaScript agrees on all 10 horizon × observation-age minimum-budget cells; Ruby replays four representative winning policy certificates across all legal outage histories.
+
+**Constructed two-recipient game**: two authorized work units each, one basic work unit/round, ONE adversarial outage in H=5 or H=6 rounds, first recipient switch loses one service opportunity, +1 recovery work boost up to B rounds. Only past outage w[t-lag] is observable at decision t. Critically **intermediate true completed-work progress is hidden** and the controller must act uniformly on its set of still-possible worlds. Controller never knows current outage or adversary unused budget by oracle. Minimum B to guarantee BOTH actual deliveries: H5 lag 1/2/3/4: **1**; no receipt: **2**. H6 lag 1/2/3/4: **0**; no receipt: **1**. All B=0,1,2 cells checked. A four-round-old outage signal can still influence final decision in this particular plant. No claim that all network games share this discontinuity, or that these are actual statutory service times/benefits.
+
+**Information legality:** the lag value is hypothetical publication + authenticated client receipt by decision boundary. Actual underlying source event time, provider release time and client receipt time are not verified by current institution/sensor data. Literature already studies delay-resilient control under partial observation, e.g. [Acta Informatica 2020](https://doi.org/10.1007/s00236-020-00374-7), and administrative burden learning/compliance/psychological costs are pre-existing [Moynihan/Herd/Harvey](https://doi.org/10.1093/jopart/muu009). No new participants. No 2.9 promotion without general result and source provenance.
+
+
 ## RITHM-2.8 P1-P5 — Observation-Conditioned Adaptive Capacity Repair (2026-10-17)
 
 [Scientific Notion court](https://app.notion.com/p/3fcef561cf928147a16afa151b6838b5) · [Ruby primary minimax synthesis](ruby/rithm28/p1p5/court.rb) · [Ruby regression](ruby/rithm28/p1p5/test_court.rb) · [Independent JavaScript verifier](js/rithm28/p1p5/independent.js). **No Python**. Local Ruby 3 tests / 11 assertions PASS, JavaScript 6/6 contract cells independently agree. Rust/R not executed because unavailable in current runtime; no GitHub Actions run.
