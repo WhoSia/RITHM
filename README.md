@@ -1,5 +1,12 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## RITHM-2.8 P1-P7 — Receipt-Contract Recovery & Out-of-Order Observations (2026-10-17)
+
+[Notion P1-P7 court](https://app.notion.com/p/3fcef561cf9281dbbe66c3d638b6fcd2) · [Ruby certified-receipt belief synthesis](ruby/rithm28/p1p7/receipt.rb) · [Ruby regressions](ruby/rithm28/p1p7/test_receipt.rb) · [independent JavaScript verifier](js/rithm28/p1p7/independent.js). Ruby 4 tests/57 assertions PASS; independent JS verified 10 horizon/schedule cases and 2 uncertified cases. ZIP replay package SHA-256 `883dc20c8455d65ec33dd458244fea0a9ccbd54091f07d0b11e9400cacd942b2`.
+
+Synthetic H=5 or 6 two-person + one-outage recovery game, first person-switch setup loss, both require 2 service units. Controller sees **only past events whose publication p and certified client receipt r occurred by current decision**, with source event id e; p>=e+1, r>=p. Tested one-round/four-round receipt delay, out-of-order, selected late event, blackout and UNVERIFIED receipt; input without certified receipt is excluded. Minimum additional service budget at H5 for lag1/lag4/out-of-order/late/blackout/uncertified: 1/1/1/1/2/2; at H6: 0/0/0/0/1/1. Ruby policy-tree replays ten winning cases. All times/receipt-certification flags are **constructed inputs**, NOT actual source logs, cryptographic certificate or administration/traffic welfare evidence. No human recruitment or universal novelty claim. Version 2.8 P1 stays OPEN, 2.9 promotion HOLD pending general theorem and credible source provenance. No Python; Ruby primary, JS verifier. Rust compiler unavailable.
+
+
 ## RITHM-2.8 P1-P6 — Observation-age robust capacity repair (2026-10-17)
 
 [Notion science court](https://app.notion.com/p/3fcef561cf9281e8835ccd428446ac12) · [Ruby belief-state synthesis](ruby/rithm28/p1p6/belief.rb) · [Ruby regression](ruby/rithm28/p1p6/test_belief.rb) · [Ruby policy-certificate replay](ruby/rithm28/p1p6/certificate.rb) · [independent JavaScript verifier](js/rithm28/p1p6/independent.js). **Ruby primary; NO Python.** Ruby local tests 3 tests / 42 assertions PASS; JavaScript agrees on all 10 horizon × observation-age minimum-budget cells; Ruby replays four representative winning policy certificates across all legal outage histories.
