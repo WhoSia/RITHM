@@ -182,6 +182,5 @@ func main(){
  decoder:=json.NewDecoder(bytes.NewReader(b));decoder.DisallowUnknownFields()
  if err=decoder.Decode(&d);err!=nil{fmt.Fprintln(os.Stderr,"FAIL",err);os.Exit(1)}
  if err=verify(d);err!=nil{fmt.Fprintln(os.Stderr,"FAIL",err);os.Exit(1)}
- fmt.Printf("PASS independent Go %s certificate (%d nodes)
-",d.Type,len(d.Nodes))
+ fmt.Printf("PASS independent Go %s certificate (%d nodes)\n",d.Type,len(d.Nodes))
 }
