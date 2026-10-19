@@ -96,3 +96,5 @@ jobs:
         run: ruby ruby/rithm29/p1/test_dynamic_court.rb
       - name: RITHM-2.9 P1 independent dynamic Go Nash verification
         run: bash scripts/rithm29-p1-independent.sh
+      - name: RITHM-2.9 P2 complete three-program pure Markov continuation correspondence
+        run: ruby ruby/rithm29/p2/test_correspondence.rb
