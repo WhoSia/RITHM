@@ -8,6 +8,8 @@ class TestPaidAgency < Minitest::Test
   assert_equal 4,a.fetch(:rows).size
   assert_equal [[:stop,:compute],[:compute,:stop]],a.fetch(:pure_equilibria).map{|x|x[:policies]}
   assert_equal [6,5,5,6],a.fetch(:rows).map{|x|x[:social]}
+  assert_equal [Rational(5,2),Rational(5,2)],a.fetch(:rows)[1][:individual]
+  assert_equal [3,3],a.fetch(:rows)[0][:individual]
   assert_equal Rational(1,2),a.fetch(:symmetric_mixed).fetch(:probability_compute)
   assert_equal Rational(11,2),a.fetch(:symmetric_mixed).fetch(:social)
  end
