@@ -87,3 +87,5 @@ jobs:
         run: ruby ruby/rithm29/p0/test_paid_agency.rb
       - name: RITHM-2.9 P0 independent Ruby-Go exact payoff comparison
         run: bash scripts/rithm29-p0-independent.sh
+      - name: RITHM-2.9 P0 repeated route switching cost model
+        run: ruby ruby/rithm29/p0/test_repeated.rb
