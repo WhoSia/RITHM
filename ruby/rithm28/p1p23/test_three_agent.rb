@@ -6,6 +6,11 @@ class TestThreeAgent < Minitest::Test
  def test_all_three_are_strategic
   r=M.audit
   assert_equal 216,r.fetch('profiles')
+  assert_equal 3,r.fetch('pure_equilibria').size
+  assert_equal [Rational(95,16),Rational(95,16),Rational(109,16)],
+    r.fetch('pure_equilibria').map{|e|e.fetch('social')}
+  assert_operator r.fetch('pure_equilibria').last.fetch('social'),:>,6
+  assert_operator r.fetch('pure_equilibria').first.fetch('social'),:<,6
   assert_equal 6,r.fetch('depth')
   assert_equal 'NOT CHECKED',r.fetch('mixed_equilibrium')
   r.fetch('pure_equilibria').each do |eq|
