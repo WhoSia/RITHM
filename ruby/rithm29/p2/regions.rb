@@ -10,7 +10,7 @@ module Rithm29OnePeriodRegions
   basis=[[0,0],[1,0],[0,1]].map{|fee,k|
     C::PROGRAMS.product(C::PROGRAMS).to_h{|pair|
       rows=C::WORLDS.map{|w|C.outcome(pair,previous,w,fee:fee,switch:k,wrong:wrong)[1]}
-      [pair,2.times.map{|i|rows.sum{|v|v[i]}/Rational(4)}]}
+      [pair,2.times.map{|i|rows.sum{|v|v[i]}/Rational(4)}]
     }
   }
   C::PROGRAMS.product(C::PROGRAMS).to_h do |pair|
