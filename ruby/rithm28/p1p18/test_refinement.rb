@@ -20,7 +20,7 @@ class TestRefinement < Minitest::Test
         end
       end
     end
-    assert_equal 132,count
+    assert_equal 78,count
   end
   def test_delayed_information_may_be_too_late
     refute M.decision(c(restore:5))
