@@ -1,5 +1,13 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## Current mainline — RITHM-2.9 OPEN (2026-10-19)
+
+**Formal 2.9 research name:** Resource-Bounded Strategic Agency: Costly Deliberation, Behavioral Friction, Endogenous Information & Collective Dynamics. User-authorized successor; 2.8 CLOSED as a generation, all P1–P27 proofs, corrections, source/novelty holds and historical records inherited. Existing root name, repository slug and history unchanged. [Current Notion charter](https://app.notion.com/p/3feef561cf9281bcbd77eeb6c983557e).
+
+**First actual 2.9-P0 code:** [Ruby finite paid-instruction 2-agent game](ruby/rithm29/p0/paid_agency.rb) with [pure/mixed checks](ruby/rithm29/p0/test_paid_agency.rb). In a restricted binary parity task, agents pay for READ_X, READ_Y and XOR, then impose external congestion on each other's actions. At fee 1, error loss 2, there are two asymmetric pure Nash profiles with all-in social cost 5, and a symmetric mixed Nash with each computing at probability 1/2, social cost 11/2. It is a **toy one-round finite game**, not a repeated behavioral model, universal complexity theorem, or independent Go-verified result. Research goal: actual paid cognition in repeated joint finite-state dynamics and falsifiable cross-domain abstraction. P1/novelty and real source welfare claims HOLD.
+
+---
+
 ## Current canonical status (2026-10-18)
 
 **RITHM-2.8 is the sole OPEN mainline; P1 OPEN.** Ruby is the primary game/synthesis implementation; Go is the independent verifier. The most recent source-evidence trust-root court is **2.8 P1-P12**; a narrower **P1-P18 R2 Ruby→Go dynamic dual-certificate experiment** (shared recovery, priced and delayed probe, synthetic revocation/restoration epochs) now has independent replay and CI. This does not promote P2, certify a real agency, or complete the still-local historical P1-P13–P1-P18 research series. P2 and 2.9 promotion **HOLD**, subject to explicit scientific evaluation.
