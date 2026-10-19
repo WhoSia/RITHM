@@ -66,3 +66,5 @@ jobs:
 
       - name: P1-P22 contingent Bayesian pure Nash audit
         run: ruby ruby/rithm28/p1p22/test_strategic_inspection.rb
+      - name: P1-P23 three-agent pure contingent equilibrium and depth screen
+        run: ruby ruby/rithm28/p1p23/test_three_agent.rb
