@@ -54,3 +54,6 @@ jobs:
         run: ruby ruby/rithm28/test_source_preflight.rb
       - name: P1-P19 Ruby-Go route cost forecast rank-reversal court
         run: bash scripts/rithm28-p1p19-route-cost-court.sh
+
+      - name: P1-P19 dynamic synthetic feedback regression
+        run: ruby ruby/rithm28/p1p19/test_effort_dynamics.rb
