@@ -61,3 +61,5 @@ jobs:
         run: ruby ruby/rithm28/p1p20/test_deliberation_court.rb
       - name: Finite hidden-state inspection test
         run: ruby ruby/rithm28/p1p20/test_bayes_inspection.rb
+      - name: P1-P21 shared-signal costly-attention counterexample
+        run: ruby ruby/rithm28/p1p21/test_shared_signal.rb
