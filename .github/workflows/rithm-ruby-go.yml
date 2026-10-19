@@ -91,3 +91,5 @@ jobs:
         run: ruby ruby/rithm29/p0/test_repeated.rb
       - name: RITHM-2.9 finite horizon memory Bellman exact court
         run: ruby ruby/rithm29/p0/test_bellman.rb
+      - name: RITHM-2.9 P1 two-agent dynamic Markov pure strategy court
+        run: ruby ruby/rithm29/p1/test_dynamic_court.rb
