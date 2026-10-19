@@ -8,7 +8,7 @@
 
 ---
 
-## Current canonical status (2026-10-18)
+## Historical 2.8 canonical snapshot (2026-10-18; superseded as mainline by 2.9)
 
 **RITHM-2.8 is the sole OPEN mainline; P1 OPEN.** Ruby is the primary game/synthesis implementation; Go is the independent verifier. The most recent source-evidence trust-root court is **2.8 P1-P12**; a narrower **P1-P18 R2 Ruby→Go dynamic dual-certificate experiment** (shared recovery, priced and delayed probe, synthetic revocation/restoration epochs) now has independent replay and CI. This does not promote P2, certify a real agency, or complete the still-local historical P1-P13–P1-P18 research series. P2 and 2.9 promotion **HOLD**, subject to explicit scientific evaluation.
 
