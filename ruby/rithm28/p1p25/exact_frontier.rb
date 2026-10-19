@@ -38,7 +38,7 @@ module RithmExactFrontier
   # initially-B player is FIXED. NOT equilibrium of original 3-agent game.
   def restricted_mixed(q:)
     raise ArgumentError unless q>=0 && q<=Rational(1,8)
-    {'inspection_probability'=>Rational(1,4)-2*q,
+    {'inspection_probability'=>Rational(1,8)-q,
       'other_agent_fixed'=>true,'full_game_mixed_nash_verified'=>false}
   end
 end
