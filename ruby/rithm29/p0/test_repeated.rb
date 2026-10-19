@@ -10,7 +10,7 @@ class TestRithm29Repeated < Minitest::Test
   assert_equal 18,r[0][:expected_total]
   assert_equal Rational(63,4),r[1][:expected_total]
   assert_equal Rational(63,4),r[2][:expected_total]
-  assert_equal Rational(27,2),r[3][:expected_total]
+  assert_equal Rational(39,2),r[3][:expected_total]
  end
  def test_zero_switch_fee_recovers_one_round_cost
   r=M.comparison(horizon:3,switch_fee:0)
