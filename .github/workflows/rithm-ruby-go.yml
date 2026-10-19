@@ -63,3 +63,6 @@ jobs:
         run: ruby ruby/rithm28/p1p20/test_bayes_inspection.rb
       - name: P1-P21 shared-signal costly-attention counterexample
         run: ruby ruby/rithm28/p1p21/test_shared_signal.rb
+
+      - name: P1-P22 contingent Bayesian pure Nash audit
+        run: ruby ruby/rithm28/p1p22/test_strategic_inspection.rb
