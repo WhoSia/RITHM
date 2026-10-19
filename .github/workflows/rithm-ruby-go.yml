@@ -70,3 +70,5 @@ jobs:
         run: ruby ruby/rithm28/p1p23/test_three_agent.rb
       - name: P1-P24 exact three-agent information-price equilibrium frontier
         run: ruby ruby/rithm28/p1p24/test_price_frontier.rb
+      - name: P1-P25 exact price breakpoints and bounded mixed subgame
+        run: ruby ruby/rithm28/p1p25/test_exact_frontier.rb
