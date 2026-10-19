@@ -72,3 +72,5 @@ jobs:
         run: ruby ruby/rithm28/p1p24/test_price_frontier.rb
       - name: P1-P25 exact price breakpoints and bounded mixed subgame
         run: ruby ruby/rithm28/p1p25/test_exact_frontier.rb
+      - name: P1-P25 finite instruction budget and nonmyopic metareasoning
+        run: ruby ruby/rithm28/p1p25/test_finite_procedure.rb
