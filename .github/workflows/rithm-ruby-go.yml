@@ -76,3 +76,7 @@ jobs:
         run: ruby ruby/rithm28/p1p25/test_finite_procedure.rb
       - name: P1-P26 full three-agent exact mixed deviation court
         run: ruby ruby/rithm28/p1p26/test_full_mixed.rb
+      - name: P1-P27 exact mixed equilibrium welfare identity
+        run: ruby ruby/rithm28/p1p27/test_mixed_welfare.rb
+      - name: P1-P27 repeated limited computation and refresh cost
+        run: ruby ruby/rithm28/p1p27/test_repeated_compute.rb
