@@ -52,3 +52,5 @@ jobs:
         run: ruby ruby/rithm28/p1p18/test_refinement.rb
       - name: Private-source preflight regression on synthetic fixtures only
         run: ruby ruby/rithm28/test_source_preflight.rb
+      - name: P1-P19 Ruby-Go route cost forecast rank-reversal court
+        run: bash scripts/rithm28-p1p19-route-cost-court.sh
