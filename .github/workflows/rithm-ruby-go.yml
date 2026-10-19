@@ -101,3 +101,5 @@ jobs:
         run: ruby ruby/rithm29/p2/test_correspondence.rb
       - name: RITHM-2.9 P2 independent full Markov correspondence Go audit
         run: bash scripts/rithm29-p2-independent.sh
+      - name: RITHM-2.9 P2 exact affine Nash parameter regions with STOP1
+        run: ruby ruby/rithm29/p2/test_regions.rb
