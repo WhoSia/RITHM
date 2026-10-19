@@ -27,8 +27,8 @@ module Rithm29PaidAgency
     raise ArgumentError unless programs.size==2 && programs.all?{|p|POLICIES.include?(p)}
     raise ArgumentError unless read_fee>=0&&xor_fee>=0&&mismatch_loss>=0
     results=WORLDS.map{|w|outcome(programs,w,read_fee:read_fee,xor_fee:xor_fee,mismatch_loss:mismatch_loss)}
-    {individual:2.times.map{|i|results.sum{|x|x[:individual][i]}/4},
-     social:results.sum{|x|x[:social]}/4}
+    {individual:2.times.map{|i|results.sum{|x|x[:individual][i]}/Rational(4)},
+     social:results.sum{|x|x[:social]}/Rational(4)}
   end
   def audit(read_fee:Rational(1,4),xor_fee:Rational(1,2),mismatch_loss:2)
     ps=POLICIES.product(POLICIES)
