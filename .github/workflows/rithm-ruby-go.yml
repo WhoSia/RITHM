@@ -68,3 +68,5 @@ jobs:
         run: ruby ruby/rithm28/p1p22/test_strategic_inspection.rb
       - name: P1-P23 three-agent pure contingent equilibrium and depth screen
         run: ruby ruby/rithm28/p1p23/test_three_agent.rb
+      - name: P1-P24 exact three-agent information-price equilibrium frontier
+        run: ruby ruby/rithm28/p1p24/test_price_frontier.rb
