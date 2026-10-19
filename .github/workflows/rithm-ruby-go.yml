@@ -6,6 +6,7 @@ on:
       - 'ruby/rithm29/**'
       - 'go/rithm29/**'
       - 'scripts/rithm29-p0-independent.sh'
+      - 'scripts/rithm29-p1-independent.sh'
       - 'go/rithm28/**'
       - 'scripts/rithm28-ruby-go-check.sh'
       - 'scripts/rithm28-p1p11-typed-evidence.sh'
@@ -93,3 +94,5 @@ jobs:
         run: ruby ruby/rithm29/p0/test_bellman.rb
       - name: RITHM-2.9 P1 two-agent dynamic Markov pure strategy court
         run: ruby ruby/rithm29/p1/test_dynamic_court.rb
+      - name: RITHM-2.9 P1 independent dynamic Go Nash verification
+        run: bash scripts/rithm29-p1-independent.sh
