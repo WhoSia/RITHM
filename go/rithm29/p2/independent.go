@@ -36,7 +36,8 @@ func eq(f V,px,py int)[][2]R{
 }
 type Branch struct{Future V}
 func main(){
- branches:=[]Branch{{}}
+ zero:=V{};for j:=0;j<4;j++{for i:=0;i<2;i++{zero[j][i]=rat(0,1)}}
+ branches:=[]Branch{{zero}}
  counts:=[]int{}
  for t:=1;t<=3;t++{
   next:=[]Branch{}
