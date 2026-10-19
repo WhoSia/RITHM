@@ -74,3 +74,5 @@ jobs:
         run: ruby ruby/rithm28/p1p25/test_exact_frontier.rb
       - name: P1-P25 finite instruction budget and nonmyopic metareasoning
         run: ruby ruby/rithm28/p1p25/test_finite_procedure.rb
+      - name: P1-P26 full three-agent exact mixed deviation court
+        run: ruby ruby/rithm28/p1p26/test_full_mixed.rb
