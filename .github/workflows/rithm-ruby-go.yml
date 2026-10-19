@@ -7,6 +7,7 @@ on:
       - 'go/rithm29/**'
       - 'scripts/rithm29-p0-independent.sh'
       - 'scripts/rithm29-p1-independent.sh'
+      - 'scripts/rithm29-p2-independent.sh'
       - 'go/rithm28/**'
       - 'scripts/rithm28-ruby-go-check.sh'
       - 'scripts/rithm28-p1p11-typed-evidence.sh'
@@ -98,3 +99,5 @@ jobs:
         run: bash scripts/rithm29-p1-independent.sh
       - name: RITHM-2.9 P2 complete three-program pure Markov continuation correspondence
         run: ruby ruby/rithm29/p2/test_correspondence.rb
+      - name: RITHM-2.9 P2 independent full Markov correspondence Go audit
+        run: bash scripts/rithm29-p2-independent.sh
