@@ -103,3 +103,9 @@ jobs:
         run: bash scripts/rithm29-p2-independent.sh
       - name: RITHM-2.9 P2 exact affine Nash parameter regions with STOP1
         run: ruby ruby/rithm29/p2/test_regions.rb
+      - name: RITHM-2.9 P3 symmetric mixed support with off-support deviation audit
+        run: ruby ruby/rithm29/p3/test_mixed_support.rb
+      - name: RITHM-2.9 P3 two-period parameter phase and welfare bounds
+        run: ruby ruby/rithm29/p3/test_phase_grid.rb
+      - name: RITHM-2.9 P3 paid partial-read dominated instruction audit
+        run: ruby ruby/rithm29/p3/test_partial_read.rb
