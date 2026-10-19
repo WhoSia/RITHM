@@ -59,3 +59,5 @@ jobs:
         run: ruby ruby/rithm28/p1p19/test_effort_dynamics.rb
       - name: P1-P20 separated deliberation and switching synthetic court
         run: ruby ruby/rithm28/p1p20/test_deliberation_court.rb
+      - name: Finite hidden-state inspection test
+        run: ruby ruby/rithm28/p1p20/test_bayes_inspection.rb
