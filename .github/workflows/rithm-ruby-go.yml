@@ -4,6 +4,8 @@ on:
     paths:
       - 'ruby/rithm28/**'
       - 'ruby/rithm29/**'
+      - 'go/rithm29/**'
+      - 'scripts/rithm29-p0-independent.sh'
       - 'go/rithm28/**'
       - 'scripts/rithm28-ruby-go-check.sh'
       - 'scripts/rithm28-p1p11-typed-evidence.sh'
@@ -83,3 +85,5 @@ jobs:
         run: ruby ruby/rithm28/p1p27/test_repeated_compute.rb
       - name: RITHM-2.9 P0 finite paid-instruction strategic game
         run: ruby ruby/rithm29/p0/test_paid_agency.rb
+      - name: RITHM-2.9 P0 independent Ruby-Go exact payoff comparison
+        run: bash scripts/rithm29-p0-independent.sh
