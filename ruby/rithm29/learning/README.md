@@ -1,35 +1,36 @@
-# Learning, self-confirmation and adaptability: empirical bridge
+# RITHM-2.9: Information-filtration-safe learning histories
 
-## Research question
+## Source-of-truth
 
-Does an informed participant's lower late-period route switching reflect successful learning, stable-but-fragile self-confirmation, habit, or strategic forecasting? **Switching prediction is not mechanism identification.**
+Noussair & Qiao, *Congestion Information and Efficiency: An Experiment*, **Online Appendices** (September 18, 2025), Drive https://drive.google.com/file/d/1xwIj82h_LTrgffv2w4XtJs2KDc8980RW/view, Appendix A (EWA-lite), B (Small Sample Models), J (instructions). Main paper: https://drive.google.com/file/d/1rTL9qTpYV6zwee6pC3nZy64H07oSWzlK/view.
 
-## Primary-method donors
+Informed participants receive historical congestion/number on each route. Uninformed participants know their own choices and received payoffs, not realized route occupancy or a uniquely identified cost from their own payoff alone (random trip values conceal it).
 
-- Fudenberg & Kreps (1995), *Learning in Extensive-Form Games I: Self-Confirming Equilibria*: on-path observations can validate beliefs while off-path beliefs remain wrong. Canonical Drive: https://drive.google.com/file/d/1rGaoxbbfjLOU_MFSA9w5nO9t2ugT5Qpg/view
-- Simon (1955), *A Behavioral Model of Rational Choice*: aspiration/satisficing. Drive: https://drive.google.com/file/d/14mO0Mr8-BNMSNDg-yvjbyVOBe1ZvXB7e/view
-- Hart & Mas-Colell (2003), *Uncoupled Dynamics Do Not Lead to Nash Equilibrium*: convergence limitations for uncoupled dynamics under specified classes; does not imply nonconvergence in this experiment. Drive: https://drive.google.com/file/d/1lIb3tXPXhAbG9Y2U4AnLJDDFxDHNV9dH/view
-- Fudenberg & Levine (2009), *Learning and Equilibrium*: https://scholar.harvard.edu/files/fudenberg/files/learning_and_equilibrium.pdf
-- MIT course, *Learning with bandit feedback*: https://www.mit.edu/~6.7980/bandit.html . Explore/exploit and partial observation are methods, not evidence human players use EXP3.
+## Corrected Ruby API
 
-## Exploratory calculations (2026-10-26)
+`RithmLearning.features(rows, informed: true)` expects chronological `:period, :route_a, :num_a, :cost`; its experienced occupancy/cost quantities are available to informed participants.
 
-Recovered author file: data_task_all_switch_230705.csv from the user-authorized ZIP. Partial treatment trt=2, exclude sessions 2 and 101, section<=4, periods 1..40. 48 independent (session,section,Group) clusters. Prediction rows periods 3..40: n=10,944. 6-fold GroupKFold by cluster (train/test groups disjoint), logistic regression with standardized features within training folds and common C=1.
+`RithmLearning.features(rows, informed: false)` expects `:period, :route_a, :payoff`. It **never reads** `:num_a` or `:cost`, not even when those keys are present. It exposes `:previous_mean_feedback` as realized **payoff**, never as route cost. Both variants use only prior observations and own route-switch history.
 
-Log loss:
-- informed + period + interaction: 0.592993
-- prior switching, previous route (inertia): 0.528139
-- previous experienced costs, cost asymmetry, state familiarities: 0.509742
-- add prior aggregate congestion changes: 0.509101
+Do NOT concatenate the two types' `previous_mean_feedback` as if one common-scale feature: one is cost and the other is payoff. Normalize/encode by informational treatment in downstream fitting. In particular, occupancy familiarity and realized relative costs are undefined as participant-accessible variables for uninformed players.
 
-Brier scores: 0.201698; 0.176777; 0.170153; 0.170031.
+### Tests
 
-The experience+social-proxy difference is small. **Not** a claim that strategic behavior is absent. The observational treatment contrast is post-treatment confounded by routes and shared congestion histories. Learning and habit are not identified by predictive performance. Familiarity uses previously encountered aggregate counts; late periods 31..40 leave only 18/2880 (0.625%) observations with <=1 prior exposure of the lag state, so there is severe lack of unfamiliar-state support.
+`ruby ruby/rithm29/learning/test_history_features.rb` (Ruby stdlib Minitest): no future leakage, informed histories, hidden occupancy invariance under stripping hidden fields, payoff requirement, invalid route rejection.
 
-## Ruby scope
+## Author learning models are richer
 
-`history_features.rb` computes past-only experience summaries for a *single participant*, and `test_history_features.rb` verifies no future leakage on a synthetic four-row fixture. Ruby is a minimal reproducibility primitive, not a replication of scikit-learn logistic CV. The separate Python exploratory analysis is the source of the four quantitative CV scores. The six-player experiment is not interchangeable with the theoretical two-player XOR game.
+EWA-lite Appendix A:
+(N_i(t)=\phi_i(t)N_i(t-1)+1);
+(A_i^j(t)=[\phi_i(t)N_i(t-1)A_i^j(t-1)+\delta_i^j(t)\hat\pi_i^j(t)]/N_i(t)).
+Uninformed agents' expected foregone payoff uses **uniform beliefs over compatible unseen counts**, conditional on observed payoff and own route, not realized hidden counts. The change detector uses type-specific observational beliefs. A full reproduction requires actual payoff-support rules, parameters and sequence logic.
 
-## Next discriminating experiment
+SSM5: informed samples 5 past trials where both realized/foregone payoffs can be inferred from occupancy. Uninformed samples separately within **trials actually choosing each route**. If only one route has ever been sampled, random choice. SSM1–9 uses uniformly chosen sample size 1 through 9. This Ruby feature module is **not** a simulation of EWA-lite or SSM.
 
-Vary a truly exogenous change in route costs; measure forward beliefs and counterfactual route forecasts separately; randomize observation of public vs private signals and information saturation; distinguish stability, shock adaptation and regret. An unobserved prior option cannot be coded as *known* to the subject.
+## Previous CV caveat
+
+The earlier GroupKFold scores 0.5930/0.5281/0.5097/0.5091 were produced by a separate exploratory Python predictor using realized congestion features for all rows. They describe an **oracle-data prediction benchmark** and must not be treated as information-feasible participant decision models. They have NOT been re-estimated after this information-set correction. No inference about psychology or causal mechanisms follows from their scores.
+
+## Theoretical purpose
+
+Compare (a) self-confirming learning under partial feedback, (b) satisficing/aspiration rules, and (c) strategic forecasting from information actually seen. A good next experiment varies feedback scope, exogenous shock response, and elicited expectations.
