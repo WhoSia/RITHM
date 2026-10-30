@@ -66,6 +66,8 @@ module RithmLearningModels
     def initialize(informed:,max_sample:5,variable_sample:false,rng:Random.new(23))
       raise ArgumentError,'sample size' unless max_sample>=1
       @informed,@max_sample,@variable_sample,@rng=informed,max_sample,variable_sample,rng
+      # Draw the participant's latent q_i once at initialization.
+      @sample_size=variable_sample ? rng.rand(1..max_sample) : max_sample
       @payoffs=[[],[]]
     end
     def observe(route_a:,payoff:,total_a:nil)
@@ -78,7 +80,7 @@ module RithmLearningModels
     end
     def choose
       return @rng.rand(2) if @payoffs.any?(&:empty?)
-      q=@variable_sample ? @rng.rand(1..@max_sample) : @max_sample
+      q=@sample_size
       means=@payoffs.map { |a| Array.new(q) { a[@rng.rand(a.size)] }.sum/q.to_f }
       return @rng.rand(2) if (means[0]-means[1]).abs<1e-12
       means[1]>means[0] ? 1 : 0
