@@ -1,0 +1,2 @@
+# Train-only calibration
+Use whole-session 6-fold and prior out-of-fold EWA choice probabilities. Within each outer heldout fold, optimize separate logit intercept and positive slope by treatment using only other sessions. For individual probability p use p'=sigmoid(alpha_trt+exp(beta_trt)*logit(p)). Then convolve six p' to get seven-count distribution, scoring heldout count logloss and Brier. Other models and group priors must share outer session splits. This is retrospective crossfit, not new human data.
