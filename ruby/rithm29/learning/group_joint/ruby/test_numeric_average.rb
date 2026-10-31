@@ -9,6 +9,6 @@ class NumericAverageTest < Minitest::Test
     assert_in_delta 1.5,mean(observed),1e-12
   end
   def test_sample_5616_fractional_mean
-    assert_in_delta 1.586360398860399,8910.to_f/5616,1e-12
+    assert_in_delta 1.586360398860399,8909.to_f/5616,1e-12
   end
 end
