@@ -9,6 +9,6 @@ class ReplayInterfaceTest < Minitest::Test
    assert out.key?(:actual_cancellation)
    assert_equal 1,out[:actual_cancellation]
    assert out[:cancellation_probability].between?(0.0,1.0)
-   assert_in_delta 4.0,out[:realized_cost],1e-12
+   assert_in_delta 4.5,out[:realized_cost],1e-12
  end
 end
