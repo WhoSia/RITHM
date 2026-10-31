@@ -1,0 +1,4 @@
+# Finite-grid SSM probability theorem
+If payoffs are integer multiples of 0.1, scale by ten, obtaining finite-support integer random variables A and B. For q independent draws with replacement from each route payoff memory, the sum distributions equal q-fold discrete self-convolutions of their empirical PMFs. Since q is shared by the route samples, comparing means is equivalent to comparing sums. Thus
+P(A) = sum_s P(S_A=s)[P(S_B<s)+0.5P(S_B=s)].
+The cumulative distribution of S_B computes this without Monte Carlo. Runtime is determined by payoff support, not combinatorially by the number of draw sequences. FFT convolution introduces roundoff; clamp tiny negative mass then renormalize and clip resulting choice probabilities to [0,1]. This method is exact **mathematically**, numerically approximate to floating-point precision. Do not call the FFT outputs symbolic rational arithmetic.
