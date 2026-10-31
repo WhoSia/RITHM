@@ -1,0 +1,2 @@
+# Actual switching prediction misspecification
+Original source group counts of participants switching per group-period 0..6 = [1059,1781,1592,853,276,49,6] across 5,616 periods. Mean realized switch count **1.5863604**; raw individually forecast EWA independent expected mean **2.0463340**, overestimate **0.459974**. Count logloss 1.520214, categorical Brier .750358. This establishes a calibration mismatch in switching frequency, but not by itself positive/negative common action correlation.
