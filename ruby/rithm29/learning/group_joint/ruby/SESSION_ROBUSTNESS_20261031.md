@@ -1,7 +1,7 @@
 # RITHM 2.9 — 2026-10-31 session-clustered group robustness
 Existing original Noussair–Qiao 24 sessions, 34,560 individual choices; period 2–40 only: 33,696 individuals, 5,616 groups. For each person use previously held-out EWA p and fold-specific train-only inertia κ, then independently convolve previous A and previous B route-switch Bernoullis into P(U,D), project to next A count. No current outcomes used in forecast.
 
-**Executed** analysis from exact CSV `one_step_predictions.csv` in a standalone script `session_robustness.py`, independently reproducing previous numerical results. 24 sessions all contain identical numbers of group transitions, so session-average paired differences equal row-weighted differences.
+**Executed** analysis from exact CSV `one_step_predictions.csv` in a standalone script `session_robustness.py`, independently reproducing previous numerical results. The 24 sessions contain **unequal** numbers of group transitions (117, 234 or 351). The pooled row-weighted contrast differs from the unweighted session-mean contrast used for bootstrap. State both explicitly.
 
 | Metric | EWA | EWA+inertia | delta | sessions improved | 20,000 session-resample percentile 95% interval |
 |--|--:|--:|--:|--:|--:|
