@@ -1,0 +1,3 @@
+# Exact turnover–net-flow decomposition
+For a group of six players, let U be number switching B→A, D the number switching A→B. Let S=U+D be gross switches and ΔN=U−D be net A-user change. Then S−|ΔN|=2 min(U,D), hence it is nonnegative, even, at most S. Cancellation count K=min(U,D) can be inferred exactly from aggregate observed (S,ΔN) as (S−|ΔN|)/2. This is a deterministic identity, no independence, stationarity, game payoff or fit assumptions.
+Consequently the same net congestion state N_t can conceal substantial individual churn (switching in opposing directions). Inferring individual cognitive inertia from N_t alone creates aggregation bias. Source data allow K to be observed because the six participant choices are tracked period-to-period.
