@@ -1,0 +1,2 @@
+# Model-level group recalibration
+Uncalibrated EWA count logloss 1.492442, Brier .735747, expected cost 4.676316. After treatment-specific train-session-only calibration count logloss **1.467871**, Brier **.727748**, expected cost **4.635560**. Improvement logloss −.024571, in 20 of 24 sessions. Still worse than treatment-conditional group-count empirical baseline 1.416180/.717298. Calibration does not close the aggregation gap.
