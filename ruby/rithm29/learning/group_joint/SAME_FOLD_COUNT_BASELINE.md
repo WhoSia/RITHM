@@ -1,0 +1,5 @@
+# Same six-fold session-heldout empirical group-count baseline
+
+After the initial source-only 5,760 group-period audit, an empirical benchmark derived from *training sessions only* was recalculated under the identical six GroupKFold whole-session partitions as the individual EWA/Markov/SSM choice forecasts. For each treatment, fit the categorical seven-bin count distribution with Jeffreys-style 0.5 pseudocount per count. Test count logloss **1.41618036**, count Brier **0.71729792**, compared with independent aggregation of EWA **1.49244221** / **0.73574685**. Earlier LOSO result 1.41550387 was not fold-aligned; use 1.41618036 for the matched-design comparison. The empirical model is a count-level prior, not an explanation of any individual learning behavior.
+
+Underlying 34,560 actual person choices / 5,760 group periods. This result does not in itself prove that conditional individual actions are dependent; it can also arise from imperfect marginal probabilities. Next separate marginal calibration and shared group shocks using the same splits. Verified script and predictions in attached RITHM_Group_Joint_20261031.zip. No new human participation.
