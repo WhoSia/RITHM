@@ -1,0 +1,2 @@
+# Switch count observability
+For any six-player group, period t>=2, define S_t=sum_i 1(a_it != a_i,t-1). Current individual model p_it=P(a_it=A|H_{t-1}) and observed prior action determine estimated switch probability s_it=1-p_it if prior route was A, otherwise p_it. Sum six independent Bernoullis to produce count-of-switchers distribution. This conditions on actual previous action, not current outcomes of other participants. Compute 144 group-blocks ×39 non-initial periods = 5,616 switch count observations.
