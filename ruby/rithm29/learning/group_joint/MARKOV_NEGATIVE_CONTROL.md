@@ -1,0 +1,2 @@
+# Markov and baseline negative controls
+Using identical calibration architecture/partitions: Markov independent group count logloss 1.456224 (raw), 1.457404 (calibrated): slight deterioration. Treatment route-share baseline 1.437170 (raw), 1.437764 (calibrated): slight deterioration. Thus recalibration improvement was not an automatic consequence of fitting extra parameters; it benefited EWA specifically in this retrospective dataset.
