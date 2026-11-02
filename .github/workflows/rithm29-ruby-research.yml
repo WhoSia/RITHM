@@ -1,0 +1,27 @@
+name: RITHM 2.9 Ruby Research Tests
+on:
+  push:
+    paths:
+      - 'ruby/rithm29/learning/group_joint/ruby/**'
+      - '.github/workflows/rithm29-ruby-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ruby-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      - name: Unit tests, not original-data replication
+        run: |
+          cd ruby/rithm29/learning/group_joint/ruby
+          ruby test_actor_markov_joint.rb
+          ruby test_residual_independence_audit.rb
+          ruby test_empirical_group_baseline.rb
+          ruby test_empirical_baseline_robustness.rb
+          ruby test_session_weighted_bootstrap.rb
+      - name: Research status boundary
+        run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
