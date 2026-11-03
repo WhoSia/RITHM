@@ -42,5 +42,7 @@ jobs:
           ruby test_stratified_contrasts.rb
           ruby test_section_order_audit.rb
           ruby test_section_adjusted_regression.rb
+          ruby test_online_actor_history.rb
+          ruby test_nested_online_actor_cv.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
