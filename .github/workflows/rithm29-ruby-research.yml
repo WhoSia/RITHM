@@ -34,5 +34,6 @@ jobs:
           ruby test_actor_calibration.rb
           ruby test_epoch_conditioned_model.rb
           ruby test_epoch_bootstrap.rb
+          ruby test_epoch_residual_contrast.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
