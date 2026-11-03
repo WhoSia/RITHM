@@ -1,6 +1,17 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
-## Current mainline — RITHM-2.9 OPEN (2026-10-19)
+## Current mainline — RITHM-2.10 OPEN (2026-11-03)
+
+**Research name:** Mechanism Identifiability in Repeated Resource Choice: Behavioral Inertia, Latent Group States and Strategic Dependence. The core research question is no longer only whether repeated choices and group turnover can be predicted, but which distinct behavioral mechanisms can generate the same observable choices and how to distinguish them. [Notion 2.10 charter](https://app.notion.com/p/40def561cf92812e9c51d5073aa70ef4) · [Ruby research charter](ruby/rithm210/RESEARCH_CHARTER.md) · [P0 exact latent-shock counterexample](ruby/rithm210/p0/latent_common_shock.rb) and [Minitest](ruby/rithm210/p0/test_latent_common_shock.rb).
+
+**First P0 result, exact synthetic counterexample:** with a previous A-users and 6-a previous B-users, conditionally independent switches with shared hidden fair group shock Z and individual probability p+delta*Z yield a positive unconditional residual cross-moment a(6-a)delta^2. At a=3, p=1/2, delta=3/40 the exact result is 81/1600=0.050625. This does **not** fit or explain the original human data, establish an actual group strategy, or prove novelty. The previous exploratory +0.0512449 residual estimate therefore cannot independently identify coordination. Local Ruby 3.3.8 P0 tests: 4 runs, 6 assertions, zero failures; remote GitHub Actions verification remains pending.
+
+**Inheritance and technical debt:** RITHM-2.9 CLOSED as a research generation, not as universal proof or full validation of original-source analysis. The human-data EWA/Markov/oracle and 24-session evidence, information-set limitations, unverified prior cross-validation alignment, original Table 8 discrepancy, and CI/source SHA HOLD all transfer to 2.10. A genuine 2.9 Ruby API mismatch was identified on 2026-11-03; repair commits [b717c893](https://github.com/WhoSia/RITHM/commit/b717c8932cc37cb7967fd0df71fb6e5330b76f95), [31ceab9c](https://github.com/WhoSia/RITHM/commit/31ceab9cc7722f561ffa509c9c24c782faf625b4). This is a code-compatibility repair, not a claim that the original residual numerical result has been re-executed from the committed source. GitHub Actions are allowed to run read-only tests but github-actions[bot] MUST NOT appear as code commit author/committer. Original human data remain preserved in [Drive](https://drive.google.com/file/d/1M3m0kCSEJ-FJfkx4g2dtcaro8MO7ZmsE/view), not re-uploaded publicly.
+
+---
+
+## Historical 2.9 research snapshot (2026-10-19 to 2026-11-02; superseded as mainline by 2.10)
+
 
 **Formal 2.9 research name:** Resource-Bounded Strategic Agency: Costly Deliberation, Behavioral Friction, Endogenous Information & Collective Dynamics. User-authorized successor; 2.8 CLOSED as a generation, all P1–P27 proofs, corrections, source/novelty holds and historical records inherited. Existing root name, repository slug and history unchanged. [Current Notion charter](https://app.notion.com/p/3feef561cf9281bcbd77eeb6c983557e).
 
