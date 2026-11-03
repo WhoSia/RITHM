@@ -14,6 +14,9 @@ module Rithm210LocalShockMomentAudit
       (pb.sum{|p|shifted(p,z)}-eu)*(pa.sum{|p|shifted(p,z)}-ed)
     end/2.0
   end
+  def mixture_bias(ps,gamma)
+    ([-gamma,gamma].sum{|z|ps.sum{|p|shifted(p,z)}}/2.0)-ps.sum
+  end
   def study(path,gamma:0.30,draws:4_000,seed:20261103)
     m=Rithm210ResidualNegativeControl
     groups=m.read_groups(path)
@@ -30,7 +33,8 @@ module Rithm210LocalShockMomentAudit
         d=people.sum{|r|r['switchAtoBWill'].to_i}
         ru=u-pb.sum;rd=d-pa.sum
         records<<{session:s,section:section,group:g,period:period,
-          within:ru*rd,model:predicted_cross(pa,pb,gamma),ru:ru,rd:rd}
+          within:ru*rd,model:predicted_cross(pa,pb,gamma),ru:ru,rd:rd,
+          bias_u:mixture_bias(pb,gamma),bias_d:mixture_bias(pa,gamma)}
       end
     end
     matched=records.group_by{|r|[r[:session],r[:section],r[:period]]}.values.flat_map do |set|
@@ -38,7 +42,8 @@ module Rithm210LocalShockMomentAudit
         other=set.reject{|q|q[:group]==r[:group]}
         next [] if other.empty?
         [{session:r[:session],observed:r[:within],predicted:r[:model],
-          between:r[:ru]*other.sum{|q|q[:rd]}/other.size.to_f}]
+          between:r[:ru]*other.sum{|q|q[:rd]}/other.size.to_f,
+          model_between:r[:bias_u]*other.sum{|q|q[:bias_d]}/other.size.to_f}]
       end
     end
     raise 'group count mismatch' unless records.size==5616 && matched.size==5148
@@ -46,8 +51,8 @@ module Rithm210LocalShockMomentAudit
     by=matched.group_by{|r|r[:session]}.map do |s,a|
       {session:s,n:a.size,
         excess:average.call(a,:observed)-average.call(a,:between),
-        predicted:average.call(a,:predicted),
-        remaining:average.call(a,:observed)-average.call(a,:between)-average.call(a,:predicted)}
+        predicted:average.call(a,:predicted)-average.call(a,:model_between),
+        remaining:average.call(a,:observed)-average.call(a,:between)-average.call(a,:predicted)+average.call(a,:model_between)}
     end
     interval=->(key){
       rng=Random.new(seed);n=by.size
@@ -64,6 +69,7 @@ module Rithm210LocalShockMomentAudit
       matched_observed_within:average.call(matched,:observed),
       matched_observed_between:average.call(matched,:between),
       matched_model_within:average.call(matched,:predicted),
+      matched_model_between:average.call(matched,:model_between),
       session_bootstrap:{excess:interval.call(:excess),
         model_explained:interval.call(:predicted),remaining:interval.call(:remaining)}}
   end
