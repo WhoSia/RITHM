@@ -26,5 +26,8 @@ jobs:
           ruby test_session_weighted_bootstrap.rb
           cd ../../../../rithm210/p0
           ruby test_latent_common_shock.rb
+          ruby test_joint_observational_equivalence.rb
+          cd ../p1
+          ruby test_latent_joint_cv.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
