@@ -10,6 +10,39 @@ module RithmActorMarkov
      q.each_with_index{|v,i|z[i]+=v*(1-p);z[i+1]+=v*p};z
    end
  end
+ def read_groups(path)
+  groups=Hash.new{|h,k|h[k]=[]}
+  CSV.foreach(path,headers:true) do |r|
+   s=r['session'].to_i;t=r['trt'].to_i;p=r['Period'].to_i
+   next unless t.between?(1,3) && s!=2 && s!=101 && p.between?(1,39)
+   groups[[s,r['section'].to_i,r['Group'].to_i,p]] << r
+  end
+  sessions=groups.keys.map(&:first).uniq
+  raise 'source mismatch' unless groups.length==5616 && sessions.length==24 && groups.values.all?{|a|a.length==6}
+  groups
+ end
+ def trained(groups,folds,heldout_fold)
+  counts=Hash.new{|h,k|h[k]=[0,0]}
+  back=Hash.new{|h,k|h[k]=[0,0]}
+  groups.each do |key,a|
+   next if folds.fetch(key[0])==heldout_fold
+   a.each do |r|
+    y=r['switchWill'].to_i
+    raise 'invalid label' unless [0,1].include?(y)
+    counts[key(r)][0]+=y;counts[key(r)][1]+=1
+    back[r['RouteA'].to_i][0]+=y;back[r['RouteA'].to_i][1]+=1
+   end
+  end
+  [counts,back]
+ end
+ def p_switch(fit,r,alpha:20.0)
+  counts,back=fit
+  local=counts.fetch(key(r),[0,0])
+  base=back.fetch(r['RouteA'].to_i,[0,0])
+  prior=(base[0]+1.0)/(base[1]+2.0)
+  (local[0]+alpha*prior)/(local[1]+alpha)
+ end
+ def binomial_convolution(probs);convolve(probs);end
  def run(path)
   groups=Hash.new{|h,k|h[k]=[]}
   CSV.foreach(path,headers:true) do |r|
