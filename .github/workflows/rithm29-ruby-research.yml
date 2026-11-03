@@ -45,6 +45,7 @@ jobs:
           ruby test_online_actor_history.rb
           ruby test_nested_online_actor_cv.rb
           ruby test_longitudinal_identity_audit.rb
+          ruby test_online_history_shock.rb
           ruby test_online_actor_history.rb
           ruby test_nested_online_actor_cv.rb
       - name: Research status boundary
