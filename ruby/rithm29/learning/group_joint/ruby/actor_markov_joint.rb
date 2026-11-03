@@ -84,7 +84,13 @@ module RithmActorMarkov
    end
   end
   {n:losses.length,sessions:sessions.length,joint:losses.sum{|r|r[:joint]}/losses.size,
-   count:losses.sum{|r|r[:count]}/losses.size}
+   count:losses.sum{|r|r[:count]}/losses.size,
+   sessions_detail:sessions.map do |s|
+     a=losses.select{|r|r[:session]==s}
+     {session:s,n:a.length,joint:a.sum{|r|r[:joint]}/a.length.to_f,
+      count:a.sum{|r|r[:count]}/a.length.to_f}
+   end}
  end
+ def evaluate(path);run(path);end
 end
 puts JSON.pretty_generate(RithmActorMarkov.run(ARGV.fetch(0))) if __FILE__==$PROGRAM_NAME
