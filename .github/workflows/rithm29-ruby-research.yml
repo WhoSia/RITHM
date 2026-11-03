@@ -29,5 +29,10 @@ jobs:
           ruby test_joint_observational_equivalence.rb
           cd ../p1
           ruby test_latent_joint_cv.rb
+          cd ../p2
+          ruby test_residual_negative_control.rb
+          ruby test_actor_calibration.rb
+          ruby test_epoch_conditioned_model.rb
+          ruby test_epoch_bootstrap.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
