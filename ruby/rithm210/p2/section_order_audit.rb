@@ -4,7 +4,9 @@ require_relative 'treatment_epoch_cv'
 module Rithm210SectionOrderAudit
   module_function
   def report(path)
-    rows=Rithm210TreatmentEpochCV.predict(Rithm210ResidualNegativeControl.read_groups(path))
+    summarize(Rithm210TreatmentEpochCV.predict(Rithm210ResidualNegativeControl.read_groups(path)))
+  end
+  def summarize(rows)
     mapping=rows.group_by{|r|[r[:session],r[:section]]}.map do |(s,section),a|
       treatments=a.map{|r|r[:treatment]}.uniq
       raise 'section contains multiple treatments' unless treatments.size==1
