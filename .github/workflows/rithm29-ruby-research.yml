@@ -35,5 +35,7 @@ jobs:
           ruby test_epoch_conditioned_model.rb
           ruby test_epoch_bootstrap.rb
           ruby test_epoch_residual_contrast.rb
+          ruby test_group_local_identification.rb
+          ruby test_local_shock_moment_audit.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
