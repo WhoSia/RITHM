@@ -44,6 +44,12 @@ module Rithm210GenerativeSSM
       if activity && index>0 && n_last==4
         previous_period=index
         epoch=previous_period<=10 ? :early : previous_period>=30 ? :late : nil
+        if epoch
+          cell=activity_stats[epoch]
+          cell[:at4]+=1
+          cell[:no_switch]+=1 if actions==actions_last
+          cell[:next_loss]+=3*(n-4)**2
+        end
       end
       actions_last=actions
       n_last=n
