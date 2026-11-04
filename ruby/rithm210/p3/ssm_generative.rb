@@ -41,6 +41,10 @@ module Rithm210GenerativeSSM
       n=actions.sum
       cost << ((n*n+2*(6-n)**2)/6.0)
       count << n
+      if activity && index>0 && n_last==4
+        previous_period=index
+        epoch=previous_period<=10 ? :early : previous_period>=30 ? :late : nil
+      end
       actions_last=actions
       n_last=n
       6.times do |i|
