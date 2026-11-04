@@ -11,7 +11,7 @@ module Rithm210OriginalWelfareAudit
     return 'late' if period >= 30
     'middle'
   end
-  def read_groups(path)
+  def read_groups(path,expected_groups:5616)
     result={}
     CSV.foreach(path,headers:true) do |r|
       s=r['session'].to_i
@@ -35,7 +35,7 @@ module Rithm210OriginalWelfareAudit
       rec[:down]+=r['switchAtoBWill'].to_i
       rec[:ids]<<r['ID'].to_i
     end
-    raise "wrong group count #{result.size}" unless result.size==5616
+    raise "wrong group count #{result.size}" unless result.size==expected_groups
     result.each_value do |g|
       raise 'group participants mismatch' unless g[:persons]==6 && g[:ids].uniq.size==6
       raise 'welfare polynomial mismatch' unless g[:cost]==24+3*(g[:n]-4)**2
