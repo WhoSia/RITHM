@@ -59,5 +59,7 @@ jobs:
           ruby test_turnover_welfare_drift.rb
           ruby test_conditional_instability.rb
           ruby test_state_standardized_instability.rb
+          ruby test_churn_welfare_bounds.rb
+          ruby test_churn_session_bootstrap.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
