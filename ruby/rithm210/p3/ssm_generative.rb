@@ -21,7 +21,7 @@ module Rithm210GenerativeSSM
     return 0 if advantage<0
     rng.rand(2)
   end
-  def simulate_one(treatment:,model:,rng:,periods:40)
+  def simulate_one(treatment:,model:,rng:,periods:40,activity:false)
     raise ArgumentError,'treatment' unless (1..3).cover?(treatment)
     raise ArgumentError,'model' unless %i[ssm5 ssm1_9].include?(model)
     informed=case treatment
