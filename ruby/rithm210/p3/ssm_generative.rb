@@ -37,7 +37,7 @@ module Rithm210GenerativeSSM
     cost=[];count=[]
     actions_last=nil
     n_last=nil
-    activity_stats={early:{at4:0,no_switch:0,next_loss:0},late:{at4:0,no_switch:0,next_loss:0}}
+    activity_stats={early:{at4:0,no_switch:0,next_loss:0,gross:0,cancel:0},late:{at4:0,no_switch:0,next_loss:0,gross:0,cancel:0}}
     periods.times do |index|
       actions=Array.new(6){|i|choose(histories[i],informed:informed[i],q:sizes[i],rng:rng)}
       n=actions.sum
@@ -50,6 +50,10 @@ module Rithm210GenerativeSSM
           cell=activity_stats[epoch]
           cell[:at4]+=1
           cell[:no_switch]+=1 if actions==actions_last
+          up=(0...6).count{|i|actions_last[i]==0 && actions[i]==1}
+          down=(0...6).count{|i|actions_last[i]==1 && actions[i]==0}
+          cell[:gross]+=up+down
+          cell[:cancel]+=1 if up==down && up>0
           cell[:next_loss]+=3*(n-4)**2
         end
       end
