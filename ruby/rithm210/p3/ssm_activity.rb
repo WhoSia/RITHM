@@ -10,7 +10,7 @@ module Rithm210GenerativeSSMActivity
     stats={}
     %i[ssm5 ssm1_9].each do |model|
       (1..3).each do |treatment|
-        cells={early:{at4:0,no_switch:0,next_loss:0},late:{at4:0,no_switch:0,next_loss:0}}
+        cells={early:{at4:0,no_switch:0,next_loss:0,gross:0,cancel:0},late:{at4:0,no_switch:0,next_loss:0,gross:0,cancel:0}}
         replicates.times do
           record=Rithm210GenerativeSSM.simulate_one(
             treatment:treatment,model:model,rng:rng,activity:true)[:activity]
@@ -22,7 +22,9 @@ module Rithm210GenerativeSSMActivity
           raise 'no support' if c[:at4]==0
           {at4:c[:at4],no_switch:c[:no_switch],
             no_switch_rate:c[:no_switch].to_f/c[:at4],
-            next_loss:c[:next_loss].to_f/c[:at4]}
+            next_loss:c[:next_loss].to_f/c[:at4],
+            mean_gross:c[:gross].to_f/c[:at4],
+            cancellation_rate:c[:cancel].to_f/c[:at4]}
         end
       end
     end
