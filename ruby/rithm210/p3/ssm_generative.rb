@@ -21,7 +21,7 @@ module Rithm210GenerativeSSM
     return 0 if advantage<0
     rng.rand(2)
   end
-  def simulate_one(treatment:,model:,rng:,periods:40,activity:false)
+  def simulate_one(treatment:,model:,rng:,periods:40,activity:false,fixed_q:nil)
     raise ArgumentError,'treatment' unless (1..3).cover?(treatment)
     raise ArgumentError,'model' unless %i[ssm5 ssm1_9].include?(model)
     informed=case treatment
@@ -29,8 +29,10 @@ module Rithm210GenerativeSSM
       when 2 then Array.new(3,true)+Array.new(3,false)
       when 3 then Array.new(6,true)
     end
+    raise ArgumentError,'fixed_q only for SSM5' if fixed_q && model!=:ssm5
+    raise ArgumentError,'fixed_q positive integer' if fixed_q && (!fixed_q.is_a?(Integer) || fixed_q<1)
     # SSM1-9 assigns one q_i to each individual for the entire 40-period game.
-    sizes=Array.new(6){ model==:ssm5 ? 5 : rng.rand(1..9) }
+    sizes=Array.new(6){ model==:ssm5 ? (fixed_q || 5) : rng.rand(1..9) }
     histories=Array.new(6){{a:[],b:[],pair:[]}}
     cost=[];count=[]
     actions_last=nil
