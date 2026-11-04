@@ -33,5 +33,7 @@ class TestRithm210ConditionalInstability < Minitest::Test
     assert_in_delta 3,result[:next_loss_decline][:point],1e-12
     assert_in_delta 3,result[:next_loss_decline][:lower],1e-12
     assert_in_delta(-1,result[:net_zero_early_minus_late][:point],1e-12)
+    assert_in_delta(-1,result[:gross_zero_early_minus_late][:point],1e-12)
+    assert_in_delta 0,result[:cancellation_early_minus_late][:point],1e-12
   end
 end
