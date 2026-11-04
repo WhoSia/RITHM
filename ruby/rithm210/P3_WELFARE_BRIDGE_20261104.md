@@ -43,3 +43,10 @@ Srinivasan/Mahmassani 1999 https://doi.org/10.3141/1676-06
 Route-control stability/hysteresis 2015 https://doi.org/10.1016/j.trb.2015.03.012
 Guo 2026 https://doi.org/10.1016/j.tre.2026.104762
 Informational Braess https://doi.org/10.1287/opre.2017.1712
+
+## Follow-up P3-R4: variance is principally within fixed six-person groups over time
+The raw original CSV has stable group membership across all three sections for 48 groups. A nested law of total variance applies to each treatment×epoch because every group has exactly 10 observations in early or late windows (19 in middle): Var(n) = E_g Var_t(n|g) + Var_g E_t(n|g).
+
+For Full information, EARLY observed group excess cost 4.112500 = 0.00046875 (squared grand-mean bias) + **3.90125000 (within-group time volatility)** + 0.21078125 (between-stable-group mean variance). LATE 2.093750 = 0.0001171875 (grand-mean bias) + **1.93187500 (within-group time volatility)** + 0.1617578125 (between-group mean variance). Of the descriptive early-to-late cost reduction 2.018750, **1.969375 (97.55%)** comes from within-stable-group temporal variability decreasing, 0.0490234375 from between-group variation, and 0.0003515625 from mean bias. This is a mathematically exact, original-source-checked decomposition of a 6-person experimental welfare outcome, NOT proof that information caused stabilization or a novel general traffic law.
+
+[Ruby hierarchical variance audit](p3/welfare_temporal_decomposition.rb) · [synthetic tests](p3/test_welfare_temporal_decomposition.rb). Independently re-evaluated locally in Ruby 3.3.8. Full detailed record lives in [Drive P3 original](https://docs.google.com/document/d/1J1m5CiwALDaRqQG790sQLx27CJ5G-X3xhkIHdRZzX7k/edit). The next falsifying question is which dynamic information/learning process *predicts the within-group variability component*, not merely a group's average occupancy.
