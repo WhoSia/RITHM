@@ -67,5 +67,6 @@ jobs:
           ruby test_ssm_activity.rb
           ruby test_ssm_q_sensitivity.rb
           ruby test_ssm_table7_replication.rb
+          ruby test_ssm_observed_activity_gap.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
