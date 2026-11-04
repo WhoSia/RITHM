@@ -33,7 +33,10 @@ module Rithm210GenerativeSSM
     sizes=Array.new(6){ model==:ssm5 ? 5 : rng.rand(1..9) }
     histories=Array.new(6){{a:[],b:[],pair:[]}}
     cost=[];count=[]
-    periods.times do
+    actions_last=nil
+    n_last=nil
+    activity_stats={early:{at4:0,no_switch:0,next_loss:0},late:{at4:0,no_switch:0,next_loss:0}}
+    periods.times do |index|
       actions=Array.new(6){|i|choose(histories[i],informed:informed[i],q:sizes[i],rng:rng)}
       n=actions.sum
       cost << ((n*n+2*(6-n)**2)/6.0)
