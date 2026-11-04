@@ -62,12 +62,13 @@ module Rithm210GenerativeSSM
         histories[i][actions[i]==1 ? :a : :b] << (actions[i]==1 ? a_profit : b_profit)
       end
     end
-    {cost_early:cost.first(10).sum/10.0,
+    metrics={cost_early:cost.first(10).sum/10.0,
      cost_late:cost.last(10).sum/10.0,
      a_early:count.first(10).sum/10.0,
      a_late:count.last(10).sum/10.0,
      cost_all:cost.sum/periods.to_f,
      a_all:count.sum/periods.to_f}
+    activity ? metrics.merge(activity:activity_stats) : metrics
   end
   def run(replicates:10_000,seed:20261104)
     raise ArgumentError,'replicates positive' unless replicates.positive?
