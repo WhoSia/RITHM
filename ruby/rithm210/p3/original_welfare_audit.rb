@@ -69,8 +69,17 @@ module Rithm210OriginalWelfareAudit
   def run(path,draws:20_000)
     rows=read_groups(path)
     strata=rows.group_by{|r|[r[:treatment],r[:epoch]]}.map do |(t,e),a|
-      {treatment:t,epoch:e,n:a.size,
-        mean_excess:a.sum{|r|r[:excess]}/a.size.to_f,
+      mu=a.sum{|r|r[:n]}/a.size.to_f
+      variance=a.sum{|r|(r[:n]-mu)**2}/a.size.to_f
+      bias_component=3*(mu-4)**2
+      dispersion_component=3*variance
+      excess=a.sum{|r|r[:excess]}/a.size.to_f
+      raise 'mean-variance welfare identity mismatch' unless
+        (excess-bias_component-dispersion_component).abs<1e-9
+      {treatment:t,epoch:e,n:a.size,mean_num_a:mu,
+        variance_num_a:variance,mean_bias_loss:bias_component,
+        dispersion_loss:dispersion_component,
+        mean_excess:excess,
         mean_cost:a.sum{|r|r[:cost]}/a.size.to_f}
     end.sort_by{|x|[x[:treatment],x[:epoch]]}
     {sha256:Digest::SHA256.file(path).hexdigest,
