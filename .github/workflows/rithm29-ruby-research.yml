@@ -55,5 +55,6 @@ jobs:
           ruby test_welfare_probability.rb
           ruby test_welfare_bootstrap.rb
           ruby test_welfare_variance_bootstrap.rb
+          ruby test_welfare_temporal_decomposition.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
