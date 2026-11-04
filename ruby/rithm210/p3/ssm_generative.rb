@@ -41,6 +41,8 @@ module Rithm210GenerativeSSM
       n=actions.sum
       cost << ((n*n+2*(6-n)**2)/6.0)
       count << n
+      actions_last=actions
+      n_last=n
       6.times do |i|
         value=6.0+10.0*rng.rand
         n_other=n-actions[i]
