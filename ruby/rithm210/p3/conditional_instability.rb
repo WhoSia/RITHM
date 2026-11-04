@@ -28,7 +28,9 @@ module Rithm210ConditionalInstability
         a=groups.fetch(s).select{|r|r[:epoch]==ep}
         # A session may contain zero occurrences of current n in an epoch.
         # Preserve its zero-count cell; resample whole sessions and pool by n.
-        [a.length,a.sum{|r|r[:subsequent]},a.count{|r|r[:change]==0}]
+        [a.length,a.sum{|r|r[:subsequent]},a.count{|r|r[:change]==0},
+          a.count{|r|r[:u]+r[:d]==0},
+          a.count{|r|r[:u]>0 && r[:d]>0 && r[:change]==0}]
       end
     end
     contrast=->(sample,index){
@@ -38,7 +40,9 @@ module Rithm210ConditionalInstability
         sample.sum{|a|a[1][index]}/ln.to_f
     }
     rng=Random.new(seed)
-    {next_loss_decline:1,net_zero_early_minus_late:2}.to_h do |name,index|
+    {next_loss_decline:1,net_zero_early_minus_late:2,
+      gross_zero_early_minus_late:3,
+      cancellation_early_minus_late:4}.to_h do |name,index|
       values=Array.new(draws) do
         contrast.call(Array.new(counts.size){counts.fetch(rng.rand(counts.size))},index)
       end.sort
