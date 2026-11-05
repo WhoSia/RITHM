@@ -84,5 +84,6 @@ jobs:
           ruby test_independent_churn_moments.rb
           ruby test_independent_churn_cluster.rb
           ruby test_heterogeneous_independence.rb
+          ruby test_actor_hetero_welfare_cv.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
