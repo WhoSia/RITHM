@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'ruby/rithm210/p3/readonly_symbol_inventory.rb'
+      - 'ruby/rithm210/p3/benchmark_readonly_symbol_inventory.rb'
       - 'ruby/rithm210/p3/test_readonly_symbol_inventory.rb'
       - 'ruby/rithm210/p3/occupancy_churn_bounds.rb'
       - 'ruby/rithm210/p3/test_occupancy_churn_bounds.rb'
@@ -34,6 +35,8 @@ jobs:
           ruby -c ruby/rithm210/p3/turnover_coupling_witness.rb
       - name: Four fixed mutation-sensitivity cases in disposable directories
         run: ruby ruby/rithm210/p3/mutation_sensitivity_review.rb
+      - name: Compare Ruby AST with naive regex on twelve synthetic source cases
+        run: ruby ruby/rithm210/p3/benchmark_readonly_symbol_inventory.rb
       - name: Baseline Ruby symbol inventory versus fixed expected AST symbols
         run: ruby ruby/rithm210/p3/test_readonly_symbol_inventory.rb
       - name: Sharp occupancy bounds and resource-domain regression
