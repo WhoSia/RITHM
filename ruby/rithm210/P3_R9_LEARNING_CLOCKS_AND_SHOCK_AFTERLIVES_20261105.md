@@ -53,3 +53,25 @@ By contrast, one uniformly sampled actor per period strict best-responding to th
 **Crucial failure-to-explain boundary:** this deterministic clock variation alone CANNOT explain the real experiment's early P(no switch|n=4)=.2208, since in the exact Nash state all players stay under strict known-state best response. A separate shock/uncertainty/misbelief/learning mechanism is required to EXPLAIN exits from the optimum; update synchronization only controls propagation of departures. Also, not every original participant had access to the shared full group snapshot, and even informed participants could not know opponents' simultaneous next moves. Therefore these are **oracle and frozen-opponent comparison models**, not valid reconstructions of the laboratory information sets.
 
 Ruby: [atomic Nash potential](p3/atomic_nash_potential.rb), [exact finite-six clock map](p3/adjustment_clocks.rb), [general-N extension](p3/general_adjustment_clocks.rb), and separate exhaustive Minitest files. Independent local Ruby passed 3 tests/187 assertions for six-person identities and 2 tests/258 assertions for general-N potential and cycle ratio.
+
+## C. The indefinite macro afterlife of ONE mistaken micro-choice
+
+Start from the efficient n=4 Nash configuration. A single mistaken A→B action takes n to 3, or a B→A action takes it to 5. The shock occurs ONCE; from the next period onward, agents strictly best respond to their current shared snapshot without further mistakes.
+
+For the n=3 case, all-at-once updates yield the infinite sequence 3→6→0→6→0→..., with excess costs 3,12,48,12,48,... . For discount factor beta in [0,1), the exact discounted congestion excess, measured from the first post-shock state, is
+
+`V_sync(3;beta)=3+(12 beta+48 beta²)/(1−beta²)`.
+
+For n=5, the sequence is 5→0→6→0→..., with
+
+`V_sync(5;beta)=3+(48 beta+12 beta²)/(1−beta²)`.
+
+If exactly one actor is chosen uniformly each period to strictly best respond, n=3 remains at 3 until one of the 3 currently-B actors is chosen (success probability 3/6), then n=4 forever. Similarly from n=5, the probability of picking one of the 5 currently-A actors is 5/6. The geometric waiting-time values are:
+
+`V_async(3;beta)=3/(1−beta/2)` and `V_async(5;beta)=3/(1−beta/6)`.
+
+At beta=0.9 these equal approximately **264.47 vs 5.45** for n=3 and **281.53 vs 3.53** for n=5. As beta tends toward 1, the synchronized present value diverges while the asynchronous n=3 value tends toward **6** and n=5 toward **3.6**. This makes the two-causal-stage modeling architecture explicit: (I) a noisy/incomplete-information rule generates rare exits; (II) the adjustment protocol amplifies or absorbs those exits and determines future welfare.
+
+It is a **synthetic counterexample** in an atomic congestion model with oracle stale-state observations. It does NOT prove that the source humans share a clock, that subjective switching disutility is social resource cost, or that synchronization-induced oscillations are novel relative to the existing day-to-day traffic and endogenous-learning literature. A robust thesis needs an empirically grounded protocol variation and a prediction differentiating observation delay, private uncertainty and concurrent intention formation.
+
+Ruby [shock afterlife](p3/shock_afterlife.rb) and [Rational test](p3/test_shock_afterlife.rb). Independent local rational checker: 2 runs/7 assertions, zero failures; the published source Minitest tests further edge cases. Remote Actions success not established.
