@@ -58,7 +58,7 @@ module Rithm210R20GroupBridge
       raise 'mixed group treatment' unless people.all?{|r|r.fetch('trt').to_i==trt}
       n=people.sum{|r|r.fetch('RouteA').to_i}
       raise 'NumA mismatch' unless people.all?{|r|r.fetch('NumA').to_i==n}
-      probabilities={ssm_uniform:[],ssm_persistent:[],own_route_frequency:[]}
+      probabilities={ssm_uniform:[],ssm_persistent:[],own_route_frequency:[],online_actor_markov:[]}
       states=[]
       people.each do |r|
         key=[s,section,r.fetch('ID').to_i]
@@ -72,6 +72,15 @@ module Rithm210R20GroupBridge
         probabilities[:ssm_persistent]<<persistent
         probabilities[:ssm_uniform]<<f.last_probabilities.sum/qmax.to_f
         probabilities[:own_route_frequency]<<(h.fetch(:a_count,0)+1).to_f/(count+2)
+        if count==0
+          probabilities[:online_actor_markov]<<0.5
+        else
+          prev_a=h.fetch(:previous_a)
+          switches=prev_a ? h.fetch(:switch_from_a,0) : h.fetch(:switch_from_b,0)
+          trials=prev_a ? h.fetch(:prior_a_count,0) : h.fetch(:prior_b_count,0)
+          switch_p=(switches+1).to_f/(trials+5)
+          probabilities[:online_actor_markov]<<(prev_a ? 1-switch_p : switch_p)
+        end
         states<<[r,h,f,inf,y]
       end
       probabilities.each{|label,ps|scored<<{session:s,treatment:trt,period:t,model:label,**score(ps,n)}}
@@ -82,10 +91,18 @@ module Rithm210R20GroupBridge
         raise 'unsupported payoff precision' unless ten.denominator==1
         Rithm210R19SSMExact.append(history:h,route_a:y==1,informed:inf,
           payoff_tenths:ten.to_i,num_a:inf ? n : nil)
+        if h.key?(:previous_a)
+          prior=h.fetch(:previous_a)
+          trial=prior ? :prior_a_count : :prior_b_count
+          switched=prior ? :switch_from_a : :switch_from_b
+          h[trial]=h.fetch(trial,0)+1
+          h[switched]=h.fetch(switched,0)+1 if prior != (y==1)
+        end
+        h[:previous_a]=(y==1)
         h[:count]=t;h[:a_count]=h.fetch(:a_count,0)+y
       end
     end
-    raise 'score size mismatch' unless scored.size==5760*3
+    raise 'score size mismatch' unless scored.size==5760*4
     by=scored.group_by{|r|[r[:treatment],r[:model]]}
     {sessions:scored.map{|r|r[:session]}.uniq.size,groups:rows.size,qmax:qmax,lapse:lapse,
      estimand:'One-period six-person occupancy distribution and quadratic expected group cost; independent actor conditional predictions.',
