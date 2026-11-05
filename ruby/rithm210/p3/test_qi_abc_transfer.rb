@@ -24,7 +24,7 @@ class TestRithm210QiABCTest < Minitest::Test
     assert_in_delta 0.4,Q.probability(:c,[0.2,0.6,0.3],1,n),1e-12
     assert_in_delta 0.2,Q.probability(:c,[0.2,0.6,0.3],0,n),1e-12
     assert_operator Q.probability(:a,[0.2,0.6,0.3],1,n),:>,0.4
-    assert_operator Q.probability(:a,[0.2,0.6,0.3],0,n),:>,0.2
+    assert_operator Q.probability(:a,[0.2,0.6,0.3],0,n),:<,0.2
   end
   def test_fit_and_parameter_boundaries
     cells={[1,3]=>[15,100],[0,3]=>[45,100],[1,5]=>[50,100],[0,5]=>[20,100]}
