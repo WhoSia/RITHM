@@ -78,5 +78,6 @@ jobs:
           ruby test_general_adjustment_clocks.rb
           ruby test_shock_afterlife.rb
           ruby test_mixed_clock_chain.rb
+          ruby test_mixed_clock_theorem.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
