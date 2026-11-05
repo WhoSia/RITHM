@@ -61,6 +61,9 @@ jobs:
           ruby test_qi_abc_forward_bootstrap.rb
           ruby test_update_clock_signal_factorial.rb
           ruby test_update_clock_welfare_rollout.rb
+          ruby test_factorial_session_randomization.rb
+          ruby test_update_clock_signal_factorial.rb
+          ruby test_update_clock_welfare_rollout.rb
           ruby test_adaptation_cycle.rb
           ruby test_policy_welfare_equivalence.rb
           ruby test_experimental_welfare.rb
