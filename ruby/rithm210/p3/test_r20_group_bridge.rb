@@ -48,3 +48,20 @@ class TestRithm210R20ActorMarkov < Minitest::Test
     assert_raises(RuntimeError){M.online_markov_probability({count:2,previous_a:true,prior_a_count:0,switch_from_a:1})}
   end
 end
+
+class TestRithm210R20CostResidualIdentity < Minitest::Test
+  M=Rithm210R20GroupBridge
+  def test_quadratic_identity_for_every_possible_occupancy
+    ps=[0.2,0.3,0.4,0.5,0.6,0.7]
+    (0..6).each do |n|
+      r=M.score(ps,n)
+      assert_in_delta r[:observed_cost]-r[:predicted_cost],
+        r[:linear_calibration]+r[:dispersion_residual],1e-9
+    end
+  end
+  def test_dispersion_residual_can_have_either_sign_without_peers
+    ps=Array.new(6,0.5)
+    assert_in_delta(-4.5,M.score(ps,3)[:dispersion_residual],1e-12)
+    assert_operator M.score(ps,0)[:dispersion_residual],:>,0
+  end
+end
