@@ -90,6 +90,7 @@ jobs:
           ruby test_epoch_independent_welfare.rb
           ruby test_joint_epoch_diagnostics.rb
           ruby test_occupancy_churn_bounds.rb
+          ruby test_occupancy_churn_backcompat.rb
           ruby test_turnover_coupling_witness.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
