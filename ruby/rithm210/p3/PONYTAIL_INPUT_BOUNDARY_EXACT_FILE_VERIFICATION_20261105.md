@@ -28,6 +28,16 @@ Additional direct boundary replay on the same matched files: `Float::INFINITY`, 
 
 This is evidence of a fixed domain-validation bug and regression-free **tested cases**, not of a new welfare theorem, independent strategic behavior, causal intervention effect, or a quantitatively proven Ponytail-vs-baseline efficiency gain.
 
+## Independent cross-tool mathematical check
+
+The connected Wolfram MCP (Wolfram Language evaluation, separate from Ruby) was used to enumerate every binary assignment of six or fewer actors and, more generally, all `n=1..8` occupancies. For each `(n,a,b)`, brute-force actor assignments were compared with the exact predicted feasible gross switch sequence
+
+```
+Abs[b-a], Abs[b-a]+2, ..., Min[a+b,2*n-a-b].
+```
+
+Wolfram returned **284 occupancy parameter cases, zero mismatches**. This independently checks the existing formula across finite `n<=8` and reinforces the Ruby `possible_gross` tests. It is **not** a formal proof for arbitrary `n`, and it does not involve experimental participant data, stochastic behavior calibration, or novel mathematics.
+
 ## Research-operation boundaries
 
 No original participant rows, researcher tokens, source archives or new datasets have been committed. GitHub Actions must not create bot-authored commits. A larger Ponytail evaluation would require randomly assigned comparable public Ruby defects, a baseline arm, an independent tester, and verification of exact test results on both arms.
