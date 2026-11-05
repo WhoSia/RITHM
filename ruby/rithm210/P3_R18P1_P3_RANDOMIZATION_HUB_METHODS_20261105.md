@@ -56,6 +56,8 @@ GitHub code committed as multiple human-authored units:
 
 A separate Ruby3.3.8 local implementation of equivalent mathematical and event-log logic was actually executed: **15 tests / 53 assertions / 0 failures**. The GitHub published files have not been downloaded byte-for-byte and executed in the container, so published-SHA exact parity and remote GitHub Actions PASS remain HOLD. This report is NOT a trial protocol approval. The science gap remains external group-randomized evidence and fair original author SSM/EWA comparisons.
 
+**Date-folder raw-byte archival proof:** [Original R18-P1–P3 Markdown in Google Drive](https://drive.google.com/file/d/1sfkr5IcagzfOqwEEOzadeiefUjTqe0GY/view?usp=drivesdk), under `공유드라이브 → 하고 있는 거 → 20261105 김우준의 사유`. Uploaded as text/markdown and downloaded again through authenticated Drive connector. Exact source/retrieved SHA256 **`c1ad36fadb88f427c5179eebb7f4dfac5dcc5725e5b8a191651a4e6c9f5c4f8d`**, 3821 raw bytes. This GitHub research record is the extended English analysis; the Drive file is a Korean human-readable digest with separate bytes. No deletion/move of historical evidence.
+
 ## VI. Research-manager gate
 
 R18-P4 should prioritize (i) unit of randomization and interference assumptions, (ii) pre-treatment occupancy/history measurement, (iii) masked/pre-registered outcomes including full 40-period excess welfare, (iv) power feasibility under at least two realistic variance/effect scenarios, (v) honest information delivery and record verification, and (vi) preregistering a single primary estimand before recruitment. A small synthetic p-value is not a human finding; a historical one-step forecast or an unexposed MCP tool is not independent evidence. No paper-level causal or novel mechanism claim is promoted.
