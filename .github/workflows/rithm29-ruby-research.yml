@@ -75,5 +75,6 @@ jobs:
           ruby test_pairwise_source_audit.rb
           ruby test_atomic_nash_potential.rb
           ruby test_adjustment_clocks.rb
+          ruby test_general_adjustment_clocks.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
