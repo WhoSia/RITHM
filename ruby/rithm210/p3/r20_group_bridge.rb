@@ -36,6 +36,16 @@ module Rithm210R20GroupBridge
      cost_bias:rows.sum{|r|r[:predicted_cost]-r[:observed_cost]}/rows.size.to_f,
      cost_abs_error:rows.sum{|r|(r[:predicted_cost]-r[:observed_cost]).abs}/rows.size.to_f}
   end
+  def online_markov_probability(history)
+    count=history.fetch(:count,0)
+    return 0.5 if count==0
+    prev_a=history.fetch(:previous_a)
+    switches=prev_a ? history.fetch(:switch_from_a,0) : history.fetch(:switch_from_b,0)
+    trials=prev_a ? history.fetch(:prior_a_count,0) : history.fetch(:prior_b_count,0)
+    raise 'invalid actor history' unless trials>=switches && switches>=0 && trials>=0
+    switch_p=(switches+1).to_f/(trials+5)
+    prev_a ? 1-switch_p : switch_p
+  end
   def run(path,qmax:2,lapse:0.02)
     require_relative 'r19_ssm_exact'
     require_relative 'r19_persistent_q_filter'
@@ -72,15 +82,7 @@ module Rithm210R20GroupBridge
         probabilities[:ssm_persistent]<<persistent
         probabilities[:ssm_uniform]<<f.last_probabilities.sum/qmax.to_f
         probabilities[:own_route_frequency]<<(h.fetch(:a_count,0)+1).to_f/(count+2)
-        if count==0
-          probabilities[:online_actor_markov]<<0.5
-        else
-          prev_a=h.fetch(:previous_a)
-          switches=prev_a ? h.fetch(:switch_from_a,0) : h.fetch(:switch_from_b,0)
-          trials=prev_a ? h.fetch(:prior_a_count,0) : h.fetch(:prior_b_count,0)
-          switch_p=(switches+1).to_f/(trials+5)
-          probabilities[:online_actor_markov]<<(prev_a ? 1-switch_p : switch_p)
-        end
+        probabilities[:online_actor_markov]<<online_markov_probability(h)
         states<<[r,h,f,inf,y]
       end
       probabilities.each{|label,ps|scored<<{session:s,treatment:trt,period:t,model:label,**score(ps,n)}}
