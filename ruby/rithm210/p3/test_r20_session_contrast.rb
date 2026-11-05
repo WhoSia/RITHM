@@ -17,7 +17,7 @@ class TestRithm210R20SessionContrast < Minitest::Test
     assert_equal 4,a[:sessions]
     assert_in_delta 0.5,a[:metrics][:logloss][:mean_difference],1e-12
     assert_equal 0,a[:metrics][:logloss][:sessions_model_better]
-    assert_in_delta 1.5,a[:metrics][:cost_bias][:mean_difference],1e-12
+    refute a[:metrics].key?(:cost_bias)
   end
   def test_reject_unpaired_duplicate_and_wrong_support
     assert_raises(ArgumentError){M.compare(fixture.first(2),treatment:3,model: :ssm_persistent)}
