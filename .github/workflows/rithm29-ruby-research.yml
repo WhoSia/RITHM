@@ -87,5 +87,6 @@ jobs:
           ruby test_actor_hetero_welfare_cv.rb
           ruby test_group_residual_welfare.rb
           ruby test_group_residual_source_cv.rb
+          ruby test_epoch_independent_welfare.rb
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
