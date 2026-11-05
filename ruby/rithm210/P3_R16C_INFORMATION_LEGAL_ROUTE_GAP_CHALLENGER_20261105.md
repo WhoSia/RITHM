@@ -16,7 +16,7 @@ Model specification: for route r∈{A,B}, p(switch|r,costs)=sigmoid(intercept_r+
 | Full information, periods1–10, all n | 480 | 2.148221 | **2.103428** | 2.173019 |
 | Full information, periods11–29, all n | 912 | 1.875955 | **1.874984** | 1.905719 |
 | Full information, periods30–39, all n | 480 | 1.666227 | **1.633371** | 1.774133 |
-| Full information, all periods | 1,872 | calculate weighted from rows | calculate weighted from rows | **1.940517** |
+| Full information, all periods | 1,872 | 1.891990 | **1.871607** | 1.940517 |
 
 New comparator next-occupancy logloss: early 1.542852, middle 1.375838, late 1.258470. Predicted next-period excess cost: early 3.133631 (actual 4.0125), middle 3.053216 (actual 2.838816), late 3.005031 (actual 2.06875). All models are trained using other sessions, but many modeling decisions arose from exploration of the same overall experiment. Small positive or negative differences are exploratory, not causal.
 
