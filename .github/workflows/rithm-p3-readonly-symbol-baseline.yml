@@ -39,3 +39,8 @@ jobs:
         run: ruby ruby/rithm210/p3/test_friction_welfare.rb
       - name: Nonidentified turnover-risk witness
         run: ruby ruby/rithm210/p3/test_turnover_coupling_witness.rb
+      - name: All four P3 suites in a single Ruby process
+        run: |
+          ruby -I ruby/rithm210/p3 -e '
+            %w[test_readonly_symbol_inventory test_occupancy_churn_bounds test_friction_welfare test_turnover_coupling_witness].each { |name| require name }
+          '
