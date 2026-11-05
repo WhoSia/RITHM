@@ -22,16 +22,22 @@ module Rithm210R20GroupBridge
   def score(ps,observed_n)
     d=convolve(ps)
     raise ArgumentError,'observed occupancy 0..6' unless observed_n.is_a?(Integer)&&observed_n.between?(0,6)
+    mu=ps.sum
+    variance=ps.sum{|p|p*(1-p)}
+    predicted_cost=d.each_with_index.sum{|p,n|p*cost(n)}
+    observed_cost=cost(observed_n)
+    linear=6*(mu-4)*(observed_n-mu)
+    dispersion=3*((observed_n-mu)**2-variance)
+    raise 'quadratic cost-error identity' unless ((observed_cost-predicted_cost)-(linear+dispersion)).abs<1e-8
     {logloss:-Math.log([d[observed_n],Float::MIN].max),
      brier:d.each_with_index.sum{|p,n|(p-(n==observed_n ? 1 : 0))**2},
-     predicted_cost:d.each_with_index.sum{|p,n|p*cost(n)},
-     observed_cost:cost(observed_n),
-     variance:d.each_with_index.sum{|p,n|p*n*n}-ps.sum**2,
-     occupancy_mean:ps.sum}
+     predicted_cost:predicted_cost,observed_cost:observed_cost,
+     variance:variance,occupancy_mean:mu,
+     linear_calibration:linear,dispersion_residual:dispersion}
   end
   def summary(rows)
     raise ArgumentError,'empty summary' if rows.empty?
-    keys=[:logloss,:brier,:predicted_cost,:observed_cost,:variance,:occupancy_mean]
+    keys=[:logloss,:brier,:predicted_cost,:observed_cost,:variance,:occupancy_mean,:linear_calibration,:dispersion_residual]
     {groups:rows.size,**keys.to_h{|k|[k,rows.sum{|r|r.fetch(k)}/rows.size.to_f]},
      cost_bias:rows.sum{|r|r[:predicted_cost]-r[:observed_cost]}/rows.size.to_f,
      cost_abs_error:rows.sum{|r|(r[:predicted_cost]-r[:observed_cost]).abs}/rows.size.to_f}
