@@ -33,3 +33,23 @@ Whole-session bootstrap: 24 original sessions, 20,000 complete-cluster resamples
 No prospective preregistration or family-wise multiple-testing correction, and the original data have been studied extensively. Do not claim that the negative pair-balance component is statistically established in isolation.
 
 Ruby: [exact joint-pair welfare](p3/pairwise_welfare.rb), [feasible-state tests](p3/test_pairwise_welfare.rb), [original sealed source session audit](p3/pairwise_source_audit.rb), [synthetic/bootstrap tests](p3/test_pairwise_source_audit.rb). Independent original-CSV Ruby check verified all 5,616 source groups, displayed exact conditional moments and cluster intervals.
+
+## B. Exact atomic congestion game: Nash equilibrium and physical adjustment clocks
+
+In the actual six-person cost table, each A user pays n and each B user pays 2(6−n). An atomic unilateral switch A→B changes that person's cost by `14−3n`, and B→A changes it by `3n−11`. The exact Rosenthal congestion potential is
+
+`Phi(n)=n(n+1)/2+(6−n)(7−n)`.
+
+Only n=4 is a pure Nash **occupancy**; all 15 player-identity profiles with four A and two B are pure Nash. The group cost `C(n)=24+3(n−4)²` is also uniquely socially minimized at n=4. At n=4, unilateral A→B costs the mover +2 and B→A +1, so every strict best responder stays, irrespective of the update clock.
+
+**Synchronization reference theorem.** Suppose every actor knows a shared PREVIOUS/current snapshot of all other agents' routes and calculates a unilateral best response ASSUMING others keep that snapshot, but everyone updates simultaneously. The deterministic next-occupancy map is:
+`T(0)=T(1)=T(2)=T(3)=6, T(4)=4, T(5)=T(6)=0.`
+Hence any initial n≠4 enters the perpetual two-cycle 0↔6, while n=4 remains fixed. The two-cycle's time-average group cost is `(C(0)+C(6))/2=(72+36)/2=54`, compared with the efficient group cost24, i.e. mean excess30 each period.
+
+By contrast, one uniformly sampled actor per period strict best-responding to that same current snapshot produces a monotone, almost-surely absorbing process at n=4. Expected selected-player update opportunities to first hit n=4 are 5.7 from n=0 and 2.2 from n=6 (geometric holding times, because a selected agent already on the locally preferable route makes no change). The underlying payoff table and strict unilateral behavior are identical; *adjustment synchronization alone* changes system-level stability conditional on a departure from the equilibrium.
+
+**General-N extension (N divisible by 3).** Costs per A actor n, per B actor 2(N−n). The social optimum and unique Nash occupancy are both n*=2N/3. Perfect snapshot-synchronous strict best response generates the extreme two-cycle 0↔N; group costs are 2N² and N², average 3N²/2. Optimal group cost is 2N²/3, so the exact dynamic cycle-to-optimum ratio is **9/4** and mean excess **5N²/6**. For N not divisible by 3 the Nash-state uniqueness fails in some cases (e.g. N=5 has n=3 and 4 Nash occupancies, of which only n=3 is socially optimal). This is a deliberately limited theorem: no universal population result, and no originality claim against traffic and best-response synchronization literature.
+
+**Crucial failure-to-explain boundary:** this deterministic clock variation alone CANNOT explain the real experiment's early P(no switch|n=4)=.2208, since in the exact Nash state all players stay under strict known-state best response. A separate shock/uncertainty/misbelief/learning mechanism is required to EXPLAIN exits from the optimum; update synchronization only controls propagation of departures. Also, not every original participant had access to the shared full group snapshot, and even informed participants could not know opponents' simultaneous next moves. Therefore these are **oracle and frozen-opponent comparison models**, not valid reconstructions of the laboratory information sets.
+
+Ruby: [atomic Nash potential](p3/atomic_nash_potential.rb), [exact finite-six clock map](p3/adjustment_clocks.rb), [general-N extension](p3/general_adjustment_clocks.rb), and separate exhaustive Minitest files. Independent local Ruby passed 3 tests/187 assertions for six-person identities and 2 tests/258 assertions for general-N potential and cycle ratio.
