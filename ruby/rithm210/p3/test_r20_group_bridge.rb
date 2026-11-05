@@ -34,3 +34,17 @@ class TestRithm210R20GroupBridge < Minitest::Test
     assert_raises(ArgumentError){M.summary([])}
   end
 end
+
+class TestRithm210R20ActorMarkov < Minitest::Test
+  M=Rithm210R20GroupBridge
+  def test_beta_one_four_switch_prior
+    assert_in_delta 0.5,M.online_markov_probability({}),1e-12
+    assert_in_delta 0.8,M.online_markov_probability({count:1,previous_a:true}),1e-12
+    assert_in_delta 0.2,M.online_markov_probability({count:1,previous_a:false}),1e-12
+    assert_in_delta 5.0/6,M.online_markov_probability({count:2,previous_a:true,prior_a_count:1,switch_from_a:0}),1e-12
+    assert_in_delta 2.0/6,M.online_markov_probability({count:2,previous_a:false,prior_b_count:1,switch_from_b:1}),1e-12
+  end
+  def test_impossible_switch_history_rejected
+    assert_raises(RuntimeError){M.online_markov_probability({count:2,previous_a:true,prior_a_count:0,switch_from_a:1})}
+  end
+end
