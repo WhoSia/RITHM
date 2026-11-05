@@ -39,5 +39,9 @@ class TestOccupancyChurnBounds < Minitest::Test
     assert_raises(ArgumentError){B.possible_pairs(n:0,a:0,b:0)}
     assert_raises(ArgumentError){B.resource_bounds(n:6,path:[4],k:1)}
     assert_raises(ArgumentError){B.resource_bounds(n:6,path:[4,4],k:-1)}
+    assert_raises(ArgumentError){B.resource_bounds(n:6,path:[4,4],k:Float::INFINITY)}
+    assert_raises(ArgumentError){B.resource_bounds(n:6,path:[4,4],k:Float::NAN)}
+    assert_raises(ArgumentError){B.resource_bounds(n:6,path:[4,4],k:Complex(1,0))}
+    assert_equal Rational(4,3),B.resource_bounds(n:6,path:[4,4],k:Rational(1,3))[:max_switch_cost]
   end
 end
