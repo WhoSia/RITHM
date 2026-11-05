@@ -76,6 +76,7 @@ jobs:
           ruby test_r18_design_feasibility.rb
           ruby test_r18_preanalysis_manifest.rb
           ruby test_r18_observable_age_support.rb
+          ruby test_r18_age_support_bootstrap.rb
           ruby test_update_clock_signal_factorial.rb
           ruby test_update_clock_welfare_rollout.rb
           ruby test_adaptation_cycle.rb
