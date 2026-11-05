@@ -83,6 +83,8 @@ jobs:
           ruby test_r19_ssm_exact.rb
           ruby test_r19_ssm_source_benchmark.rb
           ruby test_r19_ssm_session_contrast.rb
+          ruby test_r19_persistent_q_filter.rb
+          ruby test_r19_persistent_q_source.rb
           ruby test_update_clock_signal_factorial.rb
           ruby test_update_clock_welfare_rollout.rb
           ruby test_adaptation_cycle.rb
