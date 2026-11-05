@@ -50,6 +50,7 @@ jobs:
           ruby test_friction_welfare.rb
           ruby test_finite_horizon_independent_welfare.rb
           ruby test_finite_welfare_closed_form.rb
+          ruby test_all_state_epoch_cv.rb
           ruby test_adaptation_cycle.rb
           ruby test_policy_welfare_equivalence.rb
           ruby test_experimental_welfare.rb
