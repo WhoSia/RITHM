@@ -67,6 +67,7 @@ jobs:
           ruby test_smooth_clock_welfare_rollout.rb
           ruby test_labeled_smooth_welfare_rollout.rb
           ruby test_latent_shock_residual_counterexample.rb
+          ruby test_lagged_feedback_factorial.rb
           ruby test_update_clock_signal_factorial.rb
           ruby test_update_clock_welfare_rollout.rb
           ruby test_adaptation_cycle.rb
