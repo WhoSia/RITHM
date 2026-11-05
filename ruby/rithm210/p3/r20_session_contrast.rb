@@ -3,7 +3,7 @@
 # Original human source was reused for exploratory development; not a novel trial.
 module Rithm210R20SessionContrast
   module_function
-  METRICS=[:logloss,:brier,:cost_abs_error,:cost_bias].freeze
+  METRICS=[:logloss,:brier,:cost_abs_error].freeze
   def compare(rows,treatment:,model:,baseline: :own_route_frequency,draws:20_000,seed:20261106)
     raise ArgumentError,'positive draws' unless draws.is_a?(Integer)&&draws.positive?
     raise ArgumentError,'same model' if model.to_s==baseline.to_s
