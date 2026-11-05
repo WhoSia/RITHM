@@ -109,6 +109,7 @@ module Rithm210R20GroupBridge
     {sessions:scored.map{|r|r[:session]}.uniq.size,groups:rows.size,qmax:qmax,lapse:lapse,
      estimand:'One-period six-person occupancy distribution and quadratic expected group cost; independent actor conditional predictions.',
      results:by.sort_by{|key,_|key.map(&:to_s)}.map{|(t,m),a|{treatment:t,model:m,**summary(a)}},
+     session_results:scored.group_by{|r|[r[:session],r[:treatment],r[:model]]}.sort_by{|key,_|key.map(&:to_s)}.map{|(s,t,m),a|{session:s,treatment:t,model:m,**summary(a)}},
      caveat:'Original SSM q latent fit not fully reconstructed. Historical repeated-source exploratory; no causal or autonomous 40-period result.'}
   end
 end
