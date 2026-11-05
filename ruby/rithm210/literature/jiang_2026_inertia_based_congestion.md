@@ -1,0 +1,12 @@
+# Jiang et al. (2026) — Inertia-Based Strategy Updating Rule Design for Congestion Games and Its Application to NFV Networks
+
+**Full original read, directly from [Research OS Drive](https://drive.google.com/file/d/1iQa3upEAAmugxZJS3ADxZ6NFtgETl_T5/view).** Kaichen Jiang, Jinhuan Wang, Yuyue Yan, Changxi Li, Yuhu Wu. Information Sciences 755 (2026) 123817. DOI 10.1016/j.ins.2026.123817. PDF explicitly says **available online 24 June 2026**; do NOT misstate first online availability as November 2026.
+
+## Model and proof claims
+The paper replaces fully observable individual opponent strategies by resource frequencies from a rolling window of length h, constructs predicted congestion using recurrence (11)–(13), and couples predictive best response with a **time-varying inertia** (16), Algorithm 2. **Theorem 1:** the evolutionary congestion game converges almost surely to the **set of Nash equilibria** under the specified rule. **Theorem 2:** an inertia-state condition characterizes the time the proposed process reaches Nash, including a previous-stage non-equilibrium condition. It is NOT a generic theorem that arbitrary inertia, fixed experience replay or every asynchronous schedule converges. Figure 3 illustrates constant-inertia failure in a particular simulation.
+
+## Direct novelty threat
+Congestion prediction using short histories, information-light observation, state-dependent inertia, simultaneous updating and almost sure equilibrium convergence are already bundled into this prior published mechanism. Thus a newly written RITHM model that simply says “informed agents use historical congestion predictions and dynamic inertia, hence learning converges” would have no established conceptual novelty.
+
+## Conditional difference worth testing, not yet proved novel
+The original model studies asymptotic reachability of Nash sets in network resource allocation. Our proposed target is **short-horizon identification and sharp welfare-afterlife bounds** with imperfect individual signals, composition of opposing actual switches, and randomized update clocks. A precise prior-art examination of the paper's appendix, update probability support and finite-time bounds is required before claiming that this difference is technically new. The paper's Nash convergence does NOT imply a parameter-uniform 40-step welfare bound; conversely RITHM's oracle 6-person mixed-clock toy does not reproduce their prediction/inertia algorithm.
