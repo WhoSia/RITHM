@@ -34,3 +34,22 @@ Potential benefit: richer name-path and symbol-reference retrieval over naive te
 - Ruby standard-library baseline code and test may be kept even if Serena's original CI fails; no external runtime dependency is required.
 - The `.github/workflows/rithm-p3-readonly-symbol-baseline.yml` is read-only and never creates a `github-actions[bot]` commit.
 - Exact RITHM original occupancy cost test still separately passed in the prior Git blob-matched local run (4 runs/1,148 assertions). This new semantic baseline adds different tests; **their remote CI results remain a separate gate**.
+
+## Completed byte-exact local P3 integration replay (2026-11-05)
+
+After the initial benchmark design, all **eight** current GitHub `main` source/test files for the following four modules were reproduced byte-for-byte in an isolated Ruby 3.3.8 directory and verified with `git hash-object` against their actual GitHub blob SHA-1.
+
+| Implementation | Git blob | Test | Git blob |
+| --- | --- | --- | --- |
+| `occupancy_churn_bounds.rb` | `2a52f8c850a6eabab47aea1ac6b92d449d8fa7ae` | `test_occupancy_churn_bounds.rb` | `e23aaf2566835fca828ff917d0d35a67267532ee` |
+| `friction_welfare.rb` | `6dbd5613206b412d8df660ee4ccf5b6a96b59303` | `test_friction_welfare.rb` | `006ebeda1f4836fef62359e92229efcadd2a0481` |
+| `turnover_coupling_witness.rb` | `b3fe44af62f840272c1fe94cea47e455b0a053c8` | `test_turnover_coupling_witness.rb` | `8d68c36c17c262311d1318e040e2930d7dab71bc` |
+| `readonly_symbol_inventory.rb` | `94e30ba7b2ebfced0f8a8f2dd9311c5b9194f4b6` | `test_readonly_symbol_inventory.rb` | `a4337357d30ac52b3182d0ea4f96081de8c8f799` |
+
+Execution from the common directory:
+
+```sh
+ruby -I. -e 'Dir["test_*.rb"].sort.each { |f| require_relative f }'
+```
+
+**Observed result: 16 test runs, 1,195 assertions, zero failures/errors/skips.** This establishes a byte-exact local integration replay for the four suites, including all 18 symbol names, under Ruby 3.3.8. It does **not** certify every other RITHM module, remote GitHub Actions, a Serena original process, or an empirical research result. No private participant files were opened.
