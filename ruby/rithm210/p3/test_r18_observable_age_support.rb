@@ -17,6 +17,7 @@ class TestRithm210R18ObservableAgeSupport < Minitest::Test
     assert_in_delta 2.0/3,s[:all][:distinct_fraction],1e-12
     assert_equal 1,s[:early][:unchanged]
     assert_equal 1,s[:late][:changed]
+    refute s.key?(:middle)
   end
   def test_reject_nonoriginal_source
     require 'tempfile'
