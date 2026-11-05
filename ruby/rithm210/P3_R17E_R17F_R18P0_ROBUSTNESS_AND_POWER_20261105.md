@@ -54,6 +54,10 @@ If one VERY TENTATIVELY plugs the OLD Full-treatment historical session-mean SD 
 - |tau|=70 → **6/arm**, 24 total.
 At 6/arm, the nominal minimum detectable contrast is **67.6848 total-cost units**, not the small 1-period synthetic effects. THIS IS NOT a validated prospective power study: novel treatments may change residual outcome variance, no attrition, cluster imbalance, repeated within-session interference, finite-sample t critical values, or estimated covariates are accounted for. Participant count and 40-period duration are additional resource constraints. Collect independent pilot variance or use pre-specified blocking/ANCOVA to plan feasibility.
 
+**Design safety against post-treatment conditioning:** In a randomized R17F experiment, record last/current occupancy and individual histories as a **pre-treatment baseline before randomization** when possible. Conditioning causal estimates on a current n that was itself influenced by earlier randomized treatment would introduce post-treatment selection bias. The n_previous=2/current=4 demonstration conditions on one legal, actually possible observed history only; it is NOT a treatment-adjusted human estimand. A confirmatory design must preregister the baseline timing and intention-to-treat population.
+
+**Drive original-byte custody:** [Date-folder R17E/F + R18-P0 complete Markdown report](https://drive.google.com/file/d/1W11tnHsmMGQZVre3J5T4WK-I14Yc2ppT/view?usp=drivesdk) is in `공유드라이브 → 하고 있는 거 → 20261105 김우준의 사유`. Raw SHA256 `6b598dbadc7b1621555ad04f79020263ad1c1158e519c17a66c05c477636248f` independently matched after authenticated Google Drive re-download. The Drive report is a concise Korean synthesis; this GitHub report contains detailed mechanism math and the full source/test registry.
+
 ## Software, evidence, claims
 New source:
 - [R17E smooth response](p3/smooth_signal_clock.rb), [tests](p3/test_smooth_signal_clock.rb).
