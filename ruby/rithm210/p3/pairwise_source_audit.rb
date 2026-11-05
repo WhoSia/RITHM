@@ -13,7 +13,7 @@ module Rithm210PairwiseSourceAudit
     rows=raw.filter_map do |r|
       next unless r[:treatment]==3 && r[:n]==4 && [:early,:late].include?(r[:epoch])
       {session:r[:session],epoch:r[:epoch],
-        **Rithm210PairwiseWelfare.decompose(up:r[:up],down:r[:down],current_a:r[:n])}
+        **Rithm210PairwiseWelfare.decompose(up:r[:u],down:r[:d],current_a:r[:n])}
     end
     raise 'source n4 support changed' unless rows.group_by{|r|r[:epoch]}.transform_values(&:size)=={early:154,late:257}
     [sessions,rows]
