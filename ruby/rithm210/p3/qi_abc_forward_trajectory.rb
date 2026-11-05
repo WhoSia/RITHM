@@ -72,7 +72,7 @@ module Rithm210QiABCForwardTrajectory
        observed_total_cost:a.sum{|n|F.cost(n)}}
     end
   end
-  def run(csv)
+  def source_rows(csv)
     raise 'original CSV SHA mismatch' unless Digest::SHA256.file(csv).hexdigest==E::SHA
     groups=O.source(csv)
     sessions=groups.keys.map(&:first).uniq.sort
@@ -98,7 +98,11 @@ module Rithm210QiABCForwardTrajectory
       end
     end
     raise '48 trajectories per five models expected' unless metrics.values.all?{|rows|rows.size==48}
-    {sessions:24,complete_40period_trajectories:48,
+    [sessions,metrics]
+  end
+  def run(csv)
+    sessions,metrics=source_rows(csv)
+    {sessions:sessions.size,complete_40period_trajectories:48,
      model_summary:metrics.to_h{|variant,rows|[variant,[:error,:absolute_error,:squared_error,
        :terminal_logloss,:expected_total,:observed_total].to_h{|metric|
        [metric,rows.sum{|r|r[metric]}/rows.size.to_f]}]},
