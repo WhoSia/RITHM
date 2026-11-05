@@ -39,7 +39,7 @@ module Rithm210R18ObservableAgeSupport
     raise ArgumentError,'empty source' if pairs.empty?
     scopes={all:pairs,early:pairs.select{|x|x[:epoch]==:early},
       middle:pairs.select{|x|x[:epoch]==:middle},late:pairs.select{|x|x[:epoch]==:late}}
-    scopes.to_h do |name,a|
+    scopes.reject{|name,a|a.empty?}.to_h do |name,a|
       equal=a.count{|x|x[:unchanged]}
       [name,{pairs:a.size,unchanged:equal,changed:a.size-equal,
         distinct_fraction:(a.size-equal)/a.size.to_f}]
