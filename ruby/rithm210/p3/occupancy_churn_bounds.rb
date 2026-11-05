@@ -24,7 +24,7 @@ module Rithm210OccupancyChurnBounds
   # k is a REAL per-switch resource cost, not psychological utility.
   def resource_bounds(n:, path:, k:)
     raise ArgumentError, 'path must have at least two occupancies' unless path.is_a?(Array) && path.size >= 2
-    raise ArgumentError, 'k must be nonnegative' unless k.is_a?(Numeric) && k >= 0
+    raise ArgumentError, 'k must be nonnegative' unless k.is_a?(Numeric) && k.real? && k.finite? && k >= 0
     pair_bounds=path.each_cons(2).map { |a,b| gross_range(n:n,a:a,b:b) }
     lo=pair_bounds.sum { |x| x[:minimum] }
     hi=pair_bounds.sum { |x| x[:maximum] }
