@@ -45,3 +45,28 @@ It may be new to show that some experimentally identifiable features of **turnov
 - Srinivasan & Guo (2004), *Day-to-Day Evolution of Network Flows Under Route-Choice Dynamics in Commuter Decisions*, [Drive](https://drive.google.com/file/d/1x_zH2w3xQlzuiv_zrtYhfuwxDb19ILck/view): simulation of information availability, daily network evolution, and travel-time reliability/stability tradeoff. Early time-series instability is known prior art.
 
 Original four PDF **file IDs preserved**, metadata normalized and moved from 00_INTAKE to 10_PAPERS on 2026-11-05 with successful Drive update replies. No raw PDF copy or redistribution in public GitHub.
+
+## P3-R11b: Full source-session bootstrap and heterogeneity counterexample (2026-11-05)
+
+An independently executed **Ruby 3.3.8** program parsed the SHA-256-sealed original CSV (5,616 group transitions, 24 sessions), filtered Full-information current optimum n=4 (early 154 and late 257 group transitions), and generated 20,000 **whole-session** bootstrap samples (seed 20261105). At each resample the homogeneous independent switch parameter epsilon was **re-estimated from that resample's mean gross changes**, rather than treated as known. The remaining three moments are out-of-model restrictions but **not out-of-sample predictions**.
+
+| Era | epsilon from gross | P0 actual / model | cancellation actual / model | next group congestion excess actual / model |
+|---|---:|---:|---:|---:|
+| Full early n4 | .22619048 | .22077922 / .21468635 | .15584416 / .15615300 | 3.01948052 / 3.76445578 |
+| Full late n4 | .09727626 | .58365759 / .54116434 | .07782101 / .05070947 | 1.33073930 / 1.69419673 |
+
+Exploratory 95% percentile whole-session bootstrap intervals for **observed minus model**:
+- early P0 +.006093, CI **[-.044596,+.058383]**; cancellation -.000309, CI **[-.053124,+.053452]**; next-excess cost **-.744975**, CI **[-1.330757,-.070015]**;
+- late P0 +.042493, CI **[+.009824,+.070334]**; cancellation +.027112, CI **[-.000922,+.053584]**; next-excess cost **-.363457**, CI **[-.669958,-.096365]**.
+The gross error is zero by construction. Confidence intervals are exploratory and based on *same-data moment fitting*, source is extensively reused, and no multiplicity or prospective design adjustment is applied. The result is a failure of **homogeneous independent Bernoulli switching**, NOT a test against arbitrary independence or causal strategic dependence. Source code [original-data cluster audit](p3/independent_churn_cluster.rb), [source-free synthetic tests](p3/test_independent_churn_cluster.rb); local original CSV program used equivalent code and completed 20,000 bootstrap draws. The original individual CSV is NOT placed on GitHub.
+
+**Critical heterogeneous-independent counterexample.** For actor-specific switch probabilities `p_1,...,p_6`, each actor switching *independently*, write `U~PoissonBinomial(p_B)`, `D~PoissonBinomial(p_A)`. At n=4,
+```
+E[3(U−D)^2] = 3{(sum_B p_i−sum_A p_i)^2 + sum_i p_i(1−p_i)}.
+```
+A concrete independent distribution with `p_A=(1,0,0,0)`, `p_B=(1,0)` produces **two gross route changes with certainty**, but `U=D=1` and **zero next excess congestion**. In contrast, six i.i.d. switches with the same E[G]=2 have epsilon=1/3 and mean next excess **16/3≈5.333**, despite BOTH being mutually independent at the actor level. A nondegenerate independent case `p_A=(.8,0,0,0)`, `p_B=(.8,0)` yields E[G]=1.6, P0=.04, cancellation=.64, next cost=.96. Therefore **lower-than-homogeneous predicted welfare loss is not evidence of actor-level dependence**. At minimum compare against actor-specific independently predicted probabilities and validate their calibration/heldout performance.
+
+[Heterogeneous Poisson-binomial Ruby](p3/heterogeneous_independence.rb) · [synthetic restriction/counterexample tests](p3/test_heterogeneous_independence.rb).
+
+## Next methodological gate
+Use an original-source out-of-fold predictor for each ACTOR'S time-t switch probability (including route, experience, knowledge condition, and session), combine the six probabilities under independent Poisson-binomial, and examine the **heldout residual covariance of actual actor switches conditional on their probabilities**; account for shared group cost information and non-exchangeable agents. The present gross-calibrated homogeneous benchmark provides motivation but cannot identify common shocks, strategic expectations or real social switching costs. Follow with external sessions/experiments under randomized information and adjustment timing to distinguish the effects.
