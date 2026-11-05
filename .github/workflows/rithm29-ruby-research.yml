@@ -71,6 +71,7 @@ jobs:
           ruby test_r18_cluster_power_gate.rb
           ruby test_r18_randomization_inference.rb
           ruby test_r18_sign_reduction.rb
+          ruby test_r18_truthful_signal_audit.rb
           ruby test_update_clock_signal_factorial.rb
           ruby test_update_clock_welfare_rollout.rb
           ruby test_adaptation_cycle.rb
