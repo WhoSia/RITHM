@@ -42,3 +42,27 @@ class TestRithm210R21EWAGroupCV < Minitest::Test
     assert_raises(ArgumentError) { x.update(route_a: true, n_a: 7, informed: false) }
   end
 end
+
+class TestRithm210R21BlendSourceFree < Minitest::Test
+  M = Rithm210R21EWAGroupCV
+  B = Rithm210R20GroupBridge
+
+  def test_zero_ewa_blend_is_exact_prior_only_frequency
+    params = M.grid.first
+    groups = {}
+    (1..2).each do |t|
+      groups[[42, 1, t, 1]] = (1..6).map do |id|
+        route = (id <= 3 ? 1 : 0)
+        {'ID' => id.to_s, 'RouteA' => route.to_s,
+         'NumA' => '3', 'trt' => '3', 'Informed' => '1'}
+      end
+    end
+    scored = M.predict_scores(groups, params, blend: 0.0)
+    assert_equal 2, scored.size
+    fair = B.score(Array.new(6, 0.5), 3)
+    second = B.score(Array.new(3, 2.0 / 3) + Array.new(3, 1.0 / 3), 3)
+    assert_in_delta fair[:logloss], scored[0][:logloss], 1e-12
+    assert_in_delta second[:logloss], scored[1][:logloss], 1e-12
+    assert_raises(ArgumentError) { M.predict_scores(groups, params, blend: -0.1) }
+  end
+end
