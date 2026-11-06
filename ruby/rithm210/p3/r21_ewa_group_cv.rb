@@ -58,8 +58,10 @@ module Rithm210R21EWAGroupCV
     groups
   end
 
-  def predict_scores(groups, params)
+  def predict_scores(groups, params, blend: 1.0)
+    raise ArgumentError, 'blend 0..1' unless blend.is_a?(Numeric) && blend.finite? && blend.between?(0, 1)
     states = {}
+    choices = {}
     rows = []
     groups.keys.sort.each do |s, section, period, group|
       people = groups.fetch([s, section, period, group]).sort_by { |r| r.fetch('ID').to_i }
@@ -71,13 +73,21 @@ module Rithm210R21EWAGroupCV
       current = people.map do |r|
         key = [s, section, r.fetch('ID').to_i]
         state = states[key] ||= Learner.new(params)
-        [state, r.fetch('RouteA').to_i == 1, r.fetch('Informed') == '1']
+        [state, r.fetch('RouteA').to_i == 1, r.fetch('Informed') == '1', key]
       end
       # Prediction first, six simultaneous updates second.
-      ps = current.map { |state, _, _| state.prob_a }
+      ps = current.map do |state, _, _, key|
+        a_count, prior = choices.fetch(key, [0, 0])
+        own = (a_count + 1).to_f / (prior + 2)
+        blend * state.prob_a + (1 - blend) * own
+      end
       rows << {session: s, treatment: treatment, group: group, period: period,
                **Rithm210R20GroupBridge.score(ps, n)}
-      current.each { |state, route_a, informed| state.update(route_a: route_a, n_a: n, informed: informed) }
+      current.each do |state, route_a, informed, key|
+        state.update(route_a: route_a, n_a: n, informed: informed)
+        a_count, prior = choices.fetch(key, [0, 0])
+        choices[key] = [a_count + (route_a ? 1 : 0), prior + 1]
+      end
     end
     rows
   end
