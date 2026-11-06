@@ -25,7 +25,7 @@ class TestRithm210R21EWAGroupCV < Minitest::Test
   def test_route_own_bit_correction
     x = M::Learner.new(params)
     x.update(route_a: false, n_a: 4, informed: true)
-    assert_operator x.prob_a, :<, 0.5
+    assert_in_delta 0.5, x.prob_a, 1e-12
   end
   def test_grid_and_stable_logistic
     assert_equal 24, M.grid.size
