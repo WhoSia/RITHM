@@ -44,3 +44,25 @@ class TestR26Vectorized(unittest.TestCase):
                       for p,y,old in zip(ps,ys,prev)]
             for a,b in zip(actual,expected):
                 self.assertAlmostEqual(a,b,places=11)
+
+
+class TestR26EpochScope(unittest.TestCase):
+    def test_equal_session_epoch_strata_without_retuning(self):
+        from r26_source_cv import summarize
+        rows=[]
+        for sid in range(1,25):
+            for period in (1,11,30):
+                for treatment in (1,2,3):
+                    for model in ('frequency','selected'):
+                        row=dict(session=sid,period=period,treatment=treatment,model=model,
+                                 baseline=dict(logloss=1.,joint_logloss=2.,brier=.5,cost_mae=3.,cost_bias=0.,actor_brier=.3),
+                                 latent=dict(logloss=.9,joint_logloss=1.9,brier=.4,cost_mae=2.9,cost_bias=.1,actor_brier=.3))
+                        rows.append(row)
+        result=summarize(rows,[],list(range(1,25)),draws=10,groups=72)
+        self.assertEqual(18,len(result['epoch_summaries']))
+        for row in result['epoch_summaries']:
+            self.assertEqual(24,row['groups'])
+            self.assertAlmostEqual(-.1,row['logloss'])
+        rows.pop()
+        with self.assertRaises(ValueError):
+            summarize(rows,[],list(range(1,25)),draws=10,groups=72)
