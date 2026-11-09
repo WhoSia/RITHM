@@ -94,7 +94,7 @@ def summaries(rows,draws=4000,seed=20261109):
                                sessions_candidate_better=sum(x<0 for x in differences))
         all_out.append(dict(treatment=treatment,sessions=24,metrics=metrics))
     epochs=[]
-    for (treatment,model),records in sorted(
+    for treatment,model in sorted(
         {(r['treatment'],r['model']) for r in rows}):
         for age,rule in [('early',lambda p:p<=10),
                          ('middle',lambda p:11<=p<=29),
