@@ -147,5 +147,13 @@ jobs:
         run: python3 -m unittest discover -s ruby/rithm210/p3 -p 'test_r24_*.py' -v
       - name: R25 source-free nested calibration, exact dependence controls and training-boundary tests
         run: python3 -m unittest discover -s ruby/rithm210/p3 -p 'test_r25_*.py' -v
+      - name: Set up Python for R26 source-free synthetic tests
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install R26 vectorized test dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: R26 independent-marginal latent shock and train-heldout boundary tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r26_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
