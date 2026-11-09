@@ -1,8 +1,10 @@
 """R27-R2 original-source, TRAIN-ONLY sixfold benchmark (exploratory).
 
-Past group occupancies are visible to an analyst but NOT demonstrated to have
-been disclosed to experimental participants. Therefore this is an ORACLE
-lag-count forecasting rival, NOT identified cognitive learning or policy impact.
+The authors' 2026-07-24 experiment protocol (section 4.1) confirms ALL Full
+information participants received previous-period route counts. The second lag
+was previously disclosed but actual retention/use is unobserved. The lag
+forecast is information-admissible for this treatment, NOT identified cognition
+or policy effect.
 Only treatment 3 (full information); 24 independent sessions; t>=3.
 No original participant rows leave the local machine or enter git/CI.
 """
@@ -90,12 +92,12 @@ def run(path):
         boots=sorted(sum(deltas[rng.randrange(24)][j] for _ in range(24))/24 for _ in range(4000))
         intervals.append([boots[100],boots[3900]])
     return {'original_sha256':SHA,'sessions':24,'scored_groups':1824,
-            'treatment':'trt=3; historical analyst-observed lagged occupancy, participant access not verified',
+            'treatment':'trt=3 Full; author paper §4.1 confirms prior-period occupancy disclosed to all; older lag recall not established',
             'metrics':['six_actor_joint_logloss','seven_count_occupancy_logloss','one_period_cost_mae'],
             'latent_minus_train_selected_independent':[sum(d[j] for d in deltas)/24 for j in range(3)],
             'exploratory_whole_session_bootstrap95':intervals,
             'selected_models':chosen,
-            'scope':'historical-source reuse, no confirmatory p-value; previous occupancy may be oracle information; independent families are limited fixed grid'}
+            'scope':'historical-source reuse, no confirmatory p-value; past occupancy was available but memory/use unmeasured; independent families limited fixed grid'}
 if __name__=='__main__':
     import sys
     if len(sys.argv)!=2:raise SystemExit('usage: python r27_r2_source_cv.py ORIGINAL_PRIVATE_CSV')
