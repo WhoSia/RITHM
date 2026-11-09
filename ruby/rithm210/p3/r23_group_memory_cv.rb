@@ -65,7 +65,7 @@ module Rithm210R23GroupMemoryCV
     index=rows.to_h{|r|[[r.fetch(:session),r.fetch(:treatment),r.fetch(:model)],r]}
     raise 'duplicate group scoring cell' unless index.size==rows.size
     foldmap=sessions.each_with_index.to_h{|s,i|[s,i%6]}
-    output=[]
+    output=[];fold_choices=[]
     6.times do |fold|
       heldout=sessions.select{|s|foldmap[s]==fold}
       training=sessions-heldout
@@ -74,6 +74,7 @@ module Rithm210R23GroupMemoryCV
           train_loss=training.sum{|s|index.fetch([s,trt,name]).fetch(:logloss)}/training.size.to_f
           [train_loss,name]
         end
+        fold_choices<<{fold:fold,treatment:trt,model:winner,training_sessions:training.size,heldout_sessions:heldout.size}
         heldout.each do |s|
           a=index.fetch([s,trt,winner]);b=index.fetch([s,trt,baseline])
           raise 'mismatched group support' unless a[:groups]==b[:groups]
@@ -102,7 +103,7 @@ module Rithm210R23GroupMemoryCV
        delta_brier:group.sum{|r|r[:delta_brier]}/group.size.to_f,
        delta_cost_abs_error:group.sum{|r|r[:delta_cost_abs_error]}/group.size.to_f}
     end
-    {sessions:24,groups:5760,candidates:names.size,results:results,
+    {sessions:24,groups:5760,candidates:names.size,results:results,fold_choices:fold_choices,
      note:'Exploratory same historical source reused; group independent forecasts, session-level CV. One-period welfare only.'}
   end
   def run(path)
