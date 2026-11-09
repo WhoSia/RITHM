@@ -134,8 +134,25 @@ def summarize(rows,selections,sessions,*,draws=4000,seed=20261109,groups=5760):
                                    interval95=[intervals[int(.025*draws)],intervals[int(.975*draws)]],
                                    better_sessions=sum(d<0 for d in differences))
             comparisons.append(dict(treatment=treatment,model=model,sessions=len(sessions),metrics=metrics))
+    by_epoch=defaultdict(list)
+    for r in rows:
+        t=r['period']
+        name='early' if t<=10 else ('middle' if t<=29 else 'late')
+        by_epoch[r['session'],r['treatment'],r['model'],name].append(r)
+    epoch_summaries=[]
+    for treatment in (1,2,3):
+        for model in sorted({r['model'] for r in rows}):
+            for age in ('early','middle','late'):
+                strata=[by_epoch[s,treatment,model,age] for s in sessions]
+                if not all(strata):raise ValueError('missing epoch/session support')
+                epoch_summaries.append(dict(treatment=treatment,model=model,epoch=age,
+                    sessions=len(sessions),groups=sum(len(g) for g in strata),
+                    **{name:sum(sum(r['latent'][name]-r['baseline'][name] for r in g)/len(g)
+                                for g in strata)/len(strata)
+                       for name in ('logloss','joint_logloss','cost_mae')}))
     return dict(source_sessions=len(sessions),source_groups=groups,
                 fold_plans=selections,comparisons=comparisons,
+                epoch_summaries=epoch_summaries,
                 caveat='Exploratory historical data reuse; latent binary shock is not identified group strategy. Tau selection only uses outer training sessions. Marginal actor probabilities fixed.')
 
 
