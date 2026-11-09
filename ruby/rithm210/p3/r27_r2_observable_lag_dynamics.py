@@ -1,8 +1,9 @@
 """RITHM-2.10 R27-R2: exact six-actor observable-lag dynamics.
 
 SYNTHETIC (not fitted). State at t is (labelled previous choices, older
-occupancy). Signal n[t-1], n[t-2] is analyst-observable; participant access
-is NOT established. Independent Bernoulli choices or R26-compatible fair
+occupancy). In the author experiment, Full-treatment participants received previous
+period route counts; the older signal was available one period earlier but
+actual memory/use is unobserved. No human cognition is identified. Independent Bernoulli choices or R26-compatible fair
 previous-route-signed common innovation preserve each person's marginal.
 """
 from __future__ import annotations
