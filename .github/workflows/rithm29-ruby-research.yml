@@ -155,5 +155,7 @@ jobs:
         run: python -m pip install 'numpy>=1.24,<3'
       - name: R26 independent-marginal latent shock and train-heldout boundary tests
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r26_*.py' -v
+      - name: R27 source-free occupancy-fiber nonidentification proof tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r27_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
