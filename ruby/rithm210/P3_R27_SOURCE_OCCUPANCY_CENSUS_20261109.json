@@ -1,0 +1,49 @@
+{
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "scope": "R23/R26 original-source inclusion/observed-occupancy census ONLY; not fitted R26 nested-CV replay",
+  "sessions": 24,
+  "groups": 5760,
+  "actor_decisions": 34560,
+  "groups_by_treatment": {
+    "1": 1920,
+    "2": 1920,
+    "3": 1920
+  },
+  "occupancy_histogram_by_treatment": {
+    "1": [
+      1,
+      8,
+      129,
+      417,
+      741,
+      514,
+      110
+    ],
+    "2": [
+      0,
+      15,
+      125,
+      439,
+      783,
+      464,
+      94
+    ],
+    "3": [
+      1,
+      24,
+      108,
+      399,
+      828,
+      468,
+      92
+    ]
+  },
+  "mean_one_period_cost_by_treatment": {
+    "1": 27.0859375,
+    "2": 26.990625,
+    "3": 26.9671875
+  },
+  "groups_per_period": 144,
+  "periods": 40,
+  "verification": "original source bytes SHA256 matched; all group actor counts = 6, NumA matches RouteA sums, 24 independent sessions"
+}
