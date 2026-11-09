@@ -143,5 +143,7 @@ jobs:
           ruby test_turnover_coupling_witness.rb
       - name: R23 source-free Python regression tests
         run: python3 -m unittest discover -s ruby/rithm210/p3 -p 'test_r23_*.py' -v
+      - name: R24 source-free welfare identity and heldout-selection tests
+        run: python3 -m unittest discover -s ruby/rithm210/p3 -p 'test_r24_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
