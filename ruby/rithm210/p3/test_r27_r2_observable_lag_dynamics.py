@@ -28,7 +28,6 @@ class TestDynamicKernel(unittest.TestCase):
         z=run_exact(Params(0.),40)
         self.assertAlmostEqual(z['mean_cost'],31.5,places=10)
         self.assertAlmostEqual(z['J'],1260.,places=8)
-        self.assertAlmostEqual(z['mean_abs_delta_n'],1.353515625,places=5) if False else None
     def test_memory_and_inertia_change_dynamics(self):
         a=run_exact(Params(.3),40)
         b=run_exact(Params(.3,1.,.5),40)
