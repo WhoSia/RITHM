@@ -1,0 +1,178 @@
+{
+  "status": "exploratory; analytic synthetic grid and original-source oracle-lag, not causal or publication-confirmatory",
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "synthetic_horizon": 40,
+  "synthetic_grid_columns": [
+    "beta",
+    "inertia",
+    "memory_weight",
+    "tau",
+    "average_cost",
+    "avg_abs_delta_occupancy"
+  ],
+  "synthetic_grid_rounded": [
+    [
+      0.05,
+      0,
+      0,
+      0,
+      30.6784,
+      1.5422
+    ],
+    [
+      0.05,
+      1,
+      0,
+      0,
+      29.6119,
+      1.0369
+    ],
+    [
+      0.15,
+      0,
+      0,
+      0,
+      31.5839,
+      2.1471
+    ],
+    [
+      0.15,
+      1,
+      0,
+      0,
+      28.4317,
+      1.265
+    ],
+    [
+      0.3,
+      0,
+      0,
+      0,
+      39.8951,
+      3.9452
+    ],
+    [
+      0.3,
+      1,
+      0,
+      0,
+      30.2166,
+      2.0093
+    ],
+    [
+      0.3,
+      1,
+      0.5,
+      0,
+      29.1582,
+      1.437
+    ],
+    [
+      0.3,
+      1,
+      0.5,
+      0.6,
+      30.7614,
+      1.5525
+    ],
+    [
+      0.6,
+      0,
+      0,
+      0,
+      51.7291,
+      5.6918
+    ],
+    [
+      0.6,
+      1,
+      0,
+      0,
+      48.1407,
+      5.2549
+    ],
+    [
+      0.6,
+      1,
+      0.5,
+      0,
+      34.6529,
+      2.4629
+    ],
+    [
+      0.6,
+      1,
+      0.5,
+      0.6,
+      36.813,
+      2.6505
+    ]
+  ],
+  "original_source_evaluation": {
+    "sessions": 24,
+    "full_info_treatment_code": 3,
+    "scored_group_periods": 1824,
+    "periods": "3..40",
+    "folds": 6,
+    "train_sessions_per_fold": 20,
+    "heldout_sessions_per_fold": 4,
+    "trained_candidate_grid": {
+      "beta": [
+        0.05,
+        0.15,
+        0.3,
+        0.6
+      ],
+      "inertia": [
+        0,
+        1
+      ],
+      "memory_weight": [
+        0,
+        0.5
+      ],
+      "tau": [
+        0,
+        0.3,
+        0.6
+      ]
+    },
+    "heldout_equal_session_weighted": {
+      "metric_names": [
+        "six_actor_joint_logloss",
+        "seven_count_occupancy_logloss",
+        "expected_cost_mae"
+      ],
+      "independent": [
+        3.2949129421284273,
+        1.5233743280608447,
+        3.80049991762958
+      ],
+      "latent": [
+        3.272754372635518,
+        1.5122648678585635,
+        3.9259845208546005
+      ],
+      "delta_latent_minus_independent": [
+        -0.02215856949290969,
+        -0.011109460202281244,
+        0.12548460322502075
+      ],
+      "exploratory_bootstrap95": [
+        [
+          -0.038725867983351626,
+          -0.0070529443478937566
+        ],
+        [
+          -0.01761702843562561,
+          -0.005029549196454643
+        ],
+        [
+          0.09673498202689405,
+          0.15466365896456627
+        ]
+      ]
+    }
+  },
+  "disclaimer": "Previous occupancy is known to analyst, not proven disclosed to participant. Full-info only. Reused source; bootstrap not confirmatory. Exact 40-step synthetic transition is not estimated from humans."
+}
