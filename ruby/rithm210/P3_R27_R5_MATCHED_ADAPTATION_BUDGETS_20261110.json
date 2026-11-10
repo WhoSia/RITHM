@@ -1,0 +1,176 @@
+{
+  "study": "R27-R5",
+  "date": "2026-11-10",
+  "evidence": "synthetic exact 448-state probability propagation, 40 periods, no human participant data",
+  "setup": {
+    "beta": [
+      0.3,
+      0.6,
+      1
+    ],
+    "adaptive_max_chance": [
+      0.1,
+      0.3,
+      0.5,
+      1
+    ],
+    "adaptive_hazard_slope": 3,
+    "friction": 0,
+    "memory": 0,
+    "tau": 0,
+    "people": 6
+  },
+  "column_order": [
+    "beta",
+    "adaptive_max_chance",
+    "adaptive_cost",
+    "adaptive_mean_review_opportunities",
+    "adaptive_mean_actual_switches",
+    "matched_uniform_opportunities_cost",
+    "matched_uniform_switches_cost",
+    "delta_adaptive_minus_matched_opportunities_cost",
+    "delta_adaptive_minus_matched_switches_cost"
+  ],
+  "rows": [
+    [
+      0.3,
+      0.1,
+      24.74594148,
+      0.06482785,
+      0.04202983,
+      29.2732427,
+      28.74467141,
+      -4.52730123,
+      -3.99872993
+    ],
+    [
+      0.3,
+      0.3,
+      24.29056135,
+      0.1291579,
+      0.07815453,
+      28.20860951,
+      27.7716827,
+      -3.91804816,
+      -3.48112135
+    ],
+    [
+      0.3,
+      0.5,
+      24.33716904,
+      0.23688312,
+      0.14356661,
+      27.40362802,
+      27.09159296,
+      -3.06645899,
+      -2.75442393
+    ],
+    [
+      0.3,
+      1,
+      29.00343585,
+      1.9403933,
+      1.44578992,
+      26.79994323,
+      27.39514895,
+      2.20349262,
+      1.6082869
+    ],
+    [
+      0.6,
+      0.1,
+      24.63557424,
+      0.0574512,
+      0.04160392,
+      28.86503078,
+      27.83192035,
+      -4.22945654,
+      -3.19634612
+    ],
+    [
+      0.6,
+      0.3,
+      24.2503739,
+      0.11823041,
+      0.07793553,
+      27.52678445,
+      26.6784619,
+      -3.27641056,
+      -2.428088
+    ],
+    [
+      0.6,
+      0.5,
+      24.34773051,
+      0.22929785,
+      0.15420715,
+      26.51196435,
+      25.97797227,
+      -2.16423384,
+      -1.63024176
+    ],
+    [
+      0.6,
+      1,
+      43.0779653,
+      4.48757054,
+      4.21224698,
+      30.16566603,
+      40.53692246,
+      12.91229927,
+      2.54104284
+    ],
+    [
+      1,
+      0.1,
+      24.58493821,
+      0.05269507,
+      0.04074602,
+      28.79041928,
+      27.28235747,
+      -4.20548107,
+      -2.69741926
+    ],
+    [
+      1,
+      0.3,
+      24.23001275,
+      0.1097727,
+      0.07606106,
+      27.31714495,
+      26.01759632,
+      -3.0871322,
+      -1.78758357
+    ],
+    [
+      1,
+      0.5,
+      24.36952538,
+      0.22216539,
+      0.1603175,
+      26.11662167,
+      25.35499083,
+      -1.7470963,
+      -0.98546545
+    ],
+    [
+      1,
+      1,
+      48.04851889,
+      4.95222847,
+      4.87966703,
+      35.05626834,
+      45.79364931,
+      12.99225055,
+      2.25486958
+    ]
+  ],
+  "validity": [
+    "equal-budget is horizon-average not per-round allocation parity",
+    "adaptive hazard screens switching gain before deciding whether to review; computation and agency costs omitted",
+    "matched review opportunities differs from matched actual switches; test both separately",
+    "not a policy-causal human finding",
+    "under high revision availability adaptive gain targeting can WORSEN congestion despite exact horizon-average opportunity or switch matching"
+  ],
+  "screening_cost_sensitivity": "If adaptive targeting alone incurs screening cost c per actor-period for all 6 agents, adaptive cost advantage A in social cost/group-period is erased at c=A/6. Example beta=0.6 max_chance=0.3: A=3.27641056 under equal review budgets so c*=0.546068427 (cost units per actor-period). Distinct from review opportunity costs shared by policies."
+}
