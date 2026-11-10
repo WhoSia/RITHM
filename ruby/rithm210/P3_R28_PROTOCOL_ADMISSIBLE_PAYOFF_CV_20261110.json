@@ -1,0 +1,93 @@
+{
+  "study": "R28: author-protocol-admissible payoff-history competitor",
+  "asof": "2026-11-10",
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "authority": "No treatment receives stage payoff only; Full receives payoff and prior group route counts (author manuscript §4.1); Actual Cost and random Value are not disclosed as separate previous-decision inputs",
+  "population": {
+    "sessions": 24,
+    "groups_per_treatment": 48,
+    "transitions_per_treatment": 1872,
+    "actor_transition_decisions_per_treatment": 11232,
+    "exclude_sessions": [
+      2,
+      101
+    ]
+  },
+  "validation": "six 20-train/4-heldout session folds, L2 ridge coefficient .02 fixed ex ante, session-equal-weight for 6-person group forecasts",
+  "model_columns": {
+    "choice": [
+      "prior route"
+    ],
+    "choice_payoff": [
+      "prior route",
+      "prior payoff",
+      "prior route x payoff"
+    ],
+    "choice_public": [
+      "prior route",
+      "prior public occupancy",
+      "interaction"
+    ],
+    "choice_public_payoff": [
+      "prior route",
+      "prior public occupancy",
+      "interaction",
+      "prior payoff",
+      "prior route x payoff"
+    ]
+  },
+  "metrics": [
+    "individual_route_logloss",
+    "individual_brier",
+    "group_occupancy_logloss",
+    "one_period_cost_mae"
+  ],
+  "No": {
+    "choice": [
+      0.5679014422799084,
+      0.1911294447744791,
+      1.44862388371926,
+      3.0695520617552785
+    ],
+    "choice_payoff": [
+      0.5577336456526071,
+      0.1868755563167367,
+      1.4318448070576737,
+      2.923497391065453
+    ]
+  },
+  "Full": {
+    "choice": [
+      0.5392489663059715,
+      0.17823767368927843,
+      1.4638209077401028,
+      3.14341719328074
+    ],
+    "choice_payoff": [
+      0.5323152302512383,
+      0.17552048561180558,
+      1.4419746396655622,
+      2.9898982501157447
+    ],
+    "choice_public": [
+      0.5313504893894624,
+      0.17502641065458868,
+      1.4276383302594509,
+      2.929041060393994
+    ],
+    "choice_public_payoff": [
+      0.5276775392469139,
+      0.17367614122999162,
+      1.4189870984746626,
+      2.8521629793823777
+    ]
+  },
+  "limitations": [
+    "No actors cannot use actual realized Cost as a disclosed input; only observed payoff is admissible",
+    "Actual values and route costs exist in experimenter CSV but not necessarily individual information",
+    "This is within-treatment exploratory prediction and does not estimate effects of information provision",
+    "Within-subject treatment crossover and order effects not controlled by this minimal benchmark",
+    "No new independent sample and no confirmatory statistical inference",
+    "The group distribution is an independent-actor forecast, not fitted joint dependence"
+  ]
+}
