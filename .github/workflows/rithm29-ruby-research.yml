@@ -177,5 +177,7 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r28_*.py' -v
       - name: R29 Partial-information source-free privacy and switching regressions
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r29_*.py' -v
+      - name: R29 Partial information and micro-to-macro welfare source-free tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r29_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
