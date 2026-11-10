@@ -1,0 +1,113 @@
+{
+  "version": "R28 2026-11-10",
+  "status": "exploratory original-author source reanalysis; not confirmatory; no participant rows",
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "protocol": "Sixfold anchors 24 main sessions exactly as R27-R2; extra session101 assigned fold0, pilot2 assigned fold1; all model selections use training sessions only; per-session equal weighting, per-session periods=38 each group; source group counts 2 for standard sessions, 3 for101",
+  "metrics": [
+    "joint_logloss",
+    "occupancy_logloss",
+    "cost_mae"
+  ],
+  "cohorts": [
+    {
+      "name": "published_main_restricted_24",
+      "sessions": 24,
+      "groups": 48,
+      "heldout_group_periods": 1824,
+      "independent": [
+        3.294912942128427,
+        1.523374328060844,
+        3.80049991762958
+      ],
+      "latent": [
+        3.2727543726355175,
+        1.5122648678585637,
+        3.9259845208546
+      ],
+      "latent_minus_independent": [
+        -0.022158569492909525,
+        -0.011109460202280588,
+        0.12548460322501945
+      ]
+    },
+    {
+      "name": "exclude_pilot2_include101_25",
+      "sessions": 25,
+      "groups": 51,
+      "heldout_group_periods": 1938,
+      "independent": [
+        3.301185994065609,
+        1.526789654179276,
+        3.80873033963281
+      ],
+      "latent": [
+        3.280837051481794,
+        1.5158453045669327,
+        3.937695521196758
+      ],
+      "latent_minus_independent": [
+        -0.020348942583815165,
+        -0.010944349612343257,
+        0.1289651815639479
+      ]
+    },
+    {
+      "name": "literal_R_predicate_26",
+      "sessions": 26,
+      "groups": 53,
+      "heldout_group_periods": 2014,
+      "independent": [
+        3.2998348743727757,
+        1.5216362744371676,
+        3.8095542600299406
+      ],
+      "latent": [
+        3.2801534766883025,
+        1.5106257755540067,
+        3.939687210853815
+      ],
+      "latent_minus_independent": [
+        -0.01968139768447326,
+        -0.011010498883160994,
+        0.1301329508238747
+      ]
+    }
+  ],
+  "common24_heldout_model_selection_unchanged": true,
+  "extra_session_contrasts": {
+    "session101": [
+      0.02308210323444948,
+      -0.006981695453847303,
+      0.21249906169823074
+    ],
+    "session2": [
+      -0.002992775200925557,
+      -0.012664230653604447,
+      0.1593271823220439
+    ]
+  },
+  "original25_different_fold_result_joint_delta": -0.030479419,
+  "original25_fold_comparison_not_directly_attributable_to_101": true,
+  "cost_identity": {
+    "formula": "C_i=12-12*y_i-2*n+3*y_i*n",
+    "n_people": 6,
+    "n_route_choice_states_feasible": 12,
+    "full_info_24_session_actor_rows": 11520,
+    "all_treatment_actor_rows": {
+      "trt1": 12000,
+      "trt2": 12720,
+      "trt3": 12720,
+      "trt4": 12720
+    },
+    "observed_cost_identity_violations": 0,
+    "linear_dependence": "cost column is span of intercept, previous route, previous n, route*n; no separate unrestricted experienced-cost coefficient identifiable in Full if model contains this basis"
+  },
+  "limitations": [
+    "6fold fixed common-session assignments, but added sessions change train sample size to 21 or 22 for some folds; no equal sample size or independent experiment",
+    "cohort C replicates literal R filter but is not necessarily published 24-session scientific sample",
+    "not trained causal effects of information or cognitive friction",
+    "strict data filtration for input uses t-1 last route and t-1 occupancy, not contemporaneous future fields",
+    "full information own cost is observed algebraic function of previously disclosed count; partial/no conditions require separate original protocol validation",
+    "repo clean checkout CI not verified"
+  ]
+}
