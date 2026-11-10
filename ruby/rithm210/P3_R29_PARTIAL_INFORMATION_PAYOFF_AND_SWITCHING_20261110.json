@@ -1,0 +1,141 @@
+{
+  "study": "RITHM 2.10 P3-R29 Partial information legal feedback and switching",
+  "date": "2026-11-10",
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "population": {
+    "sessions": 24,
+    "groups": 48,
+    "group_periods": 1872,
+    "actor_decisions": 11232,
+    "informed_decisions": 5616,
+    "uninformed_decisions": 5616,
+    "excluded_sessions": [
+      2,
+      101
+    ],
+    "treatment": "Partial trt2"
+  },
+  "protocol": "3 informed and 3 uninformed stable identities per 6-person group; previous own profit for all; previous public route count only for informed; 6fold 20train/4heldout, session-equal aggregation, logistic L2=0.02 fixed",
+  "metrics": [
+    "actor_logloss",
+    "actor_brier",
+    "informed_logloss",
+    "uninformed_logloss",
+    "informed_brier",
+    "uninformed_brier",
+    "group_count_logloss",
+    "cost_mae",
+    "threshold_error_rate"
+  ],
+  "models": {
+    "route_info": [
+      0.5720753565661093,
+      0.1929430123299126,
+      0.5505621753003486,
+      0.59358853783187,
+      0.18327991069615246,
+      0.2026061139636728,
+      1.4462334005648112,
+      3.1500844965650088,
+      0.2778964862298196
+    ],
+    "route_info_payoff": [
+      0.5660329840497941,
+      0.19034925618200524,
+      0.5421463540372452,
+      0.5899196140623428,
+      0.17972817911870098,
+      0.2009703332453094,
+      1.4251957424822115,
+      3.0216111738601,
+      0.2763235992402659
+    ],
+    "route_info_payoff_public": [
+      0.5637527464153138,
+      0.18951360038768872,
+      0.5375406712020038,
+      0.589964821628624,
+      0.17803039659471917,
+      0.20099680418065827,
+      1.4171925902341254,
+      2.967388130070256,
+      0.27552231718898385
+    ]
+  },
+  "public_minus_payoff_delta": [
+    -0.0022802376344800424,
+    -0.0008356557943164991,
+    -0.0046056828352410845,
+    0.000045207566281071455,
+    -0.0016977825239818563,
+    0.000026470935348877716,
+    -0.008003152248086213,
+    -0.05422304378984453,
+    -0.0008012820512820554
+  ],
+  "exploratory_session_bootstrap95": [
+    [
+      -0.003048356578421096,
+      -0.0016102079978720207
+    ],
+    [
+      -0.0011044687096038483,
+      -0.0005893265646389639
+    ],
+    [
+      -0.005926932470792112,
+      -0.0034322174211459024
+    ],
+    [
+      -0.00027247823883359796,
+      0.0003325675669637943
+    ],
+    [
+      -0.0021460541828353837,
+      -0.0012713194897298794
+    ],
+    [
+      -0.00009963994795437647,
+      0.00014644318010330278
+    ],
+    [
+      -0.00932242619877193,
+      -0.00662128009668483
+    ],
+    [
+      -0.059317672652763935,
+      -0.0492773856756403
+    ],
+    [
+      -0.0017806267806267698,
+      0.0000890313390313319
+    ]
+  ],
+  "switching_by_info_and_time": {
+    "early_2_to_10": {
+      "uninformed": 0.28858024691358025,
+      "informed": 0.29758230452674894
+    },
+    "middle_11_to_30": {
+      "uninformed": 0.29942129629629627,
+      "informed": 0.25972222222222224
+    },
+    "late_31_to_40": {
+      "uninformed": 0.3090277777777778,
+      "informed": 0.21273148148148147
+    }
+  },
+  "switching_late_minus_early_info_difference": -0.10529835390946503,
+  "descriptive_session_bootstrap95_for_did": [
+    -0.16016460905349794,
+    -0.05300668724279838
+  ],
+  "limitations": [
+    "within original author experiment repeated with prior analyses; all CIs exploratory; no new independent confirmation",
+    "informed assignment fixed within group, but dynamic congestion interference and within-subject treatment sequence make switching DID not causal",
+    "last observed payoff allowed for all; hidden previous group count cannot enter uninformed actor features",
+    "group-count forecast assumes independence given individual probabilities",
+    "the neural/cognitive effort of switching is not observed",
+    "data report contains no individual participant records"
+  ]
+}
