@@ -1,0 +1,160 @@
+{
+  "title": "RITHM R27-R3 synthetic switching resource cost and exact 40-period welfare",
+  "date": "2026-11-10",
+  "evidence_class": "synthetic exact Markov forward probability; NOT original-source fitted human behavior",
+  "source_path": "ruby/rithm210/p3/r27_r3_switching_welfare.py",
+  "model": "6 labelled actors, 448 history states, simultaneous private myopic unilateral cost predictions, actual resource switching cost in social objective; 40 rounds",
+  "static_wedges": {
+    "B_to_A_at_n3": {
+      "private_improvement": 2,
+      "social_congestion_improvement": 3,
+      "private_social_incentive_gap": 1
+    },
+    "A_to_B_at_n5": {
+      "private_improvement": 1,
+      "social_congestion_improvement": 3,
+      "private_social_incentive_gap": 2
+    }
+  },
+  "result_columns": "congestion mean and switching resource mean; total=congestion+s*switches; all per round",
+  "rows": [
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0,
+      "s": 0,
+      "congestion": 47.559293738,
+      "switches": 5.234774624,
+      "total": 47.559293738,
+      "turnover": 5.203732775
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0,
+      "s": 2,
+      "congestion": 31.64963868,
+      "switches": 2.373012132,
+      "total": 36.395662943,
+      "turnover": 2.304054277
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0,
+      "s": 4,
+      "congestion": 25.174605627,
+      "switches": 0.438773205,
+      "total": 26.929698447,
+      "turnover": 0.422514484
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0,
+      "s": 6,
+      "congestion": 24.823154421,
+      "switches": 0.135951213,
+      "total": 25.638861699,
+      "turnover": 0.134178896
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0,
+      "s": 7.25,
+      "congestion": 24.915623701,
+      "switches": 0.074819469,
+      "total": 25.458064849,
+      "turnover": 0.074406239
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0,
+      "s": 8,
+      "congestion": 25.075544745,
+      "switches": 0.054994421,
+      "total": 25.515500116,
+      "turnover": 0.054823139
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0,
+      "s": 10,
+      "congestion": 25.945932154,
+      "switches": 0.028166704,
+      "total": 26.227599199,
+      "turnover": 0.028150545
+    },
+    {
+      "beta": 0.6,
+      "memory": 0.5,
+      "tau": 0,
+      "s": 0,
+      "congestion": 34.525520014,
+      "switches": 2.743708119,
+      "total": 34.525520014,
+      "turnover": 2.487238836
+    },
+    {
+      "beta": 0.6,
+      "memory": 0.5,
+      "tau": 0,
+      "s": 7.25,
+      "congestion": 24.949666166,
+      "switches": 0.075743569,
+      "total": 25.498807039,
+      "turnover": 0.075332595
+    },
+    {
+      "beta": 0.6,
+      "memory": 0.5,
+      "tau": 0,
+      "s": 10,
+      "congestion": 25.910080566,
+      "switches": 0.028493452,
+      "total": 26.195015091,
+      "turnover": 0.028477327
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0.6,
+      "s": 0,
+      "congestion": 47.476582707,
+      "switches": 5.197170006,
+      "total": 47.476582707,
+      "turnover": 5.1537449
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0.6,
+      "s": 7.25,
+      "congestion": 24.963724353,
+      "switches": 0.077474674,
+      "total": 25.525415739,
+      "turnover": 0.076921146
+    },
+    {
+      "beta": 0.6,
+      "memory": 0,
+      "tau": 0.6,
+      "s": 10,
+      "congestion": 25.951702842,
+      "switches": 0.028735644,
+      "total": 26.239059281,
+      "turnover": 0.028713834
+    }
+  ],
+  "claims_holds": [
+    "non-fitted source-free synthetic experiment",
+    "finite grid values not optimizer proof",
+    "friction is real cost, not psychological hassle",
+    "no individual effect identification",
+    "full stochastic stability and parameter transfer not established"
+  ],
+  "local_tests": "9/9 pass in local equivalent script (GitHub posted counterpart additionally has 8 unit tests; remote GitHub checkout and CI pass not yet verified)"
+}
