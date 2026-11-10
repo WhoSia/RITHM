@@ -149,3 +149,14 @@ if __name__=='__main__':
               review_budget=a['adaptive']['mean_review_opportunities'],
               switch_budget=a['adaptive']['mean_actual_switches']),
               sort_keys=True))
+
+
+def occupancy_quadratic_drift(p:Params,policy:Policy):
+    """Conditional E[V(next)-V(now)], V=(previous occupancy - 4)^2.
+
+    Not a strict stochastic Lyapunov certificate: noise can create positive
+    drift at the zero of V even when the stochastic chain is ergodic.
+    """
+    mat,*_=compile_kernel(p,policy)
+    v=(PREV_COUNT-4.)**2
+    return mat@v-v
