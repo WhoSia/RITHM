@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-10",
+  "study": "RITHM R29 independent-actor micro-to-macro cost forecast decomposition",
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "cohort": "paper restricted 24-session trt2 Partial; 48 groups x 39 heldout periods; session weighted",
+  "columns": [
+    "predicted_mean_A",
+    "predicted_poisson_binomial_variance",
+    "predicted_squared_mean_distance_from_4",
+    "expected_group_cost",
+    "realized_group_cost",
+    "group_cost_MAE"
+  ],
+  "route_info_payoff": [
+    3.946795627426525,
+    1.1628589756892245,
+    0.0907165075514546,
+    27.760726449722032,
+    26.94978632478632,
+    3.0216111738601
+  ],
+  "route_info_payoff_public": [
+    3.9477463378295834,
+    1.1617259132393187,
+    0.06839243994251953,
+    27.69035505954551,
+    26.94978632478632,
+    2.967388130070256
+  ],
+  "difference_public_minus_payoff": [
+    0.0009507104030586078,
+    -0.0011330624499057418,
+    -0.022324067608935072,
+    -0.07037139017652194,
+    0,
+    -0.054223043789844105
+  ],
+  "identity": "E[C(N)]=24+3[(sum(p_i)-4)^2+sum p_i(1-p_i)] for conditional independent six-actor Bernoulli choices",
+  "caution": "Differences are MODEL FORECAST COMPONENTS, not an experiment-caused reduction in observed welfare. True joint dependence adds 6*sum_{i<j} covariance to welfare; original 24 sessions repeatedly reused; no causal effect or friction identified."
+}
