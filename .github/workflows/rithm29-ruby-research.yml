@@ -159,5 +159,7 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r27_*.py' -v
       - name: R27-R2 source-free 448-state adaptive-feedback and heldout firewall tests
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r27_r2_*.py' -v
+      - name: R27-R3 switching-friction private-vs-social welfare exact tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r27_r3_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
