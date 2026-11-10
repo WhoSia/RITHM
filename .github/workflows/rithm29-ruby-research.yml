@@ -181,5 +181,7 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r29_*.py' -v
       - name: R30 source-free Partial legal signal and latent joint-score invariant regression
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r30_*.py' -v
+      - name: R31 prior-segment order and experience future-information firewall tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r31_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
