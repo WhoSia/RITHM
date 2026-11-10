@@ -78,3 +78,30 @@ All four received `Surname (Year) — Full Title.pdf` filenames under the curren
 **NEXT:** (i) evaluate 24 and25 populations with SAME fold-comparison design and session weighting, (ii) a private-experienced-cost-only rival against revealed counts using proper t-only filtration, (iii) resource/agency cost parity and truly per-period review budgets, (iv) formal stochastic drift outside a target set, (v) source-code publication/CI independently executed, (vi) line-by-line Marden–Shamma and Sandholm prior-art mapping.
 
 **User action:** none; more literature is now present and canonically sorted. This midterm audit does not confer paper publication readiness.
+
+
+## 2026-11-10 independent follow-up: P1 correction to the source-population classification
+
+**This paragraph explicitly supersedes the phrase "author-compatible 25-session" in the earlier audit verdict.** An independent direct read of the author-approved original ZIP's actual R script `0 data preparation.R` (lines 7–8) found the implemented selection:
+
+```r
+data <- data_all[
+  (data_all$Period>=1 & data_all$session!=101 & data_all$session!=1) |
+  (data_all$Period>=1 & data_all$session==101 & data_all$trt!=1), ]
+```
+
+The *comment* claims sessions **1 and 2** were pilots, but the actual Boolean expression excludes **1**, not **2**. The input/source CSV contains session 2 and no session 1; the resulting transformed dataset includes session 2 as well as session-101 treatments 2,3,4. Thus excluding 2 and including 101 is **NOT a byte-for-byte or predicate-exact reproduction of that R script**. The earlier 25-session sensitivity remains a legitimate *user-defined no-pilot-2, include-101* comparison; the adjective "author-compatible" is too strong without version-specific protocol justification.
+
+Independent CSV counting in treatment 3 (full-information), period 1–40, with complete stable six-person 40-period groups:
+
+| Explicit population contract | Unique sessions | Six-person groups | Two-lag scored group-periods, t=3..40 |
+|---|---:|---:|---:|
+| A: **published 24-session main-experiment-restricted**, exclude session2 and101 | 24 | 48 | 1,824 |
+| B: **extended pilot-2-excluded sensitivity**, exclude session2, include session101 | 25 | 51 | 1,938 |
+| C: **literal R-preprocessing-filter replica**, exclude session1 (absent), include 2 and101 in trt3 | 26 | 53 | 2,014 |
+
+All groups in these three trt3 cohort definitions had 40 distinct periods and six stable actor IDs per period. The manuscript (§4) describes **24** sessions as the experiment; it is NOT legitimate to silently redefine the main analysis as 26. Conversely, "exact reproduction of the author's provided R preprocessing" is **not** the 24 or 25 construction. The R script's contradictory comment and operative predicate should be treated as a **source-level discrepancy to document**, not resolved by guessing the author's intent. 24 and 25 empirical logloss contrasts were recomputed in the previous audit and remain numerically valid **for their stated filters**. No 26-session predictive logloss, trained model comparison or bootstrap has been executed here; the 2,014 number is a **cohort census only**.
+
+Further source-level check: `0 data preparation.R` constructs `switchWill`, `NumAnext`, etc. using actual `Period+1` choices. These fields are retrospective future outcomes and must not enter predictor sets at period t. In the private CSV, actor IDs were checked for collision across different sessions at fixed treatment; none were found (0 such collisions), limiting but not replacing the required model-level leakage audit.
+
+**Action / P1 owner:** add a single centralized `population_contract` argument with three explicit names in the source evaluator and publish a reproducible cohort census test before any future aggregate performance claim. Confirm whether session 2's pilot designation in the author's comments should exclude it from the published 24-session main experiment through experiment metadata, rather than treating the R Boolean typo as ground truth. Keep existing 24/25 outcomes unchanged and provenance-labelled. The status of a source-authorized 26-session **performance replication** is HOLD.
