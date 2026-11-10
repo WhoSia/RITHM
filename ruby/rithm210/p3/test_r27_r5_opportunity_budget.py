@@ -53,6 +53,14 @@ class TestR27R5(unittest.TestCase):
                            b['matched_uniform']['mean_congestion'])
         self.assertAlmostEqual(a['adaptive']['mean_congestion'],43.0779652995,places=7)
 
+    def test_quadratic_drift_not_everywhere_negative(self):
+        from r27_r5_opportunity_budget import (
+            occupancy_quadratic_drift,PREV_COUNT)
+        drift=occupancy_quadratic_drift(Params(.6,0.),Policy(.3,3.))
+        self.assertTrue((drift[PREV_COUNT==4]>=0).all())
+        self.assertTrue((drift[PREV_COUNT==4]>0).any())
+        self.assertTrue((drift[PREV_COUNT==0]<0).all())
+
     def test_invalid_policies_and_nonadaptive_target(self):
         for v in ((-1.,0.,0.),(1.1,0.,0.),(.3,-1.,0.),(float('nan'),0.,0.)):
             with self.assertRaises(ValueError):Policy(*v)
