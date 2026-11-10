@@ -1,0 +1,131 @@
+{
+  "study": "RITHM-2.10 P3-R30",
+  "date": "2026-11-10",
+  "evidence": "original-author SHA verified historical data, exploratory 24-session Partial treatment",
+  "original_source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "population": {
+    "sessions": 24,
+    "groups": 48,
+    "heldout_group_periods": 1872,
+    "actor_choices": 11232,
+    "treatment": "Partial trt2 3 informed + 3 uninformed per group"
+  },
+  "training": "sixfold 20 train/4 heldout session, ridge=.02 fixed, tau grid [0,.2,.4,.6] train-only joint-logloss selection per fold",
+  "temporal_spec": "time t>=21 observable interaction, no contemporaneous choices as model input; own previous route/payoff, public previous occupancy only if informed",
+  "metric_order": [
+    "actor_logloss",
+    "joint_six_mask_logloss",
+    "seven_count_logloss",
+    "cost_MAE",
+    "expected_cost",
+    "group_count_variance",
+    "independent_bernoulli_variance",
+    "covariance_contribution",
+    "actor_brier"
+  ],
+  "results": {
+    "base_independent": [
+      0.563752746,
+      3.382516478,
+      1.41719259,
+      2.96738813,
+      27.69035506,
+      1.161725913,
+      1.161725913,
+      0,
+      0.1895136
+    ],
+    "base_joint": [
+      0.563752746,
+      3.376854255,
+      1.417439673,
+      2.966580741,
+      27.691887901,
+      1.16223686,
+      1.161725913,
+      0.000510947,
+      0.1895136
+    ],
+    "time_independent": [
+      0.563141526,
+      3.378849156,
+      1.415706186,
+      2.948600099,
+      27.670503207,
+      1.157942855,
+      1.157942855,
+      0,
+      0.189343418
+    ],
+    "time_joint": [
+      0.563141526,
+      3.37326055,
+      1.416027124,
+      2.949209115,
+      27.673590638,
+      1.158971999,
+      1.157942855,
+      0.001029144,
+      0.189343418
+    ]
+  },
+  "selected_tau_by_fold": {
+    "base": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "time": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ]
+  },
+  "paired_differences": {
+    "time_vs_base_independent": {
+      "actor": -0.000611220410293036,
+      "joint": -0.0036673224617581046,
+      "count": -0.0014864043641768243,
+      "cost_MAE": -0.018788031467059946,
+      "exploratory_session_bootstrap95_joint": [
+        -0.008887536828460961,
+        0.001784177687947111
+      ]
+    },
+    "joint_vs_base": {
+      "actor": 0,
+      "joint": -0.005662223019887429,
+      "count": 0.0002470829409079815,
+      "cost_MAE": -0.0008073889144519231,
+      "exploratory_session_bootstrap95_joint": [
+        -0.011018719212402692,
+        -0.0006834745876239629
+      ]
+    },
+    "joint_vs_time": {
+      "actor": 0,
+      "joint": -0.005588606059598915,
+      "count": 0.000320938099283898,
+      "cost_MAE": 0.0006090159343203708,
+      "exploratory_session_bootstrap95_joint": [
+        -0.01099411324386898,
+        -0.0005658116824238067
+      ]
+    }
+  },
+  "limitations": [
+    "Derived result on reused original data, not independent confirmation",
+    "session bootstrap exploratory not pre-registered confidence",
+    "treatment sequence and within-subject crossover remain unadjusted",
+    "tau common shock is a predictive specification, not observed collective cognition",
+    "joint 6-bit forecasts and group count forecasts are different tasks; no guarantee score improvements transfer",
+    "No claim that fixed R30 model beats every rival or that actual costs decreased"
+  ],
+  "source_local_code": "local reproducibility script has additional validation and differs in bytes from concise posted GitHub implementation; GitHub checkout CI not yet passed"
+}
