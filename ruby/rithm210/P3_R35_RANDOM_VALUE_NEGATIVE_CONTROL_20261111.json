@@ -1,0 +1,55 @@
+{
+  "study": "RITHM P3-R35 conditional travel-value randomization gate",
+  "date": "2026-11-11",
+  "original_source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "design": "24 main-paper Partial sessions. At t=1..39, in (session,section,group,period,prior chosen route,informed flag) strata of size>=2, compare randomly drawn hidden V_t to next switch and already-decided current switch.",
+  "raw_actor_periods": 11232,
+  "eligible_cells": 3744,
+  "eligible_actor_periods": 8619,
+  "primary_next_switch": {
+    "slope_per_one_value_point": -0.007553612356096841,
+    "conditional_permutation_p_2999": 0.001,
+    "session_bootstrap_exploratory95": [
+      -0.010655954281258765,
+      -0.004355322839152574
+    ],
+    "uninformed_beta": -0.006061220761967429,
+    "informed_beta": -0.00912413196392292
+  },
+  "negative_control_current_already_decided_switch": {
+    "slope_per_one_value_point": -0.006472992284118245,
+    "conditional_permutation_p_2999": 0.002,
+    "eligible_actor_periods": 8394
+  },
+  "matched_after_minus_before": {
+    "slope_per_one_value_point": -0.0009434544916313623,
+    "eligible_cells": 3648,
+    "eligible_actor_periods": 8394,
+    "conditional_permutation_p_4999": 0.7432,
+    "session_bootstrap_exploratory95": [
+      -0.00679723432863045,
+      0.005851025604458584
+    ]
+  },
+  "source_marginal_value": {
+    "mean": 10.979045138888889,
+    "sd": 2.878479800735148,
+    "range": [
+      6,
+      16
+    ],
+    "within_person_lag1_corr": -0.00619981827964054
+  },
+  "existing_author_models": [
+    "EWA-lite",
+    "Small Sample of 5 SSM5",
+    "Small Sample 1–9 SSM1-9"
+  ],
+  "verdict": "HOLD causal reward learning: negative-control association unexpectedly nonzero, matched contrast not distinguishable from zero. Neither result proves randomization malfunction; source RNG and conditioning need audit.",
+  "blocked": [
+    "R35 experimenter-only Value cannot be used as participant-visible prediction feature",
+    "Original random assignment code/logs were not independently inspected",
+    "All tests and inference are exploratory on reused 24 sessions",
+    "Published GitHub clean-checkout/remote CI not verified"
+  ]
+}
