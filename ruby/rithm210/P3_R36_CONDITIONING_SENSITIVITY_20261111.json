@@ -1,0 +1,78 @@
+{
+  "study": "RITHM P3-R36 route-conditioned negative-control sensitivity",
+  "date": "2026-11-11",
+  "private_source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "cohort": "Original author 24 main sessions, Partial treatment, t=2..39 only; each conditional cell additionally fixed at session, section, group and period",
+  "columns": [
+    "condition",
+    "eligible_actors",
+    "eligible_cells",
+    "next_switch_beta",
+    "next_switch_p_999",
+    "predecision_switch_beta",
+    "predecision_p_999"
+  ],
+  "rows": [
+    [
+      "current route, informed",
+      8394,
+      3648,
+      -0.00741644677574961,
+      0.002,
+      -0.006472992284118245,
+      0.006
+    ],
+    [
+      "prior route, informed",
+      8396,
+      3648,
+      -0.010366739320007826,
+      0.001,
+      -0.0005693764314525933,
+      0.786
+    ],
+    [
+      "both prior and current route, informed",
+      5906,
+      2703,
+      -0.007197345783758002,
+      0.009,
+      0,
+      1
+    ],
+    [
+      "informed only",
+      10944,
+      3648,
+      -0.009182104283391637,
+      0.001,
+      -0.0030812766372500626,
+      0.077
+    ],
+    [
+      "current route only",
+      10493,
+      3110,
+      -0.007548289507681407,
+      0.001,
+      -0.003110419126786826,
+      0.081
+    ]
+  ],
+  "matched_sample": {
+    "actor_periods": 5906,
+    "all_three_route_condition_sets_coincide_after_joint_eligibility": true,
+    "next_switch_beta": -0.007197345783758009,
+    "predecision_switch_beta": 0,
+    "interpretation": "Predecision switch is deterministic because prior AND current routes held fixed; null test is tautological and cannot certify randomization."
+  },
+  "source_model": "Within-cell Value vs binary switch covariance ratio; value shuffled within cell; 999 exploratory permutations",
+  "exploratory_multiple_comparisons": true,
+  "not_causal": true,
+  "requirements_to_reopen": [
+    "Check source RNG assignment provenance",
+    "Design predecision negative control retaining nonzero conditional variation",
+    "Independent replication or prespecified analysis",
+    "Do not infer successful randomized design from tautological p=1"
+  ]
+}
