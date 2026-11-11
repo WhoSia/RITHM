@@ -1,0 +1,117 @@
+{
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "raw_actor_periods_t2_to39": 10944,
+  "permutation_reps": 999,
+  "estimand": "pooled within-cell slope, t2..39 with both before/after observed, no outcomes used for selecting cells",
+  "conditions": {
+    "info_only": {
+      "before": {
+        "beta": -0.0030812766372500626,
+        "permutation_p": 0.078,
+        "actors": 10944,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 2143,
+        "value_demeaned_sum_squares": 59942.68666666642
+      },
+      "after": {
+        "beta": -0.009182104283391637,
+        "permutation_p": 0.001,
+        "actors": 10944,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 2141,
+        "value_demeaned_sum_squares": 59942.68666666642
+      },
+      "after_minus_before": {
+        "beta": -0.006100827646141566,
+        "permutation_p": 0.009,
+        "actors": 10944,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 2433,
+        "value_demeaned_sum_squares": 59942.68666666642
+      },
+      "diagnosis": "NONDEGENERATE placebo candidate"
+    },
+    "previous": {
+      "before": {
+        "beta": -0.0005693764314525933,
+        "permutation_p": 0.78,
+        "actors": 8396,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 1541,
+        "value_demeaned_sum_squares": 39136.381666666624
+      },
+      "after": {
+        "beta": -0.010366739320007826,
+        "permutation_p": 0.001,
+        "actors": 8396,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 1629,
+        "value_demeaned_sum_squares": 39136.381666666624
+      },
+      "after_minus_before": {
+        "beta": -0.009797362888555233,
+        "permutation_p": 0.001,
+        "actors": 8396,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 1828,
+        "value_demeaned_sum_squares": 39136.381666666624
+      },
+      "diagnosis": "NONDEGENERATE placebo candidate"
+    },
+    "current": {
+      "before": {
+        "beta": -0.006472992284118245,
+        "permutation_p": 0.003,
+        "actors": 8394,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 1533,
+        "value_demeaned_sum_squares": 39129.24999999991
+      },
+      "after": {
+        "beta": -0.00741644677574961,
+        "permutation_p": 0.003,
+        "actors": 8394,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 1535,
+        "value_demeaned_sum_squares": 39129.24999999991
+      },
+      "after_minus_before": {
+        "beta": -0.0009434544916313623,
+        "permutation_p": 0.731,
+        "actors": 8394,
+        "cells": 3648,
+        "cells_with_both_value_and_outcome_variation": 1940,
+        "value_demeaned_sum_squares": 39129.24999999991
+      },
+      "diagnosis": "NONDEGENERATE placebo candidate"
+    },
+    "both": {
+      "before": {
+        "beta": 0.0,
+        "permutation_p": 1.0,
+        "actors": 5906,
+        "cells": 2703,
+        "cells_with_both_value_and_outcome_variation": 0,
+        "value_demeaned_sum_squares": 26604.715000000015
+      },
+      "after": {
+        "beta": -0.007197345783758002,
+        "permutation_p": 0.007,
+        "actors": 5906,
+        "cells": 2703,
+        "cells_with_both_value_and_outcome_variation": 999,
+        "value_demeaned_sum_squares": 26604.715000000015
+      },
+      "after_minus_before": {
+        "beta": -0.007197345783758002,
+        "permutation_p": 0.01,
+        "actors": 5906,
+        "cells": 2703,
+        "cells_with_both_value_and_outcome_variation": 999,
+        "value_demeaned_sum_squares": 26604.715000000015
+      },
+      "diagnosis": "DEGENERATE placebo: both choices fixed"
+    }
+  },
+  "conclusion": "Use previous-route cells as a candidate nondegenerate negative control, not both-route cells: conditioning on both makes current switch deterministic. No result automatically certifies assignment independence or causal payoffs."
+}
