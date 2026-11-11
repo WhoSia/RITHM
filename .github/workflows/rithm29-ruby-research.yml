@@ -191,5 +191,7 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r34_*.py' -v
       - name: R35 value randomization predecision placebo and source-free contract tests
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r35_*.py' -v
+      - name: R36 source-free conditional placebo and nonidentification guards
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r36_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
