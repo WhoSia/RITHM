@@ -1,0 +1,136 @@
+{
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "pop": "teacher-forced actual 39 transitions/group, 24 session equal weights, no coefficient fitted to evaluation sessions",
+  "metric_names": [
+    "actor_logloss",
+    "independent_six_choice_joint_logloss",
+    "occupancy_logloss",
+    "cost_forecast_MAE"
+  ],
+  "epsilon_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "models": {
+    "SSM5": {
+      "calibrated_metrics": [
+        0.6065019469284159,
+        3.6390116815704943,
+        1.4933250620193033,
+        3.7154352865574203
+      ],
+      "selection": [
+        {
+          "fold": 0,
+          "epsilon": 0.4,
+          "training_actor_logloss": 0.6139060727692291
+        },
+        {
+          "fold": 1,
+          "epsilon": 0.4,
+          "training_actor_logloss": 0.5999829547403156
+        },
+        {
+          "fold": 2,
+          "epsilon": 0.4,
+          "training_actor_logloss": 0.6104658816410811
+        },
+        {
+          "fold": 3,
+          "epsilon": 0.4,
+          "training_actor_logloss": 0.6114093431665041
+        },
+        {
+          "fold": 4,
+          "epsilon": 0.4,
+          "training_actor_logloss": 0.598352815771337
+        },
+        {
+          "fold": 5,
+          "epsilon": 0.4,
+          "training_actor_logloss": 0.604894613482028
+        }
+      ],
+      "raw_metrics": [
+        1.1478473268928044,
+        6.887083961356826,
+        2.4851474837159513,
+        3.494414625147753
+      ],
+      "improvement": [
+        -0.5413453799643886,
+        -3.2480722797863315,
+        -0.991822421696648,
+        0.22102066140966725
+      ]
+    },
+    "SSM1-9_fixed_q_posterior": {
+      "calibrated_metrics": [
+        0.5957437718592272,
+        3.574462631155363,
+        1.5094203566761164,
+        3.7503446927597106
+      ],
+      "selection": [
+        {
+          "fold": 0,
+          "epsilon": 0.3,
+          "training_actor_logloss": 0.6012555252685166
+        },
+        {
+          "fold": 1,
+          "epsilon": 0.2,
+          "training_actor_logloss": 0.5859770164753597
+        },
+        {
+          "fold": 2,
+          "epsilon": 0.3,
+          "training_actor_logloss": 0.5976427612618052
+        },
+        {
+          "fold": 3,
+          "epsilon": 0.3,
+          "training_actor_logloss": 0.5982163100212023
+        },
+        {
+          "fold": 4,
+          "epsilon": 0.2,
+          "training_actor_logloss": 0.585782272553642
+        },
+        {
+          "fold": 5,
+          "epsilon": 0.2,
+          "training_actor_logloss": 0.589380145995233
+        }
+      ],
+      "raw_metrics": [
+        1.0376988031819177,
+        6.226192819091505,
+        2.290425884526418,
+        3.4881789013749533
+      ],
+      "improvement": [
+        -0.44195503132269043,
+        -2.651730187936142,
+        -0.7810055278503014,
+        0.26216579138475726
+      ]
+    }
+  },
+  "calibration_interpretation": "Separately labelled 0.5 predictive mixture; not the author original mechanism. Epsilon chosen solely on 20 train sessions per fold. No actor/choice held-out target used in choosing epsilon.",
+  "cautions": [
+    "RITHM models are fitted, SSM mechanisms fixed q; this calibrator partially addresses score sharpness but not equal parameter complexity",
+    "Original author EWA-lite remains unimplemented, do not claim a 3-way complete contest",
+    "SSM1-9 actor-q posterior uses uncalibrated conditional SSM likelihood by declared design"
+  ]
+}
