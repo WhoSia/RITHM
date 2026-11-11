@@ -1,0 +1,57 @@
+{
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "sessions": 24,
+  "groups": 48,
+  "group_periods": 1872,
+  "model": "original-author Appendix-A EWA-lite, uniform-belief uninformed, lambda per fold train session MLE (0..16)",
+  "metrics": [
+    "actor_logloss",
+    "independent_joint_logloss",
+    "occupancy_logloss",
+    "cost_MAE"
+  ],
+  "heldout_session_equal_mean": [
+    0.5422019110766773,
+    3.2532114664600638,
+    1.4291305675706472,
+    2.899252125733651
+  ],
+  "lambda_selected": [
+    {
+      "fold": 0,
+      "lambda": 0.302312711141446,
+      "training_actor_logloss": 0.5454089540800153
+    },
+    {
+      "fold": 1,
+      "lambda": 0.3090575789487241,
+      "training_actor_logloss": 0.5374971946036746
+    },
+    {
+      "fold": 2,
+      "lambda": 0.2966722952518648,
+      "training_actor_logloss": 0.5516807010396049
+    },
+    {
+      "fold": 3,
+      "lambda": 0.29134955691391373,
+      "training_actor_logloss": 0.55144934664784
+    },
+    {
+      "fold": 4,
+      "lambda": 0.3130173460328992,
+      "training_actor_logloss": 0.535057791669251
+    },
+    {
+      "fold": 5,
+      "lambda": 0.3055442859198041,
+      "training_actor_logloss": 0.5383663807133865
+    }
+  ],
+  "limitations": [
+    "The original author Table 10/11 inferential payoffs and attention are implemented from text; boundary behavior verified on examples but complete author-source code is unavailable",
+    "Teacher-forced original action histories differ from unconditional EWA simulation",
+    "Fitting lambda on 20 training sessions prevents leakage to four heldout sessions",
+    "No psychological causality and no agent actually observed their hidden Value"
+  ]
+}
