@@ -1,0 +1,59 @@
+{
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "sessions": 24,
+  "groups": 48,
+  "groups_scored": 1872,
+  "scoring": "teacher-forced actual 39 transitions/group, 24 session equal weights, no coefficient fitted to evaluation sessions",
+  "original_author_Appendix_B": "SSM5 exact q=5 resampling; SSM1-9 fixed per-actor q with posterior filtering from previous actual choice likelihood; historical actual received payoffs; full info inferred foregone payoff via disclosed occupancy",
+  "metrics": [
+    "actor_logloss",
+    "independent_six_choice_joint_logloss",
+    "occupancy_logloss",
+    "cost_forecast_MAE"
+  ],
+  "results": {
+    "SSM5": {
+      "metrics": [
+        1.1478473268928044,
+        6.887083961356826,
+        2.4851474837159513,
+        3.494414625147753
+      ],
+      "info_actor_logloss": {
+        "0": 1.164832022643705,
+        "1": 1.1308626311419039
+      },
+      "session_loss_quantiles": [
+        4.7429480286361425,
+        6.35464821606272,
+        8.817914187070473
+      ]
+    },
+    "SSM1-9_fixed_q_posterior": {
+      "metrics": [
+        1.0376988031819177,
+        6.226192819091505,
+        2.290425884526418,
+        3.4881789013749533
+      ],
+      "info_actor_logloss": {
+        "0": 1.0447933490820247,
+        "1": 1.0306042572818106
+      },
+      "session_loss_quantiles": [
+        4.337579952796985,
+        6.1448206245587045,
+        8.089218697929894
+      ]
+    }
+  },
+  "caveats": [
+    "SSM tie resolved 0.5 (paper Table12 leaves tie handling underspecified)",
+    "Posterior q updating is an explicitly declared conditional-scoring choice; do not claim authors used this update in unconditional simulations",
+    "Teacher-forced realized histories differs from original unconditional 40-period SSM simulations",
+    "SSM1-9 q_i drawn once/person, not separately each period",
+    "Uninformed learns chosen-route payoff, not true cost/value/hidden count",
+    "Original EWA-lite Appendix A inference and attention model pending separate exact implementation",
+    "RITHM R33 comparison from existing archived score is not a fresh simultaneous clean-checkout run"
+  ]
+}
