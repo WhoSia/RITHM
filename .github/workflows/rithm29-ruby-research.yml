@@ -193,5 +193,7 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r35_*.py' -v
       - name: R36 source-free conditional placebo and nonidentification guards
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r36_*.py' -v
+      - name: R37 author EWA-lite, SSM5/SSM1-9 and nondegenerate negative-control source-free tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r37_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
