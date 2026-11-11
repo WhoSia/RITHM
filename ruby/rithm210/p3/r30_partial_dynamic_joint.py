@@ -49,6 +49,16 @@ def score(q,previous,y,tau):
        abs(pred-COST[n]),pred,variance,bernoulli,variance-bernoulli,
        np.mean((q-y)**2)])
 
+
+def joint_scores(ps, prior_routes, observed, tau):
+    """R31/R32/R33 compatibility alias for the unchanged R30 nine-metric score law.
+
+    Keep this stable public function when renaming internal scorer.
+    The original source-free checker imports this name from R31.
+    """
+    return score(ps, prior_routes, observed, tau)
+
+
 def predictions(groups,coef,family):
     out=[]
     for idx,g in enumerate(groups):
