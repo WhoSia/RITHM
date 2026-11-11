@@ -169,10 +169,10 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r27_audit_*.py' -v
       - name: Interim population contracts 24 vs 25 vs literal R 26 (source-free)
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r27_audit_population_contracts.py' -v
+      - name: Install SciPy before any R28-R34 Python test imports
+        run: python -m pip install 'scipy>=1.10,<2'
       - name: R28 source-free cohort CV and exact full-info cost-rank obstruction
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r28_*.py' -v
-      - name: R28 SciPy source-free payoff-filtration regression dependency
-        run: python -m pip install 'scipy>=1.10,<2'
       - name: R28 lawful payoff and information-filtration tests
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r28_*.py' -v
       - name: R29 Partial-information source-free privacy and switching regressions
@@ -187,5 +187,7 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r32_*.py' -v
       - name: R33 online Partial payoff history and no-leak source-free tests
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r33_*.py' -v
+      - name: R34 within-route received-payoff permutation and R30-R31 API bridge tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r34_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
