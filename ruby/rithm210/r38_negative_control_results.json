@@ -1,0 +1,102 @@
+{
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "permutations": 9999,
+  "conditions": {
+    "previous": {
+      "actor_periods": 8396,
+      "cells": 3648,
+      "tests": {
+        "before": {
+          "beta": -0.0005693764314525933,
+          "exact_conditional_null_sd": 0.002159368746845452,
+          "informative_cells": 1541,
+          "permutation_p": 0.7925
+        },
+        "after": {
+          "beta": -0.010366739320007826,
+          "exact_conditional_null_sd": 0.002267016718049364,
+          "informative_cells": 1629,
+          "permutation_p": 0.0001
+        },
+        "after_minus_before": {
+          "beta": -0.009797362888555233,
+          "exact_conditional_null_sd": 0.002802686906192283,
+          "informative_cells": 1828,
+          "permutation_p": 0.0005
+        }
+      }
+    },
+    "current": {
+      "actor_periods": 8394,
+      "cells": 3648,
+      "tests": {
+        "before": {
+          "beta": -0.006472992284118245,
+          "exact_conditional_null_sd": 0.0021404219201767295,
+          "informative_cells": 1533,
+          "permutation_p": 0.0029
+        },
+        "after": {
+          "beta": -0.00741644677574961,
+          "exact_conditional_null_sd": 0.002202644184128616,
+          "informative_cells": 1535,
+          "permutation_p": 0.0008
+        },
+        "after_minus_before": {
+          "beta": -0.0009434544916313623,
+          "exact_conditional_null_sd": 0.00287787181577097,
+          "informative_cells": 1940,
+          "permutation_p": 0.7488
+        }
+      }
+    },
+    "info_only": {
+      "actor_periods": 10944,
+      "cells": 3648,
+      "tests": {
+        "before": {
+          "beta": -0.0030812766372500626,
+          "exact_conditional_null_sd": 0.0017986840357245614,
+          "informative_cells": 2143,
+          "permutation_p": 0.0878
+        },
+        "after": {
+          "beta": -0.009182104283391637,
+          "exact_conditional_null_sd": 0.0018183971840569563,
+          "informative_cells": 2141,
+          "permutation_p": 0.0001
+        },
+        "after_minus_before": {
+          "beta": -0.006100827646141566,
+          "exact_conditional_null_sd": 0.002329398177979823,
+          "informative_cells": 2433,
+          "permutation_p": 0.0089
+        }
+      }
+    },
+    "both": {
+      "actor_periods": 5906,
+      "cells": 2703,
+      "tests": {
+        "before": {
+          "beta": 0.0,
+          "exact_conditional_null_sd": 0.0,
+          "informative_cells": 0,
+          "permutation_p": null
+        },
+        "after": {
+          "beta": -0.007197345783758002,
+          "exact_conditional_null_sd": 0.002582318122015863,
+          "informative_cells": 999,
+          "permutation_p": 0.0051
+        },
+        "after_minus_before": {
+          "beta": -0.007197345783758002,
+          "exact_conditional_null_sd": 0.002582318122015863,
+          "informative_cells": 999,
+          "permutation_p": 0.0051
+        }
+      }
+    }
+  }
+}
