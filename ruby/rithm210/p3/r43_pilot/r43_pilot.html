@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RITHM 경로선택 · 운영 리허설</title>
+<style>
+:root {font-family: "Inter", "Malgun Gothic", sans-serif; color: #192f31; background: #f0f5f2;}
+body {max-width: 760px; margin: 0 auto; padding: 32px 20px;}
+header {border-bottom: 1px solid #b4c6bd; margin-bottom: 24px;}
+h1 {font-size: clamp(1.6rem, 5vw, 2.35rem); letter-spacing: -.04em;}
+section {background: white; border: 1px solid #cad8d1; padding: 24px; border-radius: 14px;}
+form, .controls {display: grid; gap: 14px;}
+label {display: grid; gap: 4px;}
+input, select, button {font: inherit; border-radius: 8px; padding: .72rem .9rem;}
+input, select {border: 1px solid #839991; background: white; color: inherit;}
+button {border: 1px solid #0f554b; background: #0f554b; color: white; cursor: pointer;}
+button:focus-visible {outline: 3px solid #e89242; outline-offset: 3px;}
+.routes {display: grid; grid-template-columns: 1fr 1fr; gap: 12px;}
+.routes button {background: #eef7f2; color: #124e44; text-align: left; min-height: 100px;}
+strong {display: block; font-size: 1.4rem;}
+small {display: block; margin-top: 6px;}
+[hidden] {display: none !important;}
+</style>
+<header><h1>경로선택 실험</h1><p>운영 리허설 · 한 기기에서 차례대로 진행</p></header>
+<section id="setup">
+  <h2>집단 배정</h2>
+  <form id="config">
+    <label>블록 수<select id="horizon"><option>1</option><option>5</option><option>39</option></select></label>
+    <button>새 집단 배정</button>
+  </form>
+  <button id="resume" hidden>진행 중인 집단 재개</button>
+</section>
+<section id="handoff" hidden><h2 id="turn"></h2><p>표시된 좌석의 참가자에게 화면을 넘겨주세요.</p><button id="ready">선택 화면 열기</button> <button id="pause">일시 중지</button></section>
+<section id="choice" hidden>
+  <h2 id="prompt"></h2><p id="current"></p><p id="disclosure"></p>
+  <p>다른 사람의 경로가 그대로일 때 내가 낼 비용입니다. 한 경로를 누르면 이번 선택이 확정됩니다.</p>
+  <div class="routes">
+    <button id="a"><strong>A 경로</strong><span id="cost-a"></span><small id="mark-a"></small></button>
+    <button id="b"><strong>B 경로</strong><span id="cost-b"></span><small id="mark-b"></small></button>
+  </div>
+</section>
+<p id="error" role="alert"></p>
+<section id="end" hidden><h2>리허설 완료</h2><p id="result"></p><button id="export">기록 내려받기</button> <button id="finish">배정 화면으로</button></section>
+<script>
+const get = id => document.getElementById(id);
+const storageKey = "rithm-r43-group";
+const pendingKey = "rithm-r43-allocation";
+let group = localStorage.getItem(storageKey), state, opened, busy = false;
+
+function show(panel) {
+  for (const id of ["setup", "handoff", "choice", "end"]) get(id).hidden = id !== panel;
+}
+function setup() {
+  show("setup");
+  get("resume").hidden = !group;
+  get("config").hidden = !!group;
+  const pending = JSON.parse(localStorage.getItem(pendingKey));
+  get("horizon").disabled = !!pending;
+  if (pending) get("horizon").value = pending.blocks;
+}
+async function request(path, data) {
+  const options = data === undefined ? {} : {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(data)
+  };
+  const response = await fetch(path, options);
+  const value = await response.json();
+  if (!response.ok) throw new Error(value.error);
+  return value;
+}
+const groupPath = () => "/group/" + encodeURIComponent(group);
+async function action(callback) {
+  if (busy) return;
+  busy = true;
+  get("error").textContent = "";
+  try { await callback(); }
+  catch (error) { get("error").textContent = "요청을 완료하지 못했습니다. " + error.message; }
+  finally { busy = false; }
+}
+function render(value) {
+  state = value;
+  if (!state.turn) {
+    get("result").textContent = `${state.blocks}블록 · 선택 ${state.blocks * 6}건`;
+    show("end");
+    return;
+  }
+  const {block, seat} = state.turn;
+  get("turn").textContent = `${block}블록 · 좌석 ${seat + 1}`;
+  show("handoff");
+}
+get("config").addEventListener("submit", event => {
+  event.preventDefault();
+  action(async () => {
+    if (group) return;
+    const pending = JSON.parse(localStorage.getItem(pendingKey)) ?? {
+      blocks: Number(get("horizon").value), request_id: crypto.randomUUID().replaceAll("-", "")
+    };
+    localStorage.setItem(pendingKey, JSON.stringify(pending));
+    setup();
+    const allocated = await request("/group", pending);
+    group = allocated.id;
+    localStorage.setItem(storageKey, group);
+    localStorage.removeItem(pendingKey);
+    setup();
+    render(await request(groupPath()));
+  });
+});
+get("resume").addEventListener("click", () => action(async () => render(await request(groupPath()))));
+get("pause").addEventListener("click", setup);
+get("ready").addEventListener("click", () => {
+  const {block, seat, previous, disclosed_A, cost_A, cost_B} = state.turn;
+  get("prompt").textContent = `${block}블록 · 좌석 ${seat + 1}`;
+  get("current").textContent = `직전 경로   ${previous}`;
+  get("disclosure").textContent = `표시된 배치   A ${disclosed_A}명 · B ${6-disclosed_A}명`;
+  get("cost-a").textContent = `비용 ${cost_A}점`;
+  get("cost-b").textContent = `비용 ${cost_B}점`;
+  for (const route of ["A", "B"]) {
+    get(`mark-${route.toLowerCase()}`).textContent =
+      state.marker && previous === route ? "직전 경로" : "\u00a0";
+  }
+  opened = performance.now();
+  show("choice");
+});
+function choose(route) {
+  if (get("choice").hidden) return;
+  action(async () => {
+    const next = await request(groupPath() + "/choice", {
+      step: state.turn.step, route, response_ms: Math.round(performance.now()-opened)
+    });
+    render(next);
+  });
+}
+get("a").addEventListener("click", () => choose("A"));
+get("b").addEventListener("click", () => choose("B"));
+get("export").addEventListener("click", () => action(async () => {
+  const payload = await request(groupPath() + "/export");
+  const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], {type: "application/json"}));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "rithm-r43-rehearsal.json";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}));
+get("finish").addEventListener("click", () => {
+  localStorage.removeItem(storageKey);
+  group = null;
+  setup();
+});
+setup();
+</script>
+</html>
