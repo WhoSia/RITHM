@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RITHM 경로선택 · 운영 리허설</title>
+<style>
+:root {font-family: "Inter", "Malgun Gothic", sans-serif; color: #192f31; background: #f0f5f2;}
+body {max-width: 760px; margin: 0 auto; padding: 32px 20px;}
+header {border-bottom: 1px solid #b4c6bd; margin-bottom: 24px;}
+h1 {font-size: clamp(1.6rem, 5vw, 2.35rem); letter-spacing: -.04em;}
+section {background: white; border: 1px solid #cad8d1; padding: 24px; border-radius: 14px;}
+form, .controls {display: grid; gap: 14px;}
+label {display: grid; gap: 4px;}
+input, select, button {font: inherit; border-radius: 8px; padding: .72rem .9rem;}
+input, select {border: 1px solid #839991; background: white; color: inherit;}
+button {border: 1px solid #0f554b; background: #0f554b; color: white; cursor: pointer;}
+button:focus-visible {outline: 3px solid #e89242; outline-offset: 3px;}
+.routes {display: grid; grid-template-columns: 1fr 1fr; gap: 12px;}
+.routes button {background: #eef7f2; color: #124e44; text-align: left; min-height: 100px;}
+strong {display: block; font-size: 1.4rem;}
+small {display: block; margin-top: 6px;}
+[hidden] {display: none !important;}
+</style>
+<header><h1>경로선택 실험</h1><p>운영 리허설 · 한 기기에서 차례대로 진행</p></header>
+<section id="setup">
+  <h2>연습 조건</h2>
+  <form id="config">
+    <label>배정 코드<input id="seed" type="number" value="42" required min="1" max="4294967295"></label>
+    <label>출발 A 인원<select id="initial"><option>3</option><option>4</option><option selected>5</option></select></label>
+    <label>표시할 혼잡 정보<select id="signal"><option value="frozen">블록 시작 점유율</option><option value="live">현재 점유율</option></select></label>
+    <label>현재 경로 표식<select id="marker"><option value="off">없음</option><option value="on">있음</option></select></label>
+    <label>블록 수<select id="horizon"><option>1</option><option>5</option><option>39</option></select></label>
+    <button>리허설 시작</button>
+  </form>
+</section>
+<section id="handoff" hidden><h2 id="turn"></h2><p>표시된 좌석의 참가자에게 화면을 넘겨주세요.</p><button id="ready">선택 화면 열기</button></section>
+<section id="choice" hidden>
+  <h2 id="prompt"></h2><p id="current"></p><p id="disclosure"></p>
+  <p>다른 사람의 경로가 그대로일 때 내가 낼 비용입니다. 한 경로를 누르면 이번 선택이 확정됩니다.</p>
+  <div class="routes">
+    <button id="a"><strong>A 경로</strong><span id="cost-a"></span><small id="mark-a"></small></button>
+    <button id="b"><strong>B 경로</strong><span id="cost-b"></span><small id="mark-b"></small></button>
+  </div>
+</section>
+<section id="end" hidden><h2>리허설 완료</h2><p id="result"></p><button id="export">기록 내려받기</button></section>
+<script>
+const get = id => document.getElementById(id);
+const countA = routes => routes.filter(route => route === "A").length;
+const excess = n => 3 * (n - 4) ** 2;
+const seats = [0, 1, 2, 3, 4, 5];
+let settings, routes, initialRoutes, block, order, slot, start, events, summaries, opened, random;
+function seeded(seed) {
+  let state = seed >>> 0;
+  return () => {
+    state ^= state << 13;
+    state ^= state >>> 17;
+    state ^= state << 5;
+    return (state >>> 0) / 4294967296;
+  };
+}
+function shuffle(values) {
+  const copy = [...values];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+function show(id) {
+  for (const panel of ["setup", "handoff", "choice", "end"]) get(panel).hidden = panel !== id;
+}
+function openBlock() {
+  order = shuffle(seats);
+  slot = 0;
+  start = countA(routes);
+  openHandoff();
+}
+function openHandoff() {
+  get("turn").textContent = `${block}블록 · 좌석 ${order[slot] + 1}`;
+  show("handoff");
+}
+get("config").addEventListener("submit", event => {
+  event.preventDefault();
+  settings = {seed: Number(get("seed").value), initialA: Number(get("initial").value),
+              signal: get("signal").value, marker: get("marker").value === "on",
+              blocks: Number(get("horizon").value)};
+  random = seeded(settings.seed);
+  const assignedA = new Set(shuffle(seats).slice(0, settings.initialA));
+  routes = seats.map(seat => assignedA.has(seat) ? "A" : "B");
+  initialRoutes = [...routes];
+  block = 1;
+  events = [];
+  summaries = [];
+  openBlock();
+});
+get("ready").addEventListener("click", () => {
+  const seat = order[slot];
+  const n = settings.signal === "live" ? countA(routes) : start;
+  const othersA = n - Number(routes[seat] === "A");
+  get("prompt").textContent = `${block}블록 · 좌석 ${seat + 1}`;
+  get("current").textContent = `나의 현재 경로   ${routes[seat]}`;
+  get("disclosure").textContent = `표시된 배치   A ${n}명 · B ${6 - n}명`;
+  get("cost-a").textContent = `비용 ${othersA + 1}점`;
+  get("cost-b").textContent = `비용 ${2 * (6 - othersA)}점`;
+  for (const route of ["A", "B"]) {
+    get(`mark-${route.toLowerCase()}`).textContent =
+      settings.marker && routes[seat] === route ? "현재 경로" : "\u00a0";
+  }
+  opened = performance.now();
+  show("choice");
+});
+function choose(next) {
+  if (get("choice").hidden) return;
+  const seat = order[slot], before = countA(routes), previous = routes[seat];
+  routes[seat] = next;
+  const after = countA(routes);
+  events.push({block, turn: slot + 1, seat: seat + 1, previous, next,
+               disclosed_A: settings.signal === "live" ? before : start,
+               actual_A_before: before, actual_A_after: after,
+               response_ms: Math.round(performance.now() - opened)});
+  slot += 1;
+  if (slot < 6) return openHandoff();
+  const rows = events.slice(-6);
+  const first = start === 4 ? 0 : rows.find(row => row.actual_A_after === 4)?.turn ?? null;
+  summaries.push({block, start_A: start, end_A: after, first_target_turn: first,
+                  hit_then_lost: first !== null && after !== 4, excess_cost: excess(after),
+                  up: rows.filter(row => row.previous === "B" && row.next === "A").length,
+                  down: rows.filter(row => row.previous === "A" && row.next === "B").length});
+  if (block < settings.blocks) {
+    block += 1;
+    return openBlock();
+  }
+  const total = summaries.reduce((sum, row) => sum + row.excess_cost, 0);
+  get("result").textContent = `${settings.blocks}블록 · 선택 ${events.length}건 · 누적 초과비용 ${total}점`;
+  show("end");
+}
+get("a").addEventListener("click", () => choose("A"));
+get("b").addEventListener("click", () => choose("B"));
+get("export").addEventListener("click", () => {
+  const payload = {schema: "rithm-r42-rehearsal-v1", settings, initialRoutes, events, summaries};
+  const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], {type: "application/json"}));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "rithm-r42-rehearsal.json";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+});
+</script>
+</html>
