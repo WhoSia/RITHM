@@ -1,0 +1,297 @@
+{
+  "synthetic": {
+    "3": {
+      "fixed_d0": {
+        "final_occupancy_classes": {
+          "short_of_target": {
+            "probability": 0.00011744263583981163,
+            "weighted_cost": 0.00035397378249119266
+          },
+          "target": {
+            "probability": 0.00663162468475839,
+            "weighted_cost": 0.0
+          },
+          "past_target": {
+            "probability": 0.9932509326794019,
+            "weighted_cost": 10.746129433936662
+          }
+        },
+        "first_target_turn_counts_probability": [
+          0.00011203800538391289,
+          0.4762870634112168,
+          0.29464960120469436,
+          0.1564560656245904,
+          0.06156294982363109,
+          0.00982701114969048,
+          0.001105270780793065
+        ],
+        "hit_then_lost": 0.9932563373098577,
+        "end_excess": 10.746483407719154
+      },
+      "fixed_d0.5": {
+        "final_occupancy_classes": {
+          "short_of_target": {
+            "probability": 0.0004526336795369898,
+            "weighted_cost": 0.0013619029071525513
+          },
+          "target": {
+            "probability": 0.01613344441572378,
+            "weighted_cost": 0.0
+          },
+          "past_target": {
+            "probability": 0.9834139219047391,
+            "weighted_cost": 10.046368858572519
+          }
+        },
+        "first_target_turn_counts_probability": [
+          0.0004445683673874829,
+          0.46207090998937816,
+          0.29117031597867876,
+          0.15986123472444067,
+          0.06806420583672187,
+          0.015699857700772285,
+          0.0026889074026206295
+        ],
+        "hit_then_lost": 0.9834219872168887,
+        "end_excess": 10.04773076147967
+      },
+      "live_d0": {
+        "final_occupancy_classes": {
+          "short_of_target": {
+            "probability": 0.029773337306257034,
+            "weighted_cost": 0.08937552910669473
+          },
+          "target": {
+            "probability": 0.8370677793782164,
+            "weighted_cost": 0.0
+          },
+          "past_target": {
+            "probability": 0.1331588833155267,
+            "weighted_cost": 0.40031225820060284
+          }
+        },
+        "first_target_turn_counts_probability": [
+          0.00010936795693880924,
+          0.47628706341121674,
+          0.29464960120469436,
+          0.15645976786756277,
+          0.061569321167639426,
+          0.009830225703221318,
+          0.0010946526887266991
+        ],
+        "hit_then_lost": 0.1628228526648449,
+        "end_excess": 0.48968778730729756
+      },
+      "live_d0.5": {
+        "final_occupancy_classes": {
+          "short_of_target": {
+            "probability": 0.020802559353156908,
+            "weighted_cost": 0.062432380609170834
+          },
+          "target": {
+            "probability": 0.8822405550984787,
+            "weighted_cost": 0.0
+          },
+          "past_target": {
+            "probability": 0.09695688554836426,
+            "weighted_cost": 0.29122674220316724
+          }
+        },
+        "first_target_turn_counts_probability": [
+          0.00044057415017624357,
+          0.4620709099893783,
+          0.2911703159786787,
+          0.15986471876628516,
+          0.0680702858555181,
+          0.01570325601686639,
+          0.002679939243097026
+        ],
+        "hit_then_lost": 0.11731887075134492,
+        "end_excess": 0.3536591228123381
+      }
+    },
+    "5": {
+      "fixed_d0": {
+        "final_occupancy_classes": {
+          "short_of_target": {
+            "probability": 0.00021322996896899535,
+            "weighted_cost": 0.0006441859291517097
+          },
+          "target": {
+            "probability": 0.004616449420225587,
+            "weighted_cost": 0.0
+          },
+          "past_target": {
+            "probability": 0.9951703206108053,
+            "weighted_cost": 30.803027119511253
+          }
+        },
+        "first_target_turn_counts_probability": [
+          0.0002076328095928357,
+          0.681312063494703,
+          0.23535645514881084,
+          0.06347207795629815,
+          0.01537566103948464,
+          0.003506701314406213,
+          0.0007694082367042644
+        ],
+        "hit_then_lost": 0.9951759177701814,
+        "end_excess": 30.803671305440403
+      },
+      "fixed_d0.5": {
+        "final_occupancy_classes": {
+          "short_of_target": {
+            "probability": 0.0014356887041702018,
+            "weighted_cost": 0.004326075337508651
+          },
+          "target": {
+            "probability": 0.019250225290121915,
+            "weighted_cost": 0.0
+          },
+          "past_target": {
+            "probability": 0.979314086005708,
+            "weighted_cost": 24.077181043828194
+          }
+        },
+        "first_target_turn_counts_probability": [
+          0.0014213352511465143,
+          0.6092154821916709,
+          0.2527348099048429,
+          0.09201119099428397,
+          0.03124702357525148,
+          0.01016178720111735,
+          0.0032083708816869855
+        ],
+        "hit_then_lost": 0.9793284394587315,
+        "end_excess": 24.0815071191657
+      },
+      "live_d0": {
+        "final_occupancy_classes": {
+          "short_of_target": {
+            "probability": 0.03147485396907971,
+            "weighted_cost": 0.0944253215404636
+          },
+          "target": {
+            "probability": 0.8694951458662852,
+            "weighted_cost": 0.0
+          },
+          "past_target": {
+            "probability": 0.09903000016463538,
+            "weighted_cost": 0.2976286141391082
+          }
+        },
+        "first_target_turn_counts_probability": [
+          0.0002039218081348281,
+          0.6813120634947033,
+          0.2353564551488109,
+          0.06353270869478475,
+          0.015348362000647583,
+          0.003485558439662105,
+          0.0007609304132568496
+        ],
+        "hit_then_lost": 0.13030093232558024,
+        "end_excess": 0.39205393567957175
+      },
+      "live_d0.5": {
+        "final_occupancy_classes": {
+          "short_of_target": {
+            "probability": 0.02589797084115404,
+            "weighted_cost": 0.07769712941175563
+          },
+          "target": {
+            "probability": 0.9112369130543677,
+            "weighted_cost": 0.0
+          },
+          "past_target": {
+            "probability": 0.06286511610447809,
+            "weighted_cost": 0.18879601133628646
+          }
+        },
+        "first_target_turn_counts_probability": [
+          0.0014118248730371292,
+          0.6092154821916707,
+          0.25273480990484287,
+          0.09205963825498215,
+          0.031237861927037248,
+          0.010143686479891625,
+          0.003196696368538139
+        ],
+        "hit_then_lost": 0.08735126207259501,
+        "end_excess": 0.26649314074804215
+      }
+    }
+  },
+  "source_sha256": "d36520564b60ba5281e7b571d2ecfd94e055b9ab7f78bd4e9eaf762844d0f8bb",
+  "observed": {
+    "3": {
+      "transitions": 428,
+      "sessions_with_start": 24,
+      "corrective_direction_switches": 613,
+      "zero_corrective_direction_switches": 56,
+      "multiple_corrective_direction_switches": 197,
+      "final_occupancy_classes": {
+        "short_of_target": {
+          "probability": 0.3037383177570093,
+          "weighted_cost": 1.5630841121495327
+        },
+        "target": {
+          "probability": 0.4252336448598131,
+          "weighted_cost": 0.0
+        },
+        "past_target": {
+          "probability": 0.27102803738317754,
+          "weighted_cost": 1.1495327102803738
+        }
+      },
+      "transition_histogram_U_D": {
+        "0,0": 40,
+        "0,1": 14,
+        "0,2": 2,
+        "1,0": 117,
+        "1,1": 48,
+        "1,2": 9,
+        "1,3": 1,
+        "2,0": 80,
+        "2,1": 58,
+        "2,2": 15,
+        "3,0": 16,
+        "3,1": 20,
+        "3,2": 7,
+        "3,3": 1
+      }
+    },
+    "5": {
+      "transitions": 453,
+      "sessions_with_start": 24,
+      "corrective_direction_switches": 618,
+      "zero_corrective_direction_switches": 85,
+      "multiple_corrective_direction_switches": 188,
+      "final_occupancy_classes": {
+        "short_of_target": {
+          "probability": 0.3200883002207506,
+          "weighted_cost": 1.576158940397351
+        },
+        "target": {
+          "probability": 0.3708609271523179,
+          "weighted_cost": 0.0
+        },
+        "past_target": {
+          "probability": 0.3090507726269316,
+          "weighted_cost": 1.814569536423841
+        }
+      },
+      "transition_histogram_U_D": {
+        "0,0": 54,
+        "0,1": 120,
+        "0,2": 84,
+        "0,3": 32,
+        "0,4": 4,
+        "1,0": 31,
+        "1,1": 60,
+        "1,2": 48,
+        "1,3": 18,
+        "1,4": 2
+      }
+    }
+  }
+}
