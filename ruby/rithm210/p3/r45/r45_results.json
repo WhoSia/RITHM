@@ -1,0 +1,75 @@
+{
+  "3": {
+    "ceiling": "1862/1249",
+    "exact_certificate": true,
+    "public_final_count_has_any_feasible_burden": false,
+    "samples": {
+      "0": {
+        "feasible": true,
+        "minimum": "81/428"
+      },
+      "97/103": {
+        "feasible": true,
+        "minimum": "81/428"
+      },
+      "19/20": {
+        "feasible": true,
+        "minimum": "81/428"
+      },
+      "1": {
+        "feasible": true,
+        "minimum": "81/428"
+      },
+      "5/4": {
+        "feasible": true,
+        "minimum": "187/428"
+      },
+      "1862/1249": {
+        "feasible": true,
+        "minimum": "361081/534572"
+      },
+      "3/2": {
+        "feasible": false
+      }
+    }
+  },
+  "5": {
+    "ceiling": "97/103",
+    "exact_certificate": true,
+    "public_final_count_has_any_feasible_burden": false,
+    "samples": {
+      "0": {
+        "feasible": true,
+        "minimum": "6/151"
+      },
+      "97/103": {
+        "feasible": true,
+        "minimum": "6/151"
+      },
+      "19/20": {
+        "feasible": false
+      },
+      "1": {
+        "feasible": false
+      },
+      "5/4": {
+        "feasible": false
+      },
+      "1862/1249": {
+        "feasible": false
+      },
+      "3/2": {
+        "feasible": false
+      }
+    }
+  },
+  "relaxed_marginals_start_5_at_burden_1": {
+    "initial_A_probability": "551/755",
+    "initial_B_probability": "53/151",
+    "minimum_total_absolute_marginal_change": "2/151",
+    "law": {
+      "3,1": "53/151",
+      "4,0": "98/151"
+    }
+  }
+}
