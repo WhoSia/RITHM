@@ -1,0 +1,60 @@
+{
+  "3": {
+    "target": "A",
+    "expected_others_A": 3.459501557632399,
+    "baseline_target_probability": 0.47741433021806856,
+    "saving_per_induced_switch": 0.24299065420560748,
+    "gross_private_saving_per_induced_switch": 0.6214953271028038,
+    "saving_if_forced_target": 0.1269834337787871,
+    "saving_at_50pct_compliance_mixed_with_baseline": 0.06349171688939355,
+    "others_mean_exact": "2221/642",
+    "saving_per_induced_switch_exact": "26/107",
+    "synthetic_first_block_beta_0_6_offer_log_odds_1": {
+      "frozen": {
+        "correct_without_offer": 0.7685247834990175,
+        "correct_with_offer": 0.9002495108803148,
+        "cost_given_first_stays": 1.9414912529757629,
+        "cost_given_first_switches": 7.3101229377677726,
+        "saving_per_induced_switch": -5.3686316847920095,
+        "saving_per_offer": -0.707181545089822
+      },
+      "live": {
+        "correct_without_offer": 0.7685247834990175,
+        "correct_with_offer": 0.9002495108803148,
+        "cost_given_first_stays": 1.174420425097703,
+        "cost_given_first_switches": 1.1444979710237677,
+        "saving_per_induced_switch": 0.029922454073935345,
+        "saving_per_offer": 0.00394152710546852
+      }
+    }
+  },
+  "5": {
+    "target": "B",
+    "expected_others_A": 3.2596026490066223,
+    "baseline_target_probability": 0.2728476821192053,
+    "saving_per_induced_switch": -1.442384105960265,
+    "gross_private_saving_per_induced_switch": -1.2211920529801326,
+    "saving_if_forced_target": -1.0488329459234245,
+    "saving_at_50pct_compliance_mixed_with_baseline": -0.5244164729617122,
+    "others_mean_exact": "2461/755",
+    "saving_per_induced_switch_exact": "-1089/755",
+    "synthetic_first_block_beta_0_6_offer_log_odds_1": {
+      "frozen": {
+        "correct_without_offer": 0.6456563062257954,
+        "correct_with_offer": 0.8320183851339245,
+        "cost_given_first_stays": 9.719249537494205,
+        "cost_given_first_switches": 21.71596470794976,
+        "saving_per_induced_switch": -11.996715170455554,
+        "saving_per_offer": -2.235732779234787
+      },
+      "live": {
+        "correct_without_offer": 0.6456563062257954,
+        "correct_with_offer": 0.8320183851339245,
+        "cost_given_first_stays": 1.259432647358182,
+        "cost_given_first_switches": 1.5245088771632984,
+        "saving_per_induced_switch": -0.26507622980511636,
+        "saving_per_offer": -0.04940015725561045
+      }
+    }
+  }
+}
