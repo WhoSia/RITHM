@@ -1,0 +1,22 @@
+{
+  "seed": 451117,
+  "simulations": 1000,
+  "periods": 200,
+  "actors": 18,
+  "initial_propensities": [
+    4,
+    3,
+    3,
+    2
+  ],
+  "results": {
+    "side_road_mean": 5.882005,
+    "side_road_within_session_sd": 1.5979227317049083,
+    "switches_per_transition": 5.183804020100503
+  },
+  "published_table5": {
+    "side_road_mean": 5.88,
+    "side_road_within_session_sd": 1.65,
+    "switches_per_transition": 5.17
+  }
+}
