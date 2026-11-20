@@ -1,7 +1,9 @@
 {
   "both_direction_switches": 1546,
+  "constant_occupancy_gross_switches": 1734,
   "constant_occupancy_with_churn": 788,
   "five_to_five_one_each_direction": 173,
+  "four_to_four_gross_switches": 840,
   "four_to_four_with_churn": 385,
   "gross_switch_histogram": {
     "0": 1059,
