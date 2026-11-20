@@ -1,6 +1,6 @@
 import unittest
 from copy import deepcopy
-from r54_original_batch_clock import audit_rows, minimal_order_cost_bounds
+from r54_original_batch_clock import audit_rows, audit_zip, minimal_order_cost_bounds
 
 
 def fixture():
@@ -46,6 +46,25 @@ class R54BatchClockTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'duplicate actor'):audit_rows(entries+[entries[0]])
         missing=[x for x in entries if not (x['Period']=='2' and x['Group']=='1' and x['ID']=='101')]
         with self.assertRaisesRegex(ValueError,'actor changed identity'):audit_rows(missing)
+
+    def test_raw_blob_seal_and_tiny_fixture_opt_out(self):
+        from zipfile import ZipFile
+        from tempfile import TemporaryDirectory
+        from pathlib import Path
+        import csv
+        with TemporaryDirectory() as folder:
+            path = Path(folder)/"synthetic_source.zip"
+            rows = fixture()
+            import io
+            out = io.StringIO()
+            writer = csv.DictWriter(out, fieldnames=rows[0].keys())
+            writer.writeheader();writer.writerows(rows)
+            with ZipFile(path,'w') as z:
+                z.writestr('data_task_all_switch_230705.csv', out.getvalue())
+            result = audit_zip(path, require_original=False)
+            self.assertEqual(result['group_period_transitions'],4)
+            with self.assertRaisesRegex(ValueError,'SHA256 mismatch'):
+                audit_zip(path, require_original=True)
 
     def test_original_population_not_assumed_from_tiny_fixture(self):
         with self.assertRaisesRegex(ValueError,'sealed 24-session'):audit_rows(fixture(),require_original=True)
