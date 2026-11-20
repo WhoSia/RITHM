@@ -17,7 +17,9 @@ module Rithm210WelfareProbability
     down=Rithm210OnlineIdentity.convolve(downs)
     result=Hash.new(0.0)
     up.each_with_index do |p,u|
+      next if p.zero?
       down.each_with_index do |q,d|
+        next if q.zero?
         result[Rithm210ExperimentalWelfare.excess(current_a+u-d)]+=p*q
       end
     end
