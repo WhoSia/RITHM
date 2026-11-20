@@ -215,5 +215,7 @@ jobs:
           PYTHONPATH=ruby/rithm210/p3 python -m unittest discover -s ruby/rithm210/p3/r50 -p 'test_r*.py' -v
       - name: R54 six-seat simultaneous-choice clock and source-exclusion contract
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r54_original_batch_clock.py' -v
+      - name: R55 source-free 64-mask simultaneous-switch fiber and welfare rankings
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r55_batch_fibers.py' -v
       - name: No code mutation by verification
         run: git diff --exit-code && test -z "$(git status --porcelain)"
