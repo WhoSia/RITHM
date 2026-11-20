@@ -6,17 +6,21 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 OLD_ROOT_README_GIT_BLOB="032b27bfd10716333b597f4010c57e5a91f0f4e0"
 LEGACY_NAMES={
-    "rithm20.py","rithm20_information.py","rithm22_audit.py",
+    "rithm20_information.py","rithm22_audit.py",
     "rithm22_group_checks.py","rithm23_cost_contract.py",
     "rithm23_information_timing.py","rithm23_source_decode.py",
     "rithm23_welfare_bridge.py","rithm24_identification.py",
 }
 
 class RootSourceLayoutContract(unittest.TestCase):
-    def test_nine_legacy_modules_reside_only_under_src(self):
+    def test_retained_legacy_modules_reside_only_under_src(self):
         for name in LEGACY_NAMES:
             self.assertFalse((ROOT/name).exists(),name)
             self.assertTrue((ROOT/"src"/"rithm"/"legacy"/name).is_file(),name)
+
+    def test_retired_20_script_not_silently_reintroduced(self):
+        self.assertFalse((ROOT/"rithm20.py").exists())
+        self.assertFalse((ROOT/"src"/"rithm"/"legacy"/"rithm20.py").exists())
 
     def test_repro_is_maintained_once(self):
         self.assertFalse((ROOT/"README_REPRO.md").exists())
