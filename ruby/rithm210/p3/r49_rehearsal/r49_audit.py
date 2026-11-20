@@ -7,10 +7,18 @@ from pathlib import Path
 from r49_model import AMOUNTS, FRAMES, HORIZONS, PAYOUT_ROUND, PROTOCOL, SEATS
 
 
+class _TraceEnded(Exception):
+    pass
+
+
 def audit(export):
     if export.get("schema") != PROTOCOL:
         raise ValueError("unknown rehearsal schema")
-    events = export["events"]
+    return audit_trace(export["events"])
+
+
+def audit_trace(events, *, allow_prefix=False):
+    """Replay a complete rehearsal or an atomic, valid prefix."""
     if not events:
         raise ValueError("missing allocation")
     config = events[0]
@@ -31,6 +39,8 @@ def audit(export):
         nonlocal index
         index += 1
         if index > len(events):
+            if allow_prefix and kind != "settlement_assigned":
+                raise _TraceEnded
             raise ValueError(f"missing {kind} at round {round_}")
         entry = events[index - 1]
         if (entry["seq"], entry["type"], entry["round"], entry.get("seat")) != (index, kind, round_, seat):
@@ -40,34 +50,40 @@ def audit(export):
         return entry
 
     expect("allocated", 0)
-    for t, seat in enumerate(clock, start=1):
-        opened = expect("opportunity_opened", t, seat)
-        committed = expect("choice_committed", t, seat)
-        before = routes.count("A")
-        other = before - int(routes[seat] == "A")
-        values = (opened["previous"], committed["previous"], opened["a"],
-                  committed["before_A"], opened["cost_A"], opened["cost_B"])
-        if values != (routes[seat], routes[seat], before, before, other+1, 2*(SEATS-other)):
-            raise ValueError("recorded opportunity differs from the previous state")
-        if committed["route"] not in ("A", "B"):
-            raise ValueError("invalid committed route")
-        routes[seat] = committed["route"]
-        if committed["after_A"] != routes.count("A"):
-            raise ValueError("recorded occupancy differs from the choices")
-        if t == PAYOUT_ROUND:
-            assigned = expect("settlement_assigned", t, focal)
-            issued = expect("settlement_issued", t, focal)
-            ack = expect("settlement_acknowledged", t, focal)
-            if (assigned["frame"] not in FRAMES or assigned["amount"] not in AMOUNTS
-                    or assigned["route"] != routes[focal]
-                    or assigned["anchor_A"] != routes.count("A")
-                    or any(assigned[key] != issued[key] for key in ("frame", "amount", "route"))):
-                raise ValueError("settlement differs from recorded assignment or route")
-            settlement_order = (committed["seq"], assigned["seq"], issued["seq"], ack["seq"], ack["seq"] + 1)
+    choices = 0
+    settlement_order = None
+    try:
+        for t, seat in enumerate(clock, start=1):
+            opened = expect("opportunity_opened", t, seat)
+            committed = expect("choice_committed", t, seat)
+            before = routes.count("A")
+            other = before - int(routes[seat] == "A")
+            values = (opened["previous"], committed["previous"], opened["a"],
+                      committed["before_A"], opened["cost_A"], opened["cost_B"])
+            if values != (routes[seat], routes[seat], before, before, other+1, 2*(SEATS-other)):
+                raise ValueError("recorded opportunity differs from the previous state")
+            if committed["route"] not in ("A", "B"):
+                raise ValueError("invalid committed route")
+            routes[seat] = committed["route"]
+            choices += 1
+            if committed["after_A"] != routes.count("A"):
+                raise ValueError("recorded occupancy differs from the choices")
+            if t == PAYOUT_ROUND:
+                assigned = expect("settlement_assigned", t, focal)
+                issued = expect("settlement_issued", t, focal)
+                ack = expect("settlement_acknowledged", t, focal)
+                if (assigned["frame"] not in FRAMES or assigned["amount"] not in AMOUNTS
+                        or assigned["route"] != routes[focal]
+                        or assigned["anchor_A"] != routes.count("A")
+                        or any(assigned[key] != issued[key] for key in ("frame", "amount", "route"))):
+                    raise ValueError("settlement differs from recorded assignment or route")
+                settlement_order = (committed["seq"], assigned["seq"], issued["seq"], ack["seq"], ack["seq"] + 1)
+    except _TraceEnded:
+        index -= 1
     if index != len(events):
         raise ValueError("unexpected event after last choice")
     regressions = sum(a["server_unix_ns"] > b["server_unix_ns"] for a, b in zip(events, events[1:]))
-    return {"choices": len(clock), "events": index, "settlement_order": settlement_order,
+    return {"choices": choices, "events": index, "settlement_order": settlement_order,
             "wall_clock_regressions": regressions}
 
 
