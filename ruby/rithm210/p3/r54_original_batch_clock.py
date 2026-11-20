@@ -89,6 +89,7 @@ def audit_rows(rows, *, require_original=False, source_sha256=None):
     histogram = Counter()
     n_transitions = n_multi = n_bidirectional = n_churn = n_4to4 = 0
     n_5swap = n_order_ambiguous = total_lower = total_upper = 0
+    unchanged_occupancy_gross = at4_unchanged_gross = 0
     mismatch = 0
     sessions = set()
     for key, period_dict in groups.items():
@@ -118,6 +119,8 @@ def audit_rows(rows, *, require_original=False, source_sha256=None):
             n_multi += int(gross >= 2)
             n_bidirectional += int(up > 0 and down > 0)
             n_churn += int(gross > 0 and start_a == end_a)
+            unchanged_occupancy_gross += gross if start_a == end_a else 0
+            at4_unchanged_gross += gross if start_a == end_a == 4 else 0
             n_4to4 += int(gross > 0 and start_a == end_a == 4)
             n_5swap += int(start_a == 5 and up == down == 1)
             n_order_ambiguous += int(low < high)
@@ -138,6 +141,8 @@ def audit_rows(rows, *, require_original=False, source_sha256=None):
         "two_or_more_switches": n_multi,
         "both_direction_switches": n_bidirectional,
         "constant_occupancy_with_churn": n_churn,
+        "constant_occupancy_gross_switches": unchanged_occupancy_gross,
+        "four_to_four_gross_switches": at4_unchanged_gross,
         "four_to_four_with_churn": n_4to4,
         "five_to_five_one_each_direction": n_5swap,
         "unknown_order_changes_hypothetical_microcost": n_order_ambiguous,
