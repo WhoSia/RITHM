@@ -13,7 +13,7 @@ module Rithm210SSMSampleSizeSensitivity
         sim=Rithm210GenerativeSSM.simulate_one(
           treatment:3,model: :ssm5,rng:rng,activity:true,fixed_q:q)
         cells.each do |ep,a|
-          sim[:activity][ep].each{|k,v|a[k]+=v}
+          a.keys.each{|k|a[k]+=sim.fetch(:activity).fetch(ep).fetch(k)}
         end
       end
       [q,cells.transform_values do |a|
