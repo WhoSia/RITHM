@@ -1,0 +1,100 @@
+{
+  "frozen_summary": {
+    "allocated": 14,
+    "before_settlement_assignment": 2,
+    "before_assignment_by_committed_rounds": {
+      "0": 1,
+      "1": 1
+    },
+    "settlement_assigned": 12,
+    "cells": [
+      {
+        "start_A": 5,
+        "horizon": 5,
+        "frame": "route",
+        "amount": -4,
+        "assigned": 6,
+        "completed": 2,
+        "incomplete": 4,
+        "incomplete_known": 2,
+        "observed_switch_status": {
+          "switched": 2,
+          "stayed": 1,
+          "no_scheduled_opportunity": 1,
+          "unresolved": 2
+        },
+        "status_by_completion": {
+          "completed": {
+            "switched": 2,
+            "stayed": 0,
+            "no_scheduled_opportunity": 0,
+            "unresolved": 0
+          },
+          "incomplete": {
+            "switched": 0,
+            "stayed": 1,
+            "no_scheduled_opportunity": 1,
+            "unresolved": 2
+          }
+        },
+        "full_observation_rate_bounds": [
+          "1/3",
+          "2/3"
+        ],
+        "complete_case_rate": "1"
+      },
+      {
+        "start_A": 5,
+        "horizon": 5,
+        "frame": "route",
+        "amount": 4,
+        "assigned": 6,
+        "completed": 2,
+        "incomplete": 4,
+        "incomplete_known": 2,
+        "observed_switch_status": {
+          "switched": 2,
+          "stayed": 2,
+          "no_scheduled_opportunity": 0,
+          "unresolved": 2
+        },
+        "status_by_completion": {
+          "completed": {
+            "switched": 0,
+            "stayed": 2,
+            "no_scheduled_opportunity": 0,
+            "unresolved": 0
+          },
+          "incomplete": {
+            "switched": 2,
+            "stayed": 0,
+            "no_scheduled_opportunity": 0,
+            "unresolved": 2
+          }
+        },
+        "full_observation_rate_bounds": [
+          "1/3",
+          "2/3"
+        ],
+        "complete_case_rate": "0"
+      }
+    ],
+    "contrasts": [
+      {
+        "start_A": 5,
+        "horizon": 5,
+        "frame": "route",
+        "minus4_minus_plus4_bounds": [
+          "-1/3",
+          "1/3"
+        ],
+        "complete_case_difference": "1"
+      }
+    ]
+  },
+  "attained_completions": {
+    "lower": "-1/3",
+    "upper": "1/3"
+  },
+  "complete_case_difference_at_freeze": "1"
+}
