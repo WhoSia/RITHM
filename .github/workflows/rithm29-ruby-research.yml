@@ -199,3 +199,19 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r38_*.py' -v
       - name: Research status boundary
         run: echo "PASS verifies synthetic/unit-level properties only; original data not present in CI."
+
+  r49-r51-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: R49-R51 operator-ledger, prefix and missing-outcome bounds
+        run: |
+          python -m unittest discover -s ruby/rithm210/p3/r49_rehearsal -p 'test_r*.py' -v
+          PYTHONPATH=ruby/rithm210/p3 python -m unittest discover -s ruby/rithm210/p3/r50 -p 'test_r*.py' -v
+      - name: No code mutation by verification
+        run: git diff --exit-code && test -z "$(git status --porcelain)"
