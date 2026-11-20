@@ -32,6 +32,7 @@ class R54BatchClockTests(unittest.TestCase):
         self.assertEqual(result['unknown_order_changes_hypothetical_microcost'],1)
         self.assertEqual(result['five_to_five_one_each_direction'],1)
         self.assertEqual(result['constant_occupancy_with_churn'],1)
+        self.assertEqual(result['constant_occupancy_gross_switches'],2)
         self.assertEqual(result['hypothetical_microstep_excess_sum_range'],[3,15])
         self.assertEqual(result['recorded_gross_switches'],2)
 
