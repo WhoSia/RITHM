@@ -52,7 +52,7 @@ def decay_distribution(active, retention, kind):
     return tuple(distribution)
 
 
-def step(design, state, actor):
+def step(design, state, actor, *, learned_a_value=Q(0)):
     """A selected actor observes the current count and compares staying with moving."""
     bit = 1 << actor
     on_a = bool(state.routes & bit)
@@ -61,6 +61,7 @@ def step(design, state, actor):
     gain = (3 * count - 14) if on_a else (11 - 3 * count)
     if state.active & bit:
         gain += -design.memory_value if on_a else design.memory_value
+    gain += -learned_a_value if on_a else learned_a_value
     switched = gain > design.burden[actor]
     routes = state.routes ^ bit if switched else state.routes
     at_target = routes.bit_count() == TARGET
