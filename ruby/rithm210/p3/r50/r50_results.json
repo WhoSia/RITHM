@@ -1,0 +1,440 @@
+{
+  "cases": {
+    "4_one_independent": {
+      "lag": [
+        {
+          "lag": 1,
+          "opportunity": "1/6",
+          "minus4": "1",
+          "plus4": "0",
+          "minus4_minus_plus4": "1"
+        },
+        {
+          "lag": 2,
+          "opportunity": "5/36",
+          "minus4": "1",
+          "plus4": "0",
+          "minus4_minus_plus4": "1"
+        },
+        {
+          "lag": 3,
+          "opportunity": "25/216",
+          "minus4": "1",
+          "plus4": "0",
+          "minus4_minus_plus4": "1"
+        },
+        {
+          "lag": 4,
+          "opportunity": "125/1296",
+          "minus4": "6565/18432",
+          "plus4": "6565/18432",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 5,
+          "opportunity": "625/7776",
+          "minus4": "24559/73728",
+          "plus4": "24559/73728",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 6,
+          "opportunity": "3125/46656",
+          "minus4": "93133/294912",
+          "plus4": "93133/294912",
+          "minus4_minus_plus4": "0"
+        }
+      ],
+      "horizon": {
+        "3": {
+          "opportunity_by_horizon": "1/6",
+          "difference_given_opportunity": "1",
+          "difference_in_observed_switches_per_assigned_group": "1/6"
+        },
+        "5": {
+          "opportunity_by_horizon": "91/216",
+          "difference_given_opportunity": "1",
+          "difference_in_observed_switches_per_assigned_group": "91/216"
+        },
+        "10": {
+          "opportunity_by_horizon": "1288991/1679616",
+          "difference_given_opportunity": "707616/1288991",
+          "difference_in_observed_switches_per_assigned_group": "91/216"
+        },
+        "40": {
+          "opportunity_by_horizon": "370955494864950108367024150391/371319292745659279662190166016",
+          "difference_given_opportunity": "156435442777106455783607894016/370955494864950108367024150391",
+          "difference_in_observed_switches_per_assigned_group": "91/216"
+        }
+      },
+      "later_nonzero_count": 0
+    },
+    "4_two_independent": {
+      "lag": [
+        {
+          "lag": 1,
+          "opportunity": "1/6",
+          "minus4": "109/144",
+          "plus4": "0",
+          "minus4_minus_plus4": "109/144"
+        },
+        {
+          "lag": 2,
+          "opportunity": "5/36",
+          "minus4": "8299/11520",
+          "plus4": "0",
+          "minus4_minus_plus4": "8299/11520"
+        },
+        {
+          "lag": 3,
+          "opportunity": "25/216",
+          "minus4": "164149/230400",
+          "plus4": "0",
+          "minus4_minus_plus4": "164149/230400"
+        },
+        {
+          "lag": 4,
+          "opportunity": "125/1296",
+          "minus4": "167651009/589824000",
+          "plus4": "167651009/589824000",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 5,
+          "opportunity": "625/7776",
+          "minus4": "13093400557/47185920000",
+          "plus4": "13093400557/47185920000",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 6,
+          "opportunity": "3125/46656",
+          "minus4": "1027320712361/3774873600000",
+          "plus4": "1027320712361/3774873600000",
+          "minus4_minus_plus4": "0"
+        }
+      ],
+      "horizon": {
+        "3": {
+          "opportunity_by_horizon": "1/6",
+          "difference_given_opportunity": "109/144",
+          "difference_in_observed_switches_per_assigned_group": "109/864"
+        },
+        "5": {
+          "opportunity_by_horizon": "91/216",
+          "difference_given_opportunity": "614461/838656",
+          "difference_in_observed_switches_per_assigned_group": "614461/1990656"
+        },
+        "10": {
+          "opportunity_by_horizon": "1288991/1679616",
+          "difference_given_opportunity": "16590447/41247712",
+          "difference_in_observed_switches_per_assigned_group": "614461/1990656"
+        },
+        "40": {
+          "opportunity_by_horizon": "370955494864950108367024150391/371319292745659279662190166016",
+          "difference_given_opportunity": "114616098381533799230258282496/370955494864950108367024150391",
+          "difference_in_observed_switches_per_assigned_group": "614461/1990656"
+        }
+      },
+      "later_nonzero_count": 0
+    },
+    "4_two_shared": {
+      "lag": [
+        {
+          "lag": 1,
+          "opportunity": "1/6",
+          "minus4": "109/144",
+          "plus4": "0",
+          "minus4_minus_plus4": "109/144"
+        },
+        {
+          "lag": 2,
+          "opportunity": "5/36",
+          "minus4": "1043/1440",
+          "plus4": "0",
+          "minus4_minus_plus4": "1043/1440"
+        },
+        {
+          "lag": 3,
+          "opportunity": "25/216",
+          "minus4": "20693/28800",
+          "plus4": "0",
+          "minus4_minus_plus4": "20693/28800"
+        },
+        {
+          "lag": 4,
+          "opportunity": "125/1296",
+          "minus4": "532541/2304000",
+          "plus4": "532541/2304000",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 5,
+          "opportunity": "625/7776",
+          "minus4": "10414867/46080000",
+          "plus4": "10414867/46080000",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 6,
+          "opportunity": "3125/46656",
+          "minus4": "207744029/921600000",
+          "plus4": "207744029/921600000",
+          "minus4_minus_plus4": "0"
+        }
+      ],
+      "horizon": {
+        "3": {
+          "opportunity_by_horizon": "1/6",
+          "difference_given_opportunity": "109/144",
+          "difference_in_observed_switches_per_assigned_group": "109/864"
+        },
+        "5": {
+          "opportunity_by_horizon": "91/216",
+          "difference_given_opportunity": "77117/104832",
+          "difference_in_observed_switches_per_assigned_group": "77117/248832"
+        },
+        "10": {
+          "opportunity_by_horizon": "1288991/1679616",
+          "difference_given_opportunity": "2082159/5155964",
+          "difference_in_observed_switches_per_assigned_group": "77117/248832"
+        },
+        "40": {
+          "opportunity_by_horizon": "370955494864950108367024150391/371319292745659279662190166016",
+          "difference_given_opportunity": "115077762902950611937809924096/370955494864950108367024150391",
+          "difference_in_observed_switches_per_assigned_group": "77117/248832"
+        }
+      },
+      "later_nonzero_count": 0
+    },
+    "5_one_independent": {
+      "lag": [
+        {
+          "lag": 1,
+          "opportunity": "1/6",
+          "minus4": "1",
+          "plus4": "0",
+          "minus4_minus_plus4": "1"
+        },
+        {
+          "lag": 2,
+          "opportunity": "5/36",
+          "minus4": "1",
+          "plus4": "0",
+          "minus4_minus_plus4": "1"
+        },
+        {
+          "lag": 3,
+          "opportunity": "25/216",
+          "minus4": "1",
+          "plus4": "0",
+          "minus4_minus_plus4": "1"
+        },
+        {
+          "lag": 4,
+          "opportunity": "125/1296",
+          "minus4": "2215/3072",
+          "plus4": "2215/3072",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 5,
+          "opportunity": "625/7776",
+          "minus4": "9589/12288",
+          "plus4": "9589/12288",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 6,
+          "opportunity": "3125/46656",
+          "minus4": "40543/49152",
+          "plus4": "40543/49152",
+          "minus4_minus_plus4": "0"
+        }
+      ],
+      "horizon": {
+        "3": {
+          "opportunity_by_horizon": "1/6",
+          "difference_given_opportunity": "1",
+          "difference_in_observed_switches_per_assigned_group": "1/6"
+        },
+        "5": {
+          "opportunity_by_horizon": "91/216",
+          "difference_given_opportunity": "1",
+          "difference_in_observed_switches_per_assigned_group": "91/216"
+        },
+        "10": {
+          "opportunity_by_horizon": "1288991/1679616",
+          "difference_given_opportunity": "707616/1288991",
+          "difference_in_observed_switches_per_assigned_group": "91/216"
+        },
+        "40": {
+          "opportunity_by_horizon": "370955494864950108367024150391/371319292745659279662190166016",
+          "difference_given_opportunity": "156435442777106455783607894016/370955494864950108367024150391",
+          "difference_in_observed_switches_per_assigned_group": "91/216"
+        }
+      },
+      "later_nonzero_count": 0
+    },
+    "5_two_independent": {
+      "lag": [
+        {
+          "lag": 1,
+          "opportunity": "1/6",
+          "minus4": "23/24",
+          "plus4": "0",
+          "minus4_minus_plus4": "23/24"
+        },
+        {
+          "lag": 2,
+          "opportunity": "5/36",
+          "minus4": "113/128",
+          "plus4": "0",
+          "minus4_minus_plus4": "113/128"
+        },
+        {
+          "lag": 3,
+          "opportunity": "25/216",
+          "minus4": "6109/7680",
+          "plus4": "0",
+          "minus4_minus_plus4": "6109/7680"
+        },
+        {
+          "lag": 4,
+          "opportunity": "125/1296",
+          "minus4": "49064207/98304000",
+          "plus4": "49064207/98304000",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 5,
+          "opportunity": "625/7776",
+          "minus4": "3690203171/7864320000",
+          "plus4": "3690203171/7864320000",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 6,
+          "opportunity": "3125/46656",
+          "minus4": "268132035623/629145600000",
+          "plus4": "268132035623/629145600000",
+          "minus4_minus_plus4": "0"
+        }
+      ],
+      "horizon": {
+        "3": {
+          "opportunity_by_horizon": "1/6",
+          "difference_given_opportunity": "23/24",
+          "difference_in_observed_switches_per_assigned_group": "23/144"
+        },
+        "5": {
+          "opportunity_by_horizon": "91/216",
+          "difference_given_opportunity": "124217/139776",
+          "difference_in_observed_switches_per_assigned_group": "124217/331776"
+        },
+        "10": {
+          "opportunity_by_horizon": "1288991/1679616",
+          "difference_given_opportunity": "10061577/20623856",
+          "difference_in_observed_switches_per_assigned_group": "124217/331776"
+        },
+        "40": {
+          "opportunity_by_horizon": "370955494864950108367024150391/371319292745659279662190166016",
+          "difference_given_opportunity": "139022016622623573561072156672/370955494864950108367024150391",
+          "difference_in_observed_switches_per_assigned_group": "124217/331776"
+        }
+      },
+      "later_nonzero_count": 0
+    },
+    "5_two_shared": {
+      "lag": [
+        {
+          "lag": 1,
+          "opportunity": "1/6",
+          "minus4": "23/24",
+          "plus4": "0",
+          "minus4_minus_plus4": "23/24"
+        },
+        {
+          "lag": 2,
+          "opportunity": "5/36",
+          "minus4": "71/80",
+          "plus4": "0",
+          "minus4_minus_plus4": "71/80"
+        },
+        {
+          "lag": 3,
+          "opportunity": "25/216",
+          "minus4": "3853/4800",
+          "plus4": "0",
+          "minus4_minus_plus4": "3853/4800"
+        },
+        {
+          "lag": 4,
+          "opportunity": "125/1296",
+          "minus4": "166967/384000",
+          "plus4": "166967/384000",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 5,
+          "opportunity": "625/7776",
+          "minus4": "3127097/7680000",
+          "plus4": "3127097/7680000",
+          "minus4_minus_plus4": "0"
+        },
+        {
+          "lag": 6,
+          "opportunity": "3125/46656",
+          "minus4": "56867927/153600000",
+          "plus4": "56867927/153600000",
+          "minus4_minus_plus4": "0"
+        }
+      ],
+      "horizon": {
+        "3": {
+          "opportunity_by_horizon": "1/6",
+          "difference_given_opportunity": "23/24",
+          "difference_in_observed_switches_per_assigned_group": "23/144"
+        },
+        "5": {
+          "opportunity_by_horizon": "91/216",
+          "difference_given_opportunity": "2227/2496",
+          "difference_in_observed_switches_per_assigned_group": "15589/41472"
+        },
+        "10": {
+          "opportunity_by_horizon": "1288991/1679616",
+          "difference_given_opportunity": "74277/151646",
+          "difference_in_observed_switches_per_assigned_group": "15589/41472"
+        },
+        "40": {
+          "opportunity_by_horizon": "370955494864950108367024150391/371319292745659279662190166016",
+          "difference_given_opportunity": "139576014048323748810134126592/370955494864950108367024150391",
+          "difference_in_observed_switches_per_assigned_group": "15589/41472"
+        }
+      },
+      "later_nonzero_count": 0
+    }
+  },
+  "reward_retention_sensitivity": {
+    "1/4": {
+      "last_nonzero_lag_within_40": 1,
+      "at_10": "279936/1288991",
+      "at_40": "61886548790943213277031694336/370955494864950108367024150391"
+    },
+    "3/4": {
+      "last_nonzero_lag_within_40": 3,
+      "at_10": "707616/1288991",
+      "at_40": "156435442777106455783607894016/370955494864950108367024150391"
+    },
+    "9/10": {
+      "last_nonzero_lag_within_40": 7,
+      "at_10": "1210866/1288991",
+      "at_40": "267690892876565518146670166016/370955494864950108367024150391"
+    },
+    "1": {
+      "last_nonzero_lag_within_40": 38,
+      "at_10": "1",
+      "at_40": "1"
+    }
+  }
+}
