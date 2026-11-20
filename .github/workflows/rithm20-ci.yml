@@ -23,7 +23,10 @@ jobs:
       - name: Scientific test dependencies
         run: python -m pip install numpy pandas
       - run: python -m unittest discover -s tests -v
-      - run: python -m rithm.legacy.rithm20 tests/fixtures/study1-mini.csv
+      - name: Archived descriptive script remains retired
+        run: |
+          test ! -f src/rithm/legacy/rithm20.py
+          echo "RITHM 2.0 script was archived and retired; source-only historical tests explicitly skip."
       - run: git diff --exit-code && test -z "$(git status --porcelain)"
   base-r:
     runs-on: ubuntu-latest
