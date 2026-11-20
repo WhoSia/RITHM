@@ -1,4 +1,4 @@
-"""Read-only, operator-side cohort export for R49 complete and incomplete sessions.
+"""Read-only, operator-side independent cohort audit for R49 sessions.
 
 Never publish registry files containing full future seat clocks or per-seat choices.
 """
@@ -8,6 +8,7 @@ from pathlib import Path
 
 from r49_audit import audit_trace
 from r49_model import PAYOUT_ROUND, PROTOCOL, TARGET_A, next_state, outcome
+from r51_roster import group_ref
 
 REGISTRY_SCHEMA = "rithm-r51-registry-v1"
 
@@ -24,7 +25,8 @@ def derive(events):
     decisions = [e for e in events if e["type"] == "choice_committed"]
     first = next((e for e in decisions if acknowledged is not None and
                   e["seq"] > acknowledged["seq"] and e["seat"] == cfg["focal"]), None)
-    response = None if first is None and not finished else (
+    no_planned_revision = not any(seat == cfg["focal"] for seat in cfg["clock"][PAYOUT_ROUND:])
+    response = None if first is None and not (finished or no_planned_revision) else (
         bool(first["route"] != first["previous"]) if first is not None else False
     )
     excess = sum(3 * (e["after_A"] - TARGET_A)**2 for e in decisions)
@@ -60,7 +62,7 @@ def registry(ledger):
             if derived["first_focal_switch"] is not False:
                 raise AssertionError("complete no-opportunity trace must be known zero")
         safe = [{k: v for k, v in e.items() if k != "receipt"} for e in events]
-        rows.append({"study": key, "protocol": PROTOCOL, "events": safe, "summary": derived})
+        rows.append({"study": group_ref(key), "protocol": PROTOCOL, "events": safe, "summary": derived})
     return {"schema": REGISTRY_SCHEMA, "cohort": rows}
 
 
@@ -70,7 +72,7 @@ def check_registry(bundle):
     ids = set()
     for row in bundle["cohort"]:
         key = row.get("study")
-        if not isinstance(key, str) or len(key) != 32 or any(c not in "0123456789abcdef" for c in key):
+        if not isinstance(key, str) or len(key) != 64 or any(c not in "0123456789abcdef" for c in key):
             raise ValueError("invalid study identifier")
         if key in ids:
             raise ValueError("duplicate allocated study")
