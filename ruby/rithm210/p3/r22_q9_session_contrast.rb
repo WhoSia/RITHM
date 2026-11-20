@@ -26,7 +26,7 @@ module Rithm210R22Q9SessionContrast
         Array.new(ids.size){values[rng.rand(ids.size)]}.sum/ids.size.to_f
       end.sort
       [key,{mean_difference:values.sum/ids.size.to_f,
-        percentile95:[draws_sorted[(draws*.025).floor],draws_sorted[(draws*.975).floor]],
+        percentile95:[draws_sorted[(draws*0.025).floor],draws_sorted[(draws*0.975).floor]],
         candidate_better_sessions:values.count{|d|d<0}}]
     end
     {treatment:treatment,candidate:candidate,baseline:baseline,sessions:ids.size,
