@@ -14,7 +14,7 @@ module Rithm210R18RoundChainAudit
   end
   def verify(protocol:,baseline_previous_mask:,baseline_current_mask:,baseline_timestamp:,assignment_timestamp:,rounds:)
     age,feedback=PROTOCOLS.fetch(protocol){raise ArgumentError,'unknown protocol'}
-    Audit.occ(baseline_previous_mask);Audit.occ(baseline_current_mask)
+    Audit::BASE.occupancy(baseline_previous_mask);Audit::BASE.occupancy(baseline_current_mask)
     unless [baseline_timestamp,assignment_timestamp].all?{|v|v.is_a?(Numeric)&&v.finite?}&&baseline_timestamp<assignment_timestamp
       raise ArgumentError,'baseline must precede allocation'
     end
@@ -26,11 +26,11 @@ module Rithm210R18RoundChainAudit
       raise ArgumentError,'protocol changed' if r.key?(:protocol)&&r[:protocol]!=protocol
       check=Audit.check_round(previous_mask:prev,initial_mask:current,
         report_age:age,feedback:feedback,events:r.fetch(:events))
-      total+=cost(Audit.occ(current))
+      total+=cost(Audit::BASE.occupancy(current))
       prev,current=current,check.fetch(:final_mask)
     end
     {protocol:protocol,complete:true,rounds:HORIZON,opportunities:HORIZON*6,
      cumulative_cost:total,cumulative_excess:total-24*HORIZON,
-     terminal_occupancy:Audit.occ(current)}
+     terminal_occupancy:Audit::BASE.occupancy(current)}
   end
 end
