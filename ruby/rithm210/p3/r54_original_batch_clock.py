@@ -14,6 +14,7 @@ from pathlib import Path
 from zipfile import ZipFile
 
 SOURCE_NAME = "data_task_all_switch_230705.csv"
+APPROVED_ZIP_SHA256 = "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953"
 EXCLUDED_SESSIONS = frozenset({2, 101})
 
 
@@ -148,12 +149,15 @@ def audit_rows(rows, *, require_original=False, source_sha256=None):
 
 def audit_zip(path, *, require_original=True):
     raw = Path(path).read_bytes()
+    digest = hashlib.sha256(raw).hexdigest()
+    if require_original and digest != APPROVED_ZIP_SHA256:
+        raise ValueError("approved original ZIP SHA256 mismatch")
     with ZipFile(io.BytesIO(raw)) as archive:
         if SOURCE_NAME not in archive.namelist():
             raise ValueError("missing source CSV")
         text = archive.read(SOURCE_NAME).decode("utf-8-sig")
     return audit_rows(csv.DictReader(io.StringIO(text)), require_original=require_original,
-                      source_sha256=hashlib.sha256(raw).hexdigest())
+                      source_sha256=digest)
 
 
 if __name__ == "__main__":
