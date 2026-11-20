@@ -7,6 +7,8 @@ import unittest
 
 from r49_store import Ledger
 from r51_registry import check_registry, registry
+from r51_roster import export_roster, group_ref
+from r51_audit_roster import analyze_roster
 from r51_bounds import summarize
 from test_r49 import FixedDraws
 
@@ -66,12 +68,12 @@ class R51RegistryTests(unittest.TestCase):
         b = self.fixture()
         self.assertEqual(check_registry(b), 6)
         states = {r["study"]: r["summary"] for r in b["cohort"]}
-        self.assertEqual(states[f"{6:032x}"]["assigned_arm"], None)
-        self.assertFalse(states[f"{4:032x}"]["acknowledged"])
-        self.assertEqual(states[f"{3:032x}"]["first_focal_switch"], None)
-        self.assertIs(states[f"{5:032x}"]["first_focal_switch"], False)
-        self.assertEqual(states[f"{1:032x}"]["first_focal_switch"], True)
-        self.assertTrue(states[f"{2:032x}"]["completed"])
+        self.assertEqual(states[group_ref(f"{6:032x}")]["assigned_arm"], None)
+        self.assertFalse(states[group_ref(f"{4:032x}")]["acknowledged"])
+        self.assertEqual(states[group_ref(f"{3:032x}")]["first_focal_switch"], None)
+        self.assertIs(states[group_ref(f"{5:032x}")]["first_focal_switch"], False)
+        self.assertEqual(states[group_ref(f"{1:032x}")]["first_focal_switch"], True)
+        self.assertTrue(states[group_ref(f"{2:032x}")]["completed"])
         self.assertNotIn("receipt", str(b))
 
     def test_bounds_include_unknown_outcomes_without_imputation(self):
@@ -103,10 +105,25 @@ class R51RegistryTests(unittest.TestCase):
     def test_audit_rejects_incomplete_atomic_reward_assignment(self):
         bundle = self.fixture()
         tampered = deepcopy(bundle)
-        row = next(r for r in tampered["cohort"] if r["study"] == f"{4:032x}")
+        row = next(r for r in tampered["cohort"] if r["study"] == group_ref(f"{4:032x}"))
         row["events"] = row["events"][:-1]  # Between round-two choice and mandatory draw
         with self.assertRaisesRegex(ValueError, "missing settlement_assigned"):
             check_registry(tampered)
+
+    def test_independent_roster_bounds_agree_and_credentials_are_hidden(self):
+        bundle = self.fixture()
+        canonical = analyze_roster(export_roster(self.db))
+        new = summarize(bundle)
+        self.assertEqual(new["assigned"], canonical["settlement_assigned"])
+        old_cells = {(c["start_A"], c["horizon"], c["frame"], c["amount"]): c
+                     for c in canonical["cells"]}
+        for new_cell in new["arm_cells"]:
+            key = (new_cell["start_A"], new_cell["horizon"],
+                   new_cell["frame"], new_cell["amount"])
+            self.assertEqual(new_cell["assigned_group_first_switch_bounds"],
+                             list(old_cells[key]["full_observation_rate_bounds"]))
+        for idx in range(1, 7):
+            self.assertNotIn(f"{idx:032x}", str(bundle))
 
     def test_bounds_do_not_claim_significance(self):
         r = summarize(self.fixture())
