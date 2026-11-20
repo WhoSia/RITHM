@@ -1,0 +1,162 @@
+{
+  "descriptive_session_resampling": [
+    {
+      "arm_contrast": "2-minus-1",
+      "draws": 8000,
+      "interpretation": "Descriptive paired-session sensitivity, not a causal or sampling CI.",
+      "metric_differences_per_group_section": {
+        "congestion_excess": {
+          "paired_pooled_difference_per_group_section": -3.8125,
+          "resampled_2p5": -17.133333,
+          "resampled_97p5": 9.8
+        },
+        "excess_pairs": {
+          "paired_pooled_difference_per_group_section": -0.270833,
+          "resampled_2p5": -1.87234,
+          "resampled_97p5": 1.38
+        },
+        "gross": {
+          "paired_pooled_difference_per_group_section": 0.854167,
+          "resampled_2p5": -4.543478,
+          "resampled_97p5": 6.108696
+        },
+        "minimum": {
+          "paired_pooled_difference_per_group_section": 1.395833,
+          "resampled_2p5": -1.979592,
+          "resampled_97p5": 4.673469
+        },
+        "uniform_numerator": {
+          "paired_pooled_difference_per_group_section": 2.763889,
+          "resampled_2p5": 0.673759,
+          "resampled_97p5": 4.916667
+        }
+      },
+      "seed": 20261121,
+      "sessions": 24
+    },
+    {
+      "arm_contrast": "3-minus-1",
+      "draws": 8000,
+      "interpretation": "Descriptive paired-session sensitivity, not a causal or sampling CI.",
+      "metric_differences_per_group_section": {
+        "congestion_excess": {
+          "paired_pooled_difference_per_group_section": -4.75,
+          "resampled_2p5": -18.55102,
+          "resampled_97p5": 9.42
+        },
+        "excess_pairs": {
+          "paired_pooled_difference_per_group_section": -3.854167,
+          "resampled_2p5": -6.326923,
+          "resampled_97p5": -1.387755
+        },
+        "gross": {
+          "paired_pooled_difference_per_group_section": -9.625,
+          "resampled_2p5": -15.36,
+          "resampled_97p5": -3.222222
+        },
+        "minimum": {
+          "paired_pooled_difference_per_group_section": -1.916667,
+          "resampled_2p5": -4.770833,
+          "resampled_97p5": 0.829787
+        },
+        "uniform_numerator": {
+          "paired_pooled_difference_per_group_section": 1.763889,
+          "resampled_2p5": -0.198582,
+          "resampled_97p5": 3.766667
+        }
+      },
+      "seed": 20261122,
+      "sessions": 24
+    }
+  ],
+  "four_to_four_occupancy_fiber": {
+    "observed_gross_count_distribution": {
+      "0": 682,
+      "2": 350,
+      "4": 35
+    },
+    "transitions": 1067,
+    "uniform_label_probability_exact": {
+      "0": "1/15",
+      "2": "8/15",
+      "4": "2/5"
+    }
+  },
+  "observed_aggregate_welfare_contrasts": {
+    "Full_minus_No": {
+      "congestion_excess_difference_per_group_section": "-19/4",
+      "gross_switch_difference_per_group_section": "-77/8"
+    },
+    "Partial_minus_No": {
+      "congestion_excess_difference_per_group_section": "-61/16",
+      "gross_switch_difference_per_group_section": "41/48",
+      "switch_price_crossover_exact_if_nonnegative": "183/41"
+    }
+  },
+  "population": {
+    "actor_decisions": 34560,
+    "group_period_transitions": 5616,
+    "group_sections": 144,
+    "sessions": 24
+  },
+  "scope": "Original 24-session observational descriptive cohort; treatment differences do NOT identify causal effects. Uniform relabeling is hypothetical, not an observed mechanism or an alternative original experiment.",
+  "session_arm_group_section_count_distribution": {
+    "1": 12,
+    "2": 48,
+    "3": 12
+  },
+  "source_contract": {
+    "other_R_script_nonidentical": "0 data preparation.R applies a different session-101 and pilot exclusion; not interchangeable",
+    "retained_R_script_filter": "9 exp_data_Part1_adjustment behavior.R and 102 exp_data_s123_plot and test_nocolor.R",
+    "source_NumA_NumB_and_Cost_mismatch_rows": 0,
+    "source_NumSwitch_mismatch_rows": 0
+  },
+  "source_zip_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "switches": {
+    "extra_beyond_occupancy_minimum": 3324,
+    "extra_cancelling_pairs": 1662,
+    "maximum_given_occupancy": 21883,
+    "minimum_given_occupancy": 5585,
+    "observed_actor_changes": 8909,
+    "transitions_with_multiple_feasible_gross_counts": 5063,
+    "uniform_identity_expected_switches_exact": "44575/3"
+  },
+  "treatments": {
+    "1": {
+      "congestion_excess_40_periods": 5925,
+      "extra_switches": 1240,
+      "gross_switches_39_transitions": 3110,
+      "group_sections": 48,
+      "label": "No",
+      "occupancy_minimum": 1870,
+      "opposing_direction_pairs": 620,
+      "periods": 1920,
+      "transitions": 1872,
+      "uniform_identity_expected_switches_exact": "14641/3"
+    },
+    "2": {
+      "congestion_excess_40_periods": 5742,
+      "extra_switches": 1214,
+      "gross_switches_39_transitions": 3151,
+      "group_sections": 48,
+      "label": "Partial",
+      "occupancy_minimum": 1937,
+      "opposing_direction_pairs": 607,
+      "periods": 1920,
+      "transitions": 1872,
+      "uniform_identity_expected_switches_exact": "5013"
+    },
+    "3": {
+      "congestion_excess_40_periods": 5697,
+      "extra_switches": 870,
+      "gross_switches_39_transitions": 2648,
+      "group_sections": 48,
+      "label": "Full",
+      "occupancy_minimum": 1778,
+      "opposing_direction_pairs": 435,
+      "periods": 1920,
+      "transitions": 1872,
+      "uniform_identity_expected_switches_exact": "4965"
+    }
+  }
+}
