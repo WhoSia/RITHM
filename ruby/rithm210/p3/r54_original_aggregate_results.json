@@ -1,0 +1,31 @@
+{
+  "both_direction_switches": 1546,
+  "constant_occupancy_with_churn": 788,
+  "five_to_five_one_each_direction": 173,
+  "four_to_four_with_churn": 385,
+  "gross_switch_histogram": {
+    "0": 1059,
+    "1": 1781,
+    "2": 1592,
+    "3": 853,
+    "4": 276,
+    "5": 49,
+    "6": 6
+  },
+  "group_period_transitions": 5616,
+  "hypothetical_microstep_excess_sum_range": [
+    22842,
+    45126
+  ],
+  "individual_choices": 34560,
+  "input_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "recorded_gross_switches": 8909,
+  "scope": "Boundary-period choices only; intermediate action order and microstep welfare are unobserved. No causal estimate.",
+  "selection": "trt in {1,2,3}; Period>=1; exclude sessions 2 and 101; sections 2-4",
+  "sessions": 24,
+  "six_actor_group_sections": 144,
+  "source_declared_switch_mismatches": 0,
+  "source_name": "data_task_all_switch_230705.csv",
+  "two_or_more_switches": 2776,
+  "unknown_order_changes_hypothetical_microcost": 1196
+}
