@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RITHM · 경로선택 리허설</title>
+<style>
+:root {font: 1rem Inter, system-ui, sans-serif; color: #202b2a; background: #f3f5f2;}
+body {max-width: 43rem; margin: auto; padding: 2rem 1rem;}
+h1, h2 {line-height: 1.25;}
+section {background: #fff; border: 1px solid #ccd5cd; border-radius: .75rem; padding: 1.25rem;}
+button, select {font: inherit; padding: .65rem .85rem; border: 1px solid #42675f; border-radius: .4rem;}
+button {background: #154c43; color: white; cursor: pointer;}
+button:disabled {opacity: .6; cursor: wait;}
+button:focus-visible, select:focus-visible {outline: 3px solid #a46308; outline-offset: 2px;}
+form, label {display: grid; gap: .45rem;}
+form {gap: .85rem; max-width: 20rem;}
+.actions {display: flex; gap: .5rem; flex-wrap: wrap;}
+#alert {color: #8d2318;}
+#amount {font-size: 1.5rem; font-weight: 750;}
+[hidden] {display: none !important;}
+</style>
+<header><h1>6석 경로선택 리허설</h1></header>
+<section id="setup">
+  <h2>그룹 시작</h2>
+  <form id="config">
+    <label>초기 배치<select id="start"><option value="5">A 5명 · B 1명</option><option value="4">A 4명 · B 2명</option></select></label>
+    <label>기간<select id="rounds"><option>5</option><option>10</option><option>40</option></select></label>
+    <button>배정</button>
+  </form>
+  <button id="resume" hidden>리허설 재개</button>
+</section>
+<section id="handoff" hidden>
+  <h2 id="handoffTitle"></h2>
+  <p>표시된 좌석에 화면을 넘겨주세요.</p>
+  <button id="open">선택 화면 열기</button>
+</section>
+<section id="choice" hidden>
+  <h2 id="choiceTitle"></h2>
+  <p id="current"></p>
+  <div class="actions"><button id="routeA"></button><button id="routeB"></button></div>
+</section>
+<section id="settlement" hidden>
+  <h2 id="settlementTitle"></h2>
+  <p id="privatePrompt">표시된 좌석만 정산을 열어주세요.</p>
+  <button id="issue">정산 열기</button>
+  <div id="receipt" hidden>
+    <p id="amount"></p><p>이번 기에만 반영되는 정산입니다.</p>
+    <button id="ack">정산 확인</button>
+  </div>
+</section>
+<section id="complete" hidden>
+  <h2>리허설 완료</h2>
+  <div class="actions"><button id="export">기록 내려받기</button><button id="reset">새 그룹</button></div>
+</section>
+<p id="alert" role="alert"></p>
+<script>
+const get = id => document.getElementById(id);
+const key = "rithm:r49:group";
+const pendingKey = "rithm:r49:pending";
+const panels = ["setup", "handoff", "choice", "settlement", "complete"];
+let id = localStorage.getItem(key);
+let state, receipt, busy = false;
+const groupPath = suffix => "/study/" + id + (suffix ? "/" + suffix : "");
+
+async function api(path, value) {
+  const options = value === undefined ? {} : {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(value)
+  };
+  const r = await fetch(path, options);
+  const data = await r.json();
+  if (!r.ok) throw new Error(data.error);
+  return data;
+}
+
+function panel(value) {
+  for (const name of panels) get(name).hidden = name !== value;
+}
+
+function setup() {
+  panel("setup");
+  get("config").hidden = Boolean(id);
+  get("resume").hidden = !id;
+  const pending = JSON.parse(localStorage.getItem(pendingKey));
+  if (pending) {
+    get("start").value = pending.start;
+    get("rounds").value = pending.rounds;
+  }
+  get("start").disabled = Boolean(pending);
+  get("rounds").disabled = Boolean(pending);
+}
+
+function render(value) {
+  state = value;
+  receipt = undefined;
+  get("receipt").hidden = true;
+  get("amount").textContent = "";
+  get("issue").hidden = false;
+  get("privatePrompt").hidden = false;
+  if (value.phase !== "complete") {
+    get(value.phase + "Title").textContent = value.round + "기 · 좌석 " + (value.seat + 1);
+  }
+  if (value.phase === "choice") {
+    get("current").textContent = "현재 " + value.previous + " 경로 · A " + value.a + "명 / B " + (6-value.a) + "명";
+    get("routeA").textContent = "A 경로 · 비용 " + value.cost_A;
+    get("routeB").textContent = "B 경로 · 비용 " + value.cost_B;
+  }
+  panel(value.phase);
+}
+
+async function perform(fn) {
+  if (busy) return;
+  busy = true;
+  get("alert").textContent = "";
+  for (const button of document.querySelectorAll("button")) button.disabled = true;
+  try { await fn(); }
+  catch (error) {
+    get("alert").textContent = error.message;
+    if (id) {
+      try { render(await api(groupPath())); }
+      catch { /* Keep the error visible if the server is unreachable. */ }
+    }
+  } finally {
+    busy = false;
+    for (const button of document.querySelectorAll("button")) button.disabled = false;
+  }
+}
+
+function command(action, payload = {}) {
+  return api(groupPath(action), {round: state.round, seat: state.seat, ...payload});
+}
+
+get("config").addEventListener("submit", e => {
+  e.preventDefault();
+  return perform(async () => {
+    const params = JSON.parse(localStorage.getItem(pendingKey)) ?? {
+      id: crypto.randomUUID().replaceAll("-", ""), start: Number(get("start").value),
+      rounds: Number(get("rounds").value)
+    };
+    localStorage.setItem(pendingKey, JSON.stringify(params));
+    setup();
+    const result = await api("/allocate", params);
+    id = params.id;
+    localStorage.setItem(key, id);
+    localStorage.removeItem(pendingKey);
+    render(result);
+  });
+});
+get("resume").onclick = () => perform(async () => render(await api(groupPath())));
+get("open").onclick = () => perform(async () => render(await command("open")));
+for (const route of ["A", "B"]) {
+  get("route" + route).onclick = () => perform(async () => render(await command("choose", {route})));
+}
+get("issue").onclick = () => perform(async () => {
+  const value = await command("issue");
+  if (!value.receipt) { render(value); return; }
+  receipt = value.receipt;
+  const signed = value.amount > 0 ? "+" + value.amount : String(value.amount);
+  const label = value.frame === "route" ? value.route + " 경로 보수 조정" : "별도 실험 정산";
+  get("amount").textContent = label + " " + signed + "점";
+  get("receipt").hidden = false;
+  get("issue").hidden = true;
+  get("privatePrompt").hidden = true;
+});
+get("ack").onclick = () => perform(async () => render(await command("ack", {receipt})));
+get("export").onclick = () => perform(async () => {
+  const data = await api(groupPath("export"));
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], {type: "application/json"}));
+  a.download = "rithm-r49-rehearsal.json";
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+});
+get("reset").onclick = () => {
+  localStorage.removeItem(key);
+  id = undefined;
+  setup();
+};
+setup();
+</script>
+</html>
