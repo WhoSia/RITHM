@@ -217,5 +217,5 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r54_original_batch_clock.py' -v
       - name: R55 source-free 64-mask simultaneous-switch fiber and welfare rankings
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r55_batch_fibers.py' -v
-      - name: No code mutation by verification
+      - name: R56 predecision legal-flow and common-shock observational equivalence\n        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r56_*.py' -v\n      - name: No code mutation by verification
         run: git diff --exit-code && test -z "$(git status --porcelain)"
