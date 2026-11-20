@@ -1,0 +1,134 @@
+{
+  "assumption_boundary": "Smoothing sensitivity is descriptive, NOT a prespecified nested tuning experiment or a proof of strategic independence.",
+  "input_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "non_nested_alpha_sensitivity": [
+    {
+      "joint_laplace_session_equal_logloss": 2.0071044935667306,
+      "joint_minus_state_logloss": 0.007490709887755909,
+      "laplace_alpha": 0.25,
+      "state_independent_session_equal_logloss": 1.9996137836789747
+    },
+    {
+      "joint_laplace_session_equal_logloss": 2.005563616477607,
+      "joint_minus_state_logloss": 0.005949832798632482,
+      "laplace_alpha": 0.5,
+      "state_independent_session_equal_logloss": 1.9996137836789747
+    },
+    {
+      "joint_laplace_session_equal_logloss": 2.0062149096903124,
+      "joint_minus_state_logloss": 0.006601126011337666,
+      "laplace_alpha": 1.0,
+      "state_independent_session_equal_logloss": 1.9996137836789747
+    },
+    {
+      "joint_laplace_session_equal_logloss": 2.011392597312164,
+      "joint_minus_state_logloss": 0.011778813633189333,
+      "laplace_alpha": 2.0,
+      "state_independent_session_equal_logloss": 1.9996137836789747
+    },
+    {
+      "joint_laplace_session_equal_logloss": 2.0254180817297343,
+      "joint_minus_state_logloss": 0.025804298050759567,
+      "laplace_alpha": 4.0,
+      "state_independent_session_equal_logloss": 1.9996137836789747
+    },
+    {
+      "joint_laplace_session_equal_logloss": 2.0549601269940654,
+      "joint_minus_state_logloss": 0.055346343315090696,
+      "laplace_alpha": 8.0,
+      "state_independent_session_equal_logloss": 1.9996137836789747
+    }
+  ],
+  "primary_loso": {
+    "conditioning": "previous A occupancy and treatment only; no future occupancy, choices, or same-session train leakage",
+    "joint_laplace_alpha": 1,
+    "models": {
+      "joint_laplace": {
+        "equal_session_logloss_nats": 2.0062149096903124,
+        "equal_session_multiclass_brier": 0.8310110595273436,
+        "pooled_transition_logloss_nats": 1.9910723716820502,
+        "pooled_transition_multiclass_brier": 0.8281039543753155
+      },
+      "pooled_independent": {
+        "equal_session_logloss_nats": 2.070623870032221,
+        "equal_session_multiclass_brier": 0.8480845428548328,
+        "pooled_transition_logloss_nats": 2.057816509788668,
+        "pooled_transition_multiclass_brier": 0.8465053516053748
+      },
+      "state_independent": {
+        "equal_session_logloss_nats": 1.9996137836789747,
+        "equal_session_multiclass_brier": 0.8302157103820479,
+        "pooled_transition_logloss_nats": 1.9830114355122737,
+        "pooled_transition_multiclass_brier": 0.8273652830346748
+      }
+    },
+    "paired_session_resampling": [
+      {
+        "alternative": "state_independent",
+        "baseline": "pooled_independent",
+        "mean_difference": -0.07101008635324639,
+        "score": "logloss_nats",
+        "session_resampling_95_percentile": [
+          -0.09522847499403413,
+          -0.04949576625268418
+        ]
+      },
+      {
+        "alternative": "state_independent",
+        "baseline": "pooled_independent",
+        "mean_difference": -0.017868832472785007,
+        "score": "multiclass_brier",
+        "session_resampling_95_percentile": [
+          -0.024953924811623673,
+          -0.010797193694027976
+        ]
+      },
+      {
+        "alternative": "joint_laplace",
+        "baseline": "pooled_independent",
+        "mean_difference": -0.06440896034190872,
+        "score": "logloss_nats",
+        "session_resampling_95_percentile": [
+          -0.09026162167129816,
+          -0.04123605199719615
+        ]
+      },
+      {
+        "alternative": "joint_laplace",
+        "baseline": "pooled_independent",
+        "mean_difference": -0.017073483327489303,
+        "score": "multiclass_brier",
+        "session_resampling_95_percentile": [
+          -0.026230629790386543,
+          -0.008297420652756501
+        ]
+      },
+      {
+        "alternative": "joint_laplace",
+        "baseline": "state_independent",
+        "mean_difference": 0.006601126011337666,
+        "score": "logloss_nats",
+        "session_resampling_95_percentile": [
+          -0.0009823970164093698,
+          0.01357027367390847
+        ]
+      },
+      {
+        "alternative": "joint_laplace",
+        "baseline": "state_independent",
+        "mean_difference": 0.0007953491452957021,
+        "score": "multiclass_brier",
+        "session_resampling_95_percentile": [
+          -0.0013725568406366083,
+          0.0028257745977753046
+        ]
+      }
+    ],
+    "scope": "exploratory source fit; no causal strategic coordination identification",
+    "session_count": 24,
+    "transition_count": 5616,
+    "units": "24 session leave-one-out, all 3 treatment codes in each fold"
+  },
+  "privacy": "No participant/group/session rows or identifiers published; all scores cohort aggregates.",
+  "study": "RITHM-2.10-P3-R56"
+}
