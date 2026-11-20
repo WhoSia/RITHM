@@ -1,0 +1,67 @@
+[
+  {
+    "start": 5,
+    "frame": "route",
+    "shown": "A 경로 보수 조정 -4점",
+    "choices": 5,
+    "events": 14,
+    "settlement_order": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "wall_clock_regressions": 0,
+    "outcome": {
+      "first_hit_round": null,
+      "first_exit_round": null,
+      "pre_settlement_A": 5,
+      "first_focal_after_settlement": {
+        "round": 4,
+        "switched": false,
+        "choice_seq": 12
+      },
+      "other_choices_before_focal": [
+        10
+      ],
+      "other_switches_before_focal": 0,
+      "congestion_cost": 15,
+      "focal_switches": 0,
+      "modeled_total_cost_half_points": 30
+    }
+  },
+  {
+    "start": 4,
+    "frame": "wallet",
+    "shown": "별도 실험 정산 -4점",
+    "choices": 5,
+    "events": 14,
+    "settlement_order": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "wall_clock_regressions": 0,
+    "outcome": {
+      "first_hit_round": 0,
+      "first_exit_round": 5,
+      "pre_settlement_A": 4,
+      "first_focal_after_settlement": {
+        "round": 5,
+        "switched": true,
+        "choice_seq": 14
+      },
+      "other_choices_before_focal": [
+        10,
+        12
+      ],
+      "other_switches_before_focal": 0,
+      "congestion_cost": 3,
+      "focal_switches": 1,
+      "modeled_total_cost_half_points": 7
+    }
+  }
+]
