@@ -15,11 +15,10 @@ class R52Tests(unittest.TestCase):
     def setUp(self):
         self.path = Path(self.enterContext(tempfile.TemporaryDirectory())) / "rehearsal.sqlite3"
 
-    def create(self, clock, *, complete=False):
+    def create(self, clock, *, complete=False, key="e"*32):
         rng = FixedDraws()
         rng.clock = iter(clock)
         ledger = Ledger(self.path, rng)
-        key = "e"*32
         ledger.allocate(key, 5, len(clock))
         for t, seat in ((1, clock[0]), (2, clock[1])):
             ledger.action(key, "open", t, seat=seat)
@@ -71,8 +70,8 @@ class R52Tests(unittest.TestCase):
         return excess, 2*excess+focal
 
     def test_exact_against_all_2_to_5_round_completions(self):
-        for clock in ((0,1,0,2,3),(0,1,2,3,4),(0,1,2,0,3)):
-            _,_,events=self.create(clock)
+        for index,clock in enumerate(((0,1,0,2,3),(0,1,2,3,4),(0,1,2,0,3)),start=1):
+            _,_,events=self.create(clock,key=f"{index:032x}")
             result=sharp_bounds(events,witnesses=True)
             expected=self.exhaustive(events)
             self.assertEqual(result["full_excess_cost_bounds"],expected[0])
@@ -82,7 +81,6 @@ class R52Tests(unittest.TestCase):
                 objective=0 if "excess" in name else 1
                 extreme=0 if name.startswith("min") else 1
                 self.assertEqual(attained[objective],expected[objective][extreme])
-            break
 
     def test_actual_completed_result_is_an_exact_point(self):
         ledger,key,events=self.create((0,1,0,2,3),complete=True)
