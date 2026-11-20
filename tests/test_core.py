@@ -5,7 +5,12 @@ import unittest
 import sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
-from rithm.legacy.rithm20 import welfare,nash_side_counts,analyze,pay_main,pay_side
+try:
+ from rithm.legacy.rithm20 import welfare,nash_side_counts,analyze,pay_main,pay_side
+except ModuleNotFoundError as exc:
+ if exc.name != 'rithm.legacy.rithm20':
+  raise
+ raise unittest.SkipTest('RITHM 2.0 descriptive script retired after byte-preserved Drive archive; historical execution requires explicit restoration') from exc
 FIX=ROOT/"tests/fixtures/study1-mini.csv"
 class HumanGroupTests(unittest.TestCase):
  def test_game(self):
