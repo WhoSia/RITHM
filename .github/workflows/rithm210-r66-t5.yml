@@ -1,0 +1,25 @@
+name: RITHM 2.10 R66-T5 Exact Finite-Horizon Welfare (source-free)
+on:
+  push:
+    paths:
+      - 'ruby/rithm210/p3/r66_t5_public_reference.py'
+      - 'ruby/rithm210/p3/test_r66_t5_public_reference.py'
+      - '.github/workflows/rithm210-r66-t5.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-finite-horizon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact fraction Markov, covariance and switching-fee tests (no human source)
+        working-directory: ruby/rithm210/p3
+        run: |
+          python -m unittest -v test_r66_t5_public_reference.py
+          python r66_t5_public_reference.py
