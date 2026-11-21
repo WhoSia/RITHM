@@ -263,3 +263,20 @@ jobs:
           test ! -f rererequestforpermissiontouseexperimentalroutechoi.zip
           git diff --exit-code
           test -z "$(git status --porcelain)"
+
+  r60-person-history-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify 23 source-free R60 exact and history tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r60_*.py' -v
+      - name: Restricted original records absent and worktree unchanged
+        run: |
+          test ! -e rererequestforpermissiontouseexperimentalroutechoi.zip
+          git diff --exit-code
+          test -z "$(git status --porcelain)"
