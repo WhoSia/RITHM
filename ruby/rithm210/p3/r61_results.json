@@ -1,0 +1,243 @@
+{
+  "actor_decisions": 22464,
+  "causal_scope": "descriptive prediction, NOT proof of decaying memory, personal latent traits or real welfare interventions",
+  "decay_grid": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "16",
+    "32",
+    "64",
+    "inf"
+  ],
+  "estimation": "R60 cohort, strict target-period prefix; outer 24-session heldout, inner 23-session actor-loss crossvalidation among frozen tau grid",
+  "group_transitions": 3744,
+  "linked_actor_pairs": 576,
+  "nested_train_only_average_actor_losses_min_max": {
+    "max": 0.5046930194487677,
+    "min": 0.4919655262500151
+  },
+  "overall": {
+    "base": {
+      "equal_session_actor_brier": 0.18177669162144583,
+      "equal_session_actor_logloss": 0.5471812710936147,
+      "equal_session_group_joint_logloss": 2.0347490130364037
+    },
+    "current_only": {
+      "equal_session_actor_brier": 0.16658798584854576,
+      "equal_session_actor_logloss": 0.5043982863078663,
+      "equal_session_group_joint_logloss": 1.939943719045268
+    },
+    "fixed_tau_16": {
+      "equal_session_actor_brier": 0.1648044600523982,
+      "equal_session_actor_logloss": 0.49855112087043957,
+      "equal_session_group_joint_logloss": 1.9341258489655497
+    },
+    "fixed_tau_8": {
+      "equal_session_actor_brier": 0.16464625487516996,
+      "equal_session_actor_logloss": 0.49843597892935637,
+      "equal_session_group_joint_logloss": 1.9291101699030344
+    },
+    "nested_adaptive": {
+      "equal_session_actor_brier": 0.16482955615202158,
+      "equal_session_actor_logloss": 0.49890197336417286,
+      "equal_session_group_joint_logloss": 1.9309438692853997
+    },
+    "static_prior": {
+      "equal_session_actor_brier": 0.1669271492553921,
+      "equal_session_actor_logloss": 0.5032203129620207,
+      "equal_session_group_joint_logloss": 1.959185358937637
+    }
+  },
+  "overall_nested_vs_online_actor": {
+    "delta_nats": -0.005496312943693515,
+    "n_sessions": 24,
+    "session_resampling_95_descriptive": [
+      -0.008119266838131483,
+      -0.002543770870913144
+    ]
+  },
+  "overall_nested_vs_online_group": {
+    "delta_nats": -0.008999849759868088,
+    "n_sessions": 24,
+    "session_resampling_95_descriptive": [
+      -0.020959285776108682,
+      0.0036892203463153492
+    ]
+  },
+  "overall_nested_vs_static_actor": {
+    "delta_nats": -0.00431833959784795,
+    "n_sessions": 24,
+    "session_resampling_95_descriptive": [
+      -0.007091660346695786,
+      -0.0014920735986111888
+    ]
+  },
+  "privacy": "NO person, session, group, or exogenous Value rows or per-session fitted tau published",
+  "selection_count": {
+    "0": 0,
+    "16": 2,
+    "2": 0,
+    "32": 0,
+    "4": 0,
+    "64": 0,
+    "8": 22,
+    "inf": 0
+  },
+  "session_count": 24,
+  "source_zip_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "stages": {
+    "early_period_2_6": {
+      "models": {
+        "base": {
+          "equal_session_actor_brier": 0.1892791256411304,
+          "equal_session_actor_logloss": 0.5642427793440618,
+          "equal_session_group_joint_logloss": 2.096855325598324
+        },
+        "current_only": {
+          "equal_session_actor_brier": 0.18652631627698893,
+          "equal_session_actor_logloss": 0.5573736947828704,
+          "equal_session_group_joint_logloss": 2.0879176216290425
+        },
+        "fixed_tau_16": {
+          "equal_session_actor_brier": 0.17799893001588055,
+          "equal_session_actor_logloss": 0.5314415450778697,
+          "equal_session_group_joint_logloss": 2.0295061880727316
+        },
+        "fixed_tau_8": {
+          "equal_session_actor_brier": 0.1779111329029215,
+          "equal_session_actor_logloss": 0.5313498472614369,
+          "equal_session_group_joint_logloss": 2.0277545671645427
+        },
+        "nested_adaptive": {
+          "equal_session_actor_brier": 0.17798715285939187,
+          "equal_session_actor_logloss": 0.5315374246339848,
+          "equal_session_group_joint_logloss": 2.0285386563972594
+        },
+        "static_prior": {
+          "equal_session_actor_brier": 0.17816347816052566,
+          "equal_session_actor_logloss": 0.5317626941962137,
+          "equal_session_group_joint_logloss": 2.0319306115987743
+        }
+      },
+      "nested_minus_online_actor": {
+        "delta_nats": -0.02583627014888554,
+        "n_sessions": 24,
+        "session_resampling_95_descriptive": [
+          -0.038263044835136255,
+          -0.013492704182295194
+        ]
+      },
+      "nested_minus_static_actor": {
+        "delta_nats": -0.00022526956222888275,
+        "n_sessions": 24,
+        "session_resampling_95_descriptive": [
+          -0.0017796225153267797,
+          0.0012813166501298597
+        ]
+      }
+    },
+    "late_period_21_40": {
+      "models": {
+        "base": {
+          "equal_session_actor_brier": 0.17667242522801724,
+          "equal_session_actor_logloss": 0.5354389744585408,
+          "equal_session_group_joint_logloss": 2.0061846938981285
+        },
+        "current_only": {
+          "equal_session_actor_brier": 0.15754548869494323,
+          "equal_session_actor_logloss": 0.4807681263036998,
+          "equal_session_group_joint_logloss": 1.8828811750941281
+        },
+        "fixed_tau_16": {
+          "equal_session_actor_brier": 0.15759861671683795,
+          "equal_session_actor_logloss": 0.48102467702872365,
+          "equal_session_group_joint_logloss": 1.8897214192903757
+        },
+        "fixed_tau_8": {
+          "equal_session_actor_brier": 0.15748412956394975,
+          "equal_session_actor_logloss": 0.48064380070440066,
+          "equal_session_group_joint_logloss": 1.8839642808551034
+        },
+        "nested_adaptive": {
+          "equal_session_actor_brier": 0.15760313708801044,
+          "equal_session_actor_logloss": 0.4810187167045475,
+          "equal_session_group_joint_logloss": 1.8853509633737375
+        },
+        "static_prior": {
+          "equal_session_actor_brier": 0.16058697750988846,
+          "equal_session_actor_logloss": 0.48817287363445566,
+          "equal_session_group_joint_logloss": 1.9269053508392775
+        }
+      },
+      "nested_minus_online_actor": {
+        "delta_nats": 0.0002505904008476723,
+        "n_sessions": 24,
+        "session_resampling_95_descriptive": [
+          -0.0003567011940982219,
+          0.0010328478830811537
+        ]
+      },
+      "nested_minus_static_actor": {
+        "delta_nats": -0.007154156929908173,
+        "n_sessions": 24,
+        "session_resampling_95_descriptive": [
+          -0.011199578621310125,
+          -0.0029772810323517975
+        ]
+      }
+    },
+    "middle_period_7_20": {
+      "models": {
+        "base": {
+          "equal_session_actor_brier": 0.18638906003359917,
+          "equal_session_actor_logloss": 0.5578625847685605,
+          "equal_session_group_joint_logloss": 2.0533743573189667
+        },
+        "current_only": {
+          "equal_session_actor_brier": 0.17238500662924827,
+          "equal_session_actor_logloss": 0.519235869001317,
+          "equal_session_group_joint_logloss": 1.9686138166241192
+        },
+        "fixed_tau_16": {
+          "equal_session_actor_brier": 0.1703862112590978,
+          "equal_session_actor_logloss": 0.5118423177130942,
+          "equal_session_group_joint_logloss": 1.9634963416775189
+        },
+        "fixed_tau_8": {
+          "equal_session_actor_brier": 0.17014040602414468,
+          "equal_session_actor_logloss": 0.5120984234178358,
+          "equal_session_group_joint_logloss": 1.9583741552352543
+        },
+        "nested_adaptive": {
+          "equal_session_actor_brier": 0.17045387027654807,
+          "equal_session_actor_logloss": 0.5127939645672762,
+          "equal_session_group_joint_logloss": 1.9612213109049685
+        },
+        "static_prior": {
+          "equal_session_actor_brier": 0.17197156285427806,
+          "equal_session_actor_logloss": 0.514522947274902,
+          "equal_session_group_joint_logloss": 1.9793192088420295
+        }
+      },
+      "nested_minus_online_actor": {
+        "delta_nats": -0.0064419044340407565,
+        "n_sessions": 24,
+        "session_resampling_95_descriptive": [
+          -0.01049458746512281,
+          -0.0015849881787523008
+        ]
+      },
+      "nested_minus_static_actor": {
+        "delta_nats": -0.0017289827076257113,
+        "n_sessions": 24,
+        "session_resampling_95_descriptive": [
+          -0.005163775771392649,
+          0.0018556445799703684
+        ]
+      }
+    }
+  },
+  "version": "R61.0"
+}
