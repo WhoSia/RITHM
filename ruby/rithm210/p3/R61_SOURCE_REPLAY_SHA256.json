@@ -1,0 +1,15 @@
+{
+  "file_sha256": {
+    "r61_identity_null.json": "f63b8a9e367f907d079cf0392f5a5a4537191a671cf2d4b8aeccf7b1188375e2",
+    "r61_macro_diagnostics.json": "a713af1dd36790a2f3a61cc5ec31bda94febd7cbf06f5e093d05e911c1fb98a6",
+    "r61_results.json": "87b419c907578547686273c8ea7b0be5637b4d142b7dd1c029b347c8a9a20dec",
+    "r61_rollout_fair.json": "a17b1eef5e1beb93421abf27d4a7d80f7c85c1abb128d7b8deb65f0ec165985e",
+    "r61_rollout_observed.json": "70bd7bd5d0eb746891c49654edb22c6029b62fc9ae60ea858e9ded53f9e03594",
+    "r61_rollout_seed2.json": "cb2b56c1483a8ad9877dea7b04fbb23cca7e88c3ce96e0902935b28a247e7fad",
+    "r61_subgroups.json": "02eb31252807f19f8ccfaabd2559056567ba9f4fd42cbff8622a52379dba5681",
+    "r61_three_segment_results.json": "05af1d80d1244c8db40d805aba8ac4791d93fe1427c18f2aeb7550da42ec4f81"
+  },
+  "outputs_aggregated_no_source_rows": true,
+  "source_private": true,
+  "source_sha256_only": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953"
+}
