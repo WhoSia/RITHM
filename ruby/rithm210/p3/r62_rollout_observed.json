@@ -1,0 +1,149 @@
+{
+  "model_results": {
+    "at_four_joint": {
+      "cost_MSE_minus_independent": {
+        "cluster_95_descriptive": [
+          -419.0803985595703,
+          -36.29466247558594
+        ],
+        "delta": -220.66571044921875
+      },
+      "cost_group_total_MSE": 6937.236190795898,
+      "gross_group_total_MSE": 494.3329840766059,
+      "late_occupancy_4_fraction": 0.3109375,
+      "occupancy_4_fraction": 0.3227783203125,
+      "p_no_switch_given_previous_four": 0.1989846010748243,
+      "p_remain_four_given_previous_four": 0.39877015295576684,
+      "resource_kappa_polynomial": {
+        "A": 6937.236190795898,
+        "B": 1485.2263641357422,
+        "D": 494.3329840766059
+      },
+      "selected_q_histogram": {
+        "0.05": 24
+      },
+      "treatment_group_mean_excess": {
+        "1": 186.64892578125,
+        "2": 187.9833984375,
+        "3": 187.0107421875
+      }
+    },
+    "at_four_stability": {
+      "cost_MSE_minus_independent": {
+        "cluster_95_descriptive": [
+          -973.1318817138672,
+          -497.29270935058594
+        ],
+        "delta": -745.2667007446289
+      },
+      "cost_group_total_MSE": 6412.635200500488,
+      "gross_group_total_MSE": 498.3525221082899,
+      "late_occupancy_4_fraction": 0.33614908854166664,
+      "occupancy_4_fraction": 0.3519816080729167,
+      "p_no_switch_given_previous_four": 0.2828024572991016,
+      "p_remain_four_given_previous_four": 0.47793047121906185,
+      "resource_kappa_polynomial": {
+        "A": 6412.635200500488,
+        "B": 1518.266377766927,
+        "D": 498.3525221082899
+      },
+      "selected_q_histogram": {
+        "0.2": 24
+      },
+      "treatment_group_mean_excess": {
+        "1": 181.107421875,
+        "2": 182.595703125,
+        "3": 183.52880859375
+      }
+    },
+    "common_shock_joint": {
+      "cost_MSE_minus_independent": {
+        "cluster_95_descriptive": [
+          -145.33876037597656,
+          309.43678283691406
+        ],
+        "delta": 86.25959777832031
+      },
+      "cost_group_total_MSE": 7244.1614990234375,
+      "gross_group_total_MSE": 493.3497382269965,
+      "late_occupancy_4_fraction": 0.2950358072916667,
+      "occupancy_4_fraction": 0.31297607421875,
+      "p_no_switch_given_previous_four": 0.18500725283792235,
+      "p_remain_four_given_previous_four": 0.3813528871618115,
+      "resource_kappa_polynomial": {
+        "A": 7244.1614990234375,
+        "B": 1537.3216247558594,
+        "D": 493.3497382269965
+      },
+      "selected_q_histogram": {
+        "0.2": 24
+      },
+      "treatment_group_mean_excess": {
+        "1": 186.24755859375,
+        "2": 189.78662109375,
+        "3": 189.05712890625
+      }
+    },
+    "independent": {
+      "cost_group_total_MSE": 7157.901901245117,
+      "gross_group_total_MSE": 492.724132961697,
+      "late_occupancy_4_fraction": 0.29640299479166665,
+      "occupancy_4_fraction": 0.3128580729166667,
+      "p_no_switch_given_previous_four": 0.1748578580844463,
+      "p_remain_four_given_previous_four": 0.37476198719058335,
+      "resource_kappa_polynomial": {
+        "A": 7157.901901245117,
+        "B": 1497.168441772461,
+        "D": 492.724132961697
+      },
+      "selected_q_histogram": {
+        "0.0": 24
+      },
+      "treatment_group_mean_excess": {
+        "1": 188.583984375,
+        "2": 189.05419921875,
+        "3": 188.66162109375
+      }
+    },
+    "late_four_stability": {
+      "cost_MSE_minus_independent": {
+        "cluster_95_descriptive": [
+          -574.0805587768555,
+          -219.17398834228516
+        ],
+        "delta": -397.36058044433594
+      },
+      "cost_group_total_MSE": 6760.541320800781,
+      "gross_group_total_MSE": 491.665295071072,
+      "late_occupancy_4_fraction": 0.342529296875,
+      "occupancy_4_fraction": 0.3358846028645833,
+      "p_no_switch_given_previous_four": 0.24605196128374937,
+      "p_remain_four_given_previous_four": 0.44090056285178236,
+      "resource_kappa_polynomial": {
+        "A": 6760.541320800781,
+        "B": 1506.3563537597656,
+        "D": 491.665295071072
+      },
+      "selected_q_histogram": {
+        "0.2": 4,
+        "0.25": 20
+      },
+      "treatment_group_mean_excess": {
+        "1": 185.63525390625,
+        "2": 185.15771484375,
+        "3": 185.6162109375
+      }
+    }
+  },
+  "observed_group_excess_by_treatment": {
+    "1": 114.1875,
+    "2": 112.40625,
+    "3": 112.3125
+  },
+  "reps_per_group": 64,
+  "scope": "No source human actor rows; 40-period generated trajectories, original initial actor routes only when observed start; six simultaneous decisions per period.",
+  "seed": 20261121,
+  "sessions": 24,
+  "source_groups": 96,
+  "start": "observed"
+}
