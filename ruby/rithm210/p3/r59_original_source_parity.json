@@ -1,0 +1,11 @@
+{
+  "adjacent_section_matched_person_links": 576,
+  "cross_section_group_changes": 0,
+  "identical_common_cells": 483840,
+  "selected_enriched_40_period_rows": 34560,
+  "selection_warning": "Un-enriched table includes an additional 20-period pilot session; R59 follows the 24-session enriched analysis cohort. No unreported original table is equivalent by default.",
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "un_enriched_actor_gross_switches": 8909,
+  "un_enriched_extra_20_period_pilot_rows": 360,
+  "un_enriched_preintersection_rows": 34920
+}
