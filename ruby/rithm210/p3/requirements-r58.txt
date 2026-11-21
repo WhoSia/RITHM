@@ -1,0 +1,3 @@
+# Only for source-free R58 FFT theorem tests and sealed original analysis.
+# No runtime dependencies for R49-R57 are changed by this file.
+numpy==2.2.6
