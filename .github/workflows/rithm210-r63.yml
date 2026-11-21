@@ -1,0 +1,32 @@
+name: RITHM-2.10 R63 Source-Free Transport Gate
+
+on:
+  push:
+    paths:
+      - 'ruby/rithm210/p3/r63_transport_audit.py'
+      - 'ruby/rithm210/p3/test_r63_transport_audit.py'
+      - 'ruby/rithm210/p3/r62_legal_rollout_*.json'
+      - '.github/workflows/rithm210-r63.yml'
+  pull_request:
+    paths:
+      - 'ruby/rithm210/p3/r63_transport_audit.py'
+      - 'ruby/rithm210/p3/test_r63_transport_audit.py'
+      - 'ruby/rithm210/p3/r62_legal_rollout_*.json'
+      - '.github/workflows/rithm210-r63.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  aggregate-only-transport:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: R63 source-only exact and R62 aggregate identity tests (no restricted human data)
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r63_*.py' -v
+      - name: Generate traceable R63 descriptive audit from immutable public aggregates
+        run: python ruby/rithm210/p3/r63_transport_audit.py > /tmp/r63_aggregate_only.json
