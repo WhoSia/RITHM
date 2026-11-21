@@ -1,0 +1,135 @@
+{
+  "members": {
+    "REPRODUCE.md": {
+      "bytes": 4475,
+      "sha256": "2720a3d4a6c31a5fa2193bef424856d43dc0634c6fdb7a2d8f1f5312215f6294"
+    },
+    "RITHM_R59_20261121.md": {
+      "bytes": 20094,
+      "sha256": "08b66e87172e6e01bdd5f34a0c3ec578b08dcfbfdf9496b3495c09ec95be0a4a"
+    },
+    "build_r59_archive.py": {
+      "bytes": 2897,
+      "sha256": "3db5282421b49c3cb2d8718c21688844dc8194eeebf7a60ee06379e50c84b8ef"
+    },
+    "r54_original_batch_clock.py": {
+      "bytes": 7678,
+      "sha256": "f25bcde2e3d1f2557a65d3b979a484ba0606dd04822d06ab91a98b0b105686c2"
+    },
+    "r56_joint_flow_cv.py": {
+      "bytes": 8227,
+      "sha256": "47662112d515aa47d3d16157d184d40b6bef4cf3aa9c165ebf747a0ed15e5a7b"
+    },
+    "r57_history_cv.py": {
+      "bytes": 15018,
+      "sha256": "28c0976916f8ca7a786f76b7920a0481769ebe3f6a2ce9e405d5333c3e9ed056"
+    },
+    "r58_author_rivals.py": {
+      "bytes": 11102,
+      "sha256": "179eee4bbd3016d873135df9b636d3cf1f234652ad0bb04aacafaad9a25096d5"
+    },
+    "r58_matched_cv.py": {
+      "bytes": 16464,
+      "sha256": "3f3edf4a28fd9a5bef0846f5085ad3c8b6755cfb3718c7d09722052b4c0cfde9"
+    },
+    "r58_provenance.py": {
+      "bytes": 1135,
+      "sha256": "9499a3839b75c87d1fb7f71e6f0b47282e9bde19615815a02f19b9c578a044c5"
+    },
+    "r59_closed_loop.py": {
+      "bytes": 19654,
+      "sha256": "d367d0dc73c4b28f6815d416ae3a40da7c969f292fb7e2db5a36693ef278adb4"
+    },
+    "r59_fair_fresh.json": {
+      "bytes": 54004,
+      "sha256": "843a7fec9ceae8324367343b37aab0844fbde492f28a04b37605ac45407a5160"
+    },
+    "r59_fair_primary.json": {
+      "bytes": 54075,
+      "sha256": "a6c773e76b494b65aeb321b8496dfab80f124281d4e66ebe746fdbc368a52f8b"
+    },
+    "r59_fair_raw_ssm.json": {
+      "bytes": 21686,
+      "sha256": "a768e62bdbcc92177471337618dda31fdd4e764ae642a29782e9c8892069983e"
+    },
+    "r59_fair_seed2_32.json": {
+      "bytes": 30936,
+      "sha256": "9791a835ea15f998a95deae5a829fac0b67797fc99df3ae37f848e8067d4d0f5"
+    },
+    "r59_independent_replay.py": {
+      "bytes": 4477,
+      "sha256": "ac439384e62f4d05195df21a027f7b785ce5699fd9addc3eb105f4f7e4a60012"
+    },
+    "r59_observed_primary.json": {
+      "bytes": 54106,
+      "sha256": "28fcf76e9a9062c7c19a369c1bd884501e96304d344d8687958c2fceef8c6044"
+    },
+    "r59_observed_seed2_32.json": {
+      "bytes": 30920,
+      "sha256": "8a860616ec641c0684b88f4dac7803c0c611f7c7ca7765bd05586952a3ed76b3"
+    },
+    "r59_original_source_parity.json": {
+      "bytes": 593,
+      "sha256": "91b12ff79e33ceb779fbf490a2d56e2665164b54634939597111d1a738998453"
+    },
+    "r59_prior_exposure.py": {
+      "bytes": 7802,
+      "sha256": "aeec1aeee37d494bc7d44f46e745aeaea7728712f0ea8dbe11d06e1d95dc95be"
+    },
+    "r59_prior_exposure_results.json": {
+      "bytes": 1305,
+      "sha256": "503150abd841efe7d4404b518e64e0462544f559c47fdd18e7c1984656f10b10"
+    },
+    "r59_results.json": {
+      "bytes": 45088,
+      "sha256": "78836ddeb35d850fabf96a52324ed19a8c7d8a436d60245759e7b0a36b88733f"
+    },
+    "r59_results.py": {
+      "bytes": 6961,
+      "sha256": "4fc55550a51d53185689dc642abf902613d1485c4890b36a81daa55a9cfba289"
+    },
+    "r59_run.py": {
+      "bytes": 1617,
+      "sha256": "ae8b4f6ffc357cb9981f90c17aed8aecbf9519bb4289818e23843c9c9dc67a70"
+    },
+    "r59_transport_counterexample.py": {
+      "bytes": 2322,
+      "sha256": "c5915d9044224106ea55e190cb0935dee3bb6b98a602993f17ee6111ad618bb5"
+    },
+    "requirements-r59.txt": {
+      "bytes": 143,
+      "sha256": "e76f1079c338fa795a8e160f055588916c070025b7c57681bb97e90e93c3b0a6"
+    },
+    "test_r58_author_rivals.py": {
+      "bytes": 5031,
+      "sha256": "790d42cc17c60a16d90828b031a6afae28d1210ffd3994510253bc1793ad017e"
+    },
+    "test_r58_matched_cv.py": {
+      "bytes": 4036,
+      "sha256": "65e163abdd556ebd4d814505626794ed20948cc9a05a49a9fba23623b78e6b7b"
+    },
+    "test_r58_provenance.py": {
+      "bytes": 903,
+      "sha256": "30a1aabe73901dba4206f2d9b7fc4d5cfc1cf5de5e262c7875002c850a43ab17"
+    },
+    "test_r58_welfare.py": {
+      "bytes": 2830,
+      "sha256": "cf0ea1e3f581cc1a7d6eb42dbe769fca7f63de06e9b800fc6a4829aefae54c3b"
+    },
+    "test_r59_closed_loop.py": {
+      "bytes": 5860,
+      "sha256": "a400c8f36dd9599a87704c4678ba1acd3a4dcc5d57bbd4a92113c5771a627da1"
+    },
+    "test_r59_prior_exposure.py": {
+      "bytes": 2889,
+      "sha256": "b5f39747bb0694d75f099eee18aa4a19f01cf1efb45bb890fa7f88c83aabb038"
+    },
+    "test_r59_results.py": {
+      "bytes": 3049,
+      "sha256": "d80e27c0a6dfb593f47479de98ad242f88b34bcff5543efd6bb26f0437c2d1e5"
+    }
+  },
+  "original_human_source_sha256_reference_only": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "restricted_source_is_excluded": true,
+  "title": "RITHM R59 source-free exact evidence archive"
+}
