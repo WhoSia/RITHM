@@ -1,0 +1,69 @@
+{
+  "study": "P3-R65C descriptive symmetric age-bin decomposition of group A4 all-stay rate",
+  "source": "original author-approved cohort, 24 original sessions; data private",
+  "originalZipSha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "exactLocalFullJSONsha256": "cf8b7ca737b66acc3a0c4bc3b18e26573fb041658623b9f7375b735707258719",
+  "scope": "NOT causal; age bin and A4 selection post-treatment; competing decompositions have no privileged status",
+  "condition": "same labeled six-person route vector since last configuration change; previous t=1..10 early, t=30..39 late",
+  "Full": {
+    "totalA4StayIncrease": 0.3628783667694174,
+    "fourBins": {
+      "composition": 0.22862609817543197,
+      "withinAgeBin": 0.13425226859398542
+    },
+    "twoBins": {
+      "composition": 0.13118286831387085,
+      "withinAgeBin": 0.23169549845554654,
+      "pairedSessionBootstrap3000": {
+        "composition95": [
+          0.05669933601850062,
+          0.18993330652336504
+        ],
+        "within95": [
+          0.12444669806652535,
+          0.37334291244259354
+        ],
+        "total95": [
+          0.2195474241694752,
+          0.4864864864864865
+        ]
+      }
+    },
+    "onePeriodConfigurationAge": {
+      "early": {
+        "stay": 20,
+        "observations": 122
+      },
+      "late": {
+        "stay": 36,
+        "observations": 108
+      }
+    }
+  },
+  "Endogenous": {
+    "totalA4StayIncrease": -0.008357795172863669,
+    "fourBins": {
+      "composition": 0.03143526826337957,
+      "withinAgeBin": -0.03979306343624324
+    },
+    "twoBins": {
+      "composition": 0.0070134895506884214,
+      "withinAgeBin": -0.015371284723552106,
+      "pairedSessionBootstrap3000": {
+        "composition95": [
+          -0.00892894069400375,
+          0.027886863607793848
+        ],
+        "within95": [
+          -0.0914732879623205,
+          0.06194509933550887
+        ],
+        "total95": [
+          -0.09781979548524022,
+          0.08376074550314239
+        ]
+      }
+    }
+  },
+  "interpretation": "Same total difference, different composition/within attributions under binning; cannot call 63% a uniquely identified causal mechanism. Full age1 early20/122 late36/108 suggests a within-bin rise coexists with changing age mix."
+}
