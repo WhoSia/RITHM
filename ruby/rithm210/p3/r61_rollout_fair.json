@@ -1,0 +1,100 @@
+{
+  "MonteCarlo_reps_per_group": 64,
+  "by_treatment": {
+    "1": {
+      "group_sections": 32,
+      "observed_mean_congestion_40periods": 114.1875,
+      "observed_mean_gross_switches_39transitions": 59.46875,
+      "predicted_mean_congestion_40periods": {
+        "current_only": 193.58056640625,
+        "fixed_tau_8": 205.1455078125,
+        "nested_adaptive": 206.29833984375,
+        "static_prior": 227.30419921875
+      }
+    },
+    "2": {
+      "group_sections": 32,
+      "observed_mean_congestion_40periods": 112.40625,
+      "observed_mean_gross_switches_39transitions": 62.84375,
+      "predicted_mean_congestion_40periods": {
+        "current_only": 196.43701171875,
+        "fixed_tau_8": 212.28515625,
+        "nested_adaptive": 213.0380859375,
+        "static_prior": 236.4521484375
+      }
+    },
+    "3": {
+      "group_sections": 32,
+      "observed_mean_congestion_40periods": 112.3125,
+      "observed_mean_gross_switches_39transitions": 52.9375,
+      "predicted_mean_congestion_40periods": {
+        "current_only": 193.75341796875,
+        "fixed_tau_8": 213.91552734375,
+        "nested_adaptive": 215.0009765625,
+        "static_prior": 241.7255859375
+      }
+    }
+  },
+  "group_sections": 96,
+  "model_scores": {
+    "current_only": {
+      "congestion_group_total_mse": 8265.12142944336,
+      "gross_switch_group_total_mse": 492.16476270887586,
+      "resource_mse_kappa_polynomial": {
+        "A": 8265.12142944336,
+        "B": 1638.236592610677,
+        "D": 492.16476270887586
+      }
+    },
+    "fixed_tau_8": {
+      "congestion_group_total_mse": 10726.786079406738,
+      "gross_switch_group_total_mse": 352.1267581515842,
+      "resource_mse_kappa_polynomial": {
+        "A": 10726.786079406738,
+        "B": 1733.6705830891926,
+        "D": 352.1267581515842
+      }
+    },
+    "nested_adaptive": {
+      "congestion_group_total_mse": 10868.364082336426,
+      "gross_switch_group_total_mse": 356.9736785888672,
+      "resource_mse_kappa_polynomial": {
+        "A": 10868.364082336426,
+        "B": 1746.4059041341145,
+        "D": 356.9736785888672
+      }
+    },
+    "static_prior": {
+      "congestion_group_total_mse": 16053.24821472168,
+      "gross_switch_group_total_mse": 333.61482408311633,
+      "resource_mse_kappa_polynomial": {
+        "A": 16053.24821472168,
+        "B": 2036.3742930094402,
+        "D": 333.61482408311633
+      }
+    }
+  },
+  "nested_vs_online_congestion": {
+    "MSE_difference": 2603.2426528930664,
+    "alternative": "nested_adaptive",
+    "baseline": "current_only",
+    "metric": "congestion",
+    "session_resampling_95_descriptive": [
+      2020.7769622802734,
+      3138.2294540405273
+    ]
+  },
+  "nested_vs_static_congestion": {
+    "MSE_difference": -5184.884132385254,
+    "alternative": "nested_adaptive",
+    "baseline": "static_prior",
+    "metric": "congestion",
+    "session_resampling_95_descriptive": [
+      -5890.571632385254,
+      -4435.268409729004
+    ]
+  },
+  "scope": "40-period group-total prediction error conditional on observed prior section; no policy causal effect",
+  "seed": 20261121,
+  "start": "fair"
+}
