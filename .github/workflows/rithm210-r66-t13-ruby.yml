@@ -1,0 +1,27 @@
+name: RITHM-2.10 R66-T13 Native Ruby Friction Counterexamples
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ruby/rithm210/p3/r66_t13_*.rb'
+      - 'ruby/rithm210/p3/test_r66_t13_*.rb'
+      - '.github/workflows/rithm210-r66-t13-ruby.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-free-exact-proofs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: false
+      - name: Run T13 Ruby Rational / Minitest without original participant data
+        working-directory: ruby/rithm210/p3
+        run: |
+          ruby -I. -e 'Dir["test_r66_t13_*.rb"].sort.each { |f| require_relative f }'
+      - name: Print test-only five-cell counterexamples
+        working-directory: ruby/rithm210/p3
+        run: ruby r66_t13_counterexamples.rb
