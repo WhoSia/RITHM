@@ -87,9 +87,11 @@ def exact_legal_transport(world, treatment, horizon=40):
         raise ValueError('positive integer horizon required')
     p5, cost, gross = Fraction(0), Fraction(0), Fraction(0)
     per_period = []
-    for _ in range(horizon):
+    for period in range(horizon):
         per_period.append(p5)
         cost += 3 * p5
+        if period == horizon - 1:
+            break  # No off-horizon t=H -> H+1 movement is counted.
         leaving_four = (1 - p5) / 10
         returning_four = p5 * (0 if world == 'trap' and treatment == 'Full' else 1)
         gross += leaving_four + returning_four
