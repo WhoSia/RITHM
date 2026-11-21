@@ -1,0 +1,114 @@
+{
+  "allowed_members": {
+    "R61_SOURCE_REPLAY_SHA256.json": {
+      "bytes": 977,
+      "sha256": "d0e8834ce92e60c2a10be1aab0c09d60af89b5b362d749953256f1e7ae4cfca4"
+    },
+    "REPRODUCE_R61.md": {
+      "bytes": 2972,
+      "sha256": "80dec951215aa51503b143dd1b705aa7a336764242640130bd1cbf5101188af6"
+    },
+    "RITHM_R61_20261121.md": {
+      "bytes": 17525,
+      "sha256": "d95ff3df9653480df8293ea24bc367d1d6075dcc01e70dcddb52f8295877302b"
+    },
+    "r54_original_batch_clock.py": {
+      "bytes": 7678,
+      "sha256": "f25bcde2e3d1f2557a65d3b979a484ba0606dd04822d06ab91a98b0b105686c2"
+    },
+    "r59_prior_exposure.py": {
+      "bytes": 7802,
+      "sha256": "aeec1aeee37d494bc7d44f46e745aeaea7728712f0ea8dbe11d06e1d95dc95be"
+    },
+    "r60_cross_segment.py": {
+      "bytes": 10971,
+      "sha256": "60888c0a5238015744621071df89f0f27ef7ce28a339854c2404258f073247e2"
+    },
+    "r60_identity_placebo.py": {
+      "bytes": 4865,
+      "sha256": "fe4f2639b2b5bd114b83a567e0a9b2a2ea88fcf2696105ad0a8d3d29e5ade83c"
+    },
+    "r61_adaptive_prior.py": {
+      "bytes": 9306,
+      "sha256": "559bbeb8ea8baa81cd90b89cd2af22c9e20f7c65373708bdcd0f488106f88614"
+    },
+    "r61_build_archive.py": {
+      "bytes": 3235,
+      "sha256": "1956afdd73bd6d96b23702856f014cf1322f28f8181014214907cfd752a9a35e"
+    },
+    "r61_closed_loop.py": {
+      "bytes": 7660,
+      "sha256": "a887021e84044a53a491c0ec36cd9b303f4680bf60d4c873c47ac7d1b3a8d287"
+    },
+    "r61_identity_null.json": {
+      "bytes": 1717,
+      "sha256": "f63b8a9e367f907d079cf0392f5a5a4537191a671cf2d4b8aeccf7b1188375e2"
+    },
+    "r61_macro_diagnostics.json": {
+      "bytes": 5228,
+      "sha256": "a713af1dd36790a2f3a61cc5ec31bda94febd7cbf06f5e093d05e911c1fb98a6"
+    },
+    "r61_macro_diagnostics.py": {
+      "bytes": 3780,
+      "sha256": "fcd4ed22a469a5ed6d2185386f3e3d95d3219f3753ae460fd902ac8d6066b7ed"
+    },
+    "r61_matched_identity.py": {
+      "bytes": 4708,
+      "sha256": "0c8c5831f0d64eb1c05e8409ea8d61185a271b27649bd75ada5e026e4a76257d"
+    },
+    "r61_results.json": {
+      "bytes": 8474,
+      "sha256": "87b419c907578547686273c8ea7b0be5637b4d142b7dd1c029b347c8a9a20dec"
+    },
+    "r61_rollout_fair.json": {
+      "bytes": 3114,
+      "sha256": "a17b1eef5e1beb93421abf27d4a7d80f7c85c1abb128d7b8deb65f0ec165985e"
+    },
+    "r61_rollout_observed.json": {
+      "bytes": 3117,
+      "sha256": "70bd7bd5d0eb746891c49654edb22c6029b62fc9ae60ea858e9ded53f9e03594"
+    },
+    "r61_rollout_seed2.json": {
+      "bytes": 3114,
+      "sha256": "cb2b56c1483a8ad9877dea7b04fbb23cca7e88c3ce96e0902935b28a247e7fad"
+    },
+    "r61_run.py": {
+      "bytes": 3403,
+      "sha256": "586280c45e632b5d5dbc7cf31f8ea206d006f480b7e0c92aac9af2accd6ec619"
+    },
+    "r61_subgroups.json": {
+      "bytes": 2396,
+      "sha256": "02eb31252807f19f8ccfaabd2559056567ba9f4fd42cbff8622a52379dba5681"
+    },
+    "r61_subgroups.py": {
+      "bytes": 2013,
+      "sha256": "4eeb027adc317723ab40809c050f87a201d6d74972933b048ecb8c88892a76cc"
+    },
+    "r61_three_segment_results.json": {
+      "bytes": 1348,
+      "sha256": "05af1d80d1244c8db40d805aba8ac4791d93fe1427c18f2aeb7550da42ec4f81"
+    },
+    "r61_three_segment_rival.py": {
+      "bytes": 4724,
+      "sha256": "5605a39dfddcf9318d055b884bca0765794ab0157937a48b947d4f3d1c551348"
+    },
+    "test_r61_adaptive_prior.py": {
+      "bytes": 6794,
+      "sha256": "f15cfcc947db8ee184a7dd15b65fc440097379ae3484f719df264cc420bd6290"
+    },
+    "test_r61_macro_diagnostics.py": {
+      "bytes": 2041,
+      "sha256": "a47e33a0fcd06522fb5f6c5f8e518952e2e039806c8c1744035238177afc4e3b"
+    },
+    "test_r61_rollout_and_mechanism.py": {
+      "bytes": 5136,
+      "sha256": "1f73dfa538d813b830430ccb85bc446f267dd9cd65a340022589956c38e05f20"
+    }
+  },
+  "member_count": 27,
+  "original_human_replay_only_local": "Remote CI tests run on synthetic source-free data, not human rows.",
+  "private_human_zip_excluded": true,
+  "research": "RITHM P3-R61",
+  "source_free_test_count": 29,
+  "source_sha256_only": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953"
+}
