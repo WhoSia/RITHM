@@ -1,0 +1,27 @@
+name: RITHM R66-T9 Temporal Welfare Source-Free Tests
+on:
+  push:
+    branches:
+      - 'research/r66-t8-intake-identification-20261121'
+    paths:
+      - 'ruby/rithm210/p3/r66_t9_temporal_welfare.py'
+      - 'ruby/rithm210/p3/test_r66_t9_temporal_welfare.py'
+      - '.github/workflows/rithm210-r66-t9.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finite-horizon-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Temporal covariance bounds and differencing null (source free)
+        working-directory: ruby/rithm210/p3
+        run: |
+          python -m unittest -v test_r66_t9_temporal_welfare.py
+          python r66_t9_temporal_welfare.py
