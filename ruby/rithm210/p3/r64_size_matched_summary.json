@@ -1,0 +1,108 @@
+{
+  "version": "RITHM-2.10 P3-R64A",
+  "scope": "Author-approved original SHA256, reused 24-session sample; source-private; aggregate-only exploratory diagnostic. Sampled subpanels and Monte Carlo repeats are NOT independent new experiments.",
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "population": {
+    "total_sessions": 24,
+    "partial_target_sessions": 17,
+    "partial_group_sections": 32,
+    "partial_joint_transitions": 1248,
+    "actor_decisions_per_mask_original_source_no_or_full": 7488,
+    "actor_decisions_per_partial_mask": 3744
+  },
+  "method": {
+    "whole_session_holdout": true,
+    "actor_panel_indivisible_length": 39,
+    "matched_source_panel_count_equals_comparator_partial_count": true,
+    "panel_selection_without_outcomes": true,
+    "memory_tau": 8,
+    "shrink": 20,
+    "source_subsample_repetitions": 8,
+    "autonomous_40_round_subsamples": 3,
+    "mc_repetitions_per_group": 64,
+    "same_mc_uniform_streams": true,
+    "rollout_coin_seed": 20261121,
+    "original_future_values_seen_only_post_choice": true
+  },
+  "baseline": {
+    "partial_only": {
+      "one_step_actor_logloss": 0.494812735480238,
+      "one_step_joint_U_D_logloss": 1.890600177042488,
+      "autonomous_40_group_total_mse": 5546.8125
+    },
+    "unthinned_bridge": {
+      "one_step_actor_logloss": 0.4972735857391721,
+      "one_step_joint_U_D_logloss": 1.8922545472995214,
+      "autonomous_40_group_total_mse": 4648.13525390625
+    }
+  },
+  "matched": [
+    {
+      "panel_seed": 20261121,
+      "one_step_actor_logloss": 0.497667681,
+      "one_step_joint_U_D_logloss": 1.892453058,
+      "one_step_oldA4_Brier": 0.143018049,
+      "autonomous_40_group_total_mse": 4807.428223,
+      "MSE_equal17session_minus_partial": -629.534007,
+      "cluster_bootstrap95": [
+        -1396.3125,
+        63.4053309
+      ]
+    },
+    {
+      "panel_seed": 20261123,
+      "one_step_actor_logloss": 0.497505979,
+      "one_step_joint_U_D_logloss": 1.891784529,
+      "one_step_oldA4_Brier": 0.141293873,
+      "autonomous_40_group_total_mse": 4815.035156,
+      "MSE_equal17session_minus_partial": -561.23989,
+      "cluster_bootstrap95": [
+        -1207.9466912,
+        45.5459559
+      ]
+    },
+    {
+      "panel_seed": 20261125,
+      "one_step_actor_logloss": 0.499037186,
+      "one_step_joint_U_D_logloss": 1.898577199,
+      "one_step_oldA4_Brier": 0.14396069,
+      "autonomous_40_group_total_mse": 4979.425781,
+      "MSE_equal17session_minus_partial": -526.231158,
+      "cluster_bootstrap95": [
+        -1077.6686581,
+        33.6038603
+      ]
+    },
+    {
+      "panel_seed": 20261127,
+      "one_step_actor_logloss": 0.498887138,
+      "one_step_joint_U_D_logloss": 1.898872269,
+      "one_step_oldA4_Brier": 0.143904936
+    },
+    {
+      "panel_seed": 20261129,
+      "one_step_actor_logloss": 0.498010194,
+      "one_step_joint_U_D_logloss": 1.894148943,
+      "one_step_oldA4_Brier": 0.143131031
+    },
+    {
+      "panel_seed": 20261131,
+      "one_step_actor_logloss": 0.498910636,
+      "one_step_joint_U_D_logloss": 1.896679506,
+      "one_step_oldA4_Brier": 0.142561615
+    },
+    {
+      "panel_seed": 20261133,
+      "one_step_actor_logloss": 0.497561728,
+      "one_step_joint_U_D_logloss": 1.89395669,
+      "one_step_oldA4_Brier": 0.142004167
+    },
+    {
+      "panel_seed": 20261135,
+      "one_step_actor_logloss": 0.498285671,
+      "one_step_joint_U_D_logloss": 1.893741399,
+      "one_step_oldA4_Brier": 0.142612729
+    }
+  ],
+  "verdict": "All eight size-matched bridge one-step joint losses are higher than the Partial-only baseline. Three size-matched samples yield numerically smaller long-run group MSE but descriptive 17-session paired intervals each include zero. Remaining bridge advantage is not solely explained by 2x training panel size, yet robust/invariant structural transport is NOT established. Same original cohort reused after extensive exploration; independent validation HOLD."
+}
