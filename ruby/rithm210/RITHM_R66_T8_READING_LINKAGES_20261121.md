@@ -1,0 +1,27 @@
+# R66-T8 original paper reading: scientific mechanism and counterexamples
+
+Research OS 00_INTAKE raw PDFs are now either 10_PAPERS (12 metadata moves, same Drive file IDs) or 90_DUPLICATE_QUARANTINE (one apparent Yang 2026 duplicate, byte identity NOT yet proved). Detailed 13-paper reading notes included as a source-free document in the reproducibility archive.
+
+## Near-rationality and countereffects
+- **Akerlof & Yellen (1985), AER 75:708–720.** Proposition-level reasoning uses the envelope theorem: the loss due to near-optimal individual nonmaximization can be second-order while a corresponding shift in equilibrium is first-order. Do not infer all such shifts are socially undesirable or that every small behavior friction magnifies. New canonical ID `1c1elpo04YbUskg_9fwqZ2DLLYOeAxM-R`.
+- **Golosov & Lucas (2007), JPE 115:171–199.** Menu costs select firms with price distortions and idiosyncratic shocks; calibrated numerical shocks do NOT produce large persistent real effects. Central counterexample to an unconditional micro-to-macro amplification slogan. Canonical ID `1kDXarP7Rc1JzhF8JU13hK_lEckYhHQzD`.
+- **Hellwig & Veldkamp (2008 manuscript; journal 2009).** Strategic complementarity in the action can induce complementarity in the choice to acquire information, including synchronized planning dates; not proof that original N&Q players shared a latent clock. Version-specific canonical author MS ID `1b96ATqSIxrHFgXX9l6zeQ9RXGWCPHG5H`.
+
+## Dynamic route learning and different convergence notions
+- **Krichene, Drighès & Bayen (2015), SIAM Journal on Control and Optimization.** Sublinear *discounted* regret in non-atomic congestion obtains convergence of Cesàro-average strategies; stronger AREP-like approximation controls actual path convergence. Our finite six-player outcomes require actual pathwise and welfare checks, not merely time-averaged Nash claims. Canonical ID `1r0raEr_uONMDoRz2mssgSjZ79_3GaWpM`.
+- **Koochakzadeh & Yazıcıoğlu (2022 arXiv v1).** Priority-based simultaneous revisions are permitted only for *uncoupled* agents that do not affect one another's utilities or feasible moves; arbitrary synchronous revision can change stochastic stability. In a shared congestion route game, indiscriminate parallel revision is not automatically safe. Canonical preprint ID `1sDpwn7VlxOjltT5gNIeY0MaliakkurS6`.
+- **Li, Wang & Nie (2024 arXiv v2).** CumLog accumulates experiences instead of averaging them; asymptotic equilibrium convergence under specific population/dynamic assumptions. Treat finite 6-player counterfactual transfer and utility information as new independent proof obligations. Preprint ID `1cADSpcr1GEvx1wcMHL21MR3AzPXdp4Sd`.
+- **Yang et al. (2026), Mathematics 14:2910.** Full- and partial-information reinforcement dynamics and experiments; generic Proposition 3 as printed omits a condition needed for asymptotic attraction if only ΔV≤0. Exact non-attraction counterexamples in T8; no claim that paper's actual algorithm diverges. Existing canonical published ID `1MofuqZdbLl_PbArBstOr2TmR0XJvB11c`, intake same-size candidate is quarantined, SHA still unverified.
+
+## Recurrent spells, heterogeneity and information responses
+- **Alvarez, Borovičková & Shimer (2016 NBER 22188; 2024 published version separately needed).** Two repeated durations identify latent heterogeneity under inverse-Gaussian Brownian first-passage model and a drift-sign condition. This is NOT a generic two-spell identity result for unconstrained heterogeneous route choice. Canonical 2016 MS ID `116GlkgRGxC1lucfU2hER35KsAe5jQtfl`.
+- **Meneguzzer & Olivieri (2013), Procedia 87:44–59.** Thirty-person 50-round partial feedback experiment, route switching and experienced cost association, equilibrium occasionally attained yet transient. Canonical ID `1kZ7ANvNp2MOmqd-1Q0Igfs3JPXDsnzX2`.
+- **Meneguzzer (2023), Applied Sciences 13:3294.** Two-dimensional discrete nonlinear DTD with contrarian fraction and learning/inertia parameters; local stability judged using Jacobian trace/determinant Jury conditions. Contrarian behavior may dampen overconcentrated route recommendations but can destabilize in other parameter regions. New canonical ID `1Jp-xlSV1TNsJDw4BL8KP-67Yvg47J4wf`.
+
+## Distribution-shift and higher-order
+- **Ross, Gordon & Bagnell (2011), PMLR.** DAgger-type sequence-learning guarantee addresses policy-induced state distribution shift; historical one-step test set alone cannot guarantee actual 40-round deployed policy value. Canonical ID `1Znr6g_98hwGijHMKFZgmFLL13mQy11WJ`.
+- **March-Pons, Pastor-Satorras & Miguel (2026), npj Complexity.** Higher-order *social interaction* can break a multi-option consensus stalemate; not synonymous with third-order statistical action dependence used in R66-T6/T7. Canonical ID `1aAwBTOIa5WiO9tFxqvhKQDPtqRszXUvN`.
+- **Mak, Gisches & Rapoport (2014 original preprint, journal 2015).** Sequential en-route segment information versus precommitted routing; some information-induced inertia while route switches may offset at the aggregate level. Do not assign the journal year to the archived 2014 manuscript. Canonical author MS ID `1vWgj51a211ds9FFrorprzxOG1mkGDSii`.
+
+### Research judgment
+This reading makes the guiding RITHM conjecture conditional: **weak friction can be amplified, suppressed, or qualitatively redirected depending on actor selection, information complementarities, asynchronous/uncoupled revision, response heterogeneity, and the dynamic horizon.** Compare historical data, exact synthetic theorem and intervention experiments separately.
