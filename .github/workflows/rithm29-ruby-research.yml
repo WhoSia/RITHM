@@ -242,3 +242,24 @@ jobs:
           test ! -e rererequestforpermissiontouseexperimentalroutechoi.zip
           git diff --exit-code
           test -z "$(git status --porcelain)"
+
+  r59-autonomous-transport-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install isolated R59 exact SSM test dependency
+        run: python -m pip install -r ruby/rithm210/p3/requirements-r59.txt
+      - name: R59 16 source-free closed-loop and source selection tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r59_*.py' -v
+      - name: R58 20 source-free Appendix regression tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r58_*.py' -v
+      - name: Original-human source forbidden in CI checkout
+        run: |
+          test ! -f rererequestforpermissiontouseexperimentalroutechoi.zip
+          git diff --exit-code
+          test -z "$(git status --porcelain)"
