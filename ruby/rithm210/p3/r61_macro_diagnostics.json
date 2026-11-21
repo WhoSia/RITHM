@@ -1,0 +1,124 @@
+{
+  "limitation": "Descriptive whole-cohort occupancy; does not isolate common group shock or infer policy treatment response.",
+  "simulations_per_group": 64,
+  "source_groups": 96,
+  "start": "observed",
+  "whole_cohort_aggregate_no_original_rows": {
+    "current_only": {
+      "all": {
+        "choice_periods": 245760.0,
+        "excess_congestion_per_period": 4.7002197265625,
+        "gross_switches_per_internal_transition": 1.5342464610042734,
+        "n_from_prior_4_transitions": 75489.0,
+        "optimal_occupancy_4_fraction": 0.31468098958333335,
+        "p4_to4_given_prev4": 0.3766376558174039,
+        "p4_to4_with_no_switch_given_prev4": 0.17627733842016718
+      },
+      "first_10": {
+        "choice_periods": 61440.0,
+        "excess_congestion_per_period": 4.129296875,
+        "gross_switches_per_internal_transition": 1.5069986979166667,
+        "n_from_prior_4_transitions": 18303.0,
+        "optimal_occupancy_4_fraction": 0.3311360677083333,
+        "p4_to4_given_prev4": 0.3857837512976015,
+        "p4_to4_with_no_switch_given_prev4": 0.18002513249194121
+      },
+      "last_10": {
+        "choice_periods": 61440.0,
+        "excess_congestion_per_period": 5.27822265625,
+        "gross_switches_per_internal_transition": 1.5566243489583333,
+        "n_from_prior_4_transitions": 18427.0,
+        "optimal_occupancy_4_fraction": 0.2989908854166667,
+        "p4_to4_given_prev4": 0.36934932436099205,
+        "p4_to4_with_no_switch_given_prev4": 0.1736582189178922
+      }
+    },
+    "nested_adaptive": {
+      "all": {
+        "choice_periods": 245760.0,
+        "excess_congestion_per_period": 5.06605224609375,
+        "gross_switches_per_internal_transition": 1.6119207398504274,
+        "n_from_prior_4_transitions": 73240.0,
+        "optimal_occupancy_4_fraction": 0.30557861328125,
+        "p4_to4_given_prev4": 0.3663571818678318,
+        "p4_to4_with_no_switch_given_prev4": 0.1630802839978154
+      },
+      "first_10": {
+        "choice_periods": 61440.0,
+        "excess_congestion_per_period": 4.764697265625,
+        "gross_switches_per_internal_transition": 1.6253074363425926,
+        "n_from_prior_4_transitions": 17462.0,
+        "optimal_occupancy_4_fraction": 0.3143391927083333,
+        "p4_to4_given_prev4": 0.3667964723399382,
+        "p4_to4_with_no_switch_given_prev4": 0.16097812392623984
+      },
+      "last_10": {
+        "choice_periods": 61440.0,
+        "excess_congestion_per_period": 5.379541015625,
+        "gross_switches_per_internal_transition": 1.6122395833333334,
+        "n_from_prior_4_transitions": 18191.0,
+        "optimal_occupancy_4_fraction": 0.29567057291666665,
+        "p4_to4_given_prev4": 0.3615524160299049,
+        "p4_to4_with_no_switch_given_prev4": 0.16194821615084382
+      }
+    },
+    "source_observed": {
+      "all": {
+        "choice_periods": 3840.0,
+        "excess_congestion_per_period": 2.82421875,
+        "gross_switches_per_internal_transition": 1.4978632478632479,
+        "n_from_prior_4_transitions": 1569.0,
+        "optimal_occupancy_4_fraction": 0.4203125,
+        "p4_to4_given_prev4": 0.47737412364563414,
+        "p4_to4_with_no_switch_given_prev4": 0.3275971956660293
+      },
+      "first_10": {
+        "choice_periods": 960.0,
+        "excess_congestion_per_period": 3.190625,
+        "gross_switches_per_internal_transition": 1.6134259259259258,
+        "n_from_prior_4_transitions": 336.0,
+        "optimal_occupancy_4_fraction": 0.3875,
+        "p4_to4_given_prev4": 0.45535714285714285,
+        "p4_to4_with_no_switch_given_prev4": 0.28869047619047616
+      },
+      "last_10": {
+        "choice_periods": 960.0,
+        "excess_congestion_per_period": 2.434375,
+        "gross_switches_per_internal_transition": 1.38125,
+        "n_from_prior_4_transitions": 448.0,
+        "optimal_occupancy_4_fraction": 0.475,
+        "p4_to4_given_prev4": 0.5491071428571429,
+        "p4_to4_with_no_switch_given_prev4": 0.41294642857142855
+      }
+    },
+    "static_prior": {
+      "all": {
+        "choice_periods": 245760.0,
+        "excess_congestion_per_period": 5.5576904296875,
+        "gross_switches_per_internal_transition": 1.6426031650641026,
+        "n_from_prior_4_transitions": 69308.0,
+        "optimal_occupancy_4_fraction": 0.2889811197916667,
+        "p4_to4_given_prev4": 0.3570150631961678,
+        "p4_to4_with_no_switch_given_prev4": 0.16032781208518498
+      },
+      "first_10": {
+        "choice_periods": 61440.0,
+        "excess_congestion_per_period": 4.940673828125,
+        "gross_switches_per_internal_transition": 1.6359772858796295,
+        "n_from_prior_4_transitions": 17313.0,
+        "optimal_occupancy_4_fraction": 0.3118977864583333,
+        "p4_to4_given_prev4": 0.36770057182464044,
+        "p4_to4_with_no_switch_given_prev4": 0.1637497833997574
+      },
+      "last_10": {
+        "choice_periods": 61440.0,
+        "excess_congestion_per_period": 5.89638671875,
+        "gross_switches_per_internal_transition": 1.6513020833333334,
+        "n_from_prior_4_transitions": 16925.0,
+        "optimal_occupancy_4_fraction": 0.2755533854166667,
+        "p4_to4_given_prev4": 0.35208271787296896,
+        "p4_to4_with_no_switch_given_prev4": 0.15669128508124078
+      }
+    }
+  }
+}
