@@ -1,0 +1,32 @@
+# RITHM-2.10 P3-R64 — Prior-Art Collision Registry (2026-11-21)
+
+**Status: externally discoverable paper facts checked, NOT an exhaustive systematic literature review; no peer review was solicited.** This audit is retrospective and designed to prevent a sequence of marginal model improvements from being mistaken for novelty.
+
+| Prior work, verifiable link | Pre-existing overlap with RITHM | RITHM claim that cannot stand alone | Remaining narrower question |
+|---|---|---|---|
+| Noussair & Qiao, *Congestion Information and Efficiency: An Experiment*, Management Science online 2025-11-06, 2026 72(7):6229–6250. DOI [10.1287/mnsc.2023.00056](https://doi.org/10.1287/mnsc.2023.00056) | **The same experiment and source cohort**; No/Partial/Full information and time-varying congestion efficiency; Small Sample switching models | Original discovery that information can alter efficiency over time, or first model of switching on these data | Strong, externally discriminating benchmark against the ORIGINAL AUTHORS' Small Sample model, under its exact admissible information |
+| Mak, Gisches & Rapoport (2015), *Route vs. Segment*, [10.1111/poms.12312](https://doi.org/10.1111/poms.12312) | Experimental information, regret/minimization and inertia in repeated congestible routing | First linking information and route inertia | Specific conditional macro-stability comparison, not generic inertia |
+| Yu & Gao (2019), *Learning routing policies in a disrupted, congestible network with real-time information*, [10.1016/j.trc.2019.07.014](https://doi.org/10.1016/j.trc.2019.07.014) | Explicit comparison of one-step vs **full-trajectory** predictions and changing relative importance of inertia/learning | Originality of evaluating one-step versus long-horizon behavior or their different rankings | Congestion-specific joint stability metric and strictly matched actor information |
+| Qi, Jia, Qu & He (2023), *Investigating day-to-day route choices... Part I*, [10.1016/j.tra.2022.11.013](https://doi.org/10.1016/j.tra.2022.11.013) | 312 participants, repeated laboratory routing, route-dependent attraction/inertia, dynamics with stability theory | First route-dependent inertia model or first convergence theory | New identification or external transport claim with a separate test design |
+| Yang, Jia, Ren & Lei (2026-08-12), *Reinforcement Learning-Based Day-to-Day Route Choice Models Under Full and Partial Information Conditions*, [10.3390/math14162910](https://doi.org/10.3390/math14162910) | Information-specific reinforcement learning, laboratory experiments and direct EWA/Q-learning/mixed-logit/Selten variant baselines, stability condition | Generic novelty for a payoff feedback memory model fit under partial/full information | An explicitly new validation question not solved by existing RL benchmarks |
+| Ross, Gordon & Bagnell (2011), *A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning*, [PMLR AISTATS](https://proceedings.mlr.press/v15/ross11a.html) | Standard sequential distribution shift and compounded self-generated prediction error | A general theorem that one-step prediction can mislead long rollouts | Precisely characterize supported/unsupported transfer **under the exact six-person information structure**, if a new theorem is actually obtained |
+| Camerer & Ho (1999), *Experience-weighted Attraction Learning in Normal Form Games*, [10.1111/1468-0262.00054](https://doi.org/10.1111/1468-0262.00054) | Classical payoff-based learning, forgetting and unchosen payoff counterfactual feedback | First proposal of payoff-memory discount | Proper information-admissible EWA comparator respecting unchosen payoff visibility |
+
+## Immediate novelty-collision verdict
+
+**High-confidence negative**: route-choice inertia, payoff-based learning, information-condition differentiation, basic all-stay Fréchet bounds, the observation that one-step and long-horizon ranks differ, and distribution-shift warnings are not independently novel. Do not re-label old mechanics as new RITHM theorems or psychological discoveries.
+
+**Possible incremental contribution**: accurate original-author replication + legally constrained matched-feedback model competition + joint group-stability and generated-future evaluation. This is a **replication/benchmark or methods-note candidate**, not yet an independent mechanistic paper. The repeated same-24-session exploration must remain prominent.
+
+**Potential substantive new contribution**: explain and causally distinguish residual group stability **after** correct individual hazard calibration with genuinely independent controlled information perturbations or independently sourced compatible cohorts. R64 cannot infer that mechanism from the existing cohort alone.
+
+## Priority gap audit
+
+1. The repository's verified R61–R63B reports compare internal variants, but a faithful matched evaluation against original authors' **Small Sample** algorithm and modern **EWA/Q-learning/mixed logit** on the same legal information masks has NOT been verified in this audit. **HOLD** any literature-relative performance claim until implementations and original equations are checked.
+2. R63B's No/Full source has 7,488 original individual decisions per mask; Partial has only 3,744 per mask. Raw sample-size imbalance creates a nonmechanistic alternative explanation for its forecast advantage. R64A panel-matched re-evaluation directly tests this.
+3. Whole-original-session 17-target-session bootstrap is still reusing a heavily explored source; its intervals are descriptive. Repeating model search on the same cohort is not independent confirmation.
+4. 40-period original Value(t) is a fixed exogenous replay tape revealed only *after* simulated choice. It is an **ex-post environment-conditional forecast check**, not a demonstration of unconditional deployable 40-step forecast without knowledge of future exogenous conditions.
+5. Simulated information transitions do not identify policy causal welfare, strategic coordination, individual cognitive friction or an actual resource switching price κ.
+
+## Research decision
+Stop inventing extra common group latent states as the default. Preserve R61–R63 as evidentiary groundwork. Make **benchmark parity, cohort-size matching and independent validation design** the next mandatory gates. A novel mechanism is considered only if it survives all three. This is an internal adversarial assessment, **not** feedback from an independent human reviewer.
