@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "study": "P3-R65B independent source-free Full-informed SSM generative simulation",
+    "sourceRule": "Noussair Qiao Appendix B.1 Table4, Appendix D Table6(b)",
+    "fitted_q_according_to_authors": {
+      "Full_SSMq": 3,
+      "Full_SSM1_q_upper_bound": 4
+    },
+    "previouslyReplicatedIllustrative_SSM5_q": 5,
+    "authorRNGParity": false,
+    "numberOfIndependentHumanCohorts": 0
+  },
+  "seed_20261121": {
+    "repetitionsPerModel": 5000,
+    "sourceFree": true,
+    "originalLocalFullJSONsha256": "e6ed6569d8e8c0f1df87487adc8351b11e44f2526c9e753e3a7f3064311720f0",
+    "models": {
+      "author_R7_ssm5": {
+        "earlyA4StayCount": 12155,
+        "earlyOldA4Count": 20300,
+        "lateA4StayCount": 12222,
+        "lateOldA4Count": 24294,
+        "earlyP": 0.5987684729064039,
+        "lateP": 0.5030871820202519,
+        "lateMinusEarly": -0.09568129088615196,
+        "meanCostEarly": 4.874840000000002,
+        "meanCostLate": 4.487969999999997
+      },
+      "author_fitted_full_ssmq3": {
+        "earlyA4StayCount": 11906,
+        "earlyOldA4Count": 20528,
+        "lateA4StayCount": 11911,
+        "lateOldA4Count": 24088,
+        "earlyP": 0.5799883086515978,
+        "lateP": 0.4944785785453338,
+        "lateMinusEarly": -0.085509730106264,
+        "meanCostEarly": 4.8518999999999926,
+        "meanCostLate": 4.508009999999999
+      },
+      "author_fitted_full_ssm1q4": {
+        "earlyA4StayCount": 11812,
+        "earlyOldA4Count": 20843,
+        "lateA4StayCount": 11828,
+        "lateOldA4Count": 24306,
+        "earlyP": 0.5667130451470518,
+        "lateP": 0.486628815930223,
+        "lateMinusEarly": -0.08008422921682878,
+        "meanCostEarly": 4.824580000000007,
+        "meanCostLate": 4.491169999999997
+      }
+    }
+  },
+  "seed_20261123": {
+    "repetitionsPerModel": 5000,
+    "sourceFree": true,
+    "originalLocalFullJSONsha256": "fbda42c7dded68567945ba85a02a9c84eab4046eccb9028b5bb769e281ac8ddf",
+    "models": {
+      "author_R7_ssm5": {
+        "earlyA4StayCount": 12063,
+        "earlyOldA4Count": 20076,
+        "lateA4StayCount": 12147,
+        "lateOldA4Count": 24342,
+        "earlyP": 0.6008667065152421,
+        "lateP": 0.4990140497904856,
+        "lateMinusEarly": -0.10185265672475652,
+        "meanCostEarly": 4.8750399999999985,
+        "meanCostLate": 4.488630000000005
+      },
+      "author_fitted_full_ssmq3": {
+        "earlyA4StayCount": 11372,
+        "earlyOldA4Count": 20084,
+        "lateA4StayCount": 11383,
+        "lateOldA4Count": 23845,
+        "earlyP": 0.5662218681537542,
+        "lateP": 0.4773747116795974,
+        "lateMinusEarly": -0.08884715647415681,
+        "meanCostEarly": 4.862259999999994,
+        "meanCostLate": 4.519509999999992
+      },
+      "author_fitted_full_ssm1q4": {
+        "earlyA4StayCount": 12612,
+        "earlyOldA4Count": 21447,
+        "lateA4StayCount": 12533,
+        "lateOldA4Count": 24812,
+        "earlyP": 0.5880542733249405,
+        "lateP": 0.5051184910527164,
+        "lateMinusEarly": -0.08293578227222409,
+        "meanCostEarly": 4.803340000000007,
+        "meanCostLate": 4.486740000000003
+      }
+    }
+  },
+  "realFullOriginal_Historical": {
+    "earlyStay": 34,
+    "earlyOldA4": 154,
+    "lateStay": 150,
+    "lateOldA4": 257
+  },
+  "interpretation": "fit to average cost and route-A share need not capture age-conditioned group all-stay; code is independent source-free implementation; known hypotheses remain in play"
+}
