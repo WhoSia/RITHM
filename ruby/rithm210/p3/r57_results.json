@@ -1,0 +1,288 @@
+{
+  "exact_latent_spell_hazard_counterexample": {
+    "cases": 512,
+    "equal": true,
+    "hazards": {
+      "1": "11/40",
+      "10": "332687697779/6473753955580",
+      "2": "119/580",
+      "3": "1361/9220",
+      "5": "230321/2806420"
+    },
+    "horizon": 9
+  },
+  "limits": "Within-task tenure is left-censored by prior practice; prior A occupancy is an analyst predictor, not known to No-information participants. Model comparisons were explored retrospectively; no causal inertia or external-validity claims.",
+  "original_zip_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "population": {
+    "declared_switch_mismatches": 0,
+    "group_period_transitions": 5616,
+    "individual_choice_rows": 34560,
+    "sessions": 24
+  },
+  "primary_loso": {
+    "actor_level": {
+      "informed": {
+        "actor_brier": 0.18270679214295918,
+        "actor_logloss": 0.5476690377737663,
+        "route_permutation_actor_brier_skill": 0.00034134668818075475,
+        "route_permutation_actor_logloss_skill": 0.0010530911748880545,
+        "route_permutation_expected_actor_brier": 0.18304813883113993,
+        "route_permutation_expected_actor_logloss": 0.5487221289486544
+      },
+      "received_profit": {
+        "actor_brier": 0.18148051600028692,
+        "actor_logloss": 0.5446549367173168,
+        "route_permutation_actor_brier_skill": 0.001821794963275919,
+        "route_permutation_actor_logloss_skill": 0.004983854072932559,
+        "route_permutation_expected_actor_brier": 0.18330231096356284,
+        "route_permutation_expected_actor_logloss": 0.5496387907902494
+      },
+      "state_independent": {
+        "actor_brier": 0.18269331808685885,
+        "actor_logloss": 0.5478115293422314,
+        "route_permutation_actor_brier_skill": 0.0,
+        "route_permutation_actor_logloss_skill": 0.0,
+        "route_permutation_expected_actor_brier": 0.18269331808685885,
+        "route_permutation_expected_actor_logloss": 0.5478115293422314
+      },
+      "tenure": {
+        "actor_brier": 0.17342110818962014,
+        "actor_logloss": 0.5216907090728486,
+        "route_permutation_actor_brier_skill": 0.011993409094721158,
+        "route_permutation_actor_logloss_skill": 0.0352733899347617,
+        "route_permutation_expected_actor_brier": 0.1854145172843413,
+        "route_permutation_expected_actor_logloss": 0.5569640990076103
+      },
+      "tenure_profit": {
+        "actor_brier": 0.17273863864638433,
+        "actor_logloss": 0.5195574725109297,
+        "route_permutation_actor_brier_skill": 0.012655241522294997,
+        "route_permutation_actor_logloss_skill": 0.03812228168314158,
+        "route_permutation_expected_actor_brier": 0.18539388016867933,
+        "route_permutation_expected_actor_logloss": 0.5576797541940712
+      },
+      "tenure_profit_informed": {
+        "actor_brier": 0.17289645884690702,
+        "actor_logloss": 0.5198999535864556,
+        "route_permutation_actor_brier_skill": 0.012531098478783809,
+        "route_permutation_actor_logloss_skill": 0.038017989791664486,
+        "route_permutation_expected_actor_brier": 0.18542755732569083,
+        "route_permutation_expected_actor_logloss": 0.5579179433781201
+      }
+    },
+    "differences": {
+      "informed": {
+        "minus_baseline_equal_session_logloss": 0.0005899451747984988,
+        "session_bootstrap_95_percentile": [
+          -0.0020298076285063527,
+          0.0033349192802643126
+        ],
+        "sessions_improved": 13
+      },
+      "received_profit": {
+        "minus_baseline_equal_session_logloss": -0.00642246107317961,
+        "session_bootstrap_95_percentile": [
+          -0.011303656339787702,
+          -0.001190850350943277
+        ],
+        "sessions_improved": 19
+      },
+      "tenure": {
+        "minus_baseline_equal_session_logloss": -0.04336524433634139,
+        "session_bootstrap_95_percentile": [
+          -0.06739913729756032,
+          -0.02186570713141391
+        ],
+        "sessions_improved": 17
+      },
+      "tenure_profit": {
+        "minus_baseline_equal_session_logloss": -0.047862409686555675,
+        "session_bootstrap_95_percentile": [
+          -0.07047835564824444,
+          -0.026918877230965376
+        ],
+        "sessions_improved": 19
+      },
+      "tenure_profit_informed": {
+        "minus_baseline_equal_session_logloss": -0.047330836688167836,
+        "session_bootstrap_95_percentile": [
+          -0.06885639042654719,
+          -0.02810807170827212
+        ],
+        "sessions_improved": 19
+      }
+    },
+    "endpoint": "joint simultaneous (B-to-A, A-to-B) change counts",
+    "filtration": "only actual histories at and before t-1; treatment and analyst-known old occupancy",
+    "fixed_shrinkage_pseudoexposure": 20,
+    "incremental_feature_contrasts": {
+      "tenure_profit_informed_minus_tenure_profit": {
+        "mean_difference": 0.0005315729983878433,
+        "session_bootstrap_95_percentile": [
+          -0.0017896093203422965,
+          0.002652615131615447
+        ],
+        "sessions_improved": 11
+      },
+      "tenure_profit_minus_tenure": {
+        "mean_difference": -0.00449716535021429,
+        "session_bootstrap_95_percentile": [
+          -0.011086786308582258,
+          0.0025705230528096554
+        ],
+        "sessions_improved": 14
+      }
+    },
+    "models": {
+      "informed": {
+        "equal_session_brier": 0.8304268429847922,
+        "equal_session_logloss_nats": 2.0002037288537733,
+        "transition_equal_logloss_nats": 1.9832955163722266
+      },
+      "received_profit": {
+        "equal_session_brier": 0.8281603874793395,
+        "equal_session_logloss_nats": 1.993191322605795,
+        "transition_equal_logloss_nats": 1.9756798048050586
+      },
+      "state_independent": {
+        "equal_session_brier": 0.8302157103820479,
+        "equal_session_logloss_nats": 1.9996137836789747,
+        "transition_equal_logloss_nats": 1.9830114355122737
+      },
+      "tenure": {
+        "equal_session_brier": 0.8136636094799754,
+        "equal_session_logloss_nats": 1.9562485393426332,
+        "transition_equal_logloss_nats": 1.9404889371060121
+      },
+      "tenure_profit": {
+        "equal_session_brier": 0.8124071954510766,
+        "equal_session_logloss_nats": 1.951751373992419,
+        "transition_equal_logloss_nats": 1.9350478763352237
+      },
+      "tenure_profit_informed": {
+        "equal_session_brier": 0.812953705810649,
+        "equal_session_logloss_nats": 1.9522829469908067,
+        "transition_equal_logloss_nats": 1.936191938462544
+      }
+    },
+    "scope": "exploratory descriptive heldout prediction; not mechanism or causal identification",
+    "session_count": 24,
+    "stratified": {
+      "by_phase": {
+        "early": {
+          "informed": 2.063576139800507,
+          "received_profit": 2.0554571458426736,
+          "state_independent": 2.0623765662577016,
+          "tenure": 2.0534354803053496,
+          "tenure_profit": 2.04727840121564,
+          "tenure_profit_informed": 2.0459553755552187
+        },
+        "late": {
+          "informed": 1.939999938454376,
+          "received_profit": 1.9340387905307606,
+          "state_independent": 1.9399891402291842,
+          "tenure": 1.8639209454280525,
+          "tenure_profit": 1.8610006981303586,
+          "tenure_profit_informed": 1.8632941398546154
+        }
+      },
+      "by_treatment": {
+        "1": {
+          "informed": 2.025487670175485,
+          "received_profit": 2.011839816935467,
+          "state_independent": 2.025427133689707,
+          "tenure": 2.0085210318524886,
+          "tenure_profit": 1.9985365861998767,
+          "tenure_profit_informed": 1.9985365861998767
+        },
+        "2": {
+          "informed": 2.0415857970753533,
+          "received_profit": 2.0327989110477023,
+          "state_independent": 2.040056918589232,
+          "tenure": 1.9729012351545678,
+          "tenure_profit": 1.967657756916028,
+          "tenure_profit_informed": 1.9692524759111918
+        },
+        "3": {
+          "informed": 1.933537719310481,
+          "received_profit": 1.934935239834216,
+          "state_independent": 1.933357298757985,
+          "tenure": 1.8873233510208431,
+          "tenure_profit": 1.889059778861352,
+          "tenure_profit_informed": 1.889059778861352
+        }
+      }
+    },
+    "transition_count": 5616,
+    "within_route_assignment_diagnostic": {
+      "informed": {
+        "observed_actor_assignment_advantage": 0.0010530911748880614,
+        "session_bootstrap_95_percentile": [
+          0.00027133870584095804,
+          0.001820649229390292
+        ]
+      },
+      "received_profit": {
+        "observed_actor_assignment_advantage": 0.004983854072932535,
+        "session_bootstrap_95_percentile": [
+          0.0036243333721492125,
+          0.0063099109273469164
+        ]
+      },
+      "state_independent": {
+        "observed_actor_assignment_advantage": 1.3877787807814457e-17,
+        "session_bootstrap_95_percentile": [
+          2.3129646346357427e-18,
+          2.7755575615628914e-17
+        ]
+      },
+      "tenure": {
+        "observed_actor_assignment_advantage": 0.03527338993476169,
+        "session_bootstrap_95_percentile": [
+          0.030323149636708277,
+          0.04050223309287531
+        ]
+      },
+      "tenure_profit": {
+        "observed_actor_assignment_advantage": 0.03812228168314161,
+        "session_bootstrap_95_percentile": [
+          0.033519939845420774,
+          0.04279472986634526
+        ]
+      },
+      "tenure_profit_informed": {
+        "observed_actor_assignment_advantage": 0.03801798979166446,
+        "session_bootstrap_95_percentile": [
+          0.033355542145597716,
+          0.042567348542174234
+        ]
+      }
+    }
+  },
+  "privacy": "Aggregate scores and prior source SHA only; no participant, group, session IDs or raw rows.",
+  "retrospective_non_nested_smoothing_sensitivity": [
+    {
+      "equal_session_logloss_nats": {
+        "informed": 2.0005136749947536,
+        "received_profit": 1.993882957608708,
+        "state_independent": 1.9996137836789747,
+        "tenure": 1.9576196203909566,
+        "tenure_profit": 1.9546559927796068,
+        "tenure_profit_informed": 1.9549621612208867
+      },
+      "pseudo_exposure": 5
+    },
+    {
+      "equal_session_logloss_nats": {
+        "informed": 1.9998022751000295,
+        "received_profit": 1.9927423805504163,
+        "state_independent": 1.9996137836789747,
+        "tenure": 1.9556236376220038,
+        "tenure_profit": 1.9541273886255284,
+        "tenure_profit_informed": 1.956740598963919
+      },
+      "pseudo_exposure": 80
+    }
+  ],
+  "study": "RITHM-2.10-P3-R57"
+}
