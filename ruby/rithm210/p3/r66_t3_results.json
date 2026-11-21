@@ -1,0 +1,1797 @@
+{
+  "analysis_population": "48 groups x 4 conditions x 20 old-state early/late scored transitions, subset old nA=4; train every model without held-out original session",
+  "limitations": [
+    "original cohort repeatedly examined across RITHM R7-R66; exploratory after selection",
+    "old A4 and configuration age unavailable to originally uninformed players; analyst models NOT actor cognition",
+    "Endogenous was always last and selected information by price/incentive; not randomized",
+    "a model that predicts mean group welfare need not fit joint probability nor long-horizon generated welfare",
+    "residual can be marginal miscalibration; its sign does not identify clock covariance",
+    "public output contains no participant IDs, individual routes, group histories or individual payoffs"
+  ],
+  "models": {
+    "analyst_A4": "OLD A4 group occupancy, shrink count20 to legal coarse; cannot infer uninformed player cognition",
+    "analyst_A4_age": "OLD A4 + six-person configuration age (1/2/3-4/5+), shrink count25 to analyst_A4; analyst-only",
+    "analyst_A4_age_payoff": "OLD A4 + six-person configuration age + OWN tenure/payoff, shrink count30 to analyst_A4_age; analyst-only",
+    "legal_coarse": "treatment, epoch, own info, own previous route; all occupancy states train-only; LOSO original session",
+    "legal_payoff_tenure": "same + OWN received payoff at previous decision t (<4,4-8,>=8); shrink count 25 to own-tenure; legal at t+1",
+    "legal_tenure": "same + own route tenure (1/2/3-4/5+), shrink count 20"
+  },
+  "original_author_zip_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "paired_24_session_descriptive_bootstrap": {
+    "Endogenous_early": {
+      "accepted": 4000,
+      "differences": {
+        "analyst_A4_age": {
+          "actor_logloss": {
+            "delta": -0.000536575401223538,
+            "descriptive_95": [
+              -0.004680735379058831,
+              0.0038118836662724975
+            ]
+          },
+          "brier_allstay": {
+            "delta": 0.0015030253239525226,
+            "descriptive_95": [
+              -0.008379126071976217,
+              0.010957842515111421
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.04446191030826846,
+            "descriptive_95": [
+              -0.08098007846266864,
+              -0.0069206040574921746
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.10724928370146003,
+            "descriptive_95": [
+              -0.14883525744187054,
+              0.35746334377368605
+            ]
+          }
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss": {
+            "delta": -0.0044296192554239555,
+            "descriptive_95": [
+              -0.009834817416102093,
+              0.000825069674221246
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0033189825076123947,
+            "descriptive_95": [
+              -0.010061296176621104,
+              0.0033622011899419046
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.001280331459614259,
+            "descriptive_95": [
+              -0.03168179704420321,
+              0.0317719526086061
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.009769055083056699,
+            "descriptive_95": [
+              -0.18525520958036346,
+              0.2290598874880132
+            ]
+          }
+        },
+        "analyst_A4_age_payoff_vs_legal_payoff": {
+          "actor_logloss": {
+            "delta": 0.011002452170609522,
+            "descriptive_95": [
+              -0.007339280771989587,
+              0.03246771116133773
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.007460693410755476,
+            "descriptive_95": [
+              -0.03323626198578408,
+              0.022918207625134857
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.28052887688684924,
+            "descriptive_95": [
+              0.12051716201997364,
+              0.4323814068374424
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.6506249589780193,
+            "descriptive_95": [
+              -1.443966607257467,
+              0.2765898696135487
+            ]
+          }
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss": {
+            "delta": -0.0014710255609107215,
+            "descriptive_95": [
+              -0.007008035900186227,
+              0.00452641364252504
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.003886893058523966,
+            "descriptive_95": [
+              -0.00925383068894492,
+              0.0012917637234981794
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.05444606374849437,
+            "descriptive_95": [
+              0.02778535244975644,
+              0.08092146446033555
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.05460505541976879,
+            "descriptive_95": [
+              -0.11861806892789595,
+              0.23552028673733005
+            ]
+          }
+        }
+      },
+      "original_sessions": 24,
+      "paired_original_session_resamples": 4000
+    },
+    "Endogenous_late": {
+      "accepted": 4000,
+      "differences": {
+        "analyst_A4_age": {
+          "actor_logloss": {
+            "delta": -0.008040076611974256,
+            "descriptive_95": [
+              -0.015830274770889108,
+              0.00016118779242635384
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.01662281604262747,
+            "descriptive_95": [
+              -0.03332434796427203,
+              0.0010082374477462797
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.04495493721076349,
+            "descriptive_95": [
+              -0.12364958523472847,
+              0.026341307151799276
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.10883634756333915,
+            "descriptive_95": [
+              -0.39160687561144414,
+              0.1691155506566533
+            ]
+          }
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss": {
+            "delta": -0.02939612809842912,
+            "descriptive_95": [
+              -0.03852327588207116,
+              -0.019999936533053042
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.009078117179875056,
+            "descriptive_95": [
+              -0.015866189988859247,
+              -0.0023530155201116343
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.10094604749976466,
+            "descriptive_95": [
+              0.05299449754660912,
+              0.15090257249820005
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.2597439152449068,
+            "descriptive_95": [
+              -0.4583234928713047,
+              -0.06734482592238589
+            ]
+          }
+        },
+        "analyst_A4_age_payoff_vs_legal_payoff": {
+          "actor_logloss": {
+            "delta": 0.030586533596905052,
+            "descriptive_95": [
+              0.015659487349138357,
+              0.04457945285431336
+            ]
+          },
+          "brier_allstay": {
+            "delta": 0.011745155081391595,
+            "descriptive_95": [
+              -0.0029689461648508275,
+              0.025449822097707298
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.11407905275980779,
+            "descriptive_95": [
+              -0.007687330709947426,
+              0.2428514727203318
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.1798320443090793,
+            "descriptive_95": [
+              -0.6062447634703974,
+              0.30755586203451557
+            ]
+          }
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss": {
+            "delta": -0.003397894308801719,
+            "descriptive_95": [
+              -0.009140565467235462,
+              0.00344882174122757
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0020542625116856117,
+            "descriptive_95": [
+              -0.008128817949102085,
+              0.00421137476763786
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.04424626331373227,
+            "descriptive_95": [
+              -0.0037055422023070106,
+              0.09014650987225392
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.10063414544443461,
+            "descriptive_95": [
+              -0.10020394830536983,
+              0.3263353226289709
+            ]
+          }
+        }
+      },
+      "original_sessions": 24,
+      "paired_original_session_resamples": 4000
+    },
+    "Full_early": {
+      "accepted": 4000,
+      "differences": {
+        "analyst_A4_age": {
+          "actor_logloss": {
+            "delta": -0.006038979858518756,
+            "descriptive_95": [
+              -0.012010316911061969,
+              0.00017053507591835437
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0072750655746660065,
+            "descriptive_95": [
+              -0.01979561332026722,
+              0.003942857289895574
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.08407475276873061,
+            "descriptive_95": [
+              -0.13785981497247962,
+              -0.029528759184460518
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.14396586806725864,
+            "descriptive_95": [
+              -0.5269894442484926,
+              0.20190177346223237
+            ]
+          }
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss": {
+            "delta": -0.009759003619233653,
+            "descriptive_95": [
+              -0.01563542902079046,
+              -0.0039051851950019367
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0033857094265410947,
+            "descriptive_95": [
+              -0.006854289044873035,
+              0.00015360576671705206
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.04773627758975513,
+            "descriptive_95": [
+              -0.07318273171387188,
+              -0.024930484714936307
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.06033726005033557,
+            "descriptive_95": [
+              -0.39987639795592855,
+              0.18879872009038579
+            ]
+          }
+        },
+        "analyst_A4_age_payoff_vs_legal_payoff": {
+          "actor_logloss": {
+            "delta": -0.005430672494999289,
+            "descriptive_95": [
+              -0.01744204724545434,
+              0.006937255229522765
+            ]
+          },
+          "brier_allstay": {
+            "delta": 0.005747096294858867,
+            "descriptive_95": [
+              -0.0025635184208327444,
+              0.012596160210942536
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.17891362811060377,
+            "descriptive_95": [
+              0.11658749288928766,
+              0.24297444955427305
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.07918107450181289,
+            "descriptive_95": [
+              -0.45606219582995067,
+              0.6564177337318924
+            ]
+          }
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss": {
+            "delta": -0.0036555953649037853,
+            "descriptive_95": [
+              -0.009893497715619592,
+              0.003051029642323233
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.005714819985958575,
+            "descriptive_95": [
+              -0.012135071713309242,
+              -0.00048132645558759957
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.02592846115332792,
+            "descriptive_95": [
+              -0.004318816921668189,
+              0.05695079657336455
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.06697176589109333,
+            "descriptive_95": [
+              -0.11433816063857982,
+              0.23549891089633945
+            ]
+          }
+        }
+      },
+      "original_sessions": 24,
+      "paired_original_session_resamples": 4000
+    },
+    "Full_late": {
+      "accepted": 4000,
+      "differences": {
+        "analyst_A4_age": {
+          "actor_logloss": {
+            "delta": -0.028226925174487383,
+            "descriptive_95": [
+              -0.03887531936924926,
+              -0.016486728959308528
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.06360630486017782,
+            "descriptive_95": [
+              -0.08589101422425013,
+              -0.037046178085251874
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.0837153837022547,
+            "descriptive_95": [
+              -0.16703529722628097,
+              0.27805505150695997
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.7770258098169229,
+            "descriptive_95": [
+              -1.232231395931322,
+              -0.33175180319466424
+            ]
+          }
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss": {
+            "delta": -0.02011271907119716,
+            "descriptive_95": [
+              -0.027591898329418274,
+              -0.014003330083392024
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0050227525709591325,
+            "descriptive_95": [
+              -0.010972057717654554,
+              0.002402240913251058
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.08693194203882754,
+            "descriptive_95": [
+              0.05889033085404753,
+              0.11587394161398856
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.08359405722844748,
+            "descriptive_95": [
+              -0.259414976867383,
+              0.09766309121678951
+            ]
+          }
+        },
+        "analyst_A4_age_payoff_vs_legal_payoff": {
+          "actor_logloss": {
+            "delta": -0.004261764447881011,
+            "descriptive_95": [
+              -0.018015859681942803,
+              0.014562057514431681
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.03522647375723434,
+            "descriptive_95": [
+              -0.05646264474140708,
+              -0.008673270284143247
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.6937075508434903,
+            "descriptive_95": [
+              0.616409502189578,
+              0.7695163774547681
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.9307444125126354,
+            "descriptive_95": [
+              -1.5409297315730033,
+              -0.26009622817921674
+            ]
+          }
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss": {
+            "delta": -0.006925644723856039,
+            "descriptive_95": [
+              -0.010568492080360342,
+              -0.0029971626027540665
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.009599778539984949,
+            "descriptive_95": [
+              -0.013377245413602745,
+              -0.005055437342016078
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.028533236430532072,
+            "descriptive_95": [
+              -0.00279120221221163,
+              0.05502023584277238
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.0035063817145193354,
+            "descriptive_95": [
+              -0.16518128561628398,
+              0.22276625803421357
+            ]
+          }
+        }
+      },
+      "original_sessions": 24,
+      "paired_original_session_resamples": 4000
+    },
+    "No_early": {
+      "accepted": 4000,
+      "differences": {
+        "analyst_A4_age": {
+          "actor_logloss": {
+            "delta": -0.0018746626464023475,
+            "descriptive_95": [
+              -0.006432843421975143,
+              0.0027679472247600923
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0032814545566473563,
+            "descriptive_95": [
+              -0.007164016654923139,
+              0.0008069313154066005
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.032396431791187646,
+            "descriptive_95": [
+              -0.05557432101037638,
+              -0.008699036468658328
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.10685293159124498,
+            "descriptive_95": [
+              -0.2652763098451416,
+              0.04883326100862817
+            ]
+          }
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss": {
+            "delta": -0.006391572205623808,
+            "descriptive_95": [
+              -0.01297259120079286,
+              0.00015539562921457195
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.003765272011259979,
+            "descriptive_95": [
+              -0.008441865281373195,
+              0.0005563044088350011
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.005465290741549111,
+            "descriptive_95": [
+              -0.04618512920598561,
+              0.029720066059617314
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.0028213700683537013,
+            "descriptive_95": [
+              -0.2289804338594994,
+              0.22806184880532854
+            ]
+          }
+        },
+        "analyst_A4_age_payoff_vs_legal_payoff": {
+          "actor_logloss": {
+            "delta": 0.01146215152931307,
+            "descriptive_95": [
+              -0.0027016646928250676,
+              0.025353874063862247
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0025761193566422036,
+            "descriptive_95": [
+              -0.013683682653733431,
+              0.008009276261017023
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.17178587748589133,
+            "descriptive_95": [
+              0.0834447331910082,
+              0.25072989224155995
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.15120711656100028,
+            "descriptive_95": [
+              -0.6773138561566157,
+              0.3447460984696882
+            ]
+          }
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss": {
+            "delta": -0.007427974762658551,
+            "descriptive_95": [
+              -0.018306301804159986,
+              0.0030903252493951205
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.009036129463841108,
+            "descriptive_95": [
+              -0.016912260493856773,
+              -0.0018966270379901506
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.05598690944619905,
+            "descriptive_95": [
+              0.01915768121842054,
+              0.09235142319780143
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.1094371137827892,
+            "descriptive_95": [
+              -0.35720863929409674,
+              0.14999626309268876
+            ]
+          }
+        }
+      },
+      "original_sessions": 24,
+      "paired_original_session_resamples": 4000
+    },
+    "No_late": {
+      "accepted": 4000,
+      "differences": {
+        "analyst_A4_age": {
+          "actor_logloss": {
+            "delta": -0.0012009957283685146,
+            "descriptive_95": [
+              -0.0063659837464999924,
+              0.003925690954750927
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0004945022823484024,
+            "descriptive_95": [
+              -0.00676739711065838,
+              0.005913825966041897
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.08865550871511496,
+            "descriptive_95": [
+              -0.12209594755927755,
+              -0.058165165035039545
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.040420536610842106,
+            "descriptive_95": [
+              -0.2871639408711921,
+              0.16724584469331916
+            ]
+          }
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss": {
+            "delta": -0.026307990098445644,
+            "descriptive_95": [
+              -0.03659554498758971,
+              -0.01527216175160645
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.003513378437816961,
+            "descriptive_95": [
+              -0.006818217164744844,
+              -0.000582621506772879
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.09818771779482882,
+            "descriptive_95": [
+              0.032904240745839475,
+              0.15595705895967804
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.462162711712228,
+            "descriptive_95": [
+              -0.8123159594190241,
+              -0.10028239542422845
+            ]
+          }
+        },
+        "analyst_A4_age_payoff_vs_legal_payoff": {
+          "actor_logloss": {
+            "delta": 0.030560989297599594,
+            "descriptive_95": [
+              0.011692450850561531,
+              0.050855248728965796
+            ]
+          },
+          "brier_allstay": {
+            "delta": 0.022473561107689916,
+            "descriptive_95": [
+              -0.0035248956823060174,
+              0.06940536445017376
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.015771593438630438,
+            "descriptive_95": [
+              -0.18665084405132049,
+              0.12180554327596017
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.42530488367242825,
+            "descriptive_95": [
+              -0.2701335840691961,
+              1.3225617801444542
+            ]
+          }
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss": {
+            "delta": -0.00909913337790308,
+            "descriptive_95": [
+              -0.01668634897320659,
+              -0.0017090297976096736
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0030791049533179238,
+            "descriptive_95": [
+              -0.009127891088794776,
+              0.0025726341911609663
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.07415328916745467,
+            "descriptive_95": [
+              0.03897687978690184,
+              0.10870773987840288
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.27052185680153507,
+            "descriptive_95": [
+              -0.5754577406680355,
+              0.015691220847685372
+            ]
+          }
+        }
+      },
+      "original_sessions": 24,
+      "paired_original_session_resamples": 4000
+    },
+    "Partial_early": {
+      "accepted": 4000,
+      "differences": {
+        "analyst_A4_age": {
+          "actor_logloss": {
+            "delta": -0.006387949909983481,
+            "descriptive_95": [
+              -0.013102602196651492,
+              0.0011493604794043932
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.004391112852170476,
+            "descriptive_95": [
+              -0.013141371527250006,
+              0.004758556476081505
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.07453328571800558,
+            "descriptive_95": [
+              -0.12802419262141063,
+              -0.020647763090655608
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.21892965368801498,
+            "descriptive_95": [
+              -0.5984165366504115,
+              0.14635636166538468
+            ]
+          }
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss": {
+            "delta": -0.007344198283661396,
+            "descriptive_95": [
+              -0.011189797117204914,
+              -0.003966530763093112
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0023121740614133746,
+            "descriptive_95": [
+              -0.00488780785800802,
+              0.00020592911422392945
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.007263244776222866,
+            "descriptive_95": [
+              -0.009930883976700805,
+              0.025249890560867683
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.021241857061301772,
+            "descriptive_95": [
+              -0.21874758671641814,
+              0.16661454445712565
+            ]
+          }
+        },
+        "analyst_A4_age_payoff_vs_legal_payoff": {
+          "actor_logloss": {
+            "delta": 0.013307081274106847,
+            "descriptive_95": [
+              0.0001950502955848643,
+              0.025548786833018533
+            ]
+          },
+          "brier_allstay": {
+            "delta": 0.014701490189924005,
+            "descriptive_95": [
+              0.004529513182612438,
+              0.027935085108881236
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.14306392680065233,
+            "descriptive_95": [
+              0.06703780013076566,
+              0.2183107667166236
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.47051069965691994,
+            "descriptive_95": [
+              -0.24447079004790417,
+              1.3953346634676222
+            ]
+          }
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss": {
+            "delta": -0.00346427748643352,
+            "descriptive_95": [
+              -0.0084991153968475,
+              0.0020699768409004893
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.0047475066551739,
+            "descriptive_95": [
+              -0.009794457062134193,
+              -0.0004677687068942449
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.03518369308950736,
+            "descriptive_95": [
+              0.012326550519730785,
+              0.0609019548052353
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.07541402544164555,
+            "descriptive_95": [
+              -0.38137101041176535,
+              0.18911296976452974
+            ]
+          }
+        }
+      },
+      "original_sessions": 24,
+      "paired_original_session_resamples": 4000
+    },
+    "Partial_late": {
+      "accepted": 4000,
+      "differences": {
+        "analyst_A4_age": {
+          "actor_logloss": {
+            "delta": -0.013618502039964786,
+            "descriptive_95": [
+              -0.021050336325442454,
+              -0.0037102739231628656
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.03075170563596924,
+            "descriptive_95": [
+              -0.04603023272101764,
+              -0.014240973080361014
+            ]
+          },
+          "residual_welfare": {
+            "delta": -0.07721361960460332,
+            "descriptive_95": [
+              -0.19272785492170985,
+              0.03491897139258415
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.442205419146136,
+            "descriptive_95": [
+              -0.7525507037766079,
+              -0.07372315678116337
+            ]
+          }
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss": {
+            "delta": -0.017640155604041585,
+            "descriptive_95": [
+              -0.023562339832943313,
+              -0.011197038131518011
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.009923853423323276,
+            "descriptive_95": [
+              -0.01667265722653538,
+              -0.003081600616783503
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.08239837472583494,
+            "descriptive_95": [
+              0.03768590396579366,
+              0.1266514160016638
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.08965004699939882,
+            "descriptive_95": [
+              -0.29240838304389527,
+              0.16795492943408874
+            ]
+          }
+        },
+        "analyst_A4_age_payoff_vs_legal_payoff": {
+          "actor_logloss": {
+            "delta": 0.026111243026286146,
+            "descriptive_95": [
+              0.009778579865700354,
+              0.043404192367312244
+            ]
+          },
+          "brier_allstay": {
+            "delta": 0.01661423161786227,
+            "descriptive_95": [
+              0.004279761209062927,
+              0.027230120493027782
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.14298298833778805,
+            "descriptive_95": [
+              0.0017287776746583994,
+              0.2947872021612303
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": 0.01648486299766816,
+            "descriptive_95": [
+              -0.3843300128926508,
+              0.3916404622964773
+            ]
+          }
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss": {
+            "delta": -0.005507092547104631,
+            "descriptive_95": [
+              -0.011817602472970534,
+              0.0016404098834131298
+            ]
+          },
+          "brier_allstay": {
+            "delta": -0.010507928249146481,
+            "descriptive_95": [
+              -0.016301496235148955,
+              -0.004281670744577359
+            ]
+          },
+          "residual_welfare": {
+            "delta": 0.06335607536874044,
+            "descriptive_95": [
+              0.012487310923973483,
+              0.11345195103783134
+            ]
+          },
+          "welfare_sqerr": {
+            "delta": -0.1091361413048837,
+            "descriptive_95": [
+              -0.27422790839322886,
+              0.07687946336717211
+            ]
+          }
+        }
+      },
+      "original_sessions": 24,
+      "paired_original_session_resamples": 4000
+    }
+  },
+  "pooled": {
+    "Endogenous": {
+      "early": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.4514296234524466,
+          "brier_allstay_mean": 0.24373495188364033,
+          "n_old_A4_transitions": 219,
+          "observed_allstay_mean": 0.3744292237442922,
+          "observed_down_mean": 0.4977168949771689,
+          "observed_gross_mean": 1.0547945205479452,
+          "observed_up_mean": 0.5570776255707762,
+          "observed_welfare_mean": 2.1232876712328768,
+          "pred_allstay_mean": 0.29332516963853866,
+          "pred_gross_mean": 1.0923013708559999,
+          "pred_welfare_mean": 2.5957199208393402,
+          "residual_welfare_mean": -0.47243224960646474,
+          "welfare_sqerr_mean": 10.441778537811944
+        },
+        "analyst_A4_age": {
+          "actor_logloss_mean": 0.45089304805122343,
+          "brier_allstay_mean": 0.245237977207593,
+          "n_old_A4_transitions": 219,
+          "observed_allstay_mean": 0.3744292237442922,
+          "observed_down_mean": 0.4977168949771689,
+          "observed_gross_mean": 1.0547945205479452,
+          "observed_up_mean": 0.5570776255707762,
+          "observed_welfare_mean": 2.1232876712328768,
+          "pred_allstay_mean": 0.2862277716520564,
+          "pred_gross_mean": 1.1202335735719755,
+          "pred_welfare_mean": 2.640181831147611,
+          "residual_welfare_mean": -0.5168941599147332,
+          "welfare_sqerr_mean": 10.549027821513393
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss_mean": 0.4464634287957995,
+          "brier_allstay_mean": 0.24191899469998077,
+          "n_old_A4_transitions": 219,
+          "observed_allstay_mean": 0.3744292237442922,
+          "observed_down_mean": 0.4977168949771689,
+          "observed_gross_mean": 1.0547945205479452,
+          "observed_up_mean": 0.5570776255707762,
+          "observed_welfare_mean": 2.1232876712328768,
+          "pred_allstay_mean": 0.288679262475463,
+          "pred_gross_mean": 1.1159901208442178,
+          "pred_welfare_mean": 2.638901499687996,
+          "residual_welfare_mean": -0.5156138284551194,
+          "welfare_sqerr_mean": 10.55879687659645
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.4651063441676513,
+          "brier_allstay_mean": 0.27394780683497777,
+          "n_old_A4_transitions": 219,
+          "observed_allstay_mean": 0.3744292237442922,
+          "observed_down_mean": 0.4977168949771689,
+          "observed_gross_mean": 1.0547945205479452,
+          "observed_up_mean": 0.5570776255707762,
+          "observed_welfare_mean": 2.1232876712328768,
+          "pred_allstay_mean": 0.1857059849503084,
+          "pred_gross_mean": 1.433938128712751,
+          "pred_welfare_mean": 3.1397525763340983,
+          "residual_welfare_mean": -1.0164649051012231,
+          "welfare_sqerr_mean": 11.402722232983312
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss_mean": 0.4354609766251893,
+          "brier_allstay_mean": 0.24937968811073605,
+          "n_old_A4_transitions": 219,
+          "observed_allstay_mean": 0.3744292237442922,
+          "observed_down_mean": 0.4977168949771689,
+          "observed_gross_mean": 1.0547945205479452,
+          "observed_up_mean": 0.5570776255707762,
+          "observed_welfare_mean": 2.1232876712328768,
+          "pred_allstay_mean": 0.23353457973080102,
+          "pred_gross_mean": 1.3345276641645036,
+          "pred_welfare_mean": 2.9194303765748453,
+          "residual_welfare_mean": -0.7961427053419678,
+          "welfare_sqerr_mean": 11.20942183557447
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.43693200218609995,
+          "brier_allstay_mean": 0.25326658116926004,
+          "n_old_A4_transitions": 219,
+          "observed_allstay_mean": 0.3744292237442922,
+          "observed_down_mean": 0.4977168949771689,
+          "observed_gross_mean": 1.0547945205479452,
+          "observed_up_mean": 0.5570776255707762,
+          "observed_welfare_mean": 2.1232876712328768,
+          "pred_allstay_mean": 0.21948627922001201,
+          "pred_gross_mean": 1.3689401039155107,
+          "pred_welfare_mean": 2.9738764403233406,
+          "residual_welfare_mean": -0.8505887690904625,
+          "welfare_sqerr_mean": 11.154816780154714
+        }
+      },
+      "late": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.42906230554247454,
+          "brier_allstay_mean": 0.2362859022184439,
+          "n_old_A4_transitions": 224,
+          "observed_allstay_mean": 0.36607142857142855,
+          "observed_down_mean": 0.45089285714285715,
+          "observed_gross_mean": 0.9776785714285714,
+          "observed_up_mean": 0.5267857142857143,
+          "observed_welfare_mean": 1.6205357142857142,
+          "pred_allstay_mean": 0.32678943362307267,
+          "pred_gross_mean": 1.0120053203552566,
+          "pred_welfare_mean": 2.4334606912355867,
+          "residual_welfare_mean": -0.8129249769498764,
+          "welfare_sqerr_mean": 5.996723601218937
+        },
+        "analyst_A4_age": {
+          "actor_logloss_mean": 0.42102222893050056,
+          "brier_allstay_mean": 0.21966308617581662,
+          "n_old_A4_transitions": 224,
+          "observed_allstay_mean": 0.36607142857142855,
+          "observed_down_mean": 0.45089285714285715,
+          "observed_gross_mean": 0.9776785714285714,
+          "observed_up_mean": 0.5267857142857143,
+          "observed_welfare_mean": 1.6205357142857142,
+          "pred_allstay_mean": 0.32322595217900874,
+          "pred_gross_mean": 1.0437020823915968,
+          "pred_welfare_mean": 2.478415628446359,
+          "residual_welfare_mean": -0.8578799141606391,
+          "welfare_sqerr_mean": 5.887887253655605
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss_mean": 0.3916261008320717,
+          "brier_allstay_mean": 0.21058496899594153,
+          "n_old_A4_transitions": 224,
+          "observed_allstay_mean": 0.36607142857142855,
+          "observed_down_mean": 0.45089285714285715,
+          "observed_gross_mean": 0.9776785714285714,
+          "observed_up_mean": 0.5267857142857143,
+          "observed_welfare_mean": 1.6205357142857142,
+          "pred_allstay_mean": 0.3412967511515982,
+          "pred_gross_mean": 0.9951432325076074,
+          "pred_welfare_mean": 2.3774695809465882,
+          "residual_welfare_mean": -0.756933866660875,
+          "welfare_sqerr_mean": 5.628143338410702
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.43986497034236066,
+          "brier_allstay_mean": 0.2571215723297121,
+          "n_old_A4_transitions": 224,
+          "observed_allstay_mean": 0.36607142857142855,
+          "observed_down_mean": 0.45089285714285715,
+          "observed_gross_mean": 0.9776785714285714,
+          "observed_up_mean": 0.5267857142857143,
+          "observed_welfare_mean": 1.6205357142857142,
+          "pred_allstay_mean": 0.20874634205689088,
+          "pred_gross_mean": 1.3563011269586003,
+          "pred_welfare_mean": 3.0191670669529174,
+          "residual_welfare_mean": -1.3986313526672032,
+          "welfare_sqerr_mean": 7.18780054922639
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss_mean": 0.3610395672351669,
+          "brier_allstay_mean": 0.19883981391454988,
+          "n_old_A4_transitions": 224,
+          "observed_allstay_mean": 0.36607142857142855,
+          "observed_down_mean": 0.45089285714285715,
+          "observed_gross_mean": 0.9776785714285714,
+          "observed_up_mean": 0.5267857142857143,
+          "observed_welfare_mean": 1.6205357142857142,
+          "pred_allstay_mean": 0.2904316886627401,
+          "pred_gross_mean": 1.1541331392952217,
+          "pred_welfare_mean": 2.4915486337063952,
+          "residual_welfare_mean": -0.8710129194206827,
+          "welfare_sqerr_mean": 5.807975382719783
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.36443746154396855,
+          "brier_allstay_mean": 0.2008940764262354,
+          "n_old_A4_transitions": 224,
+          "observed_allstay_mean": 0.36607142857142855,
+          "observed_down_mean": 0.45089285714285715,
+          "observed_gross_mean": 0.9776785714285714,
+          "observed_up_mean": 0.5267857142857143,
+          "observed_welfare_mean": 1.6205357142857142,
+          "pred_allstay_mean": 0.2798517375833687,
+          "pred_gross_mean": 1.1719767305146847,
+          "pred_welfare_mean": 2.5357948970201276,
+          "residual_welfare_mean": -0.9152591827344152,
+          "welfare_sqerr_mean": 5.707341237275344
+        }
+      }
+    },
+    "Full": {
+      "early": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.4921493316952627,
+          "brier_allstay_mean": 0.17535981157820682,
+          "n_old_A4_transitions": 154,
+          "observed_allstay_mean": 0.22077922077922077,
+          "observed_down_mean": 0.538961038961039,
+          "observed_gross_mean": 1.3571428571428572,
+          "observed_up_mean": 0.8181818181818182,
+          "observed_welfare_mean": 3.0194805194805197,
+          "pred_allstay_mean": 0.1915075227839993,
+          "pred_gross_mean": 1.3741995432941148,
+          "pred_welfare_mean": 3.1001954758327903,
+          "residual_welfare_mean": -0.080714956352269,
+          "welfare_sqerr_mean": 16.12912413604793
+        },
+        "analyst_A4_age": {
+          "actor_logloss_mean": 0.4861103518367439,
+          "brier_allstay_mean": 0.16808474600354054,
+          "n_old_A4_transitions": 154,
+          "observed_allstay_mean": 0.22077922077922077,
+          "observed_down_mean": 0.538961038961039,
+          "observed_gross_mean": 1.3571428571428572,
+          "observed_up_mean": 0.8181818181818182,
+          "observed_welfare_mean": 3.0194805194805197,
+          "pred_allstay_mean": 0.18013705863497806,
+          "pred_gross_mean": 1.4304486815528252,
+          "pred_welfare_mean": 3.1842702286015205,
+          "residual_welfare_mean": -0.1647897091209997,
+          "welfare_sqerr_mean": 15.985158267980689
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss_mean": 0.4763513482175106,
+          "brier_allstay_mean": 0.16469903657699964,
+          "n_old_A4_transitions": 154,
+          "observed_allstay_mean": 0.22077922077922077,
+          "observed_down_mean": 0.538961038961039,
+          "observed_gross_mean": 1.3571428571428572,
+          "observed_up_mean": 0.8181818181818182,
+          "observed_welfare_mean": 3.0194805194805197,
+          "pred_allstay_mean": 0.1784877885821253,
+          "pred_gross_mean": 1.435461529136832,
+          "pred_welfare_mean": 3.232006506191275,
+          "residual_welfare_mean": -0.21252598671075482,
+          "welfare_sqerr_mean": 15.924821007930355
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.5036965097822956,
+          "brier_allstay_mean": 0.1817741708559176,
+          "n_old_A4_transitions": 154,
+          "observed_allstay_mean": 0.22077922077922077,
+          "observed_down_mean": 0.538961038961039,
+          "observed_gross_mean": 1.3571428571428572,
+          "observed_up_mean": 0.8181818181818182,
+          "observed_welfare_mean": 3.0194805194805197,
+          "pred_allstay_mean": 0.1259687586004074,
+          "pred_gross_mean": 1.7065174453862544,
+          "pred_welfare_mean": 3.4819432140654807,
+          "residual_welfare_mean": -0.4624626945849625,
+          "welfare_sqerr_mean": 16.29847332076622
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss_mean": 0.4817820207125095,
+          "brier_allstay_mean": 0.15895194028214074,
+          "n_old_A4_transitions": 154,
+          "observed_allstay_mean": 0.22077922077922077,
+          "observed_down_mean": 0.538961038961039,
+          "observed_gross_mean": 1.3571428571428572,
+          "observed_up_mean": 0.8181818181818182,
+          "observed_welfare_mean": 3.0194805194805197,
+          "pred_allstay_mean": 0.1453691775167449,
+          "pred_gross_mean": 1.63072666825509,
+          "pred_welfare_mean": 3.4109201343018767,
+          "residual_welfare_mean": -0.3914396148213585,
+          "welfare_sqerr_mean": 15.845639933428528
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.4854376160774137,
+          "brier_allstay_mean": 0.1646667602680993,
+          "n_old_A4_transitions": 154,
+          "observed_allstay_mean": 0.22077922077922077,
+          "observed_down_mean": 0.538961038961039,
+          "observed_gross_mean": 1.3571428571428572,
+          "observed_up_mean": 0.8181818181818182,
+          "observed_welfare_mean": 3.0194805194805197,
+          "pred_allstay_mean": 0.13653731204721142,
+          "pred_gross_mean": 1.6683671571486425,
+          "pred_welfare_mean": 3.436848595455206,
+          "residual_welfare_mean": -0.4173680759746864,
+          "welfare_sqerr_mean": 15.778668167537441
+        }
+      },
+      "late": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.3138274409368743,
+          "brier_allstay_mean": 0.25230943131790723,
+          "n_old_A4_transitions": 257,
+          "observed_allstay_mean": 0.5836575875486382,
+          "observed_down_mean": 0.27626459143968873,
+          "observed_gross_mean": 0.5836575875486382,
+          "observed_up_mean": 0.30739299610894943,
+          "observed_welfare_mean": 1.3307392996108949,
+          "pred_allstay_mean": 0.5240027590884211,
+          "pred_gross_mean": 0.6068208209716771,
+          "pred_welfare_mean": 1.608349937383164,
+          "residual_welfare_mean": -0.277610637772272,
+          "welfare_sqerr_mean": 6.15907659450673
+        },
+        "analyst_A4_age": {
+          "actor_logloss_mean": 0.2856005157623871,
+          "brier_allstay_mean": 0.1887031264577292,
+          "n_old_A4_transitions": 257,
+          "observed_allstay_mean": 0.5836575875486382,
+          "observed_down_mean": 0.27626459143968873,
+          "observed_gross_mean": 0.5836575875486382,
+          "observed_up_mean": 0.30739299610894943,
+          "observed_welfare_mean": 1.3307392996108949,
+          "pred_allstay_mean": 0.5612325899649339,
+          "pred_gross_mean": 0.5980166032813872,
+          "pred_welfare_mean": 1.524634553680912,
+          "residual_welfare_mean": -0.1938952540700165,
+          "welfare_sqerr_mean": 5.3820507846898105
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss_mean": 0.26548779669118977,
+          "brier_allstay_mean": 0.18368037388677017,
+          "n_old_A4_transitions": 257,
+          "observed_allstay_mean": 0.5836575875486382,
+          "observed_down_mean": 0.27626459143968873,
+          "observed_gross_mean": 0.5836575875486382,
+          "observed_up_mean": 0.30739299610894943,
+          "observed_welfare_mean": 1.3307392996108949,
+          "pred_allstay_mean": 0.5832121907591612,
+          "pred_gross_mean": 0.5634348990476497,
+          "pred_welfare_mean": 1.4377026116420855,
+          "residual_welfare_mean": -0.10696331203118911,
+          "welfare_sqerr_mean": 5.29845672746136
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.34707198295101305,
+          "brier_allstay_mean": 0.3435336312764134,
+          "n_old_A4_transitions": 257,
+          "observed_allstay_mean": 0.5836575875486382,
+          "observed_down_mean": 0.27626459143968873,
+          "observed_gross_mean": 0.5836575875486382,
+          "observed_up_mean": 0.30739299610894943,
+          "observed_welfare_mean": 1.3307392996108949,
+          "pred_allstay_mean": 0.27190201917146933,
+          "pred_gross_mean": 1.152071402453204,
+          "pred_welfare_mean": 2.705362428421245,
+          "residual_welfare_mean": -1.3746231288103492,
+          "welfare_sqerr_mean": 7.953156850361106
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss_mean": 0.2697495611390709,
+          "brier_allstay_mean": 0.21890684764400448,
+          "n_old_A4_transitions": 257,
+          "observed_allstay_mean": 0.5836575875486382,
+          "observed_down_mean": 0.27626459143968873,
+          "observed_gross_mean": 0.5836575875486382,
+          "observed_up_mean": 0.30739299610894943,
+          "observed_welfare_mean": 1.3307392996108949,
+          "pred_allstay_mean": 0.3965700924238453,
+          "pred_gross_mean": 0.9279616718244799,
+          "pred_welfare_mean": 2.131410162485575,
+          "residual_welfare_mean": -0.8006708628746787,
+          "welfare_sqerr_mean": 6.229201139973997
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.27667520586292726,
+          "brier_allstay_mean": 0.22850662618398954,
+          "n_old_A4_transitions": 257,
+          "observed_allstay_mean": 0.5836575875486382,
+          "observed_down_mean": 0.27626459143968873,
+          "observed_gross_mean": 0.5836575875486382,
+          "observed_up_mean": 0.30739299610894943,
+          "observed_welfare_mean": 1.3307392996108949,
+          "pred_allstay_mean": 0.3870240186161081,
+          "pred_gross_mean": 0.9463022892313072,
+          "pred_welfare_mean": 2.1599433989161048,
+          "residual_welfare_mean": -0.829204099305212,
+          "welfare_sqerr_mean": 6.22569475825948
+        }
+      }
+    },
+    "No": {
+      "early": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.5259361137178105,
+          "brier_allstay_mean": 0.17825110446239262,
+          "n_old_A4_transitions": 170,
+          "observed_allstay_mean": 0.2235294117647059,
+          "observed_down_mean": 0.6647058823529411,
+          "observed_gross_mean": 1.4176470588235295,
+          "observed_up_mean": 0.7529411764705882,
+          "observed_welfare_mean": 2.911764705882353,
+          "pred_allstay_mean": 0.18471781761550737,
+          "pred_gross_mean": 1.4301469917194205,
+          "pred_welfare_mean": 3.111676224475816,
+          "residual_welfare_mean": -0.19991151859346115,
+          "welfare_sqerr_mean": 16.921879090782433
+        },
+        "analyst_A4_age": {
+          "actor_logloss_mean": 0.5240614510714082,
+          "brier_allstay_mean": 0.17496964990574548,
+          "n_old_A4_transitions": 170,
+          "observed_allstay_mean": 0.2235294117647059,
+          "observed_down_mean": 0.6647058823529411,
+          "observed_gross_mean": 1.4176470588235295,
+          "observed_up_mean": 0.7529411764705882,
+          "observed_welfare_mean": 2.911764705882353,
+          "pred_allstay_mean": 0.18289805286537092,
+          "pred_gross_mean": 1.4410129819165816,
+          "pred_welfare_mean": 3.1440726562669994,
+          "residual_welfare_mean": -0.23230795038464874,
+          "welfare_sqerr_mean": 16.815026159191188
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss_mean": 0.5176698788657845,
+          "brier_allstay_mean": 0.17120437789448542,
+          "n_old_A4_transitions": 170,
+          "observed_allstay_mean": 0.2235294117647059,
+          "observed_down_mean": 0.6647058823529411,
+          "observed_gross_mean": 1.4176470588235295,
+          "observed_up_mean": 0.7529411764705882,
+          "observed_welfare_mean": 2.911764705882353,
+          "pred_allstay_mean": 0.18389675499314495,
+          "pred_gross_mean": 1.436365338577899,
+          "pred_welfare_mean": 3.1495379470085516,
+          "residual_welfare_mean": -0.2377732411261978,
+          "welfare_sqerr_mean": 16.817847529259538
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.5279256891090156,
+          "brier_allstay_mean": 0.18372302357301712,
+          "n_old_A4_transitions": 170,
+          "observed_allstay_mean": 0.2235294117647059,
+          "observed_down_mean": 0.6647058823529411,
+          "observed_gross_mean": 1.4176470588235295,
+          "observed_up_mean": 0.7529411764705882,
+          "observed_welfare_mean": 2.911764705882353,
+          "pred_allstay_mean": 0.12929193059464283,
+          "pred_gross_mean": 1.6803365332502749,
+          "pred_welfare_mean": 3.425659165553183,
+          "residual_welfare_mean": -0.5138944596708355,
+          "welfare_sqerr_mean": 17.087523654173133
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss_mean": 0.5062077273364713,
+          "brier_allstay_mean": 0.1737804972511278,
+          "n_old_A4_transitions": 170,
+          "observed_allstay_mean": 0.2235294117647059,
+          "observed_down_mean": 0.6647058823529411,
+          "observed_gross_mean": 1.4176470588235295,
+          "observed_up_mean": 0.7529411764705882,
+          "observed_welfare_mean": 2.911764705882353,
+          "pred_allstay_mean": 0.14839528685454959,
+          "pred_gross_mean": 1.6054755849148956,
+          "pred_welfare_mean": 3.321323824494443,
+          "residual_welfare_mean": -0.40955911861208916,
+          "welfare_sqerr_mean": 16.969054645820542
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.5136357020991298,
+          "brier_allstay_mean": 0.18281662671496882,
+          "n_old_A4_transitions": 170,
+          "observed_allstay_mean": 0.2235294117647059,
+          "observed_down_mean": 0.6647058823529411,
+          "observed_gross_mean": 1.4176470588235295,
+          "observed_up_mean": 0.7529411764705882,
+          "observed_welfare_mean": 2.911764705882353,
+          "pred_allstay_mean": 0.13595400873823246,
+          "pred_gross_mean": 1.6612945649575506,
+          "pred_welfare_mean": 3.377310733940641,
+          "residual_welfare_mean": -0.4655460280582879,
+          "welfare_sqerr_mean": 17.078491759603324
+        }
+      },
+      "late": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.5307426216754414,
+          "brier_allstay_mean": 0.18031523008365344,
+          "n_old_A4_transitions": 189,
+          "observed_allstay_mean": 0.2275132275132275,
+          "observed_down_mean": 0.6984126984126984,
+          "observed_gross_mean": 1.4232804232804233,
+          "observed_up_mean": 0.7248677248677249,
+          "observed_welfare_mean": 2.6507936507936507,
+          "pred_allstay_mean": 0.1853407250956395,
+          "pred_gross_mean": 1.4363093894284535,
+          "pred_welfare_mean": 3.135356030580792,
+          "residual_welfare_mean": -0.48456237978714395,
+          "welfare_sqerr_mean": 15.493905156431044
+        },
+        "analyst_A4_age": {
+          "actor_logloss_mean": 0.5295416259470729,
+          "brier_allstay_mean": 0.17982072780130484,
+          "n_old_A4_transitions": 189,
+          "observed_allstay_mean": 0.2275132275132275,
+          "observed_down_mean": 0.6984126984126984,
+          "observed_gross_mean": 1.4232804232804233,
+          "observed_up_mean": 0.7248677248677249,
+          "observed_welfare_mean": 2.6507936507936507,
+          "pred_allstay_mean": 0.16905688875914257,
+          "pred_gross_mean": 1.5119738105742264,
+          "pred_welfare_mean": 3.2240115392959074,
+          "residual_welfare_mean": -0.5732178885022585,
+          "welfare_sqerr_mean": 15.453484619820193
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss_mean": 0.5032336358486273,
+          "brier_allstay_mean": 0.1763073493634878,
+          "n_old_A4_transitions": 189,
+          "observed_allstay_mean": 0.2275132275132275,
+          "observed_down_mean": 0.6984126984126984,
+          "observed_gross_mean": 1.4232804232804233,
+          "observed_up_mean": 0.7248677248677249,
+          "observed_welfare_mean": 2.6507936507936507,
+          "pred_allstay_mean": 0.17994447123564908,
+          "pred_gross_mean": 1.4599502844280943,
+          "pred_welfare_mean": 3.1258238215010805,
+          "residual_welfare_mean": -0.47503017070743037,
+          "welfare_sqerr_mean": 14.991321908107972
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.532518039560697,
+          "brier_allstay_mean": 0.18499466449616397,
+          "n_old_A4_transitions": 189,
+          "observed_allstay_mean": 0.2275132275132275,
+          "observed_down_mean": 0.6984126984126984,
+          "observed_gross_mean": 1.4232804232804233,
+          "observed_up_mean": 0.7248677248677249,
+          "observed_welfare_mean": 2.6507936507936507,
+          "pred_allstay_mean": 0.13716793468142754,
+          "pred_gross_mean": 1.6468432200595444,
+          "pred_welfare_mean": 3.405133610713473,
+          "residual_welfare_mean": -0.7543399599198286,
+          "welfare_sqerr_mean": 15.803982823857835
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss_mean": 0.47267264655102753,
+          "brier_allstay_mean": 0.15383378825579794,
+          "n_old_A4_transitions": 189,
+          "observed_allstay_mean": 0.2275132275132275,
+          "observed_down_mean": 0.6984126984126984,
+          "observed_gross_mean": 1.4232804232804233,
+          "observed_up_mean": 0.7248677248677249,
+          "observed_welfare_mean": 2.6507936507936507,
+          "pred_allstay_mean": 0.17560366278718578,
+          "pred_gross_mean": 1.5145898009458,
+          "pred_welfare_mean": 3.1100522280624507,
+          "residual_welfare_mean": -0.4592585772687996,
+          "welfare_sqerr_mean": 14.566017024435537
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.4817717799289306,
+          "brier_allstay_mean": 0.15691289320911578,
+          "n_old_A4_transitions": 189,
+          "observed_allstay_mean": 0.2275132275132275,
+          "observed_down_mean": 0.6984126984126984,
+          "observed_gross_mean": 1.4232804232804233,
+          "observed_up_mean": 0.7248677248677249,
+          "observed_welfare_mean": 2.6507936507936507,
+          "pred_allstay_mean": 0.1613891558217895,
+          "pred_gross_mean": 1.5655983676053442,
+          "pred_welfare_mean": 3.184205517229904,
+          "residual_welfare_mean": -0.5334118664362538,
+          "welfare_sqerr_mean": 14.836538881237086
+        }
+      }
+    },
+    "Partial": {
+      "early": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.5391079768752746,
+          "brier_allstay_mean": 0.19660262876214088,
+          "n_old_A4_transitions": 198,
+          "observed_allstay_mean": 0.2474747474747475,
+          "observed_down_mean": 0.7323232323232324,
+          "observed_gross_mean": 1.4747474747474747,
+          "observed_up_mean": 0.7424242424242424,
+          "observed_welfare_mean": 3.090909090909091,
+          "pred_allstay_mean": 0.16834167225465727,
+          "pred_gross_mean": 1.5021796896673396,
+          "pred_welfare_mean": 3.2309214068231804,
+          "residual_welfare_mean": -0.14001231591409158,
+          "welfare_sqerr_mean": 20.5805335845248
+        },
+        "analyst_A4_age": {
+          "actor_logloss_mean": 0.5327200269652911,
+          "brier_allstay_mean": 0.1922115159099704,
+          "n_old_A4_transitions": 198,
+          "observed_allstay_mean": 0.2474747474747475,
+          "observed_down_mean": 0.7323232323232324,
+          "observed_gross_mean": 1.4747474747474747,
+          "observed_up_mean": 0.7424242424242424,
+          "observed_welfare_mean": 3.090909090909091,
+          "pred_allstay_mean": 0.1566767576274111,
+          "pred_gross_mean": 1.5714544225144937,
+          "pred_welfare_mean": 3.305454692541189,
+          "residual_welfare_mean": -0.21454560163209718,
+          "welfare_sqerr_mean": 20.361603930836797
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss_mean": 0.5253758286816296,
+          "brier_allstay_mean": 0.18989934184855692,
+          "n_old_A4_transitions": 198,
+          "observed_allstay_mean": 0.2474747474747475,
+          "observed_down_mean": 0.7323232323232324,
+          "observed_gross_mean": 1.4747474747474747,
+          "observed_up_mean": 0.7424242424242424,
+          "observed_welfare_mean": 3.090909090909091,
+          "pred_allstay_mean": 0.15548033209181966,
+          "pred_gross_mean": 1.58506430276024,
+          "pred_welfare_mean": 3.2981914477649674,
+          "residual_welfare_mean": -0.20728235685587446,
+          "welfare_sqerr_mean": 20.34036207377548
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.5458261466222025,
+          "brier_allstay_mean": 0.2058564990246042,
+          "n_old_A4_transitions": 198,
+          "observed_allstay_mean": 0.2474747474747475,
+          "observed_down_mean": 0.7323232323232324,
+          "observed_gross_mean": 1.4747474747474747,
+          "observed_up_mean": 0.7424242424242424,
+          "observed_welfare_mean": 3.090909090909091,
+          "pred_allstay_mean": 0.11371083746930973,
+          "pred_gross_mean": 1.7799276088461684,
+          "pred_welfare_mean": 3.5877969734188664,
+          "residual_welfare_mean": -0.4968878825097778,
+          "welfare_sqerr_mean": 20.731195455287637
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss_mean": 0.5120687474075228,
+          "brier_allstay_mean": 0.17519785165863308,
+          "n_old_A4_transitions": 198,
+          "observed_allstay_mean": 0.2474747474747475,
+          "observed_down_mean": 0.7323232323232324,
+          "observed_gross_mean": 1.4747474747474747,
+          "observed_up_mean": 0.7424242424242424,
+          "observed_welfare_mean": 3.090909090909091,
+          "pred_allstay_mean": 0.14044036716641833,
+          "pred_gross_mean": 1.6893759096028993,
+          "pred_welfare_mean": 3.4412553745656167,
+          "residual_welfare_mean": -0.3503462836565267,
+          "welfare_sqerr_mean": 19.869851374118568
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.5155330248939565,
+          "brier_allstay_mean": 0.17994535831380695,
+          "n_old_A4_transitions": 198,
+          "observed_allstay_mean": 0.2474747474747475,
+          "observed_down_mean": 0.7323232323232324,
+          "observed_gross_mean": 1.4747474747474747,
+          "observed_up_mean": 0.7424242424242424,
+          "observed_welfare_mean": 3.090909090909091,
+          "pred_allstay_mean": 0.1329047072565409,
+          "pred_gross_mean": 1.720063709031304,
+          "pred_welfare_mean": 3.476439067655126,
+          "residual_welfare_mean": -0.3855299767460338,
+          "welfare_sqerr_mean": 19.945265399560224
+        }
+      },
+      "late": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.46823805773613714,
+          "brier_allstay_mean": 0.2143871084549378,
+          "n_old_A4_transitions": 204,
+          "observed_allstay_mean": 0.28921568627450983,
+          "observed_down_mean": 0.553921568627451,
+          "observed_gross_mean": 1.142156862745098,
+          "observed_up_mean": 0.5882352941176471,
+          "observed_welfare_mean": 2.4558823529411766,
+          "pred_allstay_mean": 0.2566274247386066,
+          "pred_gross_mean": 1.184700281504698,
+          "pred_welfare_mean": 2.764899180320098,
+          "residual_welfare_mean": -0.309016827378921,
+          "welfare_sqerr_mean": 13.206381126864416
+        },
+        "analyst_A4_age": {
+          "actor_logloss_mean": 0.4546195556961725,
+          "brier_allstay_mean": 0.18363540281896884,
+          "n_old_A4_transitions": 204,
+          "observed_allstay_mean": 0.28921568627450983,
+          "observed_down_mean": 0.553921568627451,
+          "observed_gross_mean": 1.142156862745098,
+          "observed_up_mean": 0.5882352941176471,
+          "observed_welfare_mean": 2.4558823529411766,
+          "pred_allstay_mean": 0.24517454410461068,
+          "pred_gross_mean": 1.2389874832886576,
+          "pred_welfare_mean": 2.8421127999247013,
+          "residual_welfare_mean": -0.3862304469835239,
+          "welfare_sqerr_mean": 12.76417570771828
+        },
+        "analyst_A4_age_payoff": {
+          "actor_logloss_mean": 0.4369794000921307,
+          "brier_allstay_mean": 0.1737115493956454,
+          "n_old_A4_transitions": 204,
+          "observed_allstay_mean": 0.28921568627450983,
+          "observed_down_mean": 0.553921568627451,
+          "observed_gross_mean": 1.142156862745098,
+          "observed_up_mean": 0.5882352941176471,
+          "observed_welfare_mean": 2.4558823529411766,
+          "pred_allstay_mean": 0.25779399617194404,
+          "pred_gross_mean": 1.2013752873723835,
+          "pred_welfare_mean": 2.7597144251988652,
+          "residual_welfare_mean": -0.30383207225768927,
+          "welfare_sqerr_mean": 12.67452566071889
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.4818143479416077,
+          "brier_allstay_mean": 0.229555827052144,
+          "n_old_A4_transitions": 204,
+          "observed_allstay_mean": 0.28921568627450983,
+          "observed_down_mean": 0.553921568627451,
+          "observed_gross_mean": 1.142156862745098,
+          "observed_up_mean": 0.5882352941176471,
+          "observed_welfare_mean": 2.4558823529411766,
+          "pred_allstay_mean": 0.15026729479459386,
+          "pred_gross_mean": 1.5787669653303618,
+          "pred_welfare_mean": 3.363634015125483,
+          "residual_welfare_mean": -0.9077516621843015,
+          "welfare_sqerr_mean": 13.870397389958917
+        },
+        "legal_payoff_tenure": {
+          "actor_logloss_mean": 0.41086815706584456,
+          "brier_allstay_mean": 0.15709731777778319,
+          "n_old_A4_transitions": 204,
+          "observed_allstay_mean": 0.28921568627450983,
+          "observed_down_mean": 0.553921568627451,
+          "observed_gross_mean": 1.142156862745098,
+          "observed_up_mean": 0.5882352941176471,
+          "observed_welfare_mean": 2.4558823529411766,
+          "pred_allstay_mean": 0.21918043427607137,
+          "pred_gross_mean": 1.3932320294947411,
+          "pred_welfare_mean": 2.9026974135366537,
+          "residual_welfare_mean": -0.44681506059547715,
+          "welfare_sqerr_mean": 12.658040797721213
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.41637524961294947,
+          "brier_allstay_mean": 0.16760524602692967,
+          "n_old_A4_transitions": 204,
+          "observed_allstay_mean": 0.28921568627450983,
+          "observed_down_mean": 0.553921568627451,
+          "observed_gross_mean": 1.142156862745098,
+          "observed_up_mean": 0.5882352941176471,
+          "observed_welfare_mean": 2.4558823529411766,
+          "pred_allstay_mean": 0.2053331097247027,
+          "pred_gross_mean": 1.4257802623622247,
+          "pred_welfare_mean": 2.9660534889053913,
+          "residual_welfare_mean": -0.5101711359642177,
+          "welfare_sqerr_mean": 12.767176939026111
+        }
+      }
+    }
+  },
+  "scope": "RITHM R66-T3 EXPLORATORY; actual historical original-author 24 sessions reused; noncausal",
+  "source_free_contract": true,
+  "source_roster": {
+    "conditions": [
+      "No",
+      "Partial",
+      "Full",
+      "Endogenous"
+    ],
+    "distinct_six_person_groups": 48,
+    "original_sessions": 24,
+    "periods": 40
+  }
+}
