@@ -1,0 +1,285 @@
+{
+  "cohort": "original 24 sessions target section3/4, period2..40; original cohort SHA-gated",
+  "info_boundary": "shared Z is hidden analyst joint-state representation; no occupancy input for uninformed actors",
+  "limitations": "Retrospective exploratory: 24 sessions reused in previous work. Marginal-preserving joint fit does not identify cooperation or causal welfare.",
+  "models": {
+    "current_only": {
+      "cohort": {
+        "group_transitions": 3744,
+        "individual_decisions": 22464,
+        "sessions": 24
+      },
+      "description": "Analyst joint prior-occupancy condition, not participant private information; source-free synthetic tests separated from original ZIP.",
+      "scores": {
+        "common_positive": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19342712864855874,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.19861602836164946,
+          "delta_logloss_from_independent": -0.001817250039589278,
+          "descriptive_cluster_95": [
+            -0.0034824254321880375,
+            -0.00015500862342961627
+          ],
+          "equal_session_group_logloss": 1.9381264690056785,
+          "equal_session_no_switch_brier": 0.1495883832872229,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.531921340549331,
+          "predicted_no_switch_mean": 0.18481028762247645,
+          "train_only_q_counts": {
+            "0.2": 24
+          }
+        },
+        "independent": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19551883386007968,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.18702259492687656,
+          "equal_session_group_logloss": 1.9399437190452677,
+          "equal_session_no_switch_brier": 0.15001263799259573,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.531921340549331,
+          "predicted_no_switch_mean": 0.17294073909508725
+        },
+        "pause_at_four": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19215597042100938,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.21042595855192978,
+          "delta_logloss_from_independent": -0.0009366351533144912,
+          "descriptive_cluster_95": [
+            -0.0038776477051124525,
+            0.0017168773271875881
+          ],
+          "equal_session_group_logloss": 1.9390070838919533,
+          "equal_session_no_switch_brier": 0.148225830708409,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.531921340549331,
+          "predicted_no_switch_mean": 0.1826962963901421,
+          "train_only_q_counts": {
+            "0.05": 24
+          }
+        },
+        "pause_at_four_stability_tuned": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.1895642542531397,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.290738566374862,
+          "delta_logloss_from_independent": 0.017850551027560373,
+          "descriptive_cluster_95": [
+            0.005816469070194508,
+            0.029100087762944944
+          ],
+          "equal_session_group_logloss": 1.9577942700728281,
+          "equal_session_no_switch_brier": 0.14563148064360548,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.531921340549331,
+          "predicted_no_switch_mean": 0.21615378874096136,
+          "train_only_q_counts": {
+            "0.2": 24
+          }
+        },
+        "pause_late_four": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19368105455918522,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.1987339833210528,
+          "delta_logloss_from_independent": 0.0001254554991216017,
+          "descriptive_cluster_95": [
+            -0.0016769837347986871,
+            0.002095833359186413
+          ],
+          "equal_session_group_logloss": 1.9400691745443894,
+          "equal_session_no_switch_brier": 0.1491283507041898,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.531921340549331,
+          "predicted_no_switch_mean": 0.17781293062457396,
+          "train_only_q_counts": {
+            "0.0": 1,
+            "0.05": 23
+          }
+        },
+        "pause_late_four_stability_tuned": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19254155916228027,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.254533462768679,
+          "delta_logloss_from_independent": 0.018755706480886546,
+          "descriptive_cluster_95": [
+            0.006528734539104843,
+            0.030380180887134994
+          ],
+          "equal_session_group_logloss": 1.9586994255261545,
+          "equal_session_no_switch_brier": 0.14767557557753946,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.531921340549331,
+          "predicted_no_switch_mean": 0.2011601963093825,
+          "train_only_q_counts": {
+            "0.2": 4,
+            "0.25": 20
+          }
+        },
+        "pause_uniform": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19551883386007968,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.18702259492687656,
+          "delta_logloss_from_independent": 0.0,
+          "descriptive_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "equal_session_group_logloss": 1.9399437190452677,
+          "equal_session_no_switch_brier": 0.15001263799259573,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.531921340549331,
+          "predicted_no_switch_mean": 0.17294073909508725,
+          "train_only_q_counts": {
+            "0.0": 24
+          }
+        }
+      }
+    },
+    "nested_adaptive": {
+      "cohort": {
+        "group_transitions": 3744,
+        "individual_decisions": 22464,
+        "sessions": 24
+      },
+      "description": "Analyst joint prior-occupancy condition, not participant private information; source-free synthetic tests separated from original ZIP.",
+      "scores": {
+        "common_positive": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.1918118465855381,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.19674761995315854,
+          "delta_logloss_from_independent": -0.0014877346300791554,
+          "descriptive_cluster_95": [
+            -0.003193150563767464,
+            0.00014626239511960257
+          ],
+          "equal_session_group_logloss": 1.929456134655321,
+          "equal_session_no_switch_brier": 0.14810968013847722,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.5583859673304334,
+          "predicted_no_switch_mean": 0.1801036150003108,
+          "train_only_q_counts": {
+            "0.2": 24
+          }
+        },
+        "independent": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19396288813937038,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.1851504908626363,
+          "equal_session_group_logloss": 1.9309438692854002,
+          "equal_session_no_switch_brier": 0.14862772006842878,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.5583859673304334,
+          "predicted_no_switch_mean": 0.16816724346824183
+        },
+        "pause_at_four": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19101275178823843,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.20775411033766925,
+          "delta_logloss_from_independent": 9.418689686781685e-05,
+          "descriptive_cluster_95": [
+            -0.002513469295759213,
+            0.0025378195483458745
+          ],
+          "equal_session_group_logloss": 1.931038056182268,
+          "equal_session_no_switch_brier": 0.1471171489054415,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.5583859673304334,
+          "predicted_no_switch_mean": 0.17757618721970075,
+          "train_only_q_counts": {
+            "0.0": 1,
+            "0.05": 23
+          }
+        },
+        "pause_at_four_stability_tuned": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.18791868584813934,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.2901096850121641,
+          "delta_logloss_from_independent": 0.020536835060529158,
+          "descriptive_cluster_95": [
+            0.007968450427421439,
+            0.03206781238709485
+          ],
+          "equal_session_group_logloss": 1.9514807043459292,
+          "equal_session_no_switch_brier": 0.14434071019463462,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.5583859673304334,
+          "predicted_no_switch_mean": 0.2118517198275907,
+          "train_only_q_counts": {
+            "0.2": 24
+          }
+        },
+        "pause_late_four": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19206864271761523,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.19690868269806291,
+          "delta_logloss_from_independent": 6.592351383138036e-05,
+          "descriptive_cluster_95": [
+            -0.0017730960028580767,
+            0.002063662303544489
+          ],
+          "equal_session_group_logloss": 1.9310097927992316,
+          "equal_session_no_switch_brier": 0.14772059692041986,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.5583859673304334,
+          "predicted_no_switch_mean": 0.17305863267606025,
+          "train_only_q_counts": {
+            "0.0": 1,
+            "0.05": 23
+          }
+        },
+        "pause_late_four_stability_tuned": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19071443437800184,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.25292179986410346,
+          "delta_logloss_from_independent": 0.018529964556941735,
+          "descriptive_cluster_95": [
+            0.005990544117663458,
+            0.03041087072490989
+          ],
+          "equal_session_group_logloss": 1.9494738338423419,
+          "equal_session_no_switch_brier": 0.14617565060003737,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.5583859673304334,
+          "predicted_no_switch_mean": 0.19649242898830382,
+          "train_only_q_counts": {
+            "0.2": 4,
+            "0.25": 20
+          }
+        },
+        "pause_uniform": {
+          "actual_mean_gross_switches": 1.5101495726495726,
+          "at_four_no_switch_brier": 0.19396288813937038,
+          "at_four_no_switch_observed": 0.3275971956660293,
+          "at_four_no_switch_predicted": 0.1851504908626363,
+          "delta_logloss_from_independent": 0.0,
+          "descriptive_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "equal_session_group_logloss": 1.9309438692854002,
+          "equal_session_no_switch_brier": 0.14862772006842878,
+          "observed_no_switch_frequency": 0.20557336182336183,
+          "predicted_mean_gross_switches": 1.5583859673304334,
+          "predicted_no_switch_mean": 0.16816724346824183,
+          "train_only_q_counts": {
+            "0.0": 24
+          }
+        }
+      }
+    }
+  },
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "trained": "q selected within 23 other source sessions on joint flow logloss per outer heldout session; actor p recomputed with heldout session excluded",
+  "version": "R62.0"
+}
