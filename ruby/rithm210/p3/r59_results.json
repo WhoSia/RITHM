@@ -1,0 +1,1227 @@
+{
+  "cohort": {
+    "group_period_transitions": 5616,
+    "group_sections": 144,
+    "historical_excess_per_group_by_treatment": {
+      "1": {
+        "early_excess": 32.3125,
+        "late_excess": 29.6875,
+        "per_group_excess": 123.4375,
+        "per_group_gross": 64.79166666666667
+      },
+      "2": {
+        "early_excess": 32,
+        "late_excess": 25.3125,
+        "per_group_excess": 119.625,
+        "per_group_gross": 65.64583333333333
+      },
+      "3": {
+        "early_excess": 41.125,
+        "late_excess": 20.6875,
+        "per_group_excess": 118.6875,
+        "per_group_gross": 55.166666666666664
+      }
+    },
+    "individual_one_step_targets": 33696,
+    "periods": 40,
+    "sessions": 24
+  },
+  "filtration": "simultaneous six-person routes before any same-period congestion or Value is revealed; only self-generated histories and prior private information used",
+  "independent_author_table_parity": {
+    "adjacent_section_matched_person_links": 576,
+    "cross_section_group_changes": 0,
+    "identical_common_cells": 483840,
+    "selected_enriched_40_period_rows": 34560,
+    "selection_warning": "Un-enriched table includes an additional 20-period pilot session; R59 follows the 24-session enriched analysis cohort. No unreported original table is equivalent by default.",
+    "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+    "un_enriched_actor_gross_switches": 8909,
+    "un_enriched_extra_20_period_pilot_rows": 360,
+    "un_enriched_preintersection_rows": 34920
+  },
+  "interpretation": "One-step observation-conditional predictive loss does not determine autonomous rollout macro calibration; initialization, treatment strata, exogenous Value tape, SSM lapse and external resource switch price change predictive rankings. Source conditions and 24-session resampling are descriptive; no mechanism or policy effect identified.",
+  "previous_section_actor_reuse": {
+    "adjacent_section_pairs": 48,
+    "cross_section_route_change_fraction": 0.2881944444444444,
+    "identity_permutation_null_95_descriptive": [
+      -0.015023568162689504,
+      0.13701323190772627
+    ],
+    "identity_permutation_null_mean": 0.059608610348097835,
+    "identity_permutation_stable_group_95_descriptive": [
+      0.05540576383828718,
+      0.20652284385243702
+    ],
+    "identity_permutation_stable_group_null_mean": 0.13109745101043074,
+    "informed_mask_changed_fraction": 0.6666666666666666,
+    "linked_actor_section_transitions": 576,
+    "observed_adjacent_section_actor_rate_pearson": 0.6109874255195226,
+    "scope": "Whole cohort source-derived descriptive person links; no private person/session identifiers in output. No causal persistence claim.",
+    "sessions": 24,
+    "source_selection": "trt 1..3, sections 2..4, Period 1..40, session not 2 or 101",
+    "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+    "stable_group_identity_permutation_one_sided_p_upper": 0.00024993751562109475,
+    "treatment_changed_fraction": 1,
+    "whole_session_resampling_95_descriptive": [
+      0.5138545294421383,
+      0.688294277126298
+    ],
+    "within_next_section_first_period_flip_fraction": 0.2378472222222222,
+    "within_previous_section_last_period_flip_fraction": 0.24479166666666666
+  },
+  "scenarios": {
+    "fair_fresh": {
+      "exogenous_values": "fresh_uniform",
+      "historical_full_minus_no": {
+        "early_excess": 8.8125,
+        "late_excess": -9.0,
+        "total_excess": -4.75,
+        "total_gross": -9.625000000000007
+      },
+      "initial_routes": "fair",
+      "models": {
+        "ewa_lite": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.43359375,
+              "excess": 153.25390625,
+              "gross": 84.55403645833333,
+              "late_excess": 38.18359375
+            },
+            "2": {
+              "early_excess": 40.51953125,
+              "excess": 146.353515625,
+              "gross": 81.22005208333333,
+              "late_excess": 34.857421875
+            },
+            "3": {
+              "early_excess": 45.53515625,
+              "excess": 164.54296875,
+              "gross": 80.42903645833333,
+              "late_excess": 39.150390625
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 16.0390625,
+            "session_resampling_95_descriptive": [
+              0.8999999999999986,
+              31.05859375
+            ]
+          },
+          "full_minus_no_excess_prediction": 11.2890625,
+          "group_excess_total_MSE": 2988.5490112304688,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2988.5490112304688,
+            "B": 2691.8821614583335,
+            "D": 853.3902859157986
+          },
+          "group_total_gross_MSE": 853.3902859157986,
+          "mc_se_total_excess_mean": 0.5393458548994806,
+          "predicted_total_excess_per_group": 154.716796875,
+          "predicted_total_gross_per_group": 82.06770833333333
+        },
+        "private_history": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 41.45703125,
+              "excess": 148.451171875,
+              "gross": 65.77799479166667,
+              "late_excess": 35.595703125
+            },
+            "2": {
+              "early_excess": 42.53125,
+              "excess": 152.982421875,
+              "gross": 66.17513020833333,
+              "late_excess": 36.52734375
+            },
+            "3": {
+              "early_excess": 44.55078125,
+              "excess": 150.875,
+              "gross": 55.538411458333336,
+              "late_excess": 35.388671875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 7.173828125,
+            "session_resampling_95_descriptive": [
+              -8.39375,
+              22.7025
+            ]
+          },
+          "full_minus_no_excess_prediction": 2.423828125,
+          "group_excess_total_MSE": 2817.4478759765625,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2817.4478759765625,
+            "B": 1275.8345133463542,
+            "D": 425.28951687282984
+          },
+          "group_total_gross_MSE": 425.28951687282984,
+          "mc_se_total_excess_mean": 0.5919975551402122,
+          "predicted_total_excess_per_group": 150.76953125,
+          "predicted_total_gross_per_group": 62.49717881944444
+        },
+        "private_route": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 44.40625,
+              "excess": 164.359375,
+              "gross": 65.19205729166667,
+              "late_excess": 40.359375
+            },
+            "2": {
+              "early_excess": 44.8125,
+              "excess": 166.484375,
+              "gross": 66.11393229166667,
+              "late_excess": 40.45703125
+            },
+            "3": {
+              "early_excess": 45.388671875,
+              "excess": 165.716796875,
+              "gross": 55.541015625,
+              "late_excess": 40.880859375
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 6.107421875,
+            "session_resampling_95_descriptive": [
+              -9.30163043478261,
+              20.767578125
+            ]
+          },
+          "full_minus_no_excess_prediction": 1.357421875,
+          "group_excess_total_MSE": 3821.8128051757812,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 3821.8128051757812,
+            "B": 1253.8334554036458,
+            "D": 425.7725762261285
+          },
+          "group_total_gross_MSE": 425.7725762261285,
+          "mc_se_total_excess_mean": 0.6338257490712702,
+          "predicted_total_excess_per_group": 165.52018229166666,
+          "predicted_total_gross_per_group": 62.28233506944444
+        },
+        "ssm1_9": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.94140625,
+              "excess": 107.228515625,
+              "gross": 50.179036458333336,
+              "late_excess": 22.197265625
+            },
+            "2": {
+              "early_excess": 36.16015625,
+              "excess": 108.3828125,
+              "gross": 60.040364583333336,
+              "late_excess": 24.283203125
+            },
+            "3": {
+              "early_excess": 51.314453125,
+              "excess": 143.83984375,
+              "gross": 76.15299479166667,
+              "late_excess": 30.64453125
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 41.361328125,
+            "session_resampling_95_descriptive": [
+              26.79719387755102,
+              54.85845588235294
+            ]
+          },
+          "full_minus_no_excess_prediction": 36.611328125,
+          "group_excess_total_MSE": 2093.3973999023438,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2093.3973999023438,
+            "B": 1730.9563395182292,
+            "D": 632.2405734592014
+          },
+          "group_total_gross_MSE": 632.2405734592014,
+          "mc_se_total_excess_mean": 0.7643196698591304,
+          "predicted_total_excess_per_group": 119.81705729166667,
+          "predicted_total_gross_per_group": 62.12413194444444
+        },
+        "ssm5": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.12890625,
+              "excess": 100.162109375,
+              "gross": 45.53125,
+              "late_excess": 19.900390625
+            },
+            "2": {
+              "early_excess": 36.1875,
+              "excess": 103.099609375,
+              "gross": 55.180338541666664,
+              "late_excess": 22.865234375
+            },
+            "3": {
+              "early_excess": 50.849609375,
+              "excess": 142.484375,
+              "gross": 74.30403645833333,
+              "late_excess": 29.9296875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 47.072265625,
+            "session_resampling_95_descriptive": [
+              31.05119680851064,
+              62.67647058823529
+            ]
+          },
+          "full_minus_no_excess_prediction": 42.322265625,
+          "group_excess_total_MSE": 2314.8175048828125,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2314.8175048828125,
+            "B": 2013.5914713541667,
+            "D": 723.7464192708334
+          },
+          "group_total_gross_MSE": 723.7464192708334,
+          "mc_se_total_excess_mean": 0.8298855079729106,
+          "predicted_total_excess_per_group": 115.24869791666667,
+          "predicted_total_gross_per_group": 58.338541666666664
+        }
+      },
+      "repetitions_per_group": 32,
+      "resource_mse_nonnegative_switch_price_crossover_kappa": 1.070146830011786,
+      "ssm1_9_minus_private_history_excess_mse_session_resampling": {
+        "cluster_session_resampling_95_descriptive": [
+          -1305.9012369791667,
+          -168.6966552734375
+        ],
+        "mean_mse_difference": -724.0504760742188
+      },
+      "ssm1_9_minus_private_history_kappa1_mse_session_resampling": {
+        "cluster_session_resampling_95_descriptive": [
+          -1151.5865677637412,
+          890.3111723856209
+        ],
+        "mean_mse_difference": -61.97759331597222
+      },
+      "ssm_lapse": 0.02
+    },
+    "fair_primary": {
+      "exogenous_values": "tape",
+      "historical_full_minus_no": {
+        "early_excess": 8.8125,
+        "late_excess": -9.0,
+        "total_excess": -4.75,
+        "total_gross": -9.625000000000007
+      },
+      "initial_routes": "fair",
+      "models": {
+        "ewa_lite": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 41.177734375,
+              "excess": 156.3828125,
+              "gross": 84.4765625,
+              "late_excess": 38.751953125
+            },
+            "2": {
+              "early_excess": 40.990234375,
+              "excess": 144.787109375,
+              "gross": 80.99674479166667,
+              "late_excess": 34.53125
+            },
+            "3": {
+              "early_excess": 45.158203125,
+              "excess": 163.900390625,
+              "gross": 80.13151041666667,
+              "late_excess": 39.30078125
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 12.267578125,
+            "session_resampling_95_descriptive": [
+              -2.2719414893617014,
+              26.108490566037737
+            ]
+          },
+          "full_minus_no_excess_prediction": 7.517578125,
+          "group_excess_total_MSE": 3001.63671875,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 3001.63671875,
+            "B": 2675.0808919270835,
+            "D": 833.7631496853298
+          },
+          "group_total_gross_MSE": 833.7631496853298,
+          "mc_se_total_excess_mean": 0.5419630276421937,
+          "predicted_total_excess_per_group": 155.0234375,
+          "predicted_total_gross_per_group": 81.86827256944444
+        },
+        "private_history": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 42.12109375,
+              "excess": 150.08984375,
+              "gross": 65.64322916666667,
+              "late_excess": 36.28515625
+            },
+            "2": {
+              "early_excess": 43.35546875,
+              "excess": 154.69140625,
+              "gross": 66.693359375,
+              "late_excess": 36.599609375
+            },
+            "3": {
+              "early_excess": 44.419921875,
+              "excess": 150.701171875,
+              "gross": 55.725911458333336,
+              "late_excess": 35.248046875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 5.361328125,
+            "session_resampling_95_descriptive": [
+              -9.336647727272727,
+              19.667553191489358
+            ]
+          },
+          "full_minus_no_excess_prediction": 0.611328125,
+          "group_excess_total_MSE": 2758.8081665039062,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2758.8081665039062,
+            "B": 1280.6792805989583,
+            "D": 428.1826443142361
+          },
+          "group_total_gross_MSE": 428.1826443142361,
+          "mc_se_total_excess_mean": 0.5858896033104446,
+          "predicted_total_excess_per_group": 151.82747395833334,
+          "predicted_total_gross_per_group": 62.6875
+        },
+        "private_route": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 44.537109375,
+              "excess": 165.09375,
+              "gross": 65.01953125,
+              "late_excess": 39.89453125
+            },
+            "2": {
+              "early_excess": 44.1640625,
+              "excess": 166.9921875,
+              "gross": 65.919921875,
+              "late_excess": 40.578125
+            },
+            "3": {
+              "early_excess": 45.40625,
+              "excess": 164.798828125,
+              "gross": 55.303385416666664,
+              "late_excess": 39.615234375
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 4.455078125,
+            "session_resampling_95_descriptive": [
+              -11.389668367346943,
+              19.255859375
+            ]
+          },
+          "full_minus_no_excess_prediction": -0.294921875,
+          "group_excess_total_MSE": 3906.5741577148438,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 3906.5741577148438,
+            "B": 1305.2847900390625,
+            "D": 434.1039564344618
+          },
+          "group_total_gross_MSE": 434.1039564344618,
+          "mc_se_total_excess_mean": 0.6284636855336457,
+          "predicted_total_excess_per_group": 165.62825520833334,
+          "predicted_total_gross_per_group": 62.08094618055556
+        },
+        "ssm1_9": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.85546875,
+              "excess": 105.837890625,
+              "gross": 49.81640625,
+              "late_excess": 21.646484375
+            },
+            "2": {
+              "early_excess": 37.029296875,
+              "excess": 111.400390625,
+              "gross": 61.331380208333336,
+              "late_excess": 25.212890625
+            },
+            "3": {
+              "early_excess": 51.296875,
+              "excess": 142.916015625,
+              "gross": 75.84765625,
+              "late_excess": 29.73046875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 41.828125,
+            "session_resampling_95_descriptive": [
+              26.694375,
+              56.60477941176471
+            ]
+          },
+          "full_minus_no_excess_prediction": 37.078125,
+          "group_excess_total_MSE": 2115.6911010742188,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2115.6911010742188,
+            "B": 1796.3155110677083,
+            "D": 669.6748114691841
+          },
+          "group_total_gross_MSE": 669.6748114691841,
+          "mc_se_total_excess_mean": 0.7562750728316154,
+          "predicted_total_excess_per_group": 120.05143229166667,
+          "predicted_total_gross_per_group": 62.331814236111114
+        },
+        "ssm5": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.7265625,
+              "excess": 101.400390625,
+              "gross": 45.539713541666664,
+              "late_excess": 20.21875
+            },
+            "2": {
+              "early_excess": 36.537109375,
+              "excess": 105.876953125,
+              "gross": 57.092447916666664,
+              "late_excess": 23.43359375
+            },
+            "3": {
+              "early_excess": 51.423828125,
+              "excess": 143.951171875,
+              "gross": 74.31119791666667,
+              "late_excess": 30.462890625
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 47.30078125,
+            "session_resampling_95_descriptive": [
+              31.34765625,
+              62.69625
+            ]
+          },
+          "full_minus_no_excess_prediction": 42.55078125,
+          "group_excess_total_MSE": 2355.3422241210938,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2355.3422241210938,
+            "B": 2033.3013509114583,
+            "D": 743.0410766601562
+          },
+          "group_total_gross_MSE": 743.0410766601562,
+          "mc_se_total_excess_mean": 0.8316683060666911,
+          "predicted_total_excess_per_group": 117.076171875,
+          "predicted_total_gross_per_group": 58.981119791666664
+        }
+      },
+      "repetitions_per_group": 32,
+      "resource_mse_nonnegative_switch_price_crossover_kappa": 0.8824920189819837,
+      "ssm1_9_minus_private_history_excess_mse_session_resampling": {
+        "cluster_session_resampling_95_descriptive": [
+          -1173.3765190972222,
+          -108.17478390957447
+        ],
+        "mean_mse_difference": -643.1170654296875
+      },
+      "ssm1_9_minus_private_history_kappa1_mse_session_resampling": {
+        "cluster_session_resampling_95_descriptive": [
+          -871.8541731770833,
+          998.4284066462862
+        ],
+        "mean_mse_difference": 114.01133219401042
+      },
+      "ssm_lapse": 0.02
+    },
+    "fair_raw_ssm": {
+      "exogenous_values": "tape",
+      "historical_full_minus_no": {
+        "early_excess": 8.8125,
+        "late_excess": -9.0,
+        "total_excess": -4.75,
+        "total_gross": -9.625000000000007
+      },
+      "initial_routes": "fair",
+      "models": {
+        "ssm1_9": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.267578125,
+              "excess": 99.19140625,
+              "gross": 43.650390625,
+              "late_excess": 19.392578125
+            },
+            "2": {
+              "early_excess": 36.609375,
+              "excess": 105.083984375,
+              "gross": 56.944010416666664,
+              "late_excess": 22.49609375
+            },
+            "3": {
+              "early_excess": 49.32421875,
+              "excess": 132.552734375,
+              "gross": 69.13541666666667,
+              "late_excess": 26.912109375
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 38.111328125,
+            "session_resampling_95_descriptive": [
+              24.634191176470587,
+              51.599609375
+            ]
+          },
+          "full_minus_no_excess_prediction": 33.361328125,
+          "group_excess_total_MSE": 2323.4381103515625,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2323.4381103515625,
+            "B": 1976.6338704427083,
+            "D": 718.6512112087673
+          },
+          "group_total_gross_MSE": 718.6512112087673,
+          "mc_se_total_excess_mean": 0.8392931226393884,
+          "predicted_total_excess_per_group": 112.27604166666667,
+          "predicted_total_gross_per_group": 56.57660590277778
+        },
+        "ssm5": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 39.583984375,
+              "excess": 93.80078125,
+              "gross": 39.882161458333336,
+              "late_excess": 17.39453125
+            },
+            "2": {
+              "early_excess": 36.3515625,
+              "excess": 100.388671875,
+              "gross": 52.509765625,
+              "late_excess": 20.8984375
+            },
+            "3": {
+              "early_excess": 52.775390625,
+              "excess": 143.57421875,
+              "gross": 74.57747395833333,
+              "late_excess": 29.609375
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 54.5234375,
+            "session_resampling_95_descriptive": [
+              41.736328125,
+              66.29755434782608
+            ]
+          },
+          "full_minus_no_excess_prediction": 49.7734375,
+          "group_excess_total_MSE": 2479.4570922851562,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2479.4570922851562,
+            "B": 2247.2084147135415,
+            "D": 834.2676527235243
+          },
+          "group_total_gross_MSE": 834.2676527235243,
+          "mc_se_total_excess_mean": 0.8714995166712421,
+          "predicted_total_excess_per_group": 112.587890625,
+          "predicted_total_gross_per_group": 55.656467013888886
+        }
+      },
+      "repetitions_per_group": 32,
+      "ssm_lapse": 0
+    },
+    "fair_seed2_32": {
+      "exogenous_values": "tape",
+      "historical_full_minus_no": {
+        "early_excess": 8.8125,
+        "late_excess": -9.0,
+        "total_excess": -4.75,
+        "total_gross": -9.625000000000007
+      },
+      "initial_routes": "fair",
+      "models": {
+        "ewa_lite": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.2578125,
+              "excess": 154.328125,
+              "gross": 84.140625,
+              "late_excess": 38.09375
+            },
+            "2": {
+              "early_excess": 41.201171875,
+              "excess": 146.201171875,
+              "gross": 80.93098958333333,
+              "late_excess": 34.744140625
+            },
+            "3": {
+              "early_excess": 45.458984375,
+              "excess": 164.275390625,
+              "gross": 80.19140625,
+              "late_excess": 39.326171875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 9.947265625,
+          "group_excess_total_MSE": 2987.16552734375,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2987.16552734375,
+            "B": 2600.262247721354,
+            "D": 818.8999430338541
+          },
+          "group_total_gross_MSE": 818.8999430338541,
+          "mc_se_total_excess_mean": 0.540697010795768,
+          "predicted_total_excess_per_group": 154.93489583333334,
+          "predicted_total_gross_per_group": 81.75434027777777
+        },
+        "private_history": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 42.8671875,
+              "excess": 149.8359375,
+              "gross": 65.45703125,
+              "late_excess": 35.068359375
+            },
+            "2": {
+              "early_excess": 42.345703125,
+              "excess": 152.728515625,
+              "gross": 66.720703125,
+              "late_excess": 36.33203125
+            },
+            "3": {
+              "early_excess": 43.517578125,
+              "excess": 149.890625,
+              "gross": 55.666015625,
+              "late_excess": 35.04296875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 0.0546875,
+          "group_excess_total_MSE": 2770.6774291992188,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2770.6774291992188,
+            "B": 1302.6260579427083,
+            "D": 432.2185329861111
+          },
+          "group_total_gross_MSE": 432.2185329861111,
+          "mc_se_total_excess_mean": 0.5822545754774088,
+          "predicted_total_excess_per_group": 150.818359375,
+          "predicted_total_gross_per_group": 62.614583333333336
+        },
+        "private_route": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 44.400390625,
+              "excess": 163.2890625,
+              "gross": 64.94270833333333,
+              "late_excess": 39.431640625
+            },
+            "2": {
+              "early_excess": 44.849609375,
+              "excess": 167.513671875,
+              "gross": 65.67447916666667,
+              "late_excess": 41.017578125
+            },
+            "3": {
+              "early_excess": 45.173828125,
+              "excess": 166.072265625,
+              "gross": 55.596354166666664,
+              "late_excess": 40.599609375
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 2.783203125,
+          "group_excess_total_MSE": 3798.1895751953125,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 3798.1895751953125,
+            "B": 1224.0886637369792,
+            "D": 429.9792751736111
+          },
+          "group_total_gross_MSE": 429.9792751736111,
+          "mc_se_total_excess_mean": 0.6195533482459236,
+          "predicted_total_excess_per_group": 165.625,
+          "predicted_total_gross_per_group": 62.07118055555556
+        },
+        "ssm1_9": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.044921875,
+              "excess": 104.84765625,
+              "gross": 49.802734375,
+              "late_excess": 21.67578125
+            },
+            "2": {
+              "early_excess": 36.84375,
+              "excess": 110.2265625,
+              "gross": 60.806640625,
+              "late_excess": 24.875
+            },
+            "3": {
+              "early_excess": 49.904296875,
+              "excess": 139.185546875,
+              "gross": 74.38671875,
+              "late_excess": 29.462890625
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 34.337890625,
+          "group_excess_total_MSE": 2237.1148071289062,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2237.1148071289062,
+            "B": 1863.659912109375,
+            "D": 679.2510715060764
+          },
+          "group_total_gross_MSE": 679.2510715060764,
+          "mc_se_total_excess_mean": 0.7754122784764426,
+          "predicted_total_excess_per_group": 118.08658854166667,
+          "predicted_total_gross_per_group": 61.665364583333336
+        },
+        "ssm5": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 40.12109375,
+              "excess": 101.248046875,
+              "gross": 45.8671875,
+              "late_excess": 20.30859375
+            },
+            "2": {
+              "early_excess": 37.1015625,
+              "excess": 106.927734375,
+              "gross": 57.421875,
+              "late_excess": 23.244140625
+            },
+            "3": {
+              "early_excess": 52.2265625,
+              "excess": 144.8046875,
+              "gross": 76.12369791666667,
+              "late_excess": 30.474609375
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 43.556640625,
+          "group_excess_total_MSE": 2406.316162109375,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2406.316162109375,
+            "B": 2129.4774576822915,
+            "D": 765.7645941840278
+          },
+          "group_total_gross_MSE": 765.7645941840278,
+          "mc_se_total_excess_mean": 0.8131868642271428,
+          "predicted_total_excess_per_group": 117.66015625,
+          "predicted_total_gross_per_group": 59.80425347222222
+        }
+      },
+      "repetitions_per_group": 32,
+      "resource_mse_nonnegative_switch_price_crossover_kappa": 0.7216971359752572,
+      "ssm_lapse": 0.02
+    },
+    "observed_primary": {
+      "exogenous_values": "tape",
+      "historical_full_minus_no": {
+        "early_excess": 8.8125,
+        "late_excess": -9.0,
+        "total_excess": -4.75,
+        "total_gross": -9.625000000000007
+      },
+      "initial_routes": "observed",
+      "models": {
+        "ewa_lite": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 36.732421875,
+              "excess": 149.73828125,
+              "gross": 84.490234375,
+              "late_excess": 38.814453125
+            },
+            "2": {
+              "early_excess": 38.439453125,
+              "excess": 145.23046875,
+              "gross": 81.23893229166667,
+              "late_excess": 35.8125
+            },
+            "3": {
+              "early_excess": 43.5234375,
+              "excess": 162.947265625,
+              "gross": 80.37630208333333,
+              "late_excess": 39.9140625
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 17.958984375,
+            "session_resampling_95_descriptive": [
+              3.6941964285714306,
+              30.997767857142858
+            ]
+          },
+          "full_minus_no_excess_prediction": 13.208984375,
+          "group_excess_total_MSE": 2711.3926391601562,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2711.3926391601562,
+            "B": 2525.770711263021,
+            "D": 836.6715359157986
+          },
+          "group_total_gross_MSE": 836.6715359157986,
+          "mc_se_total_excess_mean": 0.5124313776758815,
+          "predicted_total_excess_per_group": 152.638671875,
+          "predicted_total_gross_per_group": 82.03515625
+        },
+        "private_history": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 37.578125,
+              "excess": 144.44921875,
+              "gross": 65.21549479166667,
+              "late_excess": 35.708984375
+            },
+            "2": {
+              "early_excess": 39.048828125,
+              "excess": 148.935546875,
+              "gross": 66.4453125,
+              "late_excess": 36.619140625
+            },
+            "3": {
+              "early_excess": 39.20703125,
+              "excess": 145.470703125,
+              "gross": 55.12109375,
+              "late_excess": 35.623046875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 5.771484375,
+            "session_resampling_95_descriptive": [
+              -9.879375000000003,
+              21.301470588235293
+            ]
+          },
+          "full_minus_no_excess_prediction": 1.021484375,
+          "group_excess_total_MSE": 2494.1748046875,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2494.1748046875,
+            "B": 1298.4936116536458,
+            "D": 431.31007893880206
+          },
+          "group_total_gross_MSE": 431.31007893880206,
+          "mc_se_total_excess_mean": 0.5513182353822397,
+          "predicted_total_excess_per_group": 146.28515625,
+          "predicted_total_gross_per_group": 62.26063368055556
+        },
+        "private_route": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 39.4140625,
+              "excess": 160.328125,
+              "gross": 64.74869791666667,
+              "late_excess": 40.4453125
+            },
+            "2": {
+              "early_excess": 40.07421875,
+              "excess": 162.3125,
+              "gross": 65.556640625,
+              "late_excess": 39.791015625
+            },
+            "3": {
+              "early_excess": 39.796875,
+              "excess": 158.02734375,
+              "gross": 54.836588541666664,
+              "late_excess": 39.26953125
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 2.44921875,
+            "session_resampling_95_descriptive": [
+              -12.307180851063833,
+              17.230168269230774
+            ]
+          },
+          "full_minus_no_excess_prediction": -2.30078125,
+          "group_excess_total_MSE": 3363.5245361328125,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 3363.5245361328125,
+            "B": 1261.6802978515625,
+            "D": 437.2236735026042
+          },
+          "group_total_gross_MSE": 437.2236735026042,
+          "mc_se_total_excess_mean": 0.5949122034553994,
+          "predicted_total_excess_per_group": 160.22265625,
+          "predicted_total_gross_per_group": 61.71397569444444
+        },
+        "ssm1_9": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 37.5,
+              "excess": 102.126953125,
+              "gross": 51.057942708333336,
+              "late_excess": 21.818359375
+            },
+            "2": {
+              "early_excess": 40.36328125,
+              "excess": 115.537109375,
+              "gross": 63.423177083333336,
+              "late_excess": 25.205078125
+            },
+            "3": {
+              "early_excess": 48.712890625,
+              "excess": 126.115234375,
+              "gross": 65.20247395833333,
+              "late_excess": 25.1796875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 28.73828125,
+            "session_resampling_95_descriptive": [
+              3.1436170212765973,
+              52.96875
+            ]
+          },
+          "full_minus_no_excess_prediction": 23.98828125,
+          "group_excess_total_MSE": 3583.0993041992188,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 3583.0993041992188,
+            "B": 3119.636474609375,
+            "D": 939.7956949869791
+          },
+          "group_total_gross_MSE": 939.7956949869791,
+          "mc_se_total_excess_mean": 0.538667349818286,
+          "predicted_total_excess_per_group": 114.59309895833333,
+          "predicted_total_gross_per_group": 59.89453125
+        },
+        "ssm5": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 36.86328125,
+              "excess": 95.580078125,
+              "gross": 46.681640625,
+              "late_excess": 19.849609375
+            },
+            "2": {
+              "early_excess": 39.5234375,
+              "excess": 111.68359375,
+              "gross": 59.587890625,
+              "late_excess": 24.234375
+            },
+            "3": {
+              "early_excess": 51.630859375,
+              "excess": 132.23046875,
+              "gross": 67.62630208333333,
+              "late_excess": 26.251953125
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": {
+            "difference_from_observed_treatment_contrast": 41.400390625,
+            "session_resampling_95_descriptive": [
+              14.465425531914892,
+              67.65957446808511
+            ]
+          },
+          "full_minus_no_excess_prediction": 36.650390625,
+          "group_excess_total_MSE": 4154.950744628906,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 4154.950744628906,
+            "B": 3714.936319986979,
+            "D": 1101.5028483072917
+          },
+          "group_total_gross_MSE": 1101.5028483072917,
+          "mc_se_total_excess_mean": 0.5024834624536887,
+          "predicted_total_excess_per_group": 113.16471354166667,
+          "predicted_total_gross_per_group": 57.96527777777778
+        }
+      },
+      "repetitions_per_group": 32,
+      "resource_mse_nonnegative_switch_price_crossover_kappa": null,
+      "ssm1_9_minus_private_history_excess_mse_session_resampling": {
+        "cluster_session_resampling_95_descriptive": [
+          489.8594174592391,
+          1803.0009973404256
+        ],
+        "mean_mse_difference": 1088.9244995117188
+      },
+      "ssm1_9_minus_private_history_kappa1_mse_session_resampling": {
+        "cluster_session_resampling_95_descriptive": [
+          2291.3164270279253,
+          4630.760387073864
+        ],
+        "mean_mse_difference": 3418.552978515625
+      },
+      "ssm_lapse": 0.02
+    },
+    "observed_seed2_32": {
+      "exogenous_values": "tape",
+      "historical_full_minus_no": {
+        "early_excess": 8.8125,
+        "late_excess": -9.0,
+        "total_excess": -4.75,
+        "total_gross": -9.625000000000007
+      },
+      "initial_routes": "observed",
+      "models": {
+        "ewa_lite": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 36.3359375,
+              "excess": 148.71875,
+              "gross": 83.86393229166667,
+              "late_excess": 38.333984375
+            },
+            "2": {
+              "early_excess": 37.98828125,
+              "excess": 143.849609375,
+              "gross": 80.724609375,
+              "late_excess": 34.501953125
+            },
+            "3": {
+              "early_excess": 43.640625,
+              "excess": 163.400390625,
+              "gross": 80.37369791666667,
+              "late_excess": 40.22265625
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 14.681640625,
+          "group_excess_total_MSE": 2718.697998046875,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2718.697998046875,
+            "B": 2460.28759765625,
+            "D": 816.3241238064236
+          },
+          "group_total_gross_MSE": 816.3241238064236,
+          "mc_se_total_excess_mean": 0.5231361327684776,
+          "predicted_total_excess_per_group": 151.98958333333334,
+          "predicted_total_gross_per_group": 81.65407986111111
+        },
+        "private_history": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 37.798828125,
+              "excess": 145.86328125,
+              "gross": 65.35677083333333,
+              "late_excess": 36.01171875
+            },
+            "2": {
+              "early_excess": 39.005859375,
+              "excess": 149.8359375,
+              "gross": 66.35611979166667,
+              "late_excess": 37.267578125
+            },
+            "3": {
+              "early_excess": 38.79296875,
+              "excess": 145.8359375,
+              "gross": 55.34765625,
+              "late_excess": 35.638671875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": -0.02734375,
+          "group_excess_total_MSE": 2525.0223388671875,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 2525.0223388671875,
+            "B": 1272.4168701171875,
+            "D": 427.42599148220484
+          },
+          "group_total_gross_MSE": 427.42599148220484,
+          "mc_se_total_excess_mean": 0.5668238779457875,
+          "predicted_total_excess_per_group": 147.17838541666666,
+          "predicted_total_gross_per_group": 62.353515625
+        },
+        "private_route": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 38.4765625,
+              "excess": 157.6171875,
+              "gross": 64.36783854166667,
+              "late_excess": 39.048828125
+            },
+            "2": {
+              "early_excess": 39.958984375,
+              "excess": 162.71484375,
+              "gross": 65.43033854166667,
+              "late_excess": 40.482421875
+            },
+            "3": {
+              "early_excess": 39.859375,
+              "excess": 161.046875,
+              "gross": 55.246744791666664,
+              "late_excess": 40.69921875
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 3.4296875,
+          "group_excess_total_MSE": 3316.854736328125,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 3316.854736328125,
+            "B": 1211.8450520833333,
+            "D": 435.20664469401044
+          },
+          "group_total_gross_MSE": 435.20664469401044,
+          "mc_se_total_excess_mean": 0.5920077865607329,
+          "predicted_total_excess_per_group": 160.45963541666666,
+          "predicted_total_gross_per_group": 61.681640625
+        },
+        "ssm1_9": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 37.630859375,
+              "excess": 102.787109375,
+              "gross": 51.3359375,
+              "late_excess": 21.79296875
+            },
+            "2": {
+              "early_excess": 39.65625,
+              "excess": 114.693359375,
+              "gross": 63.3203125,
+              "late_excess": 25.56640625
+            },
+            "3": {
+              "early_excess": 48.978515625,
+              "excess": 127.15625,
+              "gross": 66.24739583333333,
+              "late_excess": 25.4609375
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 24.369140625,
+          "group_excess_total_MSE": 3373.8662109375,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 3373.8662109375,
+            "B": 2937.820515950521,
+            "D": 905.2909884982639
+          },
+          "group_total_gross_MSE": 905.2909884982639,
+          "mc_se_total_excess_mean": 0.5269642929055287,
+          "predicted_total_excess_per_group": 114.87890625,
+          "predicted_total_gross_per_group": 60.30121527777778
+        },
+        "ssm5": {
+          "by_treatment": {
+            "1": {
+              "early_excess": 36.208984375,
+              "excess": 94.455078125,
+              "gross": 46.723307291666664,
+              "late_excess": 19.486328125
+            },
+            "2": {
+              "early_excess": 39.853515625,
+              "excess": 111.7890625,
+              "gross": 59.836588541666664,
+              "late_excess": 24.16015625
+            },
+            "3": {
+              "early_excess": 51.224609375,
+              "excess": 133.30078125,
+              "gross": 67.34830729166667,
+              "late_excess": 26.611328125
+            }
+          },
+          "full_minus_no_excess_error_session_resampling": null,
+          "full_minus_no_excess_prediction": 38.845703125,
+          "group_excess_total_MSE": 4291.324035644531,
+          "group_resource_prediction_mse_polynomial": {
+            "A": 4291.324035644531,
+            "B": 3846.279052734375,
+            "D": 1121.2490980360244
+          },
+          "group_total_gross_MSE": 1121.2490980360244,
+          "mc_se_total_excess_mean": 0.5028572480356495,
+          "predicted_total_excess_per_group": 113.181640625,
+          "predicted_total_gross_per_group": 57.969401041666664
+        }
+      },
+      "repetitions_per_group": 32,
+      "resource_mse_nonnegative_switch_price_crossover_kappa": null,
+      "ssm_lapse": 0.02
+    }
+  },
+  "simulation_seed_method": "source-session position and group position, no participant or session ID in output",
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "study_type": "retrospective closed-loop synthetic simulations and proof; not human causal effect"
+}
