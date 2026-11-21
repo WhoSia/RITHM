@@ -1,0 +1,139 @@
+{
+  "groups": 96,
+  "models": {
+    "legal_common_shock_joint": {
+      "congestion_MSE_minus_R61_online": {
+        "cluster95_descriptive": [
+          -5293.254409790039,
+          -3382.932357788086
+        ],
+        "delta": -4339.252784729004
+      },
+      "congestion_MSE_minus_legal_independent": {
+        "cluster95_descriptive": [
+          -219.42308044433594,
+          91.44703674316406
+        ],
+        "delta": -54.30052185058594
+      },
+      "group_total_congestion_MSE": 2818.6491165161133,
+      "group_total_switch_MSE": 321.69041527642145,
+      "late_4_fraction": 0.34523111979166665,
+      "mean_cost_by_treatment": {
+        "1": 147.134765625,
+        "2": 154.8369140625,
+        "3": 158.82861328125
+      },
+      "no_switch_given_previous_four": 0.20834883637192889,
+      "optimal_4_fraction": 0.3478190104166667,
+      "q_histogram": {
+        "0.15": 2,
+        "0.2": 22
+      },
+      "resource_cost_forecast_MSE_A_B_D": {
+        "A": 2818.6491165161133,
+        "B": 888.2601826985677,
+        "D": 321.69041527642145
+      }
+    },
+    "legal_independent": {
+      "congestion_MSE_minus_R61_online": {
+        "cluster95_descriptive": [
+          -5233.3753662109375,
+          -3283.247200012207
+        ],
+        "delta": -4284.952262878418
+      },
+      "group_total_congestion_MSE": 2872.949638366699,
+      "group_total_switch_MSE": 321.37317148844403,
+      "late_4_fraction": 0.35056966145833335,
+      "mean_cost_by_treatment": {
+        "1": 148.97021484375,
+        "2": 155.2119140625,
+        "3": 155.6103515625
+      },
+      "no_switch_given_previous_four": 0.1950485830926063,
+      "optimal_4_fraction": 0.3494181315104167,
+      "q_histogram": {
+        "0.0": 24
+      },
+      "resource_cost_forecast_MSE_A_B_D": {
+        "A": 2872.949638366699,
+        "B": 881.4526112874349,
+        "D": 321.37317148844403
+      }
+    },
+    "legal_pause_stability": {
+      "congestion_MSE_minus_R61_online": {
+        "cluster95_descriptive": [
+          -5267.888069152832,
+          -3451.3073501586914
+        ],
+        "delta": -4360.534797668457
+      },
+      "congestion_MSE_minus_legal_independent": {
+        "cluster95_descriptive": [
+          -167.66734313964844,
+          19.650054931640625
+        ],
+        "delta": -75.58253479003906
+      },
+      "group_total_congestion_MSE": 2797.36710357666,
+      "group_total_switch_MSE": 318.0929709540473,
+      "late_4_fraction": 0.36227213541666664,
+      "mean_cost_by_treatment": {
+        "1": 146.93115234375,
+        "2": 155.0068359375,
+        "3": 155.26904296875
+      },
+      "no_switch_given_previous_four": 0.24276720905431903,
+      "optimal_4_fraction": 0.36370442708333334,
+      "q_histogram": {
+        "0.1": 24
+      },
+      "resource_cost_forecast_MSE_A_B_D": {
+        "A": 2797.36710357666,
+        "B": 905.7315877278646,
+        "D": 318.0929709540473
+      }
+    },
+    "r61_current_only": {
+      "congestion_MSE_minus_legal_independent": {
+        "cluster95_descriptive": [
+          3361.4555282592773,
+          5226.383834838867
+        ],
+        "delta": 4284.952262878418
+      },
+      "group_total_congestion_MSE": 7157.901901245117,
+      "group_total_switch_MSE": 492.724132961697,
+      "late_4_fraction": 0.29640299479166665,
+      "mean_cost_by_treatment": {
+        "1": 188.583984375,
+        "2": 189.05419921875,
+        "3": 188.66162109375
+      },
+      "no_switch_given_previous_four": 0.1748578580844463,
+      "optimal_4_fraction": 0.3128580729166667,
+      "q_histogram": {
+        "0.0": 24
+      },
+      "resource_cost_forecast_MSE_A_B_D": {
+        "A": 7157.901901245117,
+        "B": 1497.168441772461,
+        "D": 492.724132961697
+      }
+    }
+  },
+  "reps": 64,
+  "scope": "Retrospective 24session descriptive; generated decisions only at t>=2 and no causal intervention or human coordination claimed.",
+  "seed": 20261121,
+  "sessions": 24,
+  "source_external_value_tape": "Original individual Value(t) never used for decision at t, only payoff after simulated action",
+  "source_true_group_total_excess_by_treatment": {
+    "1": 114.1875,
+    "2": 112.40625,
+    "3": 112.3125
+  },
+  "start": "observed"
+}
