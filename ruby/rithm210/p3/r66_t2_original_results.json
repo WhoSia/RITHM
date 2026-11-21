@@ -1,0 +1,972 @@
+{
+  "approved_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "descriptive_24_session_bootstrap": {
+    "Endogenous_early": {
+      "cluster_unit": "original session, not group transition",
+      "model_residuals": {
+        "analyst_A4": {
+          "descriptive_bootstrap_95": [
+            -0.9120871467544509,
+            0.125266561840433
+          ],
+          "point": -0.4724322496064648
+        },
+        "legal_coarse": {
+          "descriptive_bootstrap_95": [
+            -1.4638432897789477,
+            -0.3919814218390669
+          ],
+          "point": -1.0164649051012242
+        },
+        "legal_tenure": {
+          "descriptive_bootstrap_95": [
+            -1.24069511486059,
+            -0.30401397904213595
+          ],
+          "point": -0.8505887690904625
+        }
+      },
+      "original_sessions": 24,
+      "resamples_requested": 3000,
+      "valid": 3000
+    },
+    "Endogenous_late": {
+      "cluster_unit": "original session, not group transition",
+      "model_residuals": {
+        "analyst_A4": {
+          "descriptive_bootstrap_95": [
+            -1.1350730193991938,
+            -0.4187511643602218
+          ],
+          "point": -0.8129249769498765
+        },
+        "legal_coarse": {
+          "descriptive_bootstrap_95": [
+            -1.716822268390175,
+            -1.0026692298240705
+          ],
+          "point": -1.3986313526672058
+        },
+        "legal_tenure": {
+          "descriptive_bootstrap_95": [
+            -1.1690463880374315,
+            -0.5864123981864154
+          ],
+          "point": -0.9152591827344156
+        }
+      },
+      "original_sessions": 24,
+      "resamples_requested": 3000,
+      "valid": 3000
+    },
+    "Full_early": {
+      "cluster_unit": "original session, not group transition",
+      "model_residuals": {
+        "analyst_A4": {
+          "descriptive_bootstrap_95": [
+            -0.6199655490310927,
+            0.682366458235219
+          ],
+          "point": -0.080714956352268
+        },
+        "legal_coarse": {
+          "descriptive_bootstrap_95": [
+            -0.9960288932116211,
+            0.29295118085594013
+          ],
+          "point": -0.46246269458496236
+        },
+        "legal_tenure": {
+          "descriptive_bootstrap_95": [
+            -0.9322132155008944,
+            0.3093511752835705
+          ],
+          "point": -0.41736807597468717
+        }
+      },
+      "original_sessions": 24,
+      "resamples_requested": 3000,
+      "valid": 3000
+    },
+    "Full_late": {
+      "cluster_unit": "original session, not group transition",
+      "model_residuals": {
+        "analyst_A4": {
+          "descriptive_bootstrap_95": [
+            -0.6902315639780212,
+            0.2593043497928561
+          ],
+          "point": -0.27761063777227135
+        },
+        "legal_coarse": {
+          "descriptive_bootstrap_95": [
+            -1.782992649832939,
+            -0.8393285826864042
+          ],
+          "point": -1.3746231288103485
+        },
+        "legal_tenure": {
+          "descriptive_bootstrap_95": [
+            -1.1264851569166612,
+            -0.45813660182972155
+          ],
+          "point": -0.8292040993052112
+        }
+      },
+      "original_sessions": 24,
+      "resamples_requested": 3000,
+      "valid": 3000
+    },
+    "No_early": {
+      "cluster_unit": "original session, not group transition",
+      "model_residuals": {
+        "analyst_A4": {
+          "descriptive_bootstrap_95": [
+            -0.9616964571448339,
+            0.6142338945084622
+          ],
+          "point": -0.19991151859346035
+        },
+        "legal_coarse": {
+          "descriptive_bootstrap_95": [
+            -1.2656313195655657,
+            0.2914065489028233
+          ],
+          "point": -0.5138944596708366
+        },
+        "legal_tenure": {
+          "descriptive_bootstrap_95": [
+            -1.1536671763518087,
+            0.28658597651570744
+          ],
+          "point": -0.4655460280582884
+        }
+      },
+      "original_sessions": 24,
+      "resamples_requested": 3000,
+      "valid": 3000
+    },
+    "No_late": {
+      "cluster_unit": "original session, not group transition",
+      "model_residuals": {
+        "analyst_A4": {
+          "descriptive_bootstrap_95": [
+            -0.973462135226496,
+            0.16411081566999017
+          ],
+          "point": -0.48456237978714434
+        },
+        "legal_coarse": {
+          "descriptive_bootstrap_95": [
+            -1.239217160166816,
+            -0.11158294993135769
+          ],
+          "point": -0.7543399599198284
+        },
+        "legal_tenure": {
+          "descriptive_bootstrap_95": [
+            -0.9405140755733723,
+            0.02476599092319042
+          ],
+          "point": -0.5334118664362539
+        }
+      },
+      "original_sessions": 24,
+      "resamples_requested": 3000,
+      "valid": 3000
+    },
+    "Partial_early": {
+      "cluster_unit": "original session, not group transition",
+      "model_residuals": {
+        "analyst_A4": {
+          "descriptive_bootstrap_95": [
+            -0.7523496174825891,
+            0.6243925444855675
+          ],
+          "point": -0.14001231591409136
+        },
+        "legal_coarse": {
+          "descriptive_bootstrap_95": [
+            -1.1035376253767488,
+            0.2691297864889459
+          ],
+          "point": -0.4968878825097782
+        },
+        "legal_tenure": {
+          "descriptive_bootstrap_95": [
+            -0.9376293589573682,
+            0.321587919880146
+          ],
+          "point": -0.38552997674603473
+        }
+      },
+      "original_sessions": 24,
+      "resamples_requested": 3000,
+      "valid": 3000
+    },
+    "Partial_late": {
+      "cluster_unit": "original session, not group transition",
+      "model_residuals": {
+        "analyst_A4": {
+          "descriptive_bootstrap_95": [
+            -0.8526743999495898,
+            0.3044213056773171
+          ],
+          "point": -0.30901682737892067
+        },
+        "legal_coarse": {
+          "descriptive_bootstrap_95": [
+            -1.435453940066282,
+            -0.30374150922887305
+          ],
+          "point": -0.9077516621843036
+        },
+        "legal_tenure": {
+          "descriptive_bootstrap_95": [
+            -0.888689920379287,
+            -0.08043368470999067
+          ],
+          "point": -0.5101711359642174
+        }
+      },
+      "original_sessions": 24,
+      "resamples_requested": 3000,
+      "valid": 3000
+    }
+  },
+  "estimand": "observed - Bernoulli-independent predicted 3 E[(U-D)^2] in old-A4; combines signed covariance plus marginal-model mismatch",
+  "failure_mode": "difference is NOT equal to identified common-clock covariance unless fitted individual marginals calibrated at the full relevant group-state/history level; cannot infer cognitive coordination",
+  "models": {
+    "analyst_A4": "LOSO old-A4 source outcomes with shrink20 to legal_coarse; old occupancy not actor-legal for uninformed",
+    "legal_coarse": "LOSO session; train other 23 source sessions all nA, treatment/epoch/own info/own prior route",
+    "legal_tenure": "same + own route-tenure bin 1/2/3-4/5+, shrink 20 to coarse; no analyst occupancy"
+  },
+  "no_original_rows_exported": true,
+  "original_sessions": 24,
+  "pooled": {
+    "Endogenous": {
+      "early": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.4514296234524466,
+          "all_stay_obs_mean": 0.3744292237442922,
+          "all_stay_pred_mean": 0.29332516963853866,
+          "cancel_obs_mean": 0.1506849315068493,
+          "down_obs_mean": 0.4977168949771689,
+          "down_sq_obs_mean": 0.7077625570776256,
+          "gross_obs_mean": 1.0547945205479452,
+          "gross_pred_mean": 1.0923013708559999,
+          "independent_predicted_net_variance": 0.8606360585638997,
+          "n_old_A4_transitions": 219,
+          "net_obs_mean": 0.0593607305936073,
+          "net_pred_mean": 0.06785215581847476,
+          "net_sq_obs_mean": 0.7077625570776256,
+          "net_sq_pred_mean": 0.8652399736131142,
+          "nochange_occupancy_obs_mean": 0.5251141552511416,
+          "observed_down_variance": 0.46004044953191137,
+          "observed_net_variance": 0.7042388607410187,
+          "observed_up_down_covariance": 0.09716227768395158,
+          "observed_up_variance": 0.43852296657701045,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.15747741653548863,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.47243224960646346,
+          "up_down_obs_mean": 0.3744292237442922,
+          "up_obs_mean": 0.5570776255707762,
+          "up_sq_obs_mean": 0.7488584474885844,
+          "welfare_obs_mean": 2.1232876712328768,
+          "welfare_pred_mean": 2.5957199208393402,
+          "zero_switch_brier_mean": 0.24373495188364033
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.4651063441676513,
+          "all_stay_obs_mean": 0.3744292237442922,
+          "all_stay_pred_mean": 0.1857059849503084,
+          "cancel_obs_mean": 0.1506849315068493,
+          "down_obs_mean": 0.4977168949771689,
+          "down_sq_obs_mean": 0.7077625570776256,
+          "gross_obs_mean": 1.0547945205479452,
+          "gross_pred_mean": 1.433938128712751,
+          "independent_predicted_net_variance": 1.0452322269660792,
+          "n_old_A4_transitions": 219,
+          "net_obs_mean": 0.0593607305936073,
+          "net_pred_mean": 0.03676907865704552,
+          "net_sq_obs_mean": 0.7077625570776256,
+          "net_sq_pred_mean": 1.0465841921113672,
+          "nochange_occupancy_obs_mean": 0.5251141552511416,
+          "observed_down_variance": 0.46004044953191137,
+          "observed_net_variance": 0.7042388607410187,
+          "observed_up_down_covariance": 0.09716227768395158,
+          "observed_up_variance": 0.43852296657701045,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.33882163503374163,
+          "signed_covariance_plus_miscalibration_welfare_residual": -1.0164649051012216,
+          "up_down_obs_mean": 0.3744292237442922,
+          "up_obs_mean": 0.5570776255707762,
+          "up_sq_obs_mean": 0.7488584474885844,
+          "welfare_obs_mean": 2.1232876712328768,
+          "welfare_pred_mean": 3.1397525763340983,
+          "zero_switch_brier_mean": 0.27394780683497777
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.43693200218609995,
+          "all_stay_obs_mean": 0.3744292237442922,
+          "all_stay_pred_mean": 0.21948627922001201,
+          "cancel_obs_mean": 0.1506849315068493,
+          "down_obs_mean": 0.4977168949771689,
+          "down_sq_obs_mean": 0.7077625570776256,
+          "gross_obs_mean": 1.0547945205479452,
+          "gross_pred_mean": 1.3689401039155107,
+          "independent_predicted_net_variance": 0.9869842784452618,
+          "n_old_A4_transitions": 219,
+          "net_obs_mean": 0.0593607305936073,
+          "net_pred_mean": 0.06563435327009783,
+          "net_sq_obs_mean": 0.7077625570776256,
+          "net_sq_pred_mean": 0.9912921467744458,
+          "nochange_occupancy_obs_mean": 0.5251141552511416,
+          "observed_down_variance": 0.46004044953191137,
+          "observed_net_variance": 0.7042388607410187,
+          "observed_up_down_covariance": 0.09716227768395158,
+          "observed_up_variance": 0.43852296657701045,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.2835295896968202,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.8505887690904639,
+          "up_down_obs_mean": 0.3744292237442922,
+          "up_obs_mean": 0.5570776255707762,
+          "up_sq_obs_mean": 0.7488584474885844,
+          "welfare_obs_mean": 2.1232876712328768,
+          "welfare_pred_mean": 2.9738764403233406,
+          "zero_switch_brier_mean": 0.25326658116926004
+        }
+      },
+      "late": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.42906230554247454,
+          "all_stay_obs_mean": 0.36607142857142855,
+          "all_stay_pred_mean": 0.32678943362307267,
+          "cancel_obs_mean": 0.17410714285714285,
+          "down_obs_mean": 0.45089285714285715,
+          "down_sq_obs_mean": 0.5758928571428571,
+          "gross_obs_mean": 0.9776785714285714,
+          "gross_pred_mean": 1.0120053203552566,
+          "independent_predicted_net_variance": 0.8046929473791563,
+          "n_old_A4_transitions": 224,
+          "net_obs_mean": 0.07589285714285714,
+          "net_pred_mean": 0.08037795945432231,
+          "net_sq_obs_mean": 0.5401785714285714,
+          "net_sq_pred_mean": 0.811153563745197,
+          "nochange_occupancy_obs_mean": 0.5401785714285714,
+          "observed_down_variance": 0.3725884885204081,
+          "observed_net_variance": 0.5344188456632653,
+          "observed_up_down_covariance": 0.09283322704081631,
+          "observed_up_variance": 0.3474968112244898,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.2709749923166256,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.8129249769498725,
+          "up_down_obs_mean": 0.33035714285714285,
+          "up_obs_mean": 0.5267857142857143,
+          "up_sq_obs_mean": 0.625,
+          "welfare_obs_mean": 1.6205357142857142,
+          "welfare_pred_mean": 2.4334606912355867,
+          "zero_switch_brier_mean": 0.2362859022184439
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.43986497034236066,
+          "all_stay_obs_mean": 0.36607142857142855,
+          "all_stay_pred_mean": 0.20874634205689088,
+          "cancel_obs_mean": 0.17410714285714285,
+          "down_obs_mean": 0.45089285714285715,
+          "down_sq_obs_mean": 0.5758928571428571,
+          "gross_obs_mean": 0.9776785714285714,
+          "gross_pred_mean": 1.3563011269586003,
+          "independent_predicted_net_variance": 1.0058577723175812,
+          "n_old_A4_transitions": 224,
+          "net_obs_mean": 0.07589285714285714,
+          "net_pred_mean": 0.02304886114444004,
+          "net_sq_obs_mean": 0.5401785714285714,
+          "net_sq_pred_mean": 1.0063890223176368,
+          "nochange_occupancy_obs_mean": 0.5401785714285714,
+          "observed_down_variance": 0.3725884885204081,
+          "observed_net_variance": 0.5344188456632653,
+          "observed_up_down_covariance": 0.09283322704081631,
+          "observed_up_variance": 0.3474968112244898,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.46621045088906543,
+          "signed_covariance_plus_miscalibration_welfare_residual": -1.3986313526672032,
+          "up_down_obs_mean": 0.33035714285714285,
+          "up_obs_mean": 0.5267857142857143,
+          "up_sq_obs_mean": 0.625,
+          "welfare_obs_mean": 1.6205357142857142,
+          "welfare_pred_mean": 3.0191670669529174,
+          "zero_switch_brier_mean": 0.2571215723297121
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.36443746154396855,
+          "all_stay_obs_mean": 0.36607142857142855,
+          "all_stay_pred_mean": 0.2798517375833687,
+          "cancel_obs_mean": 0.17410714285714285,
+          "down_obs_mean": 0.45089285714285715,
+          "down_sq_obs_mean": 0.5758928571428571,
+          "gross_obs_mean": 0.9776785714285714,
+          "gross_pred_mean": 1.1719767305146847,
+          "independent_predicted_net_variance": 0.8425501248787344,
+          "n_old_A4_transitions": 224,
+          "net_obs_mean": 0.07589285714285714,
+          "net_pred_mean": 0.05210413414155909,
+          "net_sq_obs_mean": 0.5401785714285714,
+          "net_sq_pred_mean": 0.845264965673376,
+          "nochange_occupancy_obs_mean": 0.5401785714285714,
+          "observed_down_variance": 0.3725884885204081,
+          "observed_net_variance": 0.5344188456632653,
+          "observed_up_down_covariance": 0.09283322704081631,
+          "observed_up_variance": 0.3474968112244898,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.30508639424480455,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.9152591827344134,
+          "up_down_obs_mean": 0.33035714285714285,
+          "up_obs_mean": 0.5267857142857143,
+          "up_sq_obs_mean": 0.625,
+          "welfare_obs_mean": 1.6205357142857142,
+          "welfare_pred_mean": 2.5357948970201276,
+          "zero_switch_brier_mean": 0.2008940764262354
+        }
+      }
+    },
+    "Full": {
+      "early": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.4921493316952627,
+          "all_stay_obs_mean": 0.22077922077922077,
+          "all_stay_pred_mean": 0.1915075227839993,
+          "cancel_obs_mean": 0.15584415584415584,
+          "down_obs_mean": 0.538961038961039,
+          "down_sq_obs_mean": 0.8116883116883117,
+          "gross_obs_mean": 1.3571428571428572,
+          "gross_pred_mean": 1.3741995432941148,
+          "independent_predicted_net_variance": 0.9597787764638867,
+          "n_old_A4_transitions": 154,
+          "net_obs_mean": 0.2792207792207792,
+          "net_pred_mean": 0.271329533004382,
+          "net_sq_obs_mean": 1.0064935064935066,
+          "net_sq_pred_mean": 1.0333984919442627,
+          "nochange_occupancy_obs_mean": 0.37662337662337664,
+          "observed_down_variance": 0.5212093101703491,
+          "observed_net_variance": 0.9285292629448474,
+          "observed_up_down_covariance": 0.052538370720188854,
+          "observed_up_variance": 0.512396694214876,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.026904985450756147,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.08071495635227066,
+          "up_down_obs_mean": 0.4935064935064935,
+          "up_obs_mean": 0.8181818181818182,
+          "up_sq_obs_mean": 1.1818181818181819,
+          "welfare_obs_mean": 3.0194805194805197,
+          "welfare_pred_mean": 3.1001954758327903,
+          "zero_switch_brier_mean": 0.17535981157820682
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.5036965097822956,
+          "all_stay_obs_mean": 0.22077922077922077,
+          "all_stay_pred_mean": 0.1259687586004074,
+          "cancel_obs_mean": 0.15584415584415584,
+          "down_obs_mean": 0.538961038961039,
+          "down_sq_obs_mean": 0.8116883116883117,
+          "gross_obs_mean": 1.3571428571428572,
+          "gross_pred_mean": 1.7065174453862544,
+          "independent_predicted_net_variance": 1.1606469824733048,
+          "n_old_A4_transitions": 154,
+          "net_obs_mean": 0.2792207792207792,
+          "net_pred_mean": -0.0008692229435922007,
+          "net_sq_obs_mean": 1.0064935064935066,
+          "net_sq_pred_mean": 1.1606477380218305,
+          "nochange_occupancy_obs_mean": 0.37662337662337664,
+          "observed_down_variance": 0.5212093101703491,
+          "observed_net_variance": 0.9285292629448474,
+          "observed_up_down_covariance": 0.052538370720188854,
+          "observed_up_variance": 0.512396694214876,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.15415423152832397,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.46246269458496103,
+          "up_down_obs_mean": 0.4935064935064935,
+          "up_obs_mean": 0.8181818181818182,
+          "up_sq_obs_mean": 1.1818181818181819,
+          "welfare_obs_mean": 3.0194805194805197,
+          "welfare_pred_mean": 3.4819432140654807,
+          "zero_switch_brier_mean": 0.1817741708559176
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.4854376160774137,
+          "all_stay_obs_mean": 0.22077922077922077,
+          "all_stay_pred_mean": 0.13653731204721142,
+          "cancel_obs_mean": 0.15584415584415584,
+          "down_obs_mean": 0.538961038961039,
+          "down_sq_obs_mean": 0.8116883116883117,
+          "gross_obs_mean": 1.3571428571428572,
+          "gross_pred_mean": 1.6683671571486425,
+          "independent_predicted_net_variance": 1.1456150504647995,
+          "n_old_A4_transitions": 154,
+          "net_obs_mean": 0.2792207792207792,
+          "net_pred_mean": 0.0010714570777888787,
+          "net_sq_obs_mean": 1.0064935064935066,
+          "net_sq_pred_mean": 1.145616198485069,
+          "nochange_occupancy_obs_mean": 0.37662337662337664,
+          "observed_down_variance": 0.5212093101703491,
+          "observed_net_variance": 0.9285292629448474,
+          "observed_up_down_covariance": 0.052538370720188854,
+          "observed_up_variance": 0.512396694214876,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.13912269199156246,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.4173680759746863,
+          "up_down_obs_mean": 0.4935064935064935,
+          "up_obs_mean": 0.8181818181818182,
+          "up_sq_obs_mean": 1.1818181818181819,
+          "welfare_obs_mean": 3.0194805194805197,
+          "welfare_pred_mean": 3.436848595455206,
+          "zero_switch_brier_mean": 0.1646667602680993
+        }
+      },
+      "late": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.3138274409368743,
+          "all_stay_obs_mean": 0.5836575875486382,
+          "all_stay_pred_mean": 0.5240027590884211,
+          "cancel_obs_mean": 0.07782101167315175,
+          "down_obs_mean": 0.27626459143968873,
+          "down_sq_obs_mean": 0.33852140077821014,
+          "gross_obs_mean": 0.5836575875486382,
+          "gross_pred_mean": 0.6068208209716771,
+          "independent_predicted_net_variance": 0.5348845022957707,
+          "n_old_A4_transitions": 257,
+          "net_obs_mean": 0.0311284046692607,
+          "net_pred_mean": 0.03510190163819842,
+          "net_sq_obs_mean": 0.44357976653696496,
+          "net_sq_pred_mean": 0.5361166457943884,
+          "nochange_occupancy_obs_mean": 0.6614785992217899,
+          "observed_down_variance": 0.262199276294872,
+          "observed_net_variance": 0.44261078895971173,
+          "observed_up_down_covariance": 0.051264969946554814,
+          "observed_up_variance": 0.2829414525579494,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.09253687925742349,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.27761063777226913,
+          "up_down_obs_mean": 0.13618677042801555,
+          "up_obs_mean": 0.30739299610894943,
+          "up_sq_obs_mean": 0.377431906614786,
+          "welfare_obs_mean": 1.3307392996108949,
+          "welfare_pred_mean": 1.608349937383164,
+          "zero_switch_brier_mean": 0.25230943131790723
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.34707198295101305,
+          "all_stay_obs_mean": 0.5836575875486382,
+          "all_stay_pred_mean": 0.27190201917146933,
+          "cancel_obs_mean": 0.07782101167315175,
+          "down_obs_mean": 0.27626459143968873,
+          "down_sq_obs_mean": 0.33852140077821014,
+          "gross_obs_mean": 0.5836575875486382,
+          "gross_pred_mean": 1.152071402453204,
+          "independent_predicted_net_variance": 0.9016871497350437,
+          "n_old_A4_transitions": 257,
+          "net_obs_mean": 0.0311284046692607,
+          "net_pred_mean": 0.010016306972670776,
+          "net_sq_obs_mean": 0.44357976653696496,
+          "net_sq_pred_mean": 0.9017874761404144,
+          "nochange_occupancy_obs_mean": 0.6614785992217899,
+          "observed_down_variance": 0.262199276294872,
+          "observed_net_variance": 0.44261078895971173,
+          "observed_up_down_covariance": 0.051264969946554814,
+          "observed_up_variance": 0.2829414525579494,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.4582077096034495,
+          "signed_covariance_plus_miscalibration_welfare_residual": -1.3746231288103503,
+          "up_down_obs_mean": 0.13618677042801555,
+          "up_obs_mean": 0.30739299610894943,
+          "up_sq_obs_mean": 0.377431906614786,
+          "welfare_obs_mean": 1.3307392996108949,
+          "welfare_pred_mean": 2.705362428421245,
+          "zero_switch_brier_mean": 0.3435336312764134
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.27667520586292726,
+          "all_stay_obs_mean": 0.5836575875486382,
+          "all_stay_pred_mean": 0.3870240186161081,
+          "cancel_obs_mean": 0.07782101167315175,
+          "down_obs_mean": 0.27626459143968873,
+          "down_sq_obs_mean": 0.33852140077821014,
+          "gross_obs_mean": 0.5836575875486382,
+          "gross_pred_mean": 0.9463022892313072,
+          "independent_predicted_net_variance": 0.7194959290564326,
+          "n_old_A4_transitions": 257,
+          "net_obs_mean": 0.0311284046692607,
+          "net_pred_mean": 0.022027344724310793,
+          "net_sq_obs_mean": 0.44357976653696496,
+          "net_sq_pred_mean": 0.7199811329720361,
+          "nochange_occupancy_obs_mean": 0.6614785992217899,
+          "observed_down_variance": 0.262199276294872,
+          "observed_net_variance": 0.44261078895971173,
+          "observed_up_down_covariance": 0.051264969946554814,
+          "observed_up_variance": 0.2829414525579494,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.2764013664350712,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.8292040993052099,
+          "up_down_obs_mean": 0.13618677042801555,
+          "up_obs_mean": 0.30739299610894943,
+          "up_sq_obs_mean": 0.377431906614786,
+          "welfare_obs_mean": 1.3307392996108949,
+          "welfare_pred_mean": 2.1599433989161048,
+          "zero_switch_brier_mean": 0.22850662618398954
+        }
+      }
+    },
+    "No": {
+      "early": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.5259361137178105,
+          "all_stay_obs_mean": 0.2235294117647059,
+          "all_stay_pred_mean": 0.18471781761550737,
+          "cancel_obs_mean": 0.20588235294117646,
+          "down_obs_mean": 0.6647058823529411,
+          "down_sq_obs_mean": 0.9705882352941176,
+          "gross_obs_mean": 1.4176470588235295,
+          "gross_pred_mean": 1.4301469917194205,
+          "independent_predicted_net_variance": 1.0289029748070684,
+          "n_old_A4_transitions": 170,
+          "net_obs_mean": 0.08823529411764706,
+          "net_pred_mean": 0.091227371723272,
+          "net_sq_obs_mean": 0.9705882352941176,
+          "net_sq_pred_mean": 1.0372254081586045,
+          "nochange_occupancy_obs_mean": 0.4294117647058823,
+          "observed_down_variance": 0.5287543252595156,
+          "observed_net_variance": 0.96280276816609,
+          "observed_up_down_covariance": 0.034809688581314946,
+          "observed_up_variance": 0.5036678200692042,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.0666371728644869,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.199911518593463,
+          "up_down_obs_mean": 0.5352941176470588,
+          "up_obs_mean": 0.7529411764705882,
+          "up_sq_obs_mean": 1.0705882352941176,
+          "welfare_obs_mean": 2.911764705882353,
+          "welfare_pred_mean": 3.111676224475816,
+          "zero_switch_brier_mean": 0.17825110446239262
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.5279256891090156,
+          "all_stay_obs_mean": 0.2235294117647059,
+          "all_stay_pred_mean": 0.12929193059464283,
+          "cancel_obs_mean": 0.20588235294117646,
+          "down_obs_mean": 0.6647058823529411,
+          "down_sq_obs_mean": 0.9705882352941176,
+          "gross_obs_mean": 1.4176470588235295,
+          "gross_pred_mean": 1.6803365332502749,
+          "independent_predicted_net_variance": 1.1389300849807555,
+          "n_old_A4_transitions": 170,
+          "net_obs_mean": 0.08823529411764706,
+          "net_pred_mean": 0.05437190025164684,
+          "net_sq_obs_mean": 0.9705882352941176,
+          "net_sq_pred_mean": 1.1418863885177306,
+          "nochange_occupancy_obs_mean": 0.4294117647058823,
+          "observed_down_variance": 0.5287543252595156,
+          "observed_net_variance": 0.96280276816609,
+          "observed_up_down_covariance": 0.034809688581314946,
+          "observed_up_variance": 0.5036678200692042,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.17129815322361297,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.5138944596708304,
+          "up_down_obs_mean": 0.5352941176470588,
+          "up_obs_mean": 0.7529411764705882,
+          "up_sq_obs_mean": 1.0705882352941176,
+          "welfare_obs_mean": 2.911764705882353,
+          "welfare_pred_mean": 3.425659165553183,
+          "zero_switch_brier_mean": 0.18372302357301712
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.5136357020991298,
+          "all_stay_obs_mean": 0.2235294117647059,
+          "all_stay_pred_mean": 0.13595400873823246,
+          "cancel_obs_mean": 0.20588235294117646,
+          "down_obs_mean": 0.6647058823529411,
+          "down_sq_obs_mean": 0.9705882352941176,
+          "gross_obs_mean": 1.4176470588235295,
+          "gross_pred_mean": 1.6612945649575506,
+          "independent_predicted_net_variance": 1.1227641136582387,
+          "n_old_A4_transitions": 170,
+          "net_obs_mean": 0.08823529411764706,
+          "net_pred_mean": 0.05482819519774083,
+          "net_sq_obs_mean": 0.9705882352941176,
+          "net_sq_pred_mean": 1.1257702446468802,
+          "nochange_occupancy_obs_mean": 0.4294117647058823,
+          "observed_down_variance": 0.5287543252595156,
+          "observed_net_variance": 0.96280276816609,
+          "observed_up_down_covariance": 0.034809688581314946,
+          "observed_up_variance": 0.5036678200692042,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.1551820093527626,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.4655460280582884,
+          "up_down_obs_mean": 0.5352941176470588,
+          "up_obs_mean": 0.7529411764705882,
+          "up_sq_obs_mean": 1.0705882352941176,
+          "welfare_obs_mean": 2.911764705882353,
+          "welfare_pred_mean": 3.377310733940641,
+          "zero_switch_brier_mean": 0.18281662671496882
+        }
+      },
+      "late": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.5307426216754414,
+          "all_stay_obs_mean": 0.2275132275132275,
+          "all_stay_pred_mean": 0.1853407250956395,
+          "cancel_obs_mean": 0.2328042328042328,
+          "down_obs_mean": 0.6984126984126984,
+          "down_sq_obs_mean": 1.0793650793650793,
+          "gross_obs_mean": 1.4232804232804233,
+          "gross_pred_mean": 1.4363093894284535,
+          "independent_predicted_net_variance": 1.0443195778847645,
+          "n_old_A4_transitions": 189,
+          "net_obs_mean": 0.026455026455026454,
+          "net_pred_mean": 0.028268338746737877,
+          "net_sq_obs_mean": 0.8835978835978836,
+          "net_sq_pred_mean": 1.0451186768602647,
+          "nochange_occupancy_obs_mean": 0.4603174603174603,
+          "observed_down_variance": 0.5915847820609725,
+          "observed_net_variance": 0.8828980151731475,
+          "observed_up_down_covariance": 0.08633576887545136,
+          "observed_up_variance": 0.46398477086307777,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.1615207932623811,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.48456237978714123,
+          "up_down_obs_mean": 0.5925925925925926,
+          "up_obs_mean": 0.7248677248677249,
+          "up_sq_obs_mean": 0.9894179894179894,
+          "welfare_obs_mean": 2.6507936507936507,
+          "welfare_pred_mean": 3.135356030580792,
+          "zero_switch_brier_mean": 0.18031523008365344
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.532518039560697,
+          "all_stay_obs_mean": 0.2275132275132275,
+          "all_stay_pred_mean": 0.13716793468142754,
+          "cancel_obs_mean": 0.2328042328042328,
+          "down_obs_mean": 0.6984126984126984,
+          "down_sq_obs_mean": 1.0793650793650793,
+          "gross_obs_mean": 1.4232804232804233,
+          "gross_pred_mean": 1.6468432200595444,
+          "independent_predicted_net_variance": 1.1347557400474562,
+          "n_old_A4_transitions": 189,
+          "net_obs_mean": 0.026455026455026454,
+          "net_pred_mean": 0.016994024156605975,
+          "net_sq_obs_mean": 0.8835978835978836,
+          "net_sq_pred_mean": 1.1350445369044915,
+          "nochange_occupancy_obs_mean": 0.4603174603174603,
+          "observed_down_variance": 0.5915847820609725,
+          "observed_net_variance": 0.8828980151731475,
+          "observed_up_down_covariance": 0.08633576887545136,
+          "observed_up_variance": 0.46398477086307777,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.25144665330660787,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.7543399599198222,
+          "up_down_obs_mean": 0.5925925925925926,
+          "up_obs_mean": 0.7248677248677249,
+          "up_sq_obs_mean": 0.9894179894179894,
+          "welfare_obs_mean": 2.6507936507936507,
+          "welfare_pred_mean": 3.405133610713473,
+          "zero_switch_brier_mean": 0.18499466449616397
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.4817717799289306,
+          "all_stay_obs_mean": 0.2275132275132275,
+          "all_stay_pred_mean": 0.1613891558217895,
+          "cancel_obs_mean": 0.2328042328042328,
+          "down_obs_mean": 0.6984126984126984,
+          "down_sq_obs_mean": 1.0793650793650793,
+          "gross_obs_mean": 1.4232804232804233,
+          "gross_pred_mean": 1.5655983676053442,
+          "independent_predicted_net_variance": 1.0608986387079353,
+          "n_old_A4_transitions": 189,
+          "net_obs_mean": 0.026455026455026454,
+          "net_pred_mean": 0.022432128046607946,
+          "net_sq_obs_mean": 0.8835978835978836,
+          "net_sq_pred_mean": 1.0614018390766347,
+          "nochange_occupancy_obs_mean": 0.4603174603174603,
+          "observed_down_variance": 0.5915847820609725,
+          "observed_net_variance": 0.8828980151731475,
+          "observed_up_down_covariance": 0.08633576887545136,
+          "observed_up_variance": 0.46398477086307777,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.17780395547875105,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.5334118664362535,
+          "up_down_obs_mean": 0.5925925925925926,
+          "up_obs_mean": 0.7248677248677249,
+          "up_sq_obs_mean": 0.9894179894179894,
+          "welfare_obs_mean": 2.6507936507936507,
+          "welfare_pred_mean": 3.184205517229904,
+          "zero_switch_brier_mean": 0.15691289320911578
+        }
+      }
+    },
+    "Partial": {
+      "early": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.5391079768752746,
+          "all_stay_obs_mean": 0.2474747474747475,
+          "all_stay_pred_mean": 0.16834167225465727,
+          "cancel_obs_mean": 0.19696969696969696,
+          "down_obs_mean": 0.7323232323232324,
+          "down_sq_obs_mean": 1.207070707070707,
+          "gross_obs_mean": 1.4747474747474747,
+          "gross_pred_mean": 1.5021796896673396,
+          "independent_predicted_net_variance": 1.076795721189751,
+          "n_old_A4_transitions": 198,
+          "net_obs_mean": 0.010101010101010102,
+          "net_pred_mean": 0.013344702493626848,
+          "net_sq_obs_mean": 1.0303030303030303,
+          "net_sq_pred_mean": 1.0769738022743944,
+          "nochange_occupancy_obs_mean": 0.4444444444444444,
+          "observed_down_variance": 0.67077339047036,
+          "observed_net_variance": 1.0302009998979695,
+          "observed_up_down_covariance": 0.08256810529537806,
+          "observed_up_variance": 0.5245638200183654,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.046670771971364156,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.14001231591408958,
+          "up_down_obs_mean": 0.6262626262626263,
+          "up_obs_mean": 0.7424242424242424,
+          "up_sq_obs_mean": 1.0757575757575757,
+          "welfare_obs_mean": 3.090909090909091,
+          "welfare_pred_mean": 3.2309214068231804,
+          "zero_switch_brier_mean": 0.19660262876214088
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.5458261466222025,
+          "all_stay_obs_mean": 0.2474747474747475,
+          "all_stay_pred_mean": 0.11371083746930973,
+          "cancel_obs_mean": 0.19696969696969696,
+          "down_obs_mean": 0.7323232323232324,
+          "down_sq_obs_mean": 1.207070707070707,
+          "gross_obs_mean": 1.4747474747474747,
+          "gross_pred_mean": 1.7799276088461684,
+          "independent_predicted_net_variance": 1.1943465736627974,
+          "n_old_A4_transitions": 198,
+          "net_obs_mean": 0.010101010101010102,
+          "net_pred_mean": -0.03982148678991538,
+          "net_sq_obs_mean": 1.0303030303030303,
+          "net_sq_pred_mean": 1.1959323244729567,
+          "nochange_occupancy_obs_mean": 0.4444444444444444,
+          "observed_down_variance": 0.67077339047036,
+          "observed_net_variance": 1.0302009998979695,
+          "observed_up_down_covariance": 0.08256810529537806,
+          "observed_up_variance": 0.5245638200183654,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.16562929416992644,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.49688788250977556,
+          "up_down_obs_mean": 0.6262626262626263,
+          "up_obs_mean": 0.7424242424242424,
+          "up_sq_obs_mean": 1.0757575757575757,
+          "welfare_obs_mean": 3.090909090909091,
+          "welfare_pred_mean": 3.5877969734188664,
+          "zero_switch_brier_mean": 0.2058564990246042
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.5155330248939565,
+          "all_stay_obs_mean": 0.2474747474747475,
+          "all_stay_pred_mean": 0.1329047072565409,
+          "cancel_obs_mean": 0.19696969696969696,
+          "down_obs_mean": 0.7323232323232324,
+          "down_sq_obs_mean": 1.207070707070707,
+          "gross_obs_mean": 1.4747474747474747,
+          "gross_pred_mean": 1.720063709031304,
+          "independent_predicted_net_variance": 1.1582542231292385,
+          "n_old_A4_transitions": 198,
+          "net_obs_mean": 0.010101010101010102,
+          "net_pred_mean": -0.02363893869167417,
+          "net_sq_obs_mean": 1.0303030303030303,
+          "net_sq_pred_mean": 1.1588130225517073,
+          "nochange_occupancy_obs_mean": 0.4444444444444444,
+          "observed_down_variance": 0.67077339047036,
+          "observed_net_variance": 1.0302009998979695,
+          "observed_up_down_covariance": 0.08256810529537806,
+          "observed_up_variance": 0.5245638200183654,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.12850999224867699,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.3855299767460352,
+          "up_down_obs_mean": 0.6262626262626263,
+          "up_obs_mean": 0.7424242424242424,
+          "up_sq_obs_mean": 1.0757575757575757,
+          "welfare_obs_mean": 3.090909090909091,
+          "welfare_pred_mean": 3.476439067655126,
+          "zero_switch_brier_mean": 0.17994535831380695
+        }
+      },
+      "late": {
+        "analyst_A4": {
+          "actor_logloss_mean": 0.46823805773613714,
+          "all_stay_obs_mean": 0.28921568627450983,
+          "all_stay_pred_mean": 0.2566274247386066,
+          "cancel_obs_mean": 0.16666666666666666,
+          "down_obs_mean": 0.553921568627451,
+          "down_sq_obs_mean": 0.7892156862745098,
+          "gross_obs_mean": 1.142156862745098,
+          "gross_pred_mean": 1.184700281504698,
+          "independent_predicted_net_variance": 0.9197653283247851,
+          "n_old_A4_transitions": 204,
+          "net_obs_mean": 0.03431372549019608,
+          "net_pred_mean": 0.04321726254534653,
+          "net_sq_obs_mean": 0.8186274509803921,
+          "net_sq_pred_mean": 0.9216330601066985,
+          "nochange_occupancy_obs_mean": 0.45588235294117646,
+          "observed_down_variance": 0.48238658208381385,
+          "observed_net_variance": 0.8174500192233756,
+          "observed_up_down_covariance": 0.032006920415224904,
+          "observed_up_variance": 0.3990772779700115,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.10300560912630641,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.30901682737892155,
+          "up_down_obs_mean": 0.35784313725490197,
+          "up_obs_mean": 0.5882352941176471,
+          "up_sq_obs_mean": 0.7450980392156863,
+          "welfare_obs_mean": 2.4558823529411766,
+          "welfare_pred_mean": 2.764899180320098,
+          "zero_switch_brier_mean": 0.2143871084549378
+        },
+        "legal_coarse": {
+          "actor_logloss_mean": 0.4818143479416077,
+          "all_stay_obs_mean": 0.28921568627450983,
+          "all_stay_pred_mean": 0.15026729479459386,
+          "cancel_obs_mean": 0.16666666666666666,
+          "down_obs_mean": 0.553921568627451,
+          "down_sq_obs_mean": 0.7892156862745098,
+          "gross_obs_mean": 1.142156862745098,
+          "gross_pred_mean": 1.5787669653303618,
+          "independent_predicted_net_variance": 1.121183535562879,
+          "n_old_A4_transitions": 204,
+          "net_obs_mean": 0.03431372549019608,
+          "net_pred_mean": -0.005272837213518924,
+          "net_sq_obs_mean": 0.8186274509803921,
+          "net_sq_pred_mean": 1.1212113383751592,
+          "nochange_occupancy_obs_mean": 0.45588235294117646,
+          "observed_down_variance": 0.48238658208381385,
+          "observed_net_variance": 0.8174500192233756,
+          "observed_up_down_covariance": 0.032006920415224904,
+          "observed_up_variance": 0.3990772779700115,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.30258388739476705,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.9077516621843063,
+          "up_down_obs_mean": 0.35784313725490197,
+          "up_obs_mean": 0.5882352941176471,
+          "up_sq_obs_mean": 0.7450980392156863,
+          "welfare_obs_mean": 2.4558823529411766,
+          "welfare_pred_mean": 3.363634015125483,
+          "zero_switch_brier_mean": 0.229555827052144
+        },
+        "legal_tenure": {
+          "actor_logloss_mean": 0.41637524961294947,
+          "all_stay_obs_mean": 0.28921568627450983,
+          "all_stay_pred_mean": 0.2053331097247027,
+          "cancel_obs_mean": 0.16666666666666666,
+          "down_obs_mean": 0.553921568627451,
+          "down_sq_obs_mean": 0.7892156862745098,
+          "gross_obs_mean": 1.142156862745098,
+          "gross_pred_mean": 1.4257802623622247,
+          "independent_predicted_net_variance": 0.9886838150100581,
+          "n_old_A4_transitions": 204,
+          "net_obs_mean": 0.03431372549019608,
+          "net_pred_mean": 0.000825403985873098,
+          "net_sq_obs_mean": 0.8186274509803921,
+          "net_sq_pred_mean": 0.988684496301798,
+          "nochange_occupancy_obs_mean": 0.45588235294117646,
+          "observed_down_variance": 0.48238658208381385,
+          "observed_net_variance": 0.8174500192233756,
+          "observed_up_down_covariance": 0.032006920415224904,
+          "observed_up_variance": 0.3990772779700115,
+          "signed_covariance_plus_miscalibration_second_moment_residual": -0.17005704532140586,
+          "signed_covariance_plus_miscalibration_welfare_residual": -0.5101711359642147,
+          "up_down_obs_mean": 0.35784313725490197,
+          "up_obs_mean": 0.5882352941176471,
+          "up_sq_obs_mean": 0.7450980392156863,
+          "welfare_obs_mean": 2.4558823529411766,
+          "welfare_pred_mean": 2.9660534889053913,
+          "zero_switch_brier_mean": 0.16760524602692967
+        }
+      }
+    }
+  },
+  "scope": "EXPLORATORY ORIGINAL HUMAN DATA; all 4 treatments; 24 original sessions reused; post-treatment A4 risk set; not causal",
+  "transition_horizon": "period t in 1..10 vs 30..39 -> t+1; old nA=4 only",
+  "treatment_sequences": "Endogenous always last, nonrandom voluntary information selection",
+  "unique_repeated_six_person_groups": 48
+}
