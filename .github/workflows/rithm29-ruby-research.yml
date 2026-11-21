@@ -297,3 +297,22 @@ jobs:
           test ! -e rererequestforpermissiontouseexperimentalroutechoi.zip
           git diff --exit-code
           test -z "$(git status --porcelain)"
+
+  r62-legal-marginal-group-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned R62 independent-batch dependency
+        run: python -m pip install -r ruby/rithm210/p3/requirements-r62.txt
+      - name: R62 36 source-free exact marginal, filtration, source-gate and macro checks
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r62_*.py' -v
+      - name: Reject owner-restricted source in CI; no modifications
+        run: |
+          test ! -e rererequestforpermissiontouseexperimentalroutechoi.zip
+          git diff --exit-code
+          test -z "$(git status --porcelain)"
