@@ -1,0 +1,30 @@
+name: RITHM-2.10 R63B Legal Feedback Transport Source-Free Gate
+
+on:
+  push:
+    paths:
+      - 'ruby/rithm210/p3/r63b_*.py'
+      - 'ruby/rithm210/p3/test_r63b_*.py'
+      - 'ruby/rithm210/p3/r63b_*.json'
+      - '.github/workflows/rithm210-r63b.yml'
+  pull_request:
+    paths:
+      - 'ruby/rithm210/p3/r63b_*.py'
+      - 'ruby/rithm210/p3/test_r63b_*.py'
+      - 'ruby/rithm210/p3/r63b_*.json'
+      - '.github/workflows/rithm210-r63b.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-and-public-aggregate-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source-free 28 exact, information-filtration, group-simultaneity, and SHA contract tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r63b_*.py' -v
