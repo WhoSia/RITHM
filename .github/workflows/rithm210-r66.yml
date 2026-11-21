@@ -1,0 +1,28 @@
+name: RITHM-2.10 R66 Exact Micro-Macro Covariance Source-Free Test
+
+on:
+  push:
+    paths:
+      - 'ruby/rithm210/p3/r66_marginal_equivalence.py'
+      - 'ruby/rithm210/p3/test_r66_marginal_equivalence.py'
+      - '.github/workflows/rithm210-r66.yml'
+  pull_request:
+    paths:
+      - 'ruby/rithm210/p3/r66_marginal_equivalence.py'
+      - 'ruby/rithm210/p3/test_r66_marginal_equivalence.py'
+      - '.github/workflows/rithm210-r66.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-fraction-micro-macro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test exact 6-person covariance identities and rival couplings without original human data
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r66_marginal_equivalence.py' -v
