@@ -1,0 +1,57 @@
+{
+  "all_zero_sharp_marginal_bounds": {
+    "explanation": "Sharp Frechet bounds assuming the forecast individual switch marginals are exact; do NOT certify model marginals.",
+    "mean_lower": 0.07416555106117406,
+    "mean_upper": 0.5629595842892784
+  },
+  "models": {
+    "analyst_A4_marginal_oracle": {
+      "P0_Brier_equal_session": 0.14119307977126166,
+      "P0_empirical": 0.3,
+      "P0_predicted": 0.2724600936452039,
+      "gross_switches_empirical_per_old_A4": 1.2169811320754718,
+      "gross_switches_predicted_per_old_A4": 1.2185776110563238,
+      "joint_U_D_logloss_equal_session": 1.8805848804681897,
+      "old_A4_group_transitions": 530
+    },
+    "bridge": {
+      "P0_Brier_equal_session": 0.14213966016913604,
+      "P0_empirical": 0.3,
+      "P0_predicted": 0.23348689438843995,
+      "gross_switches_empirical_per_old_A4": 1.2169811320754718,
+      "gross_switches_predicted_per_old_A4": 1.3575822456685178,
+      "joint_U_D_logloss_equal_session": 1.8744141829622074,
+      "old_A4_group_transitions": 530
+    }
+  },
+  "oracle_minus_bridge": {
+    "P0_Brier": {
+      "descriptive_session_bootstrap95": [
+        -0.006154299480625307,
+        0.004302188399302693
+      ],
+      "n_paired_source_sessions": 17,
+      "paired_delta": -0.0009465803978743679
+    },
+    "joint_U_D_logloss": {
+      "descriptive_session_bootstrap95": [
+        -0.017369810739768805,
+        0.035110601281438024
+      ],
+      "n_paired_source_sessions": 17,
+      "paired_delta": 0.006170697505982314
+    }
+  },
+  "oracle_shift_summary": {
+    "maximum": -0.1326388521218641,
+    "mean": -0.16191989357983977,
+    "minimum": -0.21638906548964199,
+    "source": "fit on other-session Partial old-A4 actor switches; researcher occupancy NOT actor legal"
+  },
+  "scope": "AGGREGATE ONLY: same original 24 sessions, 17 Partial-bearing, analyst-only A4 diagnostic, NO causal claim",
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "target": {
+    "old_A4_partial_transitions": 530,
+    "target_bearing_sessions": 17
+  }
+}
