@@ -1,0 +1,53 @@
+{
+  "exact_rival": {
+    "identified": "only the two-section joint binary summary distribution",
+    "match_probability": "17/25",
+    "not_equivalent": "complete 40-period within-section histories or all three segments",
+    "pairs": {
+      "(0, 0)": "17/50",
+      "(0, 1)": "4/25",
+      "(1, 0)": "4/25",
+      "(1, 1)": "17/50"
+    },
+    "unidentified": "persistent actor type versus history-response mechanism"
+  },
+  "group": {
+    "actor_decisions": 22464,
+    "groups_with_nontrivial_shuffle": 96,
+    "interpretation": "Observed label specificity under THIS exchangeability null; no causal personality/memory inference.",
+    "observed_actor_logloss": 0.5171696556875323,
+    "one_sided_permutation_p_upper": 0.0004997501249375312,
+    "permutable_actor_section_records": 576,
+    "permutation_null_95_descriptive": [
+      0.5641835066485233,
+      0.5813200236048119
+    ],
+    "permutation_null_exact_mean": 0.5728924556359434
+  },
+  "same_information": {
+    "actor_decisions": 22464,
+    "groups_with_nontrivial_shuffle": 96,
+    "interpretation": "Observed label specificity under THIS exchangeability null; no causal personality/memory inference.",
+    "observed_actor_logloss": 0.5171696556875323,
+    "one_sided_permutation_p_upper": 0.0004997501249375312,
+    "permutable_actor_section_records": 576,
+    "permutation_null_95_descriptive": [
+      0.5568252437907322,
+      0.5746168205538351
+    ],
+    "permutation_null_exact_mean": 0.565876059221242
+  },
+  "same_information_and_boundary_route": {
+    "actor_decisions": 22464,
+    "groups_with_nontrivial_shuffle": 93,
+    "interpretation": "Observed label specificity under THIS exchangeability null; no causal personality/memory inference.",
+    "observed_actor_logloss": 0.5171696556875323,
+    "one_sided_permutation_p_upper": 0.0004997501249375312,
+    "permutable_actor_section_records": 354,
+    "permutation_null_95_descriptive": [
+      0.5356367663245787,
+      0.5491001082001913
+    ],
+    "permutation_null_exact_mean": 0.5423653450714684
+  }
+}
