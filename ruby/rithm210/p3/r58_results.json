@@ -1,0 +1,507 @@
+{
+  "by_phase": {
+    "early": {
+      "ewa_lite": 2.1603718563427856,
+      "legal_private_history": 2.0641937237359986,
+      "legal_route_only": 2.1125087691549584,
+      "ssm1_9": 2.9090373722883123,
+      "ssm5": 3.1888012034243296,
+      "ssmq_cv": 2.9711040427461035,
+      "state_independent": 2.0623765662577016,
+      "tenure_profit": 2.04727840121564
+    },
+    "late": {
+      "ewa_lite": 2.007298579658735,
+      "legal_private_history": 1.9006197043047728,
+      "legal_route_only": 2.0319277739344974,
+      "ssm1_9": 2.1163072572620374,
+      "ssm5": 2.3921573865227734,
+      "ssmq_cv": 2.3233600271779893,
+      "state_independent": 1.9399891402291842,
+      "tenure_profit": 1.8610006981303586
+    }
+  },
+  "by_treatment": {
+    "1": {
+      "ewa_lite": 2.1180063539085014,
+      "legal_private_history": 1.9935527407481601,
+      "legal_route_only": 2.0537682734797618,
+      "ssm1_9": 2.4804708763904295,
+      "ssm5": 2.629221136501419,
+      "ssmq_cv": 2.5068380545128597,
+      "state_independent": 2.025427133689707,
+      "tenure_profit": 1.9985365861998767
+    },
+    "2": {
+      "ewa_lite": 2.061843717317205,
+      "legal_private_history": 1.9909222975193632,
+      "legal_route_only": 2.1075525230771777,
+      "ssm1_9": 2.386151577438997,
+      "ssm5": 2.6178134526226273,
+      "ssmq_cv": 2.566790315658341,
+      "state_independent": 2.040056918589232,
+      "tenure_profit": 1.967657756916028
+    },
+    "3": {
+      "ewa_lite": 2.065768149057957,
+      "legal_private_history": 1.9564537953539711,
+      "legal_route_only": 2.052234749030304,
+      "ssm1_9": 2.6409048706873945,
+      "ssm5": 3.093763148992702,
+      "ssmq_cv": 2.843154503346934,
+      "state_independent": 1.933357298757985,
+      "tenure_profit": 1.889059778861352
+    }
+  },
+  "fit_ewa_lambda_range": [
+    0,
+    3.0
+  ],
+  "individual_one_step_predictions": 33696,
+  "lambda_by_treatment": {
+    "1": {
+      "max": 0.2884571201987509,
+      "mean": 0.2828996264251367,
+      "min": 0.2754687287943396
+    },
+    "2": {
+      "max": 0.30821424708422057,
+      "mean": 0.30304334671639144,
+      "min": 0.2958266203910008
+    },
+    "3": {
+      "max": 0.3540692699569853,
+      "mean": 0.3490568760132072,
+      "min": 0.34310267886094836
+    }
+  },
+  "macro_moment_predictions": {
+    "ewa_lite": {
+      "excess_congestion_bias": 0.8654715666555275,
+      "excess_congestion_mse": 20.492228379044416,
+      "gross_bias": 0.45065229907317295,
+      "gross_excess_cross_error": 1.507939278925124,
+      "gross_mse": 1.3387747345042253
+    },
+    "legal_private_history": {
+      "excess_congestion_bias": 0.38529961693460363,
+      "excess_congestion_mse": 18.7378279720731,
+      "gross_bias": -0.006487431346760001,
+      "gross_excess_cross_error": 0.9883066057359895,
+      "gross_mse": 1.1663948817049536
+    },
+    "legal_route_only": {
+      "excess_congestion_bias": 0.8181131354286095,
+      "excess_congestion_mse": 19.633080378942417,
+      "gross_bias": -0.005690558474052101,
+      "gross_excess_cross_error": 1.1302960732197422,
+      "gross_mse": 1.3319381780918715
+    },
+    "ssm1_9": {
+      "excess_congestion_bias": 1.6599414427474797,
+      "excess_congestion_mse": 38.96496065439519,
+      "gross_bias": 0.6720337136496013,
+      "gross_excess_cross_error": 3.566728445868066,
+      "gross_mse": 1.7852278629057696
+    },
+    "ssm5": {
+      "excess_congestion_bias": 1.9696559599623844,
+      "excess_congestion_mse": 41.6329140788541,
+      "gross_bias": 0.6606601505511079,
+      "gross_excess_cross_error": 3.792819987866356,
+      "gross_mse": 1.8891643926347517
+    },
+    "ssmq_cv": {
+      "excess_congestion_bias": 2.2441841942652005,
+      "excess_congestion_mse": 39.6015871815505,
+      "gross_bias": 0.8560724548582788,
+      "gross_excess_cross_error": 4.193220299547126,
+      "gross_mse": 2.0712893063441715
+    },
+    "state_independent": {
+      "excess_congestion_bias": 0.25643901881398956,
+      "excess_congestion_mse": 18.7279644125925,
+      "gross_bias": -0.0025582696796154873,
+      "gross_excess_cross_error": 1.1802352100223343,
+      "gross_mse": 1.217477956174742
+    },
+    "tenure_profit": {
+      "excess_congestion_bias": 0.19295516833368645,
+      "excess_congestion_mse": 18.384448281750615,
+      "gross_bias": -0.01168213146240869,
+      "gross_excess_cross_error": 0.9832249090751733,
+      "gross_mse": 1.124012608886459
+    }
+  },
+  "models": {
+    "ewa_lite": {
+      "mean_heldout_actor_logloss": 0.5383910487668403,
+      "mean_heldout_group_logloss": 2.0818727400945543
+    },
+    "legal_private_history": {
+      "mean_heldout_actor_logloss": 0.5233234488494978,
+      "mean_heldout_group_logloss": 1.9803096112071648
+    },
+    "legal_route_only": {
+      "mean_heldout_actor_logloss": 0.5597994696872328,
+      "mean_heldout_group_logloss": 2.0711851818624143
+    },
+    "ssm1_9": {
+      "mean_heldout_actor_logloss": 0.637752136037164,
+      "mean_heldout_group_logloss": 2.5025091081722737
+    },
+    "ssm5": {
+      "mean_heldout_actor_logloss": 0.705264524650761,
+      "mean_heldout_group_logloss": 2.7802659127055827
+    },
+    "ssmq_cv": {
+      "mean_heldout_actor_logloss": 0.6602193067011435,
+      "mean_heldout_group_logloss": 2.638927624506045
+    },
+    "state_independent": {
+      "mean_heldout_actor_logloss": 0.5478115293422314,
+      "mean_heldout_group_logloss": 1.9996137836789747
+    },
+    "tenure_profit": {
+      "mean_heldout_actor_logloss": 0.5195574725109297,
+      "mean_heldout_group_logloss": 1.951751373992419
+    }
+  },
+  "period_transitions": 5616,
+  "raw_original_ssm_zero_actor_observations": {
+    "ssm5": 613,
+    "ssmq_cv": 613
+  },
+  "scope": "Prospective source-history one-step fit; noncausal, SSM lapse is added, EWA lambda bound chosen, no mechanism identification.",
+  "sessions": 24,
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "ssm_assumed_lapse": 0.02,
+  "ssmq_training_selected": {
+    "1": {
+      "1": 24
+    },
+    "2": {
+      "1": 9,
+      "2": 15
+    },
+    "3": {
+      "3": 24
+    }
+  },
+  "vs_state_independent": {
+    "legal_private_history": {
+      "ewa_lite": {
+        "mean_logloss_difference": 0.1015631288873896,
+        "session_bootstrap_95_descriptive": [
+          0.07125707914225397,
+          0.13316652624238448
+        ],
+        "sessions_better": 2
+      },
+      "legal_route_only": {
+        "mean_logloss_difference": 0.09087557065524954,
+        "session_bootstrap_95_descriptive": [
+          0.061462890992325964,
+          0.12276093085500502
+        ],
+        "sessions_better": 3
+      },
+      "ssm1_9": {
+        "mean_logloss_difference": 0.522199496965109,
+        "session_bootstrap_95_descriptive": [
+          0.4521670500557845,
+          0.5998407406198986
+        ],
+        "sessions_better": 0
+      },
+      "ssm5": {
+        "mean_logloss_difference": 0.799956301498418,
+        "session_bootstrap_95_descriptive": [
+          0.7141251549326293,
+          0.8869488626939632
+        ],
+        "sessions_better": 0
+      },
+      "ssmq_cv": {
+        "mean_logloss_difference": 0.6586180132988803,
+        "session_bootstrap_95_descriptive": [
+          0.5793651611748959,
+          0.7411436655985308
+        ],
+        "sessions_better": 0
+      },
+      "state_independent": {
+        "mean_logloss_difference": 0.019304172471809822,
+        "session_bootstrap_95_descriptive": [
+          -0.0023060611507321562,
+          0.04194364485974075
+        ],
+        "sessions_better": 9
+      },
+      "tenure_profit": {
+        "mean_logloss_difference": -0.028558237214745857,
+        "session_bootstrap_95_descriptive": [
+          -0.04114105032617058,
+          -0.014888658833289825
+        ],
+        "sessions_better": 18
+      }
+    },
+    "legal_route_only": {
+      "ewa_lite": {
+        "mean_logloss_difference": 0.010687558232140052,
+        "session_bootstrap_95_descriptive": [
+          -0.03136756091158288,
+          0.05164680974519755
+        ],
+        "sessions_better": 12
+      },
+      "legal_private_history": {
+        "mean_logloss_difference": -0.09087557065524954,
+        "session_bootstrap_95_descriptive": [
+          -0.12250450836159175,
+          -0.061672114743825814
+        ],
+        "sessions_better": 21
+      },
+      "ssm1_9": {
+        "mean_logloss_difference": 0.4313239263098595,
+        "session_bootstrap_95_descriptive": [
+          0.3584995659980297,
+          0.5143596279768758
+        ],
+        "sessions_better": 0
+      },
+      "ssm5": {
+        "mean_logloss_difference": 0.7090807308431685,
+        "session_bootstrap_95_descriptive": [
+          0.6131645420888959,
+          0.7992575205600111
+        ],
+        "sessions_better": 0
+      },
+      "ssmq_cv": {
+        "mean_logloss_difference": 0.5677424426436307,
+        "session_bootstrap_95_descriptive": [
+          0.4936109209947326,
+          0.6454843298613764
+        ],
+        "sessions_better": 0
+      },
+      "state_independent": {
+        "mean_logloss_difference": -0.07157139818343972,
+        "session_bootstrap_95_descriptive": [
+          -0.09523326573408059,
+          -0.04801566258897117
+        ],
+        "sessions_better": 22
+      },
+      "tenure_profit": {
+        "mean_logloss_difference": -0.1194338078699954,
+        "session_bootstrap_95_descriptive": [
+          -0.16062968445625342,
+          -0.08205502557970305
+        ],
+        "sessions_better": 22
+      }
+    },
+    "state_independent": {
+      "ewa_lite": {
+        "mean_logloss_difference": 0.08225895641557977,
+        "session_bootstrap_95_descriptive": [
+          0.04016189678099919,
+          0.12281319691147882
+        ],
+        "sessions_better": 4
+      },
+      "legal_private_history": {
+        "mean_logloss_difference": -0.019304172471809822,
+        "session_bootstrap_95_descriptive": [
+          -0.04063849527613591,
+          0.0014512845124476093
+        ],
+        "sessions_better": 15
+      },
+      "legal_route_only": {
+        "mean_logloss_difference": 0.07157139818343972,
+        "session_bootstrap_95_descriptive": [
+          0.047935821386159184,
+          0.09522686584698624
+        ],
+        "sessions_better": 2
+      },
+      "ssm1_9": {
+        "mean_logloss_difference": 0.5028953244932992,
+        "session_bootstrap_95_descriptive": [
+          0.42354753480291657,
+          0.5904437539962598
+        ],
+        "sessions_better": 0
+      },
+      "ssm5": {
+        "mean_logloss_difference": 0.7806521290266082,
+        "session_bootstrap_95_descriptive": [
+          0.6879999820481976,
+          0.8722064176314523
+        ],
+        "sessions_better": 0
+      },
+      "ssmq_cv": {
+        "mean_logloss_difference": 0.6393138408270704,
+        "session_bootstrap_95_descriptive": [
+          0.5589780843772694,
+          0.723829042355111
+        ],
+        "sessions_better": 0
+      },
+      "tenure_profit": {
+        "mean_logloss_difference": -0.047862409686555675,
+        "session_bootstrap_95_descriptive": [
+          -0.06970532272816854,
+          -0.02855883032152266
+        ],
+        "sessions_better": 19
+      }
+    }
+  },
+  "welfare_mse_robustness": {
+    "ewa_lite": {
+      "kappa_0_mse_gap": {
+        "mean": 1.7544004069713177,
+        "session_bootstrap_95_descriptive": [
+          1.0746750858848286,
+          2.4258703564305275
+        ]
+      },
+      "kappa_1_mse_gap": {
+        "mean": 2.966045606148857,
+        "session_bootstrap_95_descriptive": [
+          1.9646286641931672,
+          3.9456290060291614
+        ]
+      },
+      "kappa_5_mse_gap": {
+        "mean": 11.260223458844452,
+        "session_bootstrap_95_descriptive": [
+          7.7780212069643,
+          14.413084832409272
+        ]
+      },
+      "legal_private_history_lower_mse_all_kappa_nonnegative": true
+    },
+    "ssm1_9": {
+      "kappa_0_mse_gap": {
+        "mean": 20.227132682322097,
+        "session_bootstrap_95_descriptive": [
+          15.571294499504686,
+          25.135297641419154
+        ]
+      },
+      "kappa_1_mse_gap": {
+        "mean": 26.002809343787064,
+        "session_bootstrap_95_descriptive": [
+          20.330441442047597,
+          32.35003122862906
+        ]
+      },
+      "kappa_5_mse_gap": {
+        "mean": 61.48217561366326,
+        "session_bootstrap_95_descriptive": [
+          48.594989881254925,
+          74.74691965795479
+        ]
+      },
+      "legal_private_history_lower_mse_all_kappa_nonnegative": true
+    },
+    "ssm5": {
+      "kappa_0_mse_gap": {
+        "mean": 22.895086106781005,
+        "session_bootstrap_95_descriptive": [
+          18.416440335026998,
+          27.575724943387566
+        ]
+      },
+      "kappa_1_mse_gap": {
+        "mean": 29.226882381971535,
+        "session_bootstrap_95_descriptive": [
+          23.80379725282923,
+          35.096409987085224
+        ]
+      },
+      "kappa_5_mse_gap": {
+        "mean": 69.00945770132961,
+        "session_bootstrap_95_descriptive": [
+          57.08074368904501,
+          81.52019334352659
+        ]
+      },
+      "legal_private_history_lower_mse_all_kappa_nonnegative": true
+    },
+    "ssmq_cv": {
+      "kappa_0_mse_gap": {
+        "mean": 20.8637592094774,
+        "session_bootstrap_95_descriptive": [
+          16.33762782156358,
+          25.5844733588022
+        ]
+      },
+      "kappa_1_mse_gap": {
+        "mean": 28.178481021738893,
+        "session_bootstrap_95_descriptive": [
+          22.68327792408396,
+          34.09435196368981
+        ]
+      },
+      "kappa_5_mse_gap": {
+        "mean": 75.53525676356921,
+        "session_bootstrap_95_descriptive": [
+          62.287266049894264,
+          88.78094257029986
+        ]
+      },
+      "legal_private_history_lower_mse_all_kappa_nonnegative": true
+    }
+  },
+  "welfare_score_polynomial": {
+    "ewa_lite": {
+      "intercept_excess_mse": 20.492228379044416,
+      "linear_kappa": 3.015878557850248,
+      "quadratic_kappa": 1.3387747345042253
+    },
+    "legal_private_history": {
+      "intercept_excess_mse": 18.7378279720731,
+      "linear_kappa": 1.976613211471979,
+      "quadratic_kappa": 1.1663948817049536
+    },
+    "legal_route_only": {
+      "intercept_excess_mse": 19.633080378942417,
+      "linear_kappa": 2.2605921464394845,
+      "quadratic_kappa": 1.3319381780918715
+    },
+    "ssm1_9": {
+      "intercept_excess_mse": 38.96496065439519,
+      "linear_kappa": 7.133456891736132,
+      "quadratic_kappa": 1.7852278629057696
+    },
+    "ssm5": {
+      "intercept_excess_mse": 41.6329140788541,
+      "linear_kappa": 7.585639975732712,
+      "quadratic_kappa": 1.8891643926347517
+    },
+    "ssmq_cv": {
+      "intercept_excess_mse": 39.6015871815505,
+      "linear_kappa": 8.386440599094252,
+      "quadratic_kappa": 2.0712893063441715
+    },
+    "state_independent": {
+      "intercept_excess_mse": 18.7279644125925,
+      "linear_kappa": 2.3604704200446687,
+      "quadratic_kappa": 1.217477956174742
+    },
+    "tenure_profit": {
+      "intercept_excess_mse": 18.384448281750615,
+      "linear_kappa": 1.9664498181503467,
+      "quadratic_kappa": 1.124012608886459
+    }
+  }
+}
