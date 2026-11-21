@@ -1,0 +1,45 @@
+{
+  "original_descriptive": {
+    "causal_warning": "Treatments vary across segments and previous observations affect the later baseline; correlation is not identification of persistent type or learned carryover.",
+    "mean_switch_frequency_by_segment": {
+      "2": 0.29389245014245013,
+      "3": 0.26086182336182334,
+      "4": 0.23842592592592593
+    },
+    "pairwise_pearson": {
+      "2_3": 0.5871999604918764,
+      "2_4": 0.6097261351446025,
+      "3_4": 0.6290331637942461
+    },
+    "participant_triples": 288,
+    "session_resampling_95_descriptive": {
+      "2_3": [
+        0.4582053573591464,
+        0.7085443096426984
+      ],
+      "2_4": [
+        0.5536511678144994,
+        0.6645267528920463
+      ],
+      "3_4": [
+        0.5468775259199655,
+        0.7105559722814649
+      ]
+    },
+    "sessions": 24
+  },
+  "synthetic_exact": {
+    "domain": "only three binary summary outcomes, NOT causal mechanism proof on full human choices",
+    "p_all_three_equal_fixed_type": "13/25",
+    "p_all_three_equal_markov_learning": "289/625",
+    "p_first_equals_third_fixed_type": "17/25",
+    "p_first_equals_third_markov_learning": "353/625",
+    "same_adjacent_pair_law": {
+      "(0, 0)": "17/50",
+      "(0, 1)": "4/25",
+      "(1, 0)": "4/25",
+      "(1, 1)": "17/50"
+    },
+    "total_variation_full_three_joint": "72/625"
+  }
+}
