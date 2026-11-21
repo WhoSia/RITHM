@@ -1,0 +1,47 @@
+{
+  "group": {
+    "exact_null_mean_logloss": 0.5087285763024881,
+    "interpretation": "Only label assignment under preserved group and information-route strata, not a causal type-memory test.",
+    "null_percentile95_descriptive": [
+      0.5066708715032087,
+      0.5108842885519944
+    ],
+    "num_people_section_pairs": 576,
+    "num_target_actor_decisions": 22464,
+    "observed_logloss": 0.4959868377800975,
+    "p_value_plus_one": 0.0004997501249375312,
+    "permutable_groups": 96,
+    "permutable_pairs": 576,
+    "scope": "group"
+  },
+  "same_information": {
+    "exact_null_mean_logloss": 0.5071020200954247,
+    "interpretation": "Only label assignment under preserved group and information-route strata, not a causal type-memory test.",
+    "null_percentile95_descriptive": [
+      0.5052641405427823,
+      0.5089857232324624
+    ],
+    "num_people_section_pairs": 576,
+    "num_target_actor_decisions": 22464,
+    "observed_logloss": 0.4959868377800975,
+    "p_value_plus_one": 0.0004997501249375312,
+    "permutable_groups": 96,
+    "permutable_pairs": 576,
+    "scope": "same_information"
+  },
+  "same_information_and_boundary_route": {
+    "exact_null_mean_logloss": 0.5016682174491192,
+    "interpretation": "Only label assignment under preserved group and information-route strata, not a causal type-memory test.",
+    "null_percentile95_descriptive": [
+      0.5000849279531798,
+      0.5032369799241337
+    ],
+    "num_people_section_pairs": 576,
+    "num_target_actor_decisions": 22464,
+    "observed_logloss": 0.4959868377800975,
+    "p_value_plus_one": 0.0004997501249375312,
+    "permutable_groups": 93,
+    "permutable_pairs": 354,
+    "scope": "same_information_and_boundary_route"
+  }
+}
