@@ -1,0 +1,65 @@
+{
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "variant_values": [
+    {
+      "ssm_joint_logloss_nats": {
+        "ssm1_9": 2.607410414864854,
+        "ssm5": 2.925561325471415,
+        "ssmq_cv": 2.7395090772510406
+      },
+      "ssm_lapse": 0.005,
+      "training_selected_q_counts": {
+        "1": {
+          "1": 24
+        },
+        "2": {
+          "1": 23,
+          "2": 1
+        },
+        "3": {
+          "3": 24
+        }
+      }
+    },
+    {
+      "ssm_joint_logloss_nats": {
+        "ssm1_9": 2.5025091081722737,
+        "ssm5": 2.7802659127055827,
+        "ssmq_cv": 2.638927624506045
+      },
+      "ssm_lapse": 0.02,
+      "training_selected_q_counts": {
+        "1": {
+          "1": 24
+        },
+        "2": {
+          "1": 9,
+          "2": 15
+        },
+        "3": {
+          "3": 24
+        }
+      }
+    },
+    {
+      "ssm_joint_logloss_nats": {
+        "ssm1_9": 2.4342772402217103,
+        "ssm5": 2.6613007919512053,
+        "ssmq_cv": 2.5388398507919536
+      },
+      "ssm_lapse": 0.05,
+      "training_selected_q_counts": {
+        "1": {
+          "1": 24
+        },
+        "2": {
+          "2": 24
+        },
+        "3": {
+          "3": 24
+        }
+      }
+    }
+  ],
+  "warning": "SSM lapse is an evaluator-imposed exogenous choice noise, not the authors original simulation. Hyperparameter sweep was performed after looking at initial output."
+}
