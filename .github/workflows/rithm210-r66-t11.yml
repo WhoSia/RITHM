@@ -1,0 +1,25 @@
+name: RITHM R66-T11 Actor-History Predictive Gate
+on:
+  push:
+    branches:
+      - research/r66-t11-actor-history-20261122
+    paths:
+      - ruby/rithm210/p3/r66_t11_covariance_guard.py
+      - ruby/rithm210/p3/test_r66_t11_covariance_guard.py
+      - .github/workflows/rithm210-r66-t11.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-score-witness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: No private original participant data required
+        working-directory: ruby/rithm210/p3
+        run: |
+          python -m unittest -v test_r66_t11_covariance_guard.py
+          python r66_t11_covariance_guard.py
