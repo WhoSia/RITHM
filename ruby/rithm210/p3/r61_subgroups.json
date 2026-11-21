@@ -1,0 +1,80 @@
+{
+  "information_status_changed": {
+    "actor_decisions": 14976,
+    "adaptive_minus_online_nats": -0.005776802902914384,
+    "equal_session_actor_logloss": {
+      "current_only": 0.5077987901346883,
+      "nested_adaptive": 0.5020219872317738,
+      "static_prior": 0.5071411397817394
+    },
+    "session_resampling_95_descriptive": [
+      -0.00823855867260071,
+      -0.0032020933521004886
+    ]
+  },
+  "information_status_unchanged": {
+    "actor_decisions": 7488,
+    "adaptive_minus_online_nats": -0.004065014325129579,
+    "equal_session_actor_logloss": {
+      "current_only": 0.49467469314091395,
+      "nested_adaptive": 0.4906096788157844,
+      "static_prior": 0.4957780370788998
+    },
+    "session_resampling_95_descriptive": [
+      -0.007809190981988082,
+      0.0006408629514720621
+    ]
+  },
+  "previous_route_0": {
+    "actor_decisions": 7553,
+    "adaptive_minus_online_nats": -0.0008429273587714919,
+    "equal_session_actor_logloss": {
+      "current_only": 0.6228882013150081,
+      "nested_adaptive": 0.6220452739562367,
+      "static_prior": 0.6289580856784062
+    },
+    "session_resampling_95_descriptive": [
+      -0.0045986712620109185,
+      0.0035816409879873626
+    ]
+  },
+  "previous_route_1": {
+    "actor_decisions": 14911,
+    "adaptive_minus_online_nats": -0.007844530752342288,
+    "equal_session_actor_logloss": {
+      "current_only": 0.44407332655754106,
+      "nested_adaptive": 0.43622879580519874,
+      "static_prior": 0.43925140394789103
+    },
+    "session_resampling_95_descriptive": [
+      -0.010216348223374477,
+      -0.005362276239034239
+    ]
+  },
+  "target_section_3": {
+    "actor_decisions": 11232,
+    "adaptive_minus_online_nats": -0.005343647773431208,
+    "equal_session_actor_logloss": {
+      "current_only": 0.5184665632221718,
+      "nested_adaptive": 0.5131229154487406,
+      "static_prior": 0.5193235484600922
+    },
+    "session_resampling_95_descriptive": [
+      -0.008427554840764942,
+      -0.001997571446560535
+    ]
+  },
+  "target_section_4": {
+    "actor_decisions": 11232,
+    "adaptive_minus_online_nats": -0.005648978113955675,
+    "equal_session_actor_logloss": {
+      "current_only": 0.49033000939356086,
+      "nested_adaptive": 0.48468103127960516,
+      "static_prior": 0.4871170774639493
+    },
+    "session_resampling_95_descriptive": [
+      -0.008827662745227572,
+      -0.0023984550856953335
+    ]
+  }
+}
