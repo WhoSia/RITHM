@@ -1,0 +1,24 @@
+name: RITHM-2.10 R66-T8 Sample Versus Identification
+on:
+  push:
+    branches:
+      - 'research/r66-t8-intake-identification-20261121'
+    paths:
+      - 'ruby/rithm210/p3/r66_t8_*.py'
+      - 'ruby/rithm210/p3/test_r66_t8_*.py'
+      - '.github/workflows/rithm210-r66-t8.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-free-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate exact fractions, 24 synthetic sessions and conservative uncertainty
+        working-directory: ruby/rithm210/p3
+        run: |
+          python -m unittest discover -s . -p 'test_r66_t8_*.py' -v
