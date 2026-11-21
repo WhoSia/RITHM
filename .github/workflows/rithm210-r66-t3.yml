@@ -1,0 +1,32 @@
+name: RITHM 2.10 R66-T3 source-free payoff, frailty and fee audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - ruby/rithm210/p3/r66_t3_payoff_streak.py
+      - ruby/rithm210/p3/r66_t3_fee_sensitivity.py
+      - ruby/rithm210/p3/r66_t3_survivor_frailty.py
+      - ruby/rithm210/p3/r66_t3_results.json
+      - ruby/rithm210/p3/r66_t3_fee_sensitivity_results.json
+      - ruby/rithm210/p3/test_r66_t3_payoff_streak.py
+      - ruby/rithm210/p3/test_r66_t3_public_results.py
+      - ruby/rithm210/p3/test_r66_t3_survivor_frailty.py
+      - ruby/rithm210/p3/test_r66_t3_fee_sensitivity.py
+      - .github/workflows/rithm210-r66-t3.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  aggregate-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test source-free mathematical counterexamples and publication contracts
+        run: |
+          python -m unittest discover -s ruby/rithm210/p3 -p 'test_r66_t3_*.py' -v
+      - name: Make evidence boundary explicit
+        run: |
+          echo 'GitHub Actions contain no approved original-human ZIP. This job tests pure mathematical examples, protected information-contracts and already-published aggregate consistency, NOT original human replay or independent cohort identification.'
