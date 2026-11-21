@@ -1,0 +1,538 @@
+{
+  "definition_received": "source profit at period t; participant learns realized payoff at end of t",
+  "definition_reconstructed": "Value(t) - Cost(t), subtracts observed bonus or fee; NOT independently verified as displayed to all participants",
+  "descriptive_24_session_paired": {
+    "Endogenous_early": {
+      "actor_logloss": {
+        "descriptive_95": [
+          -0.003500727844072349,
+          0.0006936851936167887
+        ],
+        "route_minus_received": -0.0014483967774540085
+      },
+      "brier_allstay": {
+        "descriptive_95": [
+          -0.0006248000301027901,
+          0.002537686765602065
+        ],
+        "route_minus_received": 0.0008600324209444565
+      },
+      "residual_welfare": {
+        "descriptive_95": [
+          -0.013505943189469738,
+          0.010714146795302082
+        ],
+        "route_minus_received": -0.0019177836634871603
+      },
+      "welfare_sqerr": {
+        "descriptive_95": [
+          -0.19536937035289093,
+          0.09040314058220211
+        ],
+        "route_minus_received": -0.04002512106917422
+      }
+    },
+    "Endogenous_late": {
+      "actor_logloss": {
+        "descriptive_95": [
+          -0.0035724942323204223,
+          0.0007205722217930033
+        ],
+        "route_minus_received": -0.0013202265081311282
+      },
+      "brier_allstay": {
+        "descriptive_95": [
+          -0.0035944378067574723,
+          0.0014484156965619832
+        ],
+        "route_minus_received": -0.0008056365583210823
+      },
+      "residual_welfare": {
+        "descriptive_95": [
+          -0.024778212506903596,
+          0.009813881927754897
+        ],
+        "route_minus_received": -0.0057228317161652775
+      },
+      "welfare_sqerr": {
+        "descriptive_95": [
+          -0.07681859041012817,
+          0.004328332518009681
+        ],
+        "route_minus_received": -0.033410639271382436
+      }
+    },
+    "Full_early": {
+      "actor_logloss": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "brier_allstay": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "residual_welfare": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "welfare_sqerr": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      }
+    },
+    "Full_late": {
+      "actor_logloss": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "brier_allstay": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "residual_welfare": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "welfare_sqerr": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      }
+    },
+    "No_early": {
+      "actor_logloss": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "brier_allstay": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "residual_welfare": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "welfare_sqerr": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      }
+    },
+    "No_late": {
+      "actor_logloss": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "brier_allstay": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "residual_welfare": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "welfare_sqerr": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      }
+    },
+    "Partial_early": {
+      "actor_logloss": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "brier_allstay": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "residual_welfare": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "welfare_sqerr": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      }
+    },
+    "Partial_late": {
+      "actor_logloss": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "brier_allstay": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "residual_welfare": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      },
+      "welfare_sqerr": {
+        "descriptive_95": [
+          0.0,
+          0.0
+        ],
+        "route_minus_received": 0.0
+      }
+    }
+  },
+  "groups": 48,
+  "limitations": [
+    "Price/payment may be known but visibility of separately reconstructed route-only reward not established",
+    "Endogenous always last with nonrandom price and information selection",
+    "Experimenter-valued Value and Cost were not input to participant-legal model",
+    "Private actor rows, individual reward histories, source identifiers excluded from public aggregate"
+  ],
+  "original_author_zip_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "pooled": {
+    "Endogenous": {
+      "early": {
+        "received_profit": {
+          "actor_logloss_mean": 0.4354609766251893,
+          "brier_allstay_mean": 0.24937968811073605,
+          "n_old_A4_transitions": 219,
+          "observed_allstay_mean": 0.3744292237442922,
+          "observed_down_mean": 0.4977168949771689,
+          "observed_gross_mean": 1.0547945205479452,
+          "observed_up_mean": 0.5570776255707762,
+          "observed_welfare_mean": 2.1232876712328768,
+          "pred_allstay_mean": 0.23353457973080102,
+          "pred_gross_mean": 1.3345276641645036,
+          "pred_welfare_mean": 2.9194303765748453,
+          "residual_welfare_mean": -0.7961427053419678,
+          "welfare_sqerr_mean": 11.20942183557447
+        },
+        "route_reward_reconstructed": {
+          "actor_logloss_mean": 0.4340125798477358,
+          "brier_allstay_mean": 0.25023972053168053,
+          "n_old_A4_transitions": 219,
+          "observed_allstay_mean": 0.3744292237442922,
+          "observed_down_mean": 0.4977168949771689,
+          "observed_gross_mean": 1.0547945205479452,
+          "observed_up_mean": 0.5570776255707762,
+          "observed_welfare_mean": 2.1232876712328768,
+          "pred_allstay_mean": 0.23271498460240642,
+          "pred_gross_mean": 1.3375408436233853,
+          "pred_welfare_mean": 2.921348160238332,
+          "residual_welfare_mean": -0.7980604890054559,
+          "welfare_sqerr_mean": 11.169396714505293
+        }
+      },
+      "late": {
+        "received_profit": {
+          "actor_logloss_mean": 0.3610395672351669,
+          "brier_allstay_mean": 0.19883981391454988,
+          "n_old_A4_transitions": 224,
+          "observed_allstay_mean": 0.36607142857142855,
+          "observed_down_mean": 0.45089285714285715,
+          "observed_gross_mean": 0.9776785714285714,
+          "observed_up_mean": 0.5267857142857143,
+          "observed_welfare_mean": 1.6205357142857142,
+          "pred_allstay_mean": 0.2904316886627401,
+          "pred_gross_mean": 1.1541331392952217,
+          "pred_welfare_mean": 2.4915486337063952,
+          "residual_welfare_mean": -0.8710129194206827,
+          "welfare_sqerr_mean": 5.807975382719783
+        },
+        "route_reward_reconstructed": {
+          "actor_logloss_mean": 0.3597193407270356,
+          "brier_allstay_mean": 0.19803417735622872,
+          "n_old_A4_transitions": 224,
+          "observed_allstay_mean": 0.36607142857142855,
+          "observed_down_mean": 0.45089285714285715,
+          "observed_gross_mean": 0.9776785714285714,
+          "observed_up_mean": 0.5267857142857143,
+          "observed_welfare_mean": 1.6205357142857142,
+          "pred_allstay_mean": 0.2890505675785689,
+          "pred_gross_mean": 1.1571245380692203,
+          "pred_welfare_mean": 2.4972714654225605,
+          "residual_welfare_mean": -0.876735751136848,
+          "welfare_sqerr_mean": 5.7745647434483995
+        }
+      }
+    },
+    "Full": {
+      "early": {
+        "received_profit": {
+          "actor_logloss_mean": 0.4817820207125095,
+          "brier_allstay_mean": 0.15895194028214074,
+          "n_old_A4_transitions": 154,
+          "observed_allstay_mean": 0.22077922077922077,
+          "observed_down_mean": 0.538961038961039,
+          "observed_gross_mean": 1.3571428571428572,
+          "observed_up_mean": 0.8181818181818182,
+          "observed_welfare_mean": 3.0194805194805197,
+          "pred_allstay_mean": 0.1453691775167449,
+          "pred_gross_mean": 1.63072666825509,
+          "pred_welfare_mean": 3.4109201343018767,
+          "residual_welfare_mean": -0.3914396148213585,
+          "welfare_sqerr_mean": 15.845639933428528
+        },
+        "route_reward_reconstructed": {
+          "actor_logloss_mean": 0.4817820207125095,
+          "brier_allstay_mean": 0.15895194028214074,
+          "n_old_A4_transitions": 154,
+          "observed_allstay_mean": 0.22077922077922077,
+          "observed_down_mean": 0.538961038961039,
+          "observed_gross_mean": 1.3571428571428572,
+          "observed_up_mean": 0.8181818181818182,
+          "observed_welfare_mean": 3.0194805194805197,
+          "pred_allstay_mean": 0.1453691775167449,
+          "pred_gross_mean": 1.63072666825509,
+          "pred_welfare_mean": 3.4109201343018767,
+          "residual_welfare_mean": -0.3914396148213585,
+          "welfare_sqerr_mean": 15.845639933428528
+        }
+      },
+      "late": {
+        "received_profit": {
+          "actor_logloss_mean": 0.2697495611390709,
+          "brier_allstay_mean": 0.21890684764400448,
+          "n_old_A4_transitions": 257,
+          "observed_allstay_mean": 0.5836575875486382,
+          "observed_down_mean": 0.27626459143968873,
+          "observed_gross_mean": 0.5836575875486382,
+          "observed_up_mean": 0.30739299610894943,
+          "observed_welfare_mean": 1.3307392996108949,
+          "pred_allstay_mean": 0.3965700924238453,
+          "pred_gross_mean": 0.9279616718244799,
+          "pred_welfare_mean": 2.131410162485575,
+          "residual_welfare_mean": -0.8006708628746787,
+          "welfare_sqerr_mean": 6.229201139973997
+        },
+        "route_reward_reconstructed": {
+          "actor_logloss_mean": 0.2697495611390709,
+          "brier_allstay_mean": 0.21890684764400448,
+          "n_old_A4_transitions": 257,
+          "observed_allstay_mean": 0.5836575875486382,
+          "observed_down_mean": 0.27626459143968873,
+          "observed_gross_mean": 0.5836575875486382,
+          "observed_up_mean": 0.30739299610894943,
+          "observed_welfare_mean": 1.3307392996108949,
+          "pred_allstay_mean": 0.3965700924238453,
+          "pred_gross_mean": 0.9279616718244799,
+          "pred_welfare_mean": 2.131410162485575,
+          "residual_welfare_mean": -0.8006708628746787,
+          "welfare_sqerr_mean": 6.229201139973997
+        }
+      }
+    },
+    "No": {
+      "early": {
+        "received_profit": {
+          "actor_logloss_mean": 0.5062077273364713,
+          "brier_allstay_mean": 0.1737804972511278,
+          "n_old_A4_transitions": 170,
+          "observed_allstay_mean": 0.2235294117647059,
+          "observed_down_mean": 0.6647058823529411,
+          "observed_gross_mean": 1.4176470588235295,
+          "observed_up_mean": 0.7529411764705882,
+          "observed_welfare_mean": 2.911764705882353,
+          "pred_allstay_mean": 0.14839528685454959,
+          "pred_gross_mean": 1.6054755849148956,
+          "pred_welfare_mean": 3.321323824494443,
+          "residual_welfare_mean": -0.40955911861208916,
+          "welfare_sqerr_mean": 16.969054645820542
+        },
+        "route_reward_reconstructed": {
+          "actor_logloss_mean": 0.5062077273364713,
+          "brier_allstay_mean": 0.1737804972511278,
+          "n_old_A4_transitions": 170,
+          "observed_allstay_mean": 0.2235294117647059,
+          "observed_down_mean": 0.6647058823529411,
+          "observed_gross_mean": 1.4176470588235295,
+          "observed_up_mean": 0.7529411764705882,
+          "observed_welfare_mean": 2.911764705882353,
+          "pred_allstay_mean": 0.14839528685454959,
+          "pred_gross_mean": 1.6054755849148956,
+          "pred_welfare_mean": 3.321323824494443,
+          "residual_welfare_mean": -0.40955911861208916,
+          "welfare_sqerr_mean": 16.969054645820542
+        }
+      },
+      "late": {
+        "received_profit": {
+          "actor_logloss_mean": 0.47267264655102753,
+          "brier_allstay_mean": 0.15383378825579794,
+          "n_old_A4_transitions": 189,
+          "observed_allstay_mean": 0.2275132275132275,
+          "observed_down_mean": 0.6984126984126984,
+          "observed_gross_mean": 1.4232804232804233,
+          "observed_up_mean": 0.7248677248677249,
+          "observed_welfare_mean": 2.6507936507936507,
+          "pred_allstay_mean": 0.17560366278718578,
+          "pred_gross_mean": 1.5145898009458,
+          "pred_welfare_mean": 3.1100522280624507,
+          "residual_welfare_mean": -0.4592585772687996,
+          "welfare_sqerr_mean": 14.566017024435537
+        },
+        "route_reward_reconstructed": {
+          "actor_logloss_mean": 0.47267264655102753,
+          "brier_allstay_mean": 0.15383378825579794,
+          "n_old_A4_transitions": 189,
+          "observed_allstay_mean": 0.2275132275132275,
+          "observed_down_mean": 0.6984126984126984,
+          "observed_gross_mean": 1.4232804232804233,
+          "observed_up_mean": 0.7248677248677249,
+          "observed_welfare_mean": 2.6507936507936507,
+          "pred_allstay_mean": 0.17560366278718578,
+          "pred_gross_mean": 1.5145898009458,
+          "pred_welfare_mean": 3.1100522280624507,
+          "residual_welfare_mean": -0.4592585772687996,
+          "welfare_sqerr_mean": 14.566017024435537
+        }
+      }
+    },
+    "Partial": {
+      "early": {
+        "received_profit": {
+          "actor_logloss_mean": 0.5120687474075228,
+          "brier_allstay_mean": 0.17519785165863308,
+          "n_old_A4_transitions": 198,
+          "observed_allstay_mean": 0.2474747474747475,
+          "observed_down_mean": 0.7323232323232324,
+          "observed_gross_mean": 1.4747474747474747,
+          "observed_up_mean": 0.7424242424242424,
+          "observed_welfare_mean": 3.090909090909091,
+          "pred_allstay_mean": 0.14044036716641833,
+          "pred_gross_mean": 1.6893759096028993,
+          "pred_welfare_mean": 3.4412553745656167,
+          "residual_welfare_mean": -0.3503462836565267,
+          "welfare_sqerr_mean": 19.869851374118568
+        },
+        "route_reward_reconstructed": {
+          "actor_logloss_mean": 0.5120687474075228,
+          "brier_allstay_mean": 0.17519785165863308,
+          "n_old_A4_transitions": 198,
+          "observed_allstay_mean": 0.2474747474747475,
+          "observed_down_mean": 0.7323232323232324,
+          "observed_gross_mean": 1.4747474747474747,
+          "observed_up_mean": 0.7424242424242424,
+          "observed_welfare_mean": 3.090909090909091,
+          "pred_allstay_mean": 0.14044036716641833,
+          "pred_gross_mean": 1.6893759096028993,
+          "pred_welfare_mean": 3.4412553745656167,
+          "residual_welfare_mean": -0.3503462836565267,
+          "welfare_sqerr_mean": 19.869851374118568
+        }
+      },
+      "late": {
+        "received_profit": {
+          "actor_logloss_mean": 0.41086815706584456,
+          "brier_allstay_mean": 0.15709731777778319,
+          "n_old_A4_transitions": 204,
+          "observed_allstay_mean": 0.28921568627450983,
+          "observed_down_mean": 0.553921568627451,
+          "observed_gross_mean": 1.142156862745098,
+          "observed_up_mean": 0.5882352941176471,
+          "observed_welfare_mean": 2.4558823529411766,
+          "pred_allstay_mean": 0.21918043427607137,
+          "pred_gross_mean": 1.3932320294947411,
+          "pred_welfare_mean": 2.9026974135366537,
+          "residual_welfare_mean": -0.44681506059547715,
+          "welfare_sqerr_mean": 12.658040797721213
+        },
+        "route_reward_reconstructed": {
+          "actor_logloss_mean": 0.41086815706584456,
+          "brier_allstay_mean": 0.15709731777778319,
+          "n_old_A4_transitions": 204,
+          "observed_allstay_mean": 0.28921568627450983,
+          "observed_down_mean": 0.553921568627451,
+          "observed_gross_mean": 1.142156862745098,
+          "observed_up_mean": 0.5882352941176471,
+          "observed_welfare_mean": 2.4558823529411766,
+          "pred_allstay_mean": 0.21918043427607137,
+          "pred_gross_mean": 1.3932320294947411,
+          "pred_welfare_mean": 2.9026974135366537,
+          "residual_welfare_mean": -0.44681506059547715,
+          "welfare_sqerr_mean": 12.658040797721213
+        }
+      }
+    }
+  },
+  "scope": "EXPLORATORY original-source 24 sessions; route reward rebuilt from value-cost analyst record; no causal price effect",
+  "sessions": 24,
+  "source_adjustments_aggregate": {
+    "Endogenous": {
+      "nonzero_adjustment": 3960,
+      "payoff_bin_changed": 491,
+      "total_rows": 11520
+    },
+    "Full": {
+      "total_rows": 11520
+    },
+    "No": {
+      "total_rows": 11520
+    },
+    "Partial": {
+      "total_rows": 11520
+    }
+  }
+}
