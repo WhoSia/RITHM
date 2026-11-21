@@ -223,3 +223,22 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r57_*.py' -v
       - name: No code mutation by verification
         run: git diff --exit-code && test -z "$(git status --porcelain)"
+
+  r58-author-rivals-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install isolated R58 FFT convolution dependency
+        run: python -m pip install -r ruby/rithm210/p3/requirements-r58.txt
+      - name: Verify 20 source-free Appendix learning and welfare tests
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r58*.py' -v
+      - name: Verify no publication of restricted original human ZIP
+        run: |
+          test ! -e rererequestforpermissiontouseexperimentalroutechoi.zip
+          git diff --exit-code
+          test -z "$(git status --porcelain)"
