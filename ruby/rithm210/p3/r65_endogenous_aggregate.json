@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "analysis": "P3-R65A",
+    "status": "exploratory descriptive human-approved-source (not independent or causal)",
+    "approvedZipSHA256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+    "exactLocalFullJSONsha256": "9aa5ce7bad5650fab6ce0e1c13dd1e90df8b103692c308284d7911d9f8c176cd",
+    "sessions": 24,
+    "groups": 48,
+    "groupCountPerTreatment": 48,
+    "transitionsPerTreatmentEpoch": 480,
+    "epochDefinition": "old t=1..10 vs old t=30..39; test exact same six route labels"
+  },
+  "groupLevelInformedCountInEndogenous": {
+    "0": 17,
+    "1": 12,
+    "2": 2,
+    "3": 3,
+    "4": 0,
+    "5": 2,
+    "6": 12
+  },
+  "epochCounts": {
+    "No": {
+      "early": {
+        "oldA4": 170,
+        "allSixStay": 38,
+        "balancedSwap": 35,
+        "leaveA4": 97,
+        "pAllStay": 0.2235294117647059
+      },
+      "late": {
+        "oldA4": 189,
+        "allSixStay": 43,
+        "balancedSwap": 44,
+        "leaveA4": 102,
+        "pAllStay": 0.2275132275132275
+      }
+    },
+    "Partial": {
+      "early": {
+        "oldA4": 198,
+        "allSixStay": 49,
+        "balancedSwap": 39,
+        "leaveA4": 110,
+        "pAllStay": 0.2474747474747475
+      },
+      "late": {
+        "oldA4": 204,
+        "allSixStay": 59,
+        "balancedSwap": 34,
+        "leaveA4": 111,
+        "pAllStay": 0.28921568627450983
+      }
+    },
+    "Full": {
+      "early": {
+        "oldA4": 154,
+        "allSixStay": 34,
+        "balancedSwap": 24,
+        "leaveA4": 96,
+        "pAllStay": 0.22077922077922077
+      },
+      "late": {
+        "oldA4": 257,
+        "allSixStay": 150,
+        "balancedSwap": 20,
+        "leaveA4": 87,
+        "pAllStay": 0.5836575875486382
+      }
+    },
+    "Endogenous": {
+      "early": {
+        "oldA4": 219,
+        "allSixStay": 82,
+        "balancedSwap": 33,
+        "leaveA4": 104,
+        "pAllStay": 0.3744292237442922
+      },
+      "late": {
+        "oldA4": 224,
+        "allSixStay": 82,
+        "balancedSwap": 39,
+        "leaveA4": 103,
+        "pAllStay": 0.36607142857142855
+      }
+    }
+  },
+  "lateMinusEarlyByTreatment": {
+    "No": 0.0039838157485216075,
+    "Partial": 0.041740938799762345,
+    "Full": 0.3628783667694174,
+    "Endogenous": -0.008357795172863669
+  },
+  "EndogenousMinusFullDifference": -0.3712361619422811,
+  "pairedSessionBootstrap": {
+    "draws": 3000,
+    "descriptive95": [
+      -0.5582193402731547,
+      -0.17282568278919203
+    ]
+  },
+  "warnings": [
+    "same subjects/groups within treatments and Endogenous always last",
+    "information access self-selected under price/fee",
+    "A4 conditioning post-treatment; not causal",
+    "48 groups not 48 randomized independent sessions"
+  ],
+  "source": "Noussair & Qiao, Congestion Information and Efficiency, main text Sections 4.1-4.2, author-approved raw dataset"
+}
