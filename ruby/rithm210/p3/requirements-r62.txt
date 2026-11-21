@@ -1,0 +1,2 @@
+# R62 exact vectorized six-person Poisson-binomial, Python 3.11+
+numpy>=2.2,<2.3
