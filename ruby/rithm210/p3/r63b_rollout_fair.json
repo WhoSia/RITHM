@@ -1,0 +1,45 @@
+{
+  "approved_zip_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "bridge_minus_partial_MSE": {
+    "descriptive_session_bootstrap95": [
+      -1254.4894301470588,
+      -388.70680147058823
+    ],
+    "n_paired_source_sessions": 17,
+    "paired_delta": -809.3713235294117
+  },
+  "design": {
+    "horizon": 40,
+    "information_rule": "six simultaneous decisions; own previous route/payoff/streak; Value(t) only post-choice",
+    "repetitions": 64,
+    "seed": 20261121,
+    "source_sessions": 24,
+    "start": "fair",
+    "target_bearing_sessions": 17,
+    "target_partial_groups": 32,
+    "tau": 8
+  },
+  "historical_partial": {
+    "P0_given_old_A4": 0.3,
+    "mean_cost": 112.40625,
+    "mean_gross_switches": 62.84375,
+    "optimal_A4_fraction": 0.425
+  },
+  "models": {
+    "bridge": {
+      "P0_given_old_A4": 0.20629484082633306,
+      "group_total_congestion_MSE": 5857.9892578125,
+      "optimal_A4_fraction": 0.3472900390625,
+      "predicted_mean_cost": 158.35546875,
+      "predicted_mean_gross_switches": 59.02294921875
+    },
+    "partial_invariant": {
+      "P0_given_old_A4": 0.16161879895561357,
+      "group_total_congestion_MSE": 6771.31787109375,
+      "optimal_A4_fraction": 0.33597412109375,
+      "predicted_mean_cost": 166.58642578125,
+      "predicted_mean_gross_switches": 65.9716796875
+    }
+  },
+  "scope": "R63B-P2 permissioned original retrospective, aggregate-only; NOT causal, not external validation"
+}
