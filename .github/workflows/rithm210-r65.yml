@@ -1,0 +1,32 @@
+name: RITHM-2.10 R65 Pluralist Source-Free & Frozen Aggregate Research Gate
+
+on:
+  push:
+    paths:
+      - 'ruby/rithm210/p3/r65_*.py'
+      - 'ruby/rithm210/p3/r65_*.json'
+      - 'ruby/rithm210/p3/test_r65_*.py'
+      - '.github/workflows/rithm210-r65.yml'
+  pull_request:
+    paths:
+      - 'ruby/rithm210/p3/r65_*.py'
+      - 'ruby/rithm210/p3/r65_*.json'
+      - 'ruby/rithm210/p3/test_r65_*.py'
+      - '.github/workflows/rithm210-r65.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-free-claims-and-counterclaims:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run R65 exact source-free, interpretation and original-aggregate SHA checks
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r65_*.py' -v
+      - name: Independent Full SSM author-fitted q source-free smoke test
+        run: python ruby/rithm210/p3/r65_ssm_fitted.py /tmp/rithm65-ssm-smoke.json --reps 100 --seed 20261121
