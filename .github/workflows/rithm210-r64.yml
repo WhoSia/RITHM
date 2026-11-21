@@ -1,0 +1,32 @@
+name: RITHM-2.10 R64A External Review and Matched-Source Integrity Gate
+
+on:
+  push:
+    paths:
+      - 'ruby/rithm210/p3/r64_*.py'
+      - 'ruby/rithm210/p3/test_r64_*.py'
+      - 'ruby/rithm210/p3/r64_*.json'
+      - '.github/workflows/rithm210-r64.yml'
+  pull_request:
+    paths:
+      - 'ruby/rithm210/p3/r64_*.py'
+      - 'ruby/rithm210/p3/test_r64_*.py'
+      - 'ruby/rithm210/p3/r64_*.json'
+      - '.github/workflows/rithm210-r64.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-free-review-court:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check source-file syntax
+        run: python -m py_compile ruby/rithm210/p3/r64_source_size_matched.py
+      - name: Source-free sample-size matching tests and source-sealed aggregate claims
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r64_*.py' -v
