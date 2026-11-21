@@ -1,0 +1,27 @@
+name: RITHM 2.10 R66-T2 source-free six-agent second-moment audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - ruby/rithm210/p3/r66_t2_original_audit.py
+      - ruby/rithm210/p3/test_r66_t2_original_audit.py
+      - ruby/rithm210/p3/test_r66_t2_public_results.py
+      - ruby/rithm210/p3/r66_t2_original_results.json
+      - .github/workflows/rithm210-r66-t2.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  aggregate-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source-free synthetic transition and published aggregate contract tests
+        run: |
+          python -m unittest discover -s ruby/rithm210/p3 -p 'test_r66_t2_*.py' -v
+      - name: State evidence boundary
+        run: |
+          echo 'CI has NO access to approved original-human ZIP. This validates only source-free math, timing, and public aggregate contracts.'
