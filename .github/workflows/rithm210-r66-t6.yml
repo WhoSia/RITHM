@@ -1,0 +1,25 @@
+name: RITHM 2.10 R66-T6 Exact Higher-Order Welfare (source-free)
+on:
+  push:
+    paths:
+      - 'ruby/rithm210/p3/r66_t6_higher_order_welfare.py'
+      - 'ruby/rithm210/p3/test_r66_t6_higher_order_welfare.py'
+      - '.github/workflows/rithm210-r66-t6.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-three-way-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test exact parity, marginal, pair and cumulative-welfare identities
+        working-directory: ruby/rithm210/p3
+        run: |
+          python -m unittest -v test_r66_t6_higher_order_welfare.py
+          python r66_t6_higher_order_welfare.py
