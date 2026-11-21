@@ -38,6 +38,14 @@ class TransportAuditTest(unittest.TestCase):
         self.assertAlmostEqual(float(exact_legal_transport('reset','Full',40)['cost']), 10.661157024793388, places=12)
         self.assertAlmostEqual(float(exact_legal_transport('trap','Full',40)['cost']), 90.44342648824303, places=12)
 
+    def test_no_off_horizon_move_and_exact_gross(self):
+        self.assertEqual(exact_legal_transport('reset', 'Full', 1)['gross_switches'], 0)
+        self.assertEqual(exact_legal_transport('trap', 'Full', 1)['gross_switches'], 0)
+        self.assertAlmostEqual(float(exact_legal_transport('reset', 'Full', 40)['gross_switches']),
+                               7.016528925619835, places=12)
+        self.assertAlmostEqual(float(exact_legal_transport('trap', 'Full', 40)['gross_switches']),
+                               0.9835767967317394, places=12)
+
     def test_cost_and_gross_distinct(self):
         a = exact_legal_transport('reset','Full',40)
         b = exact_legal_transport('trap','Full',40)
