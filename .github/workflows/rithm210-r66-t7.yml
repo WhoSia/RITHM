@@ -1,0 +1,27 @@
+name: RITHM R66-T7 Exact Moment Welfare and Dual Certificates
+on:
+  push:
+    branches:
+      - research/r66-t7-moment-identifiability-20261121
+    paths:
+      - 'ruby/rithm210/p3/r66_t7_*.py'
+      - 'ruby/rithm210/p3/test_r66_t7_*.py'
+      - '.github/workflows/rithm210-r66-t7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-identifiability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install LP solver wheel
+        run: python -m pip install --no-cache-dir scipy
+      - name: All source-free deterministic scientific tests
+        working-directory: ruby/rithm210/p3
+        run: python -m unittest discover -s . -p 'test_r66_t7_*.py' -v
