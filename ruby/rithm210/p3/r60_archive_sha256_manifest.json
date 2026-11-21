@@ -1,0 +1,73 @@
+{
+  "bundle": "RITHM 2.10 R60 exact source-free science and achievement audit",
+  "member_count": 16,
+  "member_files": {
+    "REPRODUCE_R60.md": {
+      "bytes": 2379,
+      "sha256": "98728dbc98cb88f61b3c2e4799ea20617b044a7cac483bae9f05066a19ddd6af"
+    },
+    "RITHM_2_10_ACHIEVEMENTS_AUDIT_20261121.md": {
+      "bytes": 9604,
+      "sha256": "57098e7bd98c6fec4a914786cfff6e83610f3fb53d71cdb0aba5cc936165b469"
+    },
+    "RITHM_R60_20261121.md": {
+      "bytes": 11378,
+      "sha256": "0baa9aa19602dbc342007d7a569b47a5d0b99dbfc2ffa4f75e5235bea31625b2"
+    },
+    "r54_original_batch_clock.py": {
+      "bytes": 7678,
+      "sha256": "f25bcde2e3d1f2557a65d3b979a484ba0606dd04822d06ab91a98b0b105686c2"
+    },
+    "r59_prior_exposure.py": {
+      "bytes": 7802,
+      "sha256": "aeec1aeee37d494bc7d44f46e745aeaea7728712f0ea8dbe11d06e1d95dc95be"
+    },
+    "r60_build_archive.py": {
+      "bytes": 2478,
+      "sha256": "0e21c01f5a849ed22f11b826c9d68518df11628dddc629807c5adbec4f3637ec"
+    },
+    "r60_cross_segment.py": {
+      "bytes": 10971,
+      "sha256": "60888c0a5238015744621071df89f0f27ef7ce28a339854c2404258f073247e2"
+    },
+    "r60_identity_placebo.json": {
+      "bytes": 2034,
+      "sha256": "704ce6629d7a0d9ba509911d69c03abb43cbd1cff8099ed39c6cf1631a79de7c"
+    },
+    "r60_identity_placebo.py": {
+      "bytes": 4865,
+      "sha256": "fe4f2639b2b5bd114b83a567e0a9b2a2ea88fcf2696105ad0a8d3d29e5ade83c"
+    },
+    "r60_latent_rival.py": {
+      "bytes": 1591,
+      "sha256": "caaf4c54eeaf45906504a299afdb7022096eead1c5ee8d2ebe254cc12e9cf12a"
+    },
+    "r60_results.json": {
+      "bytes": 19826,
+      "sha256": "24a0c762d7b2cea7718db2ccaeb10a3a07e265fd14ef1e6d3053160562e81ef8"
+    },
+    "r60_run.py": {
+      "bytes": 1756,
+      "sha256": "9ea5454a24a055c545c0f75b2094f7410aee33ef3286fa840ba3f2db99a23697"
+    },
+    "r60_run_sha256.json": {
+      "bytes": 192,
+      "sha256": "bcbab1c815a470bd116314945dfa1bac296bdd70ad5d73baf93bf7931b78cf5b"
+    },
+    "test_r60_cross_segment.py": {
+      "bytes": 6025,
+      "sha256": "1e858ee37357a4c23770cd9a0cdabb9bb8804f2b0caded926d192c4f78313df4"
+    },
+    "test_r60_identity_placebo.py": {
+      "bytes": 3210,
+      "sha256": "871f7ca775e218ffbd938d11e0d6db735614f4624b4503c7c55560c13b4833b6"
+    },
+    "test_r60_results_contract.py": {
+      "bytes": 2564,
+      "sha256": "a0c818a266edd19e54639215690c926cacfeb3e796ccfed7e1e7b03204254568"
+    }
+  },
+  "private_author_original_zip_excluded": true,
+  "private_original_sha256_only": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "replay_status": "actual original data replay local only; CI unit tests synthetic only"
+}
