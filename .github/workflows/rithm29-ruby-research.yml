@@ -219,5 +219,7 @@ jobs:
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r55_batch_fibers.py' -v
       - name: R56 predecision legal-flow and common-shock observational equivalence
         run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r56_*.py' -v
+      - name: R57 history-aware source-free joint-flow, actor-assignment placebo and latent-duration proof
+        run: python -m unittest discover -s ruby/rithm210/p3 -p 'test_r57_*.py' -v
       - name: No code mutation by verification
         run: git diff --exit-code && test -z "$(git status --porcelain)"
