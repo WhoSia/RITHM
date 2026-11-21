@@ -1,0 +1,17 @@
+{
+  "authorized_source_zip_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "members_sha256": {
+    "REPRODUCE.md": "f8dc442cf8dd84f7297dce972d9869376c8fb8575a919dc272dc3871cd44ac26",
+    "RITHM_R57_20261121.md": "838cd70c44be5459f954ebb913df34b4ddd6ebb40e4b6823fc9774bd4d95ac35",
+    "r54_original_batch_clock.py": "f25bcde2e3d1f2557a65d3b979a484ba0606dd04822d06ab91a98b0b105686c2",
+    "r56_joint_flow_cv.py": "47662112d515aa47d3d16157d184d40b6bef4cf3aa9c165ebf747a0ed15e5a7b",
+    "r57_duration_equivalence.py": "5280fd5f45bff0ccd4006343ddf38263a1b1cad5b1e9f4c78e20b4cee4e1eea4",
+    "r57_history_cv.py": "28c0976916f8ca7a786f76b7920a0481769ebe3f6a2ce9e405d5333c3e9ed056",
+    "r57_results.json": "05384016931fa9a1cb32d3268d94b541d182640f57516483689ac4dd8481e000",
+    "r57_results.py": "fbf9cd77dae7739d24d8f25889f5d63aa225221fe45430f788acabd516712585",
+    "test_r57_history_cv.py": "f80472d27f45a71af3062e17393f0f2fcb3b3de295590da4b10a2dceaa849c94",
+    "test_r57_results.py": "358b996e9b4893c0b95e8f1374e181a9b652fb379cb3cad1f2fb50f0535ee154"
+  },
+  "schema": "rithm-r57-manifest-v1",
+  "study": "RITHM-2.10 P3-R57"
+}
