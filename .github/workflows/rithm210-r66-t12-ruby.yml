@@ -1,0 +1,26 @@
+name: RITHM-2.10 R66-T12 Ruby Revision Schedules
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ruby/rithm210/p3/r66_t12_*.rb'
+      - 'ruby/rithm210/p3/test_r66_t12_*.rb'
+      - '.github/workflows/rithm210-r66-t12-ruby.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-ruby:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: false
+      - name: Run native Ruby Minitest without original human data
+        working-directory: ruby/rithm210/p3
+        run: ruby -I. -e 'Dir["test_r66_t12_*.rb"].sort.each { |f| require_relative f }'
+      - name: Run original Ruby CLI without Python
+        working-directory: ruby/rithm210/p3
+        run: ruby r66_t12_cli.rb
