@@ -1,0 +1,107 @@
+{
+  "bridge_minus_partial": {
+    "actor_logloss": {
+      "descriptive_session_bootstrap95": [
+        -0.0012925699627874825,
+        0.00640641028517607
+      ],
+      "n_paired_source_sessions": 17,
+      "paired_delta": 0.0024608502589340206
+    },
+    "info0_actor_logloss": {
+      "descriptive_session_bootstrap95": [
+        -0.0005177512291000765,
+        0.008958773656229354
+      ],
+      "n_paired_source_sessions": 17,
+      "paired_delta": 0.0041592534042613665
+    },
+    "info1_actor_logloss": {
+      "descriptive_session_bootstrap95": [
+        -0.0026178128367389075,
+        0.004080170565569814
+      ],
+      "n_paired_source_sessions": 17,
+      "paired_delta": 0.0007624471136068978
+    },
+    "joint_U_D_logloss": {
+      "descriptive_session_bootstrap95": [
+        -0.012790233747374672,
+        0.017819103125151416
+      ],
+      "n_paired_source_sessions": 17,
+      "paired_delta": 0.001654370257033292
+    },
+    "old_A4_no_switch_Brier": {
+      "descriptive_session_bootstrap95": [
+        -0.008151185503430082,
+        0.0011118172713726689
+      ],
+      "n_paired_source_sessions": 17,
+      "paired_delta": -0.003457636020477116
+    }
+  },
+  "contract": {
+    "approved_zip_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+    "claim": "exploratory retrospective prediction only; information-mask invariance NOT causal identification",
+    "comparator": "Partial-only same-mask training on 23 other sessions",
+    "heldout_unit": "entire original session",
+    "shrink": 20,
+    "source_bridge": "No for info0 + Full for info1; no Partial used in training of bridge",
+    "target": "Partial mixed-information group-sections; no target data in source model training",
+    "tau": 8,
+    "total_original_actor_decisions": 22464,
+    "total_original_group_transitions": 3744,
+    "total_original_sessions": 24
+  },
+  "evaluated": {
+    "actor_decisions": 7488,
+    "group_transitions": 1248,
+    "outer_training_sessions": 24,
+    "target_bearing_sessions": 17
+  },
+  "models": {
+    "bridge": {
+      "actor_brier": 0.16592204373888392,
+      "actor_logloss": 0.49727358573917213,
+      "by_information_mask": {
+        "0": {
+          "actor_brier": 0.1680425761690562,
+          "actor_logloss": 0.5016830548066593
+        },
+        "1": {
+          "actor_brier": 0.16380151130871165,
+          "actor_logloss": 0.492864116671685
+        }
+      },
+      "joint_U_D_logloss": 1.8922545472995214,
+      "old_A4_no_switch_Brier": 0.14213966016913604,
+      "old_A4_no_switch_mean_predicted": 0.23348689438843995,
+      "old_A4_no_switch_rate_actual": 0.3,
+      "sessions_used": 17,
+      "source_strata_lt10_fraction": 0.0,
+      "source_strata_lt30_fraction": 0.0
+    },
+    "partial_invariant": {
+      "actor_brier": 0.16469238328923863,
+      "actor_logloss": 0.4948127354802381,
+      "by_information_mask": {
+        "0": {
+          "actor_brier": 0.16621396992309356,
+          "actor_logloss": 0.497523801402398
+        },
+        "1": {
+          "actor_brier": 0.16317079665538373,
+          "actor_logloss": 0.4921016695580781
+        }
+      },
+      "joint_U_D_logloss": 1.890600177042488,
+      "old_A4_no_switch_Brier": 0.14559729618961317,
+      "old_A4_no_switch_mean_predicted": 0.20991490902331403,
+      "old_A4_no_switch_rate_actual": 0.3,
+      "sessions_used": 17,
+      "source_strata_lt10_fraction": 0.0,
+      "source_strata_lt30_fraction": 0.0
+    }
+  }
+}
