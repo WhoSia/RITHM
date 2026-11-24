@@ -1,0 +1,10 @@
+id,candidate,gate,B,D,W,F,R,L,as_of
+T15-A,first spell equivalence and cross-spell discriminator,DONE,.96,.95,.93,.83,.90,.9230,2026-11-24
+T15-G,84-state partial renewal and clock sensitivity,DONE,.94,.90,.94,.94,.93,.9285,2026-11-24
+T15-H,T14 exact subjective prior boundary,DONE,.94,.96,.87,.96,.95,.9355,2026-11-24
+T16-A,adaptive beliefs from legally observed payoff signals,READY,.98,.96,.94,.83,.93,.9370,2026-11-24
+T16-B,Ashraf S01 read existing authorized outcome and authority,PREPARE,.98,.98,.94,.75,.90,.9255,2026-11-24
+T16-C,full labelled transition oracle and habit rival stress test,READY,.89,.86,.89,.88,.94,.8885,2026-11-24
+T16-D,exact main dependency and remote CI audit,READY,.86,.72,.75,.98,.99,.8405,2026-11-24
+T16-E,literature intake and reading,READY,.85,.83,.83,.82,.80,.8290,2026-11-24
+T16-F,more predictors on reused 24 sessions,READY,.70,.45,.70,.98,.80,.6945,2026-11-24
