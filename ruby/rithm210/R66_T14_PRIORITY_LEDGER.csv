@@ -1,0 +1,10 @@
+id,candidate,gate,B,D,W,F,R,L,as_of
+T14-A,cost mechanism distinction,DONE,.98,.95,.94,.98,.90,0.9525,2026-11-24
+T14-B,persistent versus refreshed type,DONE,.93,.88,.91,.75,.88,0.8790,2026-11-24
+T14-C,resource cost accounting,DONE,.95,.88,.98,.92,.90,0.9265,2026-11-24
+T15-A,habit versus permanent cost type,READY,.96,.95,.93,.83,.90,0.9230,2026-11-24
+T15-B,Ashraf S01 integration after authorization check,PREPARE,.98,.98,.94,.75,.90,0.9255,2026-11-24
+T15-C,adaptive belief update and lawful feedback,READY,.93,.93,.91,.80,.88,0.8990,2026-11-24
+T15-D,exact main SHA and remote CI,READY,.86,.72,.75,.98,.99,0.8405,2026-11-24
+T15-E,missing papers and source intake,READY,.85,.83,.83,.82,.80,0.8290,2026-11-24
+T15-F,additional predictor tuning on reused 24 sessions,READY,.70,.45,.70,.98,.80,0.6945,2026-11-24
