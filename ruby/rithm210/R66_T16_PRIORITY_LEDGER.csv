@@ -1,0 +1,11 @@
+id,candidate,gate,B,D,W,F,R,L,as_of
+T16-A,chronological payoff filter,DONE,.98,.96,.94,.83,.93,.9370,2026-11-24
+T16-A2,original signal support and payoff accounting audit,DONE,.98,.93,.89,.96,.95,.9420,2026-11-24
+T16-A3,delayed information value threshold,DONE,.94,.92,.92,.96,.95,.9355,2026-11-24
+T17-A,endogenous closed-loop belief and welfare simulation,READY,.98,.95,.98,.80,.91,.9350,2026-11-24
+T17-B,belief learning versus habit and frailty discriminators,READY,.95,.94,.91,.85,.91,.9185,2026-11-24
+T17-C,Ashraf authorized outcome and authority review,PREPARE,.98,.98,.94,.75,.90,.9255,2026-11-24
+T17-D,full labelled transition oracle and habit rival,READY,.89,.86,.89,.88,.94,.8885,2026-11-24
+T17-E,exact main dependencies and remote CI,READY,.86,.72,.75,.98,.99,.8405,2026-11-24
+T17-F,literature intake and reading,READY,.85,.83,.83,.82,.80,.8290,2026-11-24
+T17-G,more predictors on reused 24 sessions,READY,.70,.45,.70,.98,.80,.6945,2026-11-24
