@@ -1,0 +1,10 @@
+id,candidate,gate,B,D,W,F,R,L,as_of
+T17-A,closed-loop subjective belief and endogenous occupancy,DONE,.98,.95,.98,.80,.91,.9350,2026-11-24
+T17-A2,exact inefficient absorption interval,DONE,.96,.96,.97,.98,.94,.9620,2026-11-24
+T17-A3,matched memory reset comparison,DONE,.94,.91,.93,.94,.92,.9275,2026-11-24
+T18-A,learn subjective transition from legal signals and endogenous feedback,READY,.99,.97,.98,.75,.91,.9350,2026-11-24
+T18-B,learning versus habit and frailty discriminators,READY,.96,.96,.94,.85,.91,.9320,2026-11-24
+T18-C,Ashraf authorized outcomes and authority review,PREPARE,.98,.98,.94,.75,.90,.9255,2026-11-24
+T18-D,full labelled oracle for persistent types,READY,.89,.86,.89,.88,.94,.8885,2026-11-24
+T18-E,exact main dependencies and remote CI,READY,.86,.72,.75,.98,.99,.8405,2026-11-24
+T18-F,literature intake and reading,READY,.85,.83,.83,.82,.80,.8290,2026-11-24
