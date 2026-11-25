@@ -1,5 +1,9 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## Latest R66 research handoff — 2026-11-25
+
+**RITHM-2.10 P3-R66-T21** is the latest exploratory scientific unit. [T18 adaptive learning](ruby/rithm210/RITHM_R66_T18_ADAPTIVE_LEARNING_20261125.md) → [T19 strategic equilibrium](ruby/rithm210/RITHM_R66_T19_STRATEGIC_EQUILIBRIUM_20261125.md) → [T20 all-independent equilibrium selection](ruby/rithm210/RITHM_R66_T20_EQUILIBRIUM_SELECTION_20261125.md) → [T21 selective recommendation](ruby/rithm210/RITHM_R66_T21_SELECTIVE_RECOMMENDATION_20261125.md). [Latest LIRA/JEV](ruby/rithm210/R66_T21_PRIORITY_LEDGER.csv) · [targeted prior-art intake](ruby/rithm210/R66_T21_TARGETED_LITERATURE_INTAKE.csv). T20 common-friction obstruction only within the six-player independent stage-equilibrium model, kappa in [0,2]; T21 clean receipt obedience q>=5(1-k)/(13-k) for k in [0,1], a constructive correlated-signal branch, not unique repeated-game equilibrium. New local T18–T21 suite 28 tests/14881 assertions, zero failures. No remote CI, independent human causality or novelty promotion. Next T22 prior-art overlap and eligibility-conditioned learning; Ashraf lawful independent source PREPARE. No new human recruitment. No bot commits.
+
 ## Current mainline — RITHM-2.10 OPEN (2026-11-03)
 
 **Research name:** Mechanism Identifiability in Repeated Resource Choice: Behavioral Inertia, Latent Group States and Strategic Dependence. The core research question is no longer only whether repeated choices and group turnover can be predicted, but which distinct behavioral mechanisms can generate the same observable choices and how to distinguish them. [Notion 2.10 charter](https://app.notion.com/p/40def561cf92812e9c51d5073aa70ef4) · [Ruby research charter](ruby/rithm210/RESEARCH_CHARTER.md) · [P0 exact latent-shock counterexample](ruby/rithm210/p0/latent_common_shock.rb) and [Minitest](ruby/rithm210/p0/test_latent_common_shock.rb).
