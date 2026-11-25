@@ -27,4 +27,15 @@ class TestR66T24Perturbation < Minitest::Test
     assert_operator P.bounds(p,40,Rational(1,100000)).last[5],:<,base
     assert_equal [W::COST,W::COST],P.bounds(p,1,1)
   end
+  def test_stationary_witness_near_certified_boundary
+    base=W.values(W.witness,40)[5];p=W.clock(W.witness,Rational(5,4))
+    assert_operator P.bounds(p,40,Rational(54,1_000_000)).last[5],:<,base
+    delta=Rational(55,1_000_000);q=p.map(&:dup)
+    (1..6).each{|i|q[i][i]-=delta;q[i][0]+=delta}
+    W.matrix(q)
+    q.zip(p).each{|a,b|assert_operator a.zip(b).sum{|x,y|(x-y).abs}/2,:<=,delta}
+    assert_operator W.values(q,40)[5],:>,base
+    assert_operator W.values(q,40)[5],:<=,P.bounds(p,40,delta).last[5]
+  end
+
 end
