@@ -1,0 +1,11 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T27-A,held-session duration propensity and fixed-belief rivals,DONE,0.99,0.99,0.98,0.95,0.98,0.9805,0.91,0.97,0.5,2026-11-25
+T27-B,conditional direction-specific Markov rival and sign reversal,DONE,0.99,0.99,0.99,0.98,0.99,0.9885,0.95,1,0.5,2026-11-25
+T27-C,full deletion refits and fixed grid sensitivity,DONE,0.98,0.98,0.97,0.96,0.98,0.9750,0.92,0.98,0.5,2026-11-25
+T27-D,sufficient-count refit optimization,DONE,0.9,0.93,0.78,0.98,0.99,0.9090,0.94,1,0.35,2026-11-25
+T28-A,directional duration hazards conditional on time and heterogeneity,READY,0.99,0.99,0.98,0.88,0.98,0.9700,,,,2026-11-25
+T28-B,independent source admission and comparable observations,PREPARE,0.99,0.99,0.97,0.77,0.96,0.9485,,,,2026-11-25
+T28-C,group and session-level predictive estimand with dependence,READY,0.98,0.98,0.97,0.87,0.96,0.9585,,,,2026-11-25
+T28-D,bounded response-invariance sensitivity of robust policies,READY,0.96,0.96,0.98,0.93,0.96,0.9595,,,,2026-11-25
+T28-E,closest structural duration and route-learning prior art full text,READY,0.97,0.98,0.94,0.86,0.96,0.9485,,,,2026-11-25
+T28-F,remote CI and raw-byte preservation,READY,0.86,0.74,0.8,0.9,0.99,0.8435,,,,2026-11-25
