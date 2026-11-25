@@ -8,8 +8,23 @@ module RithmT27
     # Descriptive sensitivity, not a confidence interval for independent replications.
     def deletion(records,strength:12)
       groups=records.group_by(&:first);raise 'need three sessions' unless groups.size>=3
-      values=groups.keys.map do |sid|
-        C.evaluate(groups.reject{|k,_|k==sid}.values.flatten(1),strength:strength)[:contrasts].transform_values{|v|v[:mean]}
+      all,held=C.fit(records)
+      grouped=groups.transform_values do |rs|
+        rs.group_by{|_,ks,_|ks}.transform_values{|v|[v.size,v.sum{|r|r[2]}]}
+      end
+      values=groups.keys.map do |omit|
+        folds=grouped.filter_map do |sid,rows|
+          next if sid==omit
+          loss=Array.new(F::MODES.size,0.0);n=0
+          rows.each do |ks,(count,y)|
+            C.predict(ks,all,held.fetch(sid),omitted:held.fetch(omit),strength:strength).each_with_index do |p,i|
+              loss[i]-=y*Math.log(p)+(count-y)*Math.log(1-p)
+            end
+            n+=count
+          end
+          C::CONTRASTS.map{|i,j|(loss[j]-loss[i])/n}
+        end
+        C::CONTRASTS.each_with_index.to_h{|(i,j),k|["#{F::MODES[j]}_minus_#{F::MODES[i]}",folds.sum{|v|v[k]}/folds.size]}
       end
       values.first.keys.to_h{|key|[key,{range:values.map{|v|v[key]}.minmax,negative:values.count{|v|v[key]<0},refits:values.size}]}
     end
