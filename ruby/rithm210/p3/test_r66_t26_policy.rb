@@ -34,4 +34,20 @@ class TestR66T26Policy < Minitest::Test
     refute P.certify(7r/200,[[1,1,:inside]])[:improvement_certified]
     assert_raises(ArgumentError){P.cost_range(0,2,40)}
   end
+  def test_saturated_relative_policy_over_all_compatible_worlds
+    j=fixture;s=7r/200;cover=D.cover(*j,delta:1r/4)
+    x=P.relative(s,cover,multiplier:5r/4)
+    assert x[:improvement_certified]
+    assert P.relative(s,cover,multiplier:3r/2)[:improvement_certified]
+    refute P.relative(s,cover,multiplier:2)[:improvement_certified]
+    refute P.relative(s,cover,multiplier:1)[:improvement_certified]
+    assert_raises(ArgumentError){P.relative(s,cover,multiplier:0)}
+    cover.each do |l,u,_|
+      [l,u].each do |q|
+        p=s/q;direct=W.values(W.cognitive([5r/4*q,1].min*p),40)[5]
+        assert_equal direct,P.cost(s/[q,4r/5].max,40)
+        assert_operator direct,:<,x[:baseline]
+      end
+    end
+  end
 end
