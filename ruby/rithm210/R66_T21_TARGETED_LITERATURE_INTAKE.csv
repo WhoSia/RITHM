@@ -1,0 +1,9 @@
+title,status,priority,url,why
+"Reducing strategic uncertainty in transportation networks by personalized routing advice: A route-choice laboratory experiment",NOT_FOUND_FIRST_BOUNDED_SEARCH,P0,https://www.sciencedirect.com/science/article/pii/S2214367X23001527,"closest experimental comparison: personalized recommendations, inertia, fairness"
+"Information design in Bayesian routing games",NOT_FOUND_FIRST_BOUNDED_SEARCH,P0,https://arxiv.org/abs/2309.06859,"private signals and obedience"
+"Robust Information Design with Heterogeneous Beliefs in Bayesian Congestion Games",NOT_FOUND_FIRST_BOUNDED_SEARCH,P0,https://arxiv.org/abs/2604.10831,"robust obedience under belief heterogeneity"
+"Day-to-day route choice and congestion management under information heterogeneity",NOT_FOUND_FIRST_BOUNDED_SEARCH,P1,https://www.sciencedirect.com/science/article/abs/pii/S136655452600102X,"inertial user equilibrium and information release"
+"Informational Braess Paradox - The Effect of Information on Traffic Congestion",DRIVE_TITLE_MATCH,P0,https://drive.google.com/file/d/1nsgR0i40B9HgzbljUnhsb0234kO5tJeS/view,"known information paradox"
+"Learning Routing Policies in a Disrupted Congestible Network with Real-Time Information",DRIVE_TITLE_MATCH,P1,https://drive.google.com/file/d/17C_lTbmclThzwzwxGWZBAciYZMqTxjo3/view,"adaptive learning rival"
+"Information Design for Congestion Games with Unknown Demand",DRIVE_TITLE_MATCH,P1,https://drive.google.com/file/d/1uv8yORm31d3GfSv7-_ubf102GQv6M-tG/view,"related information-design benchmark"
+"Inertia-Based Strategy Updating Rule Design for Congestion Games and Its Application to NFV Networks",DRIVE_TITLE_MATCH,P1,https://drive.google.com/file/d/1iQa3upEAAmugxZJS3ADxZ6NFtgETl_T5/view,"inertia strategy updating"
