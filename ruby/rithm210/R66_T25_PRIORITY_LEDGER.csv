@@ -1,0 +1,14 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T24-A,same pooled law opposite common-clock welfare,DONE,0.99,0.98,0.99,0.96,0.96,0.9785,0.95,1,0.35,2026-11-25
+T24-B,same labelled history and positive private gain opposite welfare,DONE,0.99,0.99,0.99,0.96,0.97,0.9825,0.95,1,0.35,2026-11-25
+T24-C,static clock certified polynomial welfare envelope,DONE,0.97,0.97,0.99,0.94,0.97,0.9695,0.94,1,0.35,2026-11-25
+T24-D,relative policy identification without saturation,DONE,0.99,0.98,0.99,0.98,0.95,0.9800,0.94,1,0.35,2026-11-25
+T24-E,TV robustness and stationary counterexample,DONE,0.99,0.98,0.99,0.96,0.97,0.9800,0.94,1,0.35,2026-11-25
+T25-A,switch-anchored two-proxy identification,DONE,0.98,0.99,0.94,0.98,0.96,0.9715,0.94,1,0.35,2026-11-25
+T25-B,dependence restores policy sign ambiguity,DONE,0.99,0.99,0.99,0.98,0.97,0.9855,0.94,1,0.35,2026-11-25
+T26-A,source-compatible measurement contract and existing cohort fields,READY,0.99,0.99,0.98,0.85,0.96,0.9625,,,,2026-11-25
+T26-B,bounded dependent proxies and policy sign uncertainty,READY,0.99,0.98,0.99,0.88,0.96,0.9665,,,,2026-11-25
+T26-C,session-level uncertainty and observation-lawful baseline rivals,READY,0.99,0.98,0.96,0.8,0.96,0.9485,,,,2026-11-25
+T26-D,full text latent class and dynamic policy prior art,READY,0.94,0.98,0.9,0.87,0.95,0.9330,,,,2026-11-25
+T26-E,Ashraf independent source admission,PREPARE,0.98,0.99,0.95,0.75,0.93,0.9345,,,,2026-11-25
+T26-F,remote CI and raw-byte custody,READY,0.86,0.72,0.75,0.9,0.99,0.8285,,,,2026-11-25
