@@ -1,0 +1,13 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T23-A,inactive drift exact bounds,DONE,0.99,0.99,0.95,0.95,0.97,0.9730,0.94,1,0.35,2026-11-25
+T23-B,shared clock cross-row restriction,DONE,0.97,0.98,0.94,0.98,0.97,0.9680,0.93,1,0.35,2026-11-25
+T23-C,independent finite sample envelope,DONE,0.97,0.95,0.93,0.95,0.94,0.9495,0.9,1,0.35,2026-11-25
+T23-D,sharp unrestricted drift monotone proxy demixing,DONE,0.99,0.99,0.95,0.98,0.99,0.9805,0.94,1,0.35,2026-11-25
+T23-E,held source observation contract,DONE,0.99,0.99,0.94,0.95,0.97,0.9710,0.91,1,0.5,2026-11-25
+T24-A,partial gain identification to dynamic welfare and policy rival,READY,0.99,0.97,0.99,0.83,0.96,0.9565,,,,2026-11-25
+T24-B,source-compatible cognitive reconsideration discriminator,READY,0.99,0.99,0.96,0.82,0.96,0.9540,,,,2026-11-25
+T24-C,monotone proxy differential dependence and cluster uncertainty,READY,0.98,0.98,0.94,0.82,0.95,0.9435,,,,2026-11-25
+T24-D,matched sample-size learning controls,READY,0.94,0.94,0.94,0.95,0.95,0.9430,,,,2026-11-25
+T24-E,closest mixture prior art full text,READY,0.97,0.98,0.9,0.86,0.96,0.9405,,,,2026-11-25
+T24-F,Ashraf independent source admission,PREPARE,0.98,0.99,0.95,0.75,0.93,0.9345,,,,2026-11-25
+T24-G,remote CI and raw-byte custody,READY,0.86,0.72,0.75,0.9,0.99,0.8285,,,,2026-11-25
