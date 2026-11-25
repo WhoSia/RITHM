@@ -1,0 +1,35 @@
+{
+  "sessions": 24,
+  "records": 32832,
+  "strength": 12,
+  "scores": {
+    "route": {
+      "n": 32832,
+      "pooled_logloss": 0.557230255516879,
+      "session_mean_logloss": 0.5604068728530262,
+      "session_mean_brier": 0.18768377511970902
+    },
+    "observation": {
+      "n": 32832,
+      "pooled_logloss": 0.5426883584766218,
+      "session_mean_logloss": 0.5462084374787911,
+      "session_mean_brier": 0.182089212386963
+    },
+    "history": {
+      "n": 32832,
+      "pooled_logloss": 0.5456041330146909,
+      "session_mean_logloss": 0.5485219376571254,
+      "session_mean_brier": 0.1827456082257902
+    },
+    "both": {
+      "n": 32832,
+      "pooled_logloss": 0.532956311052738,
+      "session_mean_logloss": 0.5362481456437411,
+      "session_mean_brier": 0.17815726357097084
+    }
+  },
+  "both_minus_observation_sessions_better": 21,
+  "both_minus_observation_session_mean": -0.009960291835049975,
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true
+}
