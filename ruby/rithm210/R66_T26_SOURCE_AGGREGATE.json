@@ -1,0 +1,42 @@
+{
+  "rows": 34560,
+  "sessions": 24,
+  "group_transitions": 5616,
+  "totals": {
+    "all": {
+      "group_transitions": 5616,
+      "actor_transitions": 33696,
+      "switches": 8909,
+      "unchanged_occupancy": 1847,
+      "unchanged_with_switches": 788
+    },
+    "3": {
+      "group_transitions": 1872,
+      "actor_transitions": 11232,
+      "switches": 2648,
+      "unchanged_occupancy": 689,
+      "unchanged_with_switches": 213
+    },
+    "1": {
+      "group_transitions": 1872,
+      "actor_transitions": 11232,
+      "switches": 3110,
+      "unchanged_occupancy": 595,
+      "unchanged_with_switches": 308
+    },
+    "2": {
+      "group_transitions": 1872,
+      "actor_transitions": 11232,
+      "switches": 3151,
+      "unchanged_occupancy": 563,
+      "unchanged_with_switches": 267
+    }
+  },
+  "session_balanced_hidden_turnover": 0.140491452991453,
+  "leave_one_session_out": [
+    0.13582311408398365,
+    0.1436269044964697
+  ],
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true
+}
