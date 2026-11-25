@@ -3,6 +3,7 @@ require_relative 'r66_t27_features'
 module RithmT27
   module Compare
     F=Features
+    CONTRASTS=[[3,4],[3,5],[1,6],[3,7],[7,8]].freeze
     module_function
     def tables
       Array.new(F::MODES.size){Hash.new{|h,k|h[k]=[0,0]}}
@@ -15,7 +16,7 @@ module RithmT27
       end
       [all,held]
     end
-    def predict(ks,all,held,strength:12)
+    def predict(ks,all,held,strength:12,omitted:nil)
       raise ArgumentError,'strength' unless strength>0
       out=[]
       ks.each_with_index do |k,i|
@@ -24,6 +25,9 @@ module RithmT27
           out<<out[F::PARENTS[i]];next
         end
         n,y=all[i][k].zip(held[i][k]).map{|a,b|a-b}
+        if omitted
+          a,b=omitted[i][k];n-=a;y-=b
+        end
         out<< (i==0 ? (y+1.0)/(n+2) : (y+strength*out[F::PARENTS[i]])/(n+strength))
       end
       out
@@ -43,7 +47,7 @@ module RithmT27
         vs=folds.values.map{|v|v[i]};n=vs.sum(&:first)
         [mode,{n:n,session_logloss:vs.sum{|v|v[1]/v[0]}/vs.size,session_brier:vs.sum{|v|v[2]/v[0]}/vs.size}]
       end
-      contrasts=[[3,4],[3,5],[1,6],[3,7],[7,8]].to_h do |i,j|
+      contrasts=CONTRASTS.to_h do |i,j|
         d=folds.values.map{|v|(v[j][1]-v[i][1])/v[i][0]};m=d.sum/d.size
         loo=d.map{|x|(d.sum-x)/(d.size-1)}
         ["#{F::MODES[j]}_minus_#{F::MODES[i]}",{mean:m,better:d.count(&:negative?),delete_one_score_range:loo.minmax}]
