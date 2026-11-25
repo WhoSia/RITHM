@@ -5,7 +5,7 @@ module RithmT26
     T=RithmT25::TwoProxy
     module_function
     def range(c,l,h)
-      a,b,d=c;xs=[l,h];v=-b/(2*d) unless d==0
+      a,b,d=c.map{|x|Rational(x)};xs=[l,h];v=-b/(2*d) unless d==0
       xs<<v if v && v.between?(l,h)
       xs.map{|q|a+b*q+d*q*q}.minmax
     end
