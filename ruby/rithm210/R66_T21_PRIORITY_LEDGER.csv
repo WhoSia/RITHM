@@ -1,0 +1,8 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T21-A,clean private signal and exact receipt obedience,DONE,0.99,0.98,0.99,0.98,0.96,0.9815,0.94,1,0.25,2026-11-25
+T21-B,false-positive attack and silent mixed rival,DONE,0.98,0.98,0.98,0.97,0.95,0.9740,0.93,1,0.25,2026-11-25
+T22-A,closest prior-art full text and actual distinctive estimand,READY,0.99,0.98,0.96,0.89,0.97,0.9635,,,,2026-11-25
+T22-B,independent Ashraf lawful source admission and discriminator,PREPARE,0.99,0.99,0.97,0.75,0.93,0.9410,,,,2026-11-25
+T22-C,eligibility-conditioned learning and observed action histories,READY,0.98,0.97,0.98,0.81,0.95,0.9475,,,,2026-11-25
+T22-D,noisy recommendation overshoot dynamic policy and equilibrium selection,READY,0.93,0.93,0.98,0.87,0.95,0.9340,,,,2026-11-25
+T22-E,clean checkout and raw custody,READY,0.86,0.72,0.75,0.9,0.99,0.8285,,,,2026-11-25
