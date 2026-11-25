@@ -1,0 +1,117 @@
+{
+  "fixed": [
+    {
+      "strength": 3,
+      "session_logloss": {
+        "route": 0.560406872853026,
+        "observation": 0.5463141402096385,
+        "phase": 0.5477994199934094,
+        "directional": 0.5122531942361324,
+        "recent": 0.5242868552302351,
+        "duration": 0.5286291694693527,
+        "duration_origin": 0.5510291700390625
+      }
+    },
+    {
+      "strength": 12,
+      "session_logloss": {
+        "route": 0.560406872853026,
+        "observation": 0.5462084374787913,
+        "phase": 0.5469550094979644,
+        "directional": 0.5097531198224715,
+        "recent": 0.5108359389431464,
+        "duration": 0.5104082449060829,
+        "duration_origin": 0.5158543685847999
+      }
+    },
+    {
+      "strength": 48,
+      "session_logloss": {
+        "route": 0.560406872853026,
+        "observation": 0.5462207961388396,
+        "phase": 0.5461169518457933,
+        "directional": 0.5165297960592322,
+        "recent": 0.5112911786230883,
+        "duration": 0.5108795281661594,
+        "duration_origin": 0.5093064300363157
+      }
+    },
+    {
+      "strength": 192,
+      "session_logloss": {
+        "route": 0.560406872853026,
+        "observation": 0.5469360873570538,
+        "phase": 0.5459237104901199,
+        "directional": 0.5284827692413402,
+        "recent": 0.5217681794692633,
+        "duration": 0.5224153330366845,
+        "duration_origin": 0.5193095607909983
+      }
+    }
+  ],
+  "nested": {
+    "sessions": 24,
+    "records": 32832,
+    "grid": [
+      3,
+      12,
+      48,
+      192
+    ],
+    "session_logloss": {
+      "route": 0.5604068728530266,
+      "observation": 0.5463729584439514,
+      "phase": 0.5459237104901203,
+      "directional": 0.5097531198224714,
+      "recent": 0.5117351696032444,
+      "duration": 0.5113279996995924,
+      "duration_origin": 0.5093064300363158
+    },
+    "selected_strength_counts": {
+      "route": {
+        "3": 24
+      },
+      "observation": {
+        "12": 19,
+        "48": 5
+      },
+      "phase": {
+        "192": 24
+      },
+      "directional": {
+        "12": 24
+      },
+      "recent": {
+        "12": 23,
+        "48": 1
+      },
+      "duration": {
+        "12": 23,
+        "48": 1
+      },
+      "duration_origin": {
+        "48": 24
+      }
+    },
+    "contrasts": {
+      "recent_minus_directional": {
+        "mean": 0.001982049780773013,
+        "better": 9
+      },
+      "duration_minus_directional": {
+        "mean": 0.001574879877121016,
+        "better": 9
+      },
+      "duration_minus_recent": {
+        "mean": -0.000407169903651997,
+        "better": 11
+      },
+      "duration_origin_minus_duration": {
+        "mean": -0.002021569663276645,
+        "better": 15
+      }
+    }
+  },
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true
+}
