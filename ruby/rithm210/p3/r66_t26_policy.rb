@@ -36,5 +36,11 @@ module RithmT26
       end
       {baseline:base,intervals:out,improvement_certified:!out.empty? && out.all?{|x|x[2]==:improves}}
     end
+    # q' = min(m*q,1), so post-policy switch probability is s/max(q,1/m).
+    def relative(s,intervals,multiplier:,horizon:40,depth:16)
+      m=Rational(multiplier);raise ArgumentError,'multiplier' unless m>=1
+      effective=intervals.map{|l,u,status|[[Rational(l),1/m].max,[Rational(u),1/m].max,status]}
+      certify(s,effective,horizon:horizon,depth:depth)
+    end
   end
 end
