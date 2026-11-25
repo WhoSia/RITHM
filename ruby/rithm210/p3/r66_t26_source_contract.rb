@@ -8,12 +8,14 @@ module RithmT26
     SHA='e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953'
     FILE='data_task_all_switch_230705.csv'
     module_function
-    def audit(path)
+    def read_rows(path)
       raise ArgumentError,'source SHA mismatch' unless Digest::SHA256.file(path).hexdigest==SHA
       csv,err,status=Open3.capture3('unzip','-p',path,FILE)
       raise "unzip failure: #{err}" unless status.success?
-      rows=CSV.parse(csv,headers:true).reject{|r|%w[2 101].include?(r['session']) || !%w[1 2 3].include?(r['trt'])}
-      x=summarize(rows)
+      CSV.parse(csv,headers:true).reject{|r|%w[2 101].include?(r['session']) || !%w[1 2 3].include?(r['trt'])}
+    end
+    def audit(path)
+      x=summarize(read_rows(path))
       raise 'cohort mismatch' unless x[:rows]==34560 && x[:sessions]==24 && x[:group_transitions]==5616
       x.merge(source_sha256:SHA,aggregate_only:true)
     end
