@@ -1,0 +1,97 @@
+{
+  "sessions": 24,
+  "records": 32832,
+  "strength": 12.0,
+  "scores": {
+    "route": {
+      "n": 32832,
+      "session_logloss": 0.560406872853026,
+      "session_brier": 0.18768377511970905
+    },
+    "observation": {
+      "n": 32832,
+      "session_logloss": 0.5462084374787913,
+      "session_brier": 0.18208921238696296
+    },
+    "history": {
+      "n": 32832,
+      "session_logloss": 0.5485219376571256,
+      "session_brier": 0.1827456082257903
+    },
+    "both": {
+      "n": 32832,
+      "session_logloss": 0.5362481456437412,
+      "session_brier": 0.17815726357097086
+    },
+    "duration": {
+      "n": 32832,
+      "session_logloss": 0.5077531991018943,
+      "session_brier": 0.16969758049973707
+    },
+    "frailty": {
+      "n": 32832,
+      "session_logloss": 0.5157053323409139,
+      "session_brier": 0.17189707772861054
+    },
+    "belief": {
+      "n": 32832,
+      "session_logloss": 0.5446158399960771,
+      "session_brier": 0.18157094289487452
+    },
+    "behavior": {
+      "n": 32832,
+      "session_logloss": 0.5049186955263468,
+      "session_brier": 0.16884274193595125
+    },
+    "behavior_belief": {
+      "n": 32832,
+      "session_logloss": 0.5045438589960533,
+      "session_brier": 0.16863068106169524
+    }
+  },
+  "contrasts": {
+    "duration_minus_both": {
+      "mean": -0.028494946541846825,
+      "better": 24,
+      "delete_one_score_range": [
+        -0.02959515518238694,
+        -0.026958592221184508
+      ]
+    },
+    "frailty_minus_both": {
+      "mean": -0.020542813302827388,
+      "better": 23,
+      "delete_one_score_range": [
+        -0.022071052424279643,
+        -0.019081682629730447
+      ]
+    },
+    "belief_minus_observation": {
+      "mean": -0.0015925974827142415,
+      "better": 19,
+      "delete_one_score_range": [
+        -0.001724570607040202,
+        -0.0014716705216719567
+      ]
+    },
+    "behavior_minus_both": {
+      "mean": -0.0313294501173944,
+      "better": 24,
+      "delete_one_score_range": [
+        -0.03268587267994184,
+        -0.029643696608261175
+      ]
+    },
+    "behavior_belief_minus_behavior": {
+      "mean": -0.0003748365302935958,
+      "better": 15,
+      "delete_one_score_range": [
+        -0.0006211638952745538,
+        -1.4606492983922443e-05
+      ]
+    }
+  },
+  "rho": 0.5,
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true
+}
