@@ -44,14 +44,17 @@ module RithmT28
       end
       [all,held]
     end
-    def predict(ks,all,held,strength:12)
+    def probabilities(counts,strength)
       raise ArgumentError,'strength' unless strength>0
       out=[]
-      ks.each_with_index do |k,i|
-        n,y=all[i][k].zip(held[i][k]).map{|a,b|a-b}
+      counts.each_with_index do |(n,y),i|
         out<<(i==0 ? (y+1.0)/(n+2) : (y+strength*out[PARENTS[i]])/(n+strength))
       end
       out
+    end
+    def predict(ks,all,held,strength:12)
+      counts=ks.each_with_index.map{|k,i|all[i][k].zip(held[i][k]).map{|a,b|a-b}}
+      probabilities(counts,strength)
     end
     def evaluate(rows,strength:12)
       all,held=fit(rows);raise 'need two sessions' unless held.size>=2
