@@ -1,11 +1,11 @@
 id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
-T22-A,opportunity-conditioned row sharp identification,DONE,.98,.99,.91,.99,.98,.9695,.94,1,.35,2026-11-25
-T22-B,matched closed-loop contextual learning,DONE,.97,.94,.98,.94,.95,.9565,.84,.9,.25,2026-11-25
-T22-C,imperfect proxy sharp bounds,DONE,.99,.99,.94,.97,.98,.9745,.94,1,.35,2026-11-25
-T22-D,differential-error robustness,DONE,.99,.99,.94,.97,.98,.9745,.94,1,.35,2026-11-25
-T23-A,finite-sample and inactive drift robustness,READY,.99,.99,.95,.87,.97,.9600,,,,2026-11-25
-T23-B,existing human source opportunity observation contract,READY,.99,.99,.96,.83,.98,.9580,,,,2026-11-25
-T23-C,common-clock cross-row bounds and intervention welfare,READY,.96,.97,.98,.9,.95,.9565,,,,2026-11-25
-T23-D,matched sample-size learning controls,READY,.96,.94,.94,.95,.95,.9475,,,,2026-11-25
-T23-E,independent source Ashraf admission,PREPARE,.98,.99,.95,.75,.93,.9345,,,,2026-11-25
-T23-F,full text prior-art overlap,READY,.94,.97,.91,.84,.95,.9290,,,,2026-11-25
+T22-A,opportunity-conditioned row sharp identification,DONE,.98,.99,.91,.99,.98,0.9700,.94,1,.35,2026-11-25
+T22-B,matched closed-loop contextual learning,DONE,.97,.94,.98,.94,.95,0.9570,.84,.9,.25,2026-11-25
+T22-C,imperfect proxy sharp bounds,DONE,.99,.99,.94,.97,.98,0.9755,.94,1,.35,2026-11-25
+T22-D,differential-error robustness,DONE,.99,.99,.94,.97,.98,0.9755,.94,1,.35,2026-11-25
+T23-A,finite-sample and inactive drift robustness,READY,.99,.99,.95,.87,.97,0.9610,,,,2026-11-25
+T23-B,existing human source opportunity observation contract,READY,.99,.99,.96,.83,.98,0.9585,,,,2026-11-25
+T23-C,common-clock cross-row bounds and intervention welfare,READY,.96,.97,.98,.9,.95,0.9560,,,,2026-11-25
+T23-D,matched sample-size learning controls,READY,.96,.94,.94,.95,.95,0.9480,,,,2026-11-25
+T23-E,independent source Ashraf admission,PREPARE,.98,.99,.95,.75,.93,0.9345,,,,2026-11-25
+T23-F,full text prior-art overlap,READY,.94,.97,.91,.84,.95,0.9280,,,,2026-11-25
