@@ -13,19 +13,12 @@ module RithmT28
         [n,y]
       end
     end
-    def probabilities(counts,strength)
-      out=[]
-      counts.each_with_index do |(n,y),i|
-        out<<(i==0 ? (y+1.0)/(n+2) : (y+strength*out[H::PARENTS[i]])/(n+strength))
-      end
-      out
-    end
     def losses(grouped,all,excluded,grid)
       totals=grid.map{Array.new(H::MODES.size,0.0)};n=0
       grouped.each do |ks,(count,y)|
         c=counts(ks,all,excluded);n+=count
         grid.each_with_index do |strength,g|
-          probabilities(c,strength).each_with_index{|p,i|totals[g][i]-=y*Math.log(p)+(count-y)*Math.log(1-p)}
+          H.probabilities(c,strength).each_with_index{|p,i|totals[g][i]-=y*Math.log(p)+(count-y)*Math.log(1-p)}
         end
       end
       totals.map{|row|row.map{|v|v/n}}
