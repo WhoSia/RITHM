@@ -1,5 +1,9 @@
 # RITHM — Route-choice Inertia and Traffic Hysteresis Modeling
 
+## Latest R66 research handoff — T23 (2026-11-25)
+
+**RITHM-2.10 P3-R66-T23**: [robust opportunity identification, shared clocks and monotone-proxy demixing](ruby/rithm210/RITHM_R66_T23_ROBUST_OPPORTUNITY_20261125.md) · [LIRA/JEV](ruby/rithm210/R66_T23_PRIORITY_LEDGER.csv). Exact row-local background drift and monotone-proxy bounds; conservative independent finite-sample envelope; held original experiment has formal revision eligibility every period, not observed cognitive reconsideration. T23 local 10 tests/21548 assertions; T18–T23 51 tests/75879 assertions, zero failures. 600 independent LP objectives max numerical difference 3.55e-15. Ponytail + fast-anything principles: reuse Ruby/Rational, measure before native ports, no upstream CLI/Rust available and no demonstrated bottleneck. T24 dynamic welfare and source-compatible cognitive reconsideration; novelty, human causality, cluster uncertainty, CI and Drive raw-byte custody HOLD. No bot commits or new participants.
+
 ## Latest R66 research handoff — T22 (2026-11-25)
 
 **RITHM-2.10 P3-R66-T22**: [opportunity-conditioned learning, partial identification and proxy sensitivity](ruby/rithm210/RITHM_R66_T22_OPPORTUNITY_IDENTIFICATION_20261125.md) · [LIRA/JEV](ruby/rithm210/R66_T22_PRIORITY_LEDGER.csv). Conditional on inactive identity, the pooled row does not identify opportunity-conditioned choices; exact sharp bounds from imperfect proxies and bounded differential error. 2,880 synthetic trajectories, 13 T22 tests/39,450 assertions; T18–T22 combined local 41 tests/54,331 assertions, zero failures, T22 JSON replay byte-identical. No remote CI or real-human mechanism claim. T23: finite-sample and inactive drift robustness, source opportunity contracts, common-clock cross-row bounds. Prior-art full text and independent source admission HOLD. No bot commits or new human recruitment.
