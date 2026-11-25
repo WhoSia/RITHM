@@ -1,0 +1,12 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T18-A,joint persistence and state learning,DONE,0.98,0.96,0.97,0.9,0.94,0.9550,0.85,1,0.25,2026-11-25
+T18-B,strict-interior exact welfare reversal,DONE,0.98,0.97,0.98,0.97,0.95,0.9715,0.93,1,0.25,2026-11-25
+T18-C,matched history learning discriminator,DONE,0.96,0.97,0.88,0.98,0.94,0.9465,0.91,1,0.25,2026-11-25
+T18-D,unrestricted rows and matched replay,DONE,0.96,0.96,0.98,0.85,0.94,0.9445,0.83,0.9,0.25,2026-11-25
+T19-A,conditional simultaneous Nash branches,DONE,0.99,0.96,0.98,0.95,0.95,0.9685,0.93,1,0.25,2026-11-25
+T19-B,separate real switching resource cost,DONE,0.95,0.94,0.98,0.98,0.93,0.9550,0.93,1,0.25,2026-11-25
+T20-A,all-occupancy stage-equilibrium dynamic selection bounds,READY,0.99,0.95,0.99,0.85,0.96,0.9545,,,,2026-11-25
+T20-B,eligibility-conditioned learning vs strategic equilibrium,READY,0.98,0.98,0.98,0.75,0.94,0.9395,,,,2026-11-25
+T20-C,independent Ashraf source admission,PREPARE,0.98,0.98,0.94,0.75,0.9,0.9255,,,,2026-11-25
+T20-D,prior-art and matched human-data discriminator,READY,0.94,0.95,0.88,0.82,0.93,0.9110,,,,2026-11-25
+T20-E,CI exact checkout and raw-byte custody,READY,0.86,0.72,0.75,0.9,0.99,0.8285,,,,2026-11-25
