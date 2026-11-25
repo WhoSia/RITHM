@@ -1,0 +1,12 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T28-A,direction-specific past hazard and matched duration rivals,DONE,0.99,0.99,0.98,0.95,0.98,0.9805,0.92,0.97,0.5,2026-11-25
+T28-B,fixed smoothing sensitivity,DONE,0.98,0.98,0.96,0.98,0.98,0.9760,0.92,0.98,0.5,2026-11-25
+T28-C,nested held-session model-specific smoothing selection,DONE,0.99,0.99,0.99,0.94,0.98,0.9810,0.93,0.98,0.5,2026-11-25
+T28-D,sharp saturated response range and welfare robustness brackets,DONE,0.99,0.98,0.99,0.96,0.98,0.9815,0.95,1,0.35,2026-11-25
+T28-E,initial condition and structural prior-art metadata gate,PARTIAL,0.97,0.98,0.94,0.8,0.96,0.9395,0.78,0.83,0.4,2026-11-25
+T29-A,structural two-direction random effects with initial condition rival,READY,0.99,0.99,0.98,0.85,0.97,0.9640,,,,2026-11-25
+T29-B,independent source admission and prospective validation,PREPARE,0.99,0.99,0.99,0.75,0.96,0.9495,,,,2026-11-25
+T29-C,conditional policy calibration and strategic response sensitivity,READY,0.98,0.98,0.99,0.84,0.96,0.9580,,,,2026-11-25
+T29-D,full-text structural state dependence and route learning overlap,READY,0.98,0.99,0.94,0.85,0.96,0.9520,,,,2026-11-25
+T29-E,session-level estimand and independent holdout design,READY,0.98,0.98,0.97,0.85,0.96,0.9555,,,,2026-11-25
+T29-F,remote CI and raw-byte preservation,READY,0.86,0.74,0.8,0.9,0.99,0.8435,,,,2026-11-25
