@@ -1,0 +1,11 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T30-A,matched payoff response and later-spell rivals,DONE,0.99,0.99,0.99,0.95,0.98,0.9825,0.92,0.97,0.5,2026-11-27
+T30-B,paired information and EM-budget sensitivity,DONE,0.98,0.98,0.97,0.96,0.98,0.9750,0.93,0.98,0.5,2026-11-27
+T30-C,one-step group occupancy and congestion calibration,DONE,0.99,0.99,0.99,0.97,0.98,0.9855,0.94,0.98,0.5,2026-11-27
+T30-D,central literature recheck and prior-art scope,DONE,0.95,0.96,0.95,0.94,0.98,0.9555,0.88,0.92,0.4,2026-11-27
+T31-A,joint conditional dependence and marginal calibration discrimination,READY,0.99,0.99,0.99,0.87,0.98,0.9705,,,,2026-11-27
+T31-B,group dependence bounds for intervention welfare,READY,0.99,0.98,0.99,0.88,0.96,0.9665,,,,2026-11-27
+T31-C,payoff history learning and matched grid refinement,READY,0.98,0.99,0.98,0.85,0.96,0.9600,,,,2026-11-27
+T31-D,independent source admission and prospective validation,PREPARE,0.99,0.99,0.99,0.75,0.96,0.9495,,,,2026-11-27
+T31-E,full text structural and route choice overlap,READY,0.98,0.99,0.94,0.85,0.96,0.9520,,,,2026-11-27
+T31-F,remote CI and raw byte custody,READY,0.86,0.74,0.8,0.9,0.99,0.8435,,,,2026-11-27
