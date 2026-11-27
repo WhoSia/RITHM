@@ -1,0 +1,39 @@
+{
+  "models": [
+    {
+      "sessions": 24,
+      "records": 32832,
+      "session_logloss": 0.49699668719327156,
+      "session_brier": 0.16486224442562472,
+      "multiplier": 1.0,
+      "condition_initial": false
+    },
+    {
+      "sessions": 24,
+      "records": 32832,
+      "session_logloss": 0.4965915472483417,
+      "session_brier": 0.16470564754493264,
+      "multiplier": 1.0,
+      "condition_initial": true
+    },
+    {
+      "sessions": 24,
+      "records": 32832,
+      "session_logloss": 0.5031537368961781,
+      "session_brier": 0.1675474439640056,
+      "multiplier": 0.5,
+      "condition_initial": true
+    },
+    {
+      "sessions": 24,
+      "records": 32832,
+      "session_logloss": 0.5050101588730986,
+      "session_brier": 0.16696774996238506,
+      "multiplier": 2.0,
+      "condition_initial": true
+    }
+  ],
+  "iterations": 12,
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true
+}
