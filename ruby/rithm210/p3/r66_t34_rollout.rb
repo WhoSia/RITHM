@@ -31,13 +31,15 @@ module RithmT34
       end
       p
     end
-    def forecast(c,n,trt,i,h,mode,strength:12)
+    def forecast(c,n,trt,i,h,mode,strength:12,cache:nil)
       p=Array.new(7,0.0);p[n]=1;cost=0.0
       h.times do |k|
         q=Array.new(7,0.0)
         p.each_with_index do |w,j|
           next if w==0
-          row(c,j,trt,i+k,mode,strength:strength).each_with_index{|a,l|q[l]+=w*a}
+          key=[mode,j,trt,(i+k)/10]
+          probs=cache ? (cache[key]||=row(c,j,trt,i+k,mode,strength:strength)) : row(c,j,trt,i+k,mode,strength:strength)
+          probs.each_with_index{|a,l|q[l]+=w*a}
         end
         p=q;cost+=p.zip(COST).sum{|a,b|a*b}
       end
@@ -46,13 +48,13 @@ module RithmT34
     def evaluate(paths,strength:12,horizons:HORIZONS)
       sessions=paths.map(&:first).uniq;raise 'need two sessions' unless sessions.size>=2
       folds=sessions.map do |sid|
-        c=fit(paths.reject{|r|r.first==sid},strength:strength);f={}
+        c=fit(paths.reject{|r|r.first==sid},strength:strength);f={};cache={}
         horizons.each do |h|
           MODES.each_with_index do |m,j|
             n=0;l=0.0;pred=0.0;act=0.0;mse=0.0
             paths.select{|r|r.first==sid}.each do |_,trt,ns|
               (1...ns.size-h).each do |i|
-                q,v=forecast(c,ns[i],trt,i,h,j,strength:strength);a=ns[(i+1)..(i+h)].sum{|x|COST[x]}
+                q,v=forecast(c,ns[i],trt,i,h,j,strength:strength,cache:cache);a=ns[(i+1)..(i+h)].sum{|x|COST[x]}
                 n+=1;l-=Math.log(q[ns[i+h]]);pred+=v;act+=a;mse+=(v-a)**2
               end
             end
@@ -68,7 +70,7 @@ module RithmT34
       (0..6).map do |n|
         count=Array.new(7,0)
         paths.each{|_,_,ns|ns.each_cons(2){|a,b|count[b]+=1 if a==n}}
-        {state:n,transitions:count.sum,counts:count,return_to_four:count[4].fdiv(count.sum),return_to_five:count[5].fdiv(count.sum)}
+        {state:n,transitions:count.sum,counts:count,return_to_four:count.sum.zero? ? nil : count[4].fdiv(count.sum),return_to_five:count.sum.zero? ? nil : count[5].fdiv(count.sum)}
       end
     end
     def audit(path)
