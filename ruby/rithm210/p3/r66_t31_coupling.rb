@@ -37,6 +37,11 @@ module RithmT31
       a=q.each_with_index.sum{|w,m|m==0 ? 0 : w*3*(1-m)**2};v=3
       (1...horizon).each{|t|v=3+q[0]*v+t*a};v
     end
+    # Both the no-switch mass and absorbing exit cost are extremized by these couplings.
+    def absorbing_bounds(ps,horizon)
+      raise ArgumentError,'five switch probabilities' unless ps.size==5
+      [lower(ps),upper(ps)].map{|law|absorbing_cost(occupancy(law,5),horizon)}
+    end
     def independent(ps)
       marginals(ps).reduce([1]) do |q,p|
         z=Array.new(q.size+1,0);q.each_with_index{|w,i|z[i]+=w*(1-p);z[i+1]+=w*p};z
