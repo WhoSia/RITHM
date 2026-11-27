@@ -21,4 +21,25 @@ class TestR66T29Mixture < Minitest::Test
     a=M.events([0,0,1,0,1]);b=M.events([0,0,1,1,1]);w=Array.new(M::TYPES.size,1.0/M::TYPES.size)
     assert_equal M.predict(a,w,1).take(3),M.predict(b,w,1).take(3)
   end
+  def test_regularized_em_objective_is_monotone
+    l=[[0.7,0.2,0.1],[0.1,0.6,0.3],[0.8,0.1,0.1]];pseudo=0.05
+    objective=->(w){l.sum{|r|Math.log(r.zip(w).sum{|a,b|a*b})}+pseudo*w.sum{|x|Math.log(x)}}
+    old=objective.call([1.0/3]*3)
+    (1..12).each do |n|
+      current=objective.call(M.fit(l,iterations:n,pseudo:pseudo))
+      assert_operator current,:>=,old-1e-12;old=current
+    end
+  end
+  def test_held_session_matches_explicit_training
+    paths=[[1,['1',0],[0,1,0,0,1]],[2,['1',0],[0,0,0,1,1]],[3,['1',0],[0,1,1,0,0]]]
+    scores=paths.map do |sid,stratum,routes|
+      train=paths.reject{|s,_,_|s==sid}.map{|_,_,r|M.likelihood(M.events(r),1)}
+      ev=M.events(routes);w=M.fit(train,iterations:12)
+      losses=M.predict(ev,w,1).zip(ev).drop(1).map{|p,(_,_,y)|-Math.log(y==1 ? p : 1-p)}
+      losses.sum/losses.size
+    end
+    actual=M.evaluate(paths,iterations:12)
+    assert_in_delta scores.sum/scores.size,actual[:session_logloss],1e-14
+    assert_equal 9,actual[:records]
+  end
 end
