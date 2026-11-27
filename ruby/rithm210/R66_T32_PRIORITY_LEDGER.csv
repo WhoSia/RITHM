@@ -1,0 +1,9 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T32-A,disjoint session calibration and joint forecast rivals,DONE,0.99,0.99,0.98,0.95,0.98,0.9805,0.93,0.98,0.5,2026-11-27
+T32-B,fine grid and EM budget sensitivity,DONE,0.98,0.98,0.97,0.95,0.98,0.9735,0.92,0.98,0.5,2026-11-27
+T32-C,pair-moment exact dynamic welfare counterexample,DONE,0.99,0.99,0.99,0.97,0.99,0.9870,0.96,1,0.35,2026-11-27
+T33-A,higher-order count identification and recurrent policy dynamics,READY,0.99,0.99,0.99,0.87,0.98,0.9705,,,,2026-11-27
+T33-B,group-history dependent forecasts under matched holdout,READY,0.99,0.98,0.98,0.86,0.97,0.9630,,,,2026-11-27
+T33-C,independent source admission and prospective validation,PREPARE,0.99,0.99,0.99,0.77,0.97,0.9540,,,,2026-11-27
+T33-D,prior-art full text and source overlap,READY,0.95,0.98,0.94,0.85,0.96,0.9420,,,,2026-11-27
+T33-E,remote CI and raw byte custody,READY,0.86,0.74,0.8,0.9,0.99,0.8435,,,,2026-11-27
