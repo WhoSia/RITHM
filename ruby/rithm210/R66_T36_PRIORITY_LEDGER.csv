@@ -1,0 +1,11 @@
+state,topic,L_review,E,C,G,N,S,M,V,gate
+T36-A,policy-class exact span and counterexamples,.96,.97,1,.76,.20,.98,.87,.78,MERGE
+T36-B,source-conditioned policy rank and turnover audit,.94,.91,.96,.46,.28,.95,.80,.65,SUPPORT
+T36-C,goal-oriented exact one-row measurement widths,.98,.94,.98,.49,.51,.99,.94,.67,CORE
+T36-D,cross-domain synthesis and manuscript firewall,.98,.80,.85,.60,.48,.99,.94,.64,CORE
+T37-A,robust multistep measurement with shared response restrictions,.99,.50,.50,.70,.63,.99,.97,.55,READY
+T37-B,sampling noise and prospective measurement cost selection,.99,.55,.50,.65,.58,.99,.96,.57,READY
+T37-C,latent friction policy transport and minimax regret,.98,.62,.55,.67,.63,.99,.96,.58,READY
+T37-D,independent source admission and frozen evaluation,.99,.45,.45,.75,.45,.98,.96,.55,PREPARE
+T37-E,theorem level prior art and custody,.98,.62,.55,.65,.40,.98,.95,.58,READY
+T37-F,matched autonomous micro and aggregate and original rivals,.96,.70,.65,.50,.43,.97,.92,.65,READY
