@@ -43,23 +43,28 @@ module RithmT30
         w.map!{|v|v/z};p
       end
     end
-    def evaluate(paths,beta:0.0,multiplier:1.0,iterations:40)
+    def score_folds(paths,beta:0.0,multiplier:1.0,iterations:40)
       raise ArgumentError,'parameters' unless beta.finite? && multiplier.finite? && multiplier>0 && iterations.is_a?(Integer) && iterations>0
       data=paths.map{|sid,key,ev|[sid,key,ev,*prepare(ev,beta,multiplier)]}
       sessions=data.map(&:first).uniq;raise 'need two sessions' unless sessions.size>=2
       folds=sessions.map do |sid|
         train=data.reject{|r|r.first==sid};fits=train.group_by{|r|r[1]}.transform_values{|v|M.fit(v.map(&:last),iterations:iterations)}
-        n=0;loss=0.0;brier=0.0
+        n=0;loss=0.0;brier=0.0;by_info=Hash.new{|h,k|h[k]=[0,0.0,0.0]}
         data.select{|r|r.first==sid}.each do |_,key,ev,ps,_|
           w=fits[key]||Array.new(M::TYPES.size,1.0/M::TYPES.size)
           predict(ev,ps,w).zip(ev).drop(1).each do |p,e|
-            y=e[2];n+=1;loss-=Math.log(y==1 ? p : 1-p);brier+=(p-y)**2
+            y=e[2];l=-Math.log(y==1 ? p : 1-p);b=(p-y)**2;n+=1;loss+=l;brier+=b
+            v=by_info[key[1]];v[0]+=1;v[1]+=l;v[2]+=b
           end
         end
         raise 'empty held targets' if n==0
-        [n,loss/n,brier/n]
+        [n,loss/n,brier/n,by_info]
       end
-      {beta:beta,later_spell_multiplier:multiplier,iterations:iterations,sessions:sessions.size,records:folds.sum(&:first),session_logloss:folds.sum{|x|x[1]}/folds.size,session_brier:folds.sum{|x|x[2]}/folds.size}
+      sessions.zip(folds).to_h
+    end
+    def evaluate(paths,beta:0.0,multiplier:1.0,iterations:40)
+      folds=score_folds(paths,beta:beta,multiplier:multiplier,iterations:iterations).values
+      {beta:beta,later_spell_multiplier:multiplier,iterations:iterations,sessions:folds.size,records:folds.sum(&:first),session_logloss:folds.sum{|x|x[1]}/folds.size,session_brier:folds.sum{|x|x[2]}/folds.size}
     end
     def audit(path,iterations:40)
       s=RithmT26::SourceContract;rows=s.read_rows(path);check=s.summarize(rows)
