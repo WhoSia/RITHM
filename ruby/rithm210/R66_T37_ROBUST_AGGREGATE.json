@@ -1,0 +1,189 @@
+{
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true,
+  "sessions": 24,
+  "transitions": 5616,
+  "reference": "all rows uncertain, exact reference moments, row/time rectangular; fixed-law witnesses only",
+  "results": {
+    "none": [
+      {
+        "horizon": 2,
+        "lower": 6.106086896929443,
+        "upper": 6.106086896929443,
+        "width": 0,
+        "stationary_witness_width": 0
+      },
+      {
+        "horizon": 5,
+        "lower": 14.67672211104061,
+        "upper": 16.2925999933137,
+        "width": 1.61587788227309,
+        "stationary_witness_width": 1.61587788227309
+      },
+      {
+        "horizon": 20,
+        "lower": 57.397163647427,
+        "upper": 67.79499722550861,
+        "width": 10.39783357808161,
+        "stationary_witness_width": 10.39783357808161
+      },
+      {
+        "horizon": 40,
+        "lower": 114.35772001901972,
+        "upper": 136.4669968453859,
+        "width": 22.10927682636617,
+        "stationary_witness_width": 22.10927682636617
+      }
+    ],
+    "third_moment": [
+      {
+        "horizon": 2,
+        "lower": 6.106086896929443,
+        "upper": 6.106086896929443,
+        "width": 0,
+        "stationary_witness_width": 0
+      },
+      {
+        "horizon": 5,
+        "lower": 14.740519796852633,
+        "upper": 16.020634629158813,
+        "width": 1.2801148323061813,
+        "stationary_witness_width": 1.2801148323061813
+      },
+      {
+        "horizon": 20,
+        "lower": 57.76978205711957,
+        "upper": 65.88535314493876,
+        "width": 8.115571087819195,
+        "stationary_witness_width": 8.115571087819195
+      },
+      {
+        "horizon": 40,
+        "lower": 115.14206428219204,
+        "upper": 132.3721311181568,
+        "width": 17.23006683596475,
+        "stationary_witness_width": 17.23006683596475
+      }
+    ],
+    "no_net_change": [
+      {
+        "horizon": 2,
+        "lower": 6.106086896929443,
+        "upper": 6.106086896929443,
+        "width": 0,
+        "stationary_witness_width": 0
+      },
+      {
+        "horizon": 5,
+        "lower": 15.054998482399252,
+        "upper": 16.120095910740257,
+        "width": 1.0650974283410048,
+        "stationary_witness_width": 1.0650974283410048
+      },
+      {
+        "horizon": 20,
+        "lower": 59.71463912749359,
+        "upper": 66.50928439059534,
+        "width": 6.794645263101754,
+        "stationary_witness_width": 6.794645263101754
+      },
+      {
+        "horizon": 40,
+        "lower": 119.2605977935351,
+        "upper": 133.69512222095108,
+        "width": 14.434524427415981,
+        "stationary_witness_width": 14.434524427415981
+      }
+    ],
+    "efficient_next": [
+      {
+        "horizon": 2,
+        "lower": 6.106086896929443,
+        "upper": 6.106086896929443,
+        "width": 0,
+        "stationary_witness_width": 0
+      },
+      {
+        "horizon": 5,
+        "lower": 15.070020041812224,
+        "upper": 16.19054662183957,
+        "width": 1.1205265800273467,
+        "stationary_witness_width": 1.1205265800273467
+      },
+      {
+        "horizon": 20,
+        "lower": 59.851547677605,
+        "upper": 67.11415747208645,
+        "width": 7.26260979448145,
+        "stationary_witness_width": 7.26260979448145
+      },
+      {
+        "horizon": 40,
+        "lower": 119.56024968888218,
+        "upper": 135.01411152555679,
+        "width": 15.453861836674612,
+        "stationary_witness_width": 15.453861836674612
+      }
+    ],
+    "low_occupancy": [
+      {
+        "horizon": 2,
+        "lower": 6.106086896929443,
+        "upper": 6.106086896929443,
+        "width": 0,
+        "stationary_witness_width": 0
+      },
+      {
+        "horizon": 5,
+        "lower": 14.683168323948989,
+        "upper": 16.128742955701913,
+        "width": 1.4455746317529237,
+        "stationary_witness_width": 1.4455746317529237
+      },
+      {
+        "horizon": 20,
+        "lower": 57.424253338115186,
+        "upper": 66.59860622094794,
+        "width": 9.174352882832755,
+        "stationary_witness_width": 9.174352882832755
+      },
+      {
+        "horizon": 40,
+        "lower": 114.41233169774583,
+        "upper": 133.8924438688156,
+        "width": 19.48011217106979,
+        "stationary_witness_width": 19.48011217106979
+      }
+    ],
+    "high_occupancy": [
+      {
+        "horizon": 2,
+        "lower": 6.106086896929443,
+        "upper": 6.106086896929443,
+        "width": 0,
+        "stationary_witness_width": 0
+      },
+      {
+        "horizon": 5,
+        "lower": 15.334354334696133,
+        "upper": 16.211231075532314,
+        "width": 0.8768767408361824,
+        "stationary_witness_width": 0.871201871954032
+      },
+      {
+        "horizon": 20,
+        "lower": 61.46254925837439,
+        "upper": 67.2560644022182,
+        "width": 5.793515143843815,
+        "stationary_witness_width": 5.7878428644058655
+      },
+      {
+        "horizon": 40,
+        "lower": 122.96678772199272,
+        "upper": 135.31770174319564,
+        "width": 12.350914021202925,
+        "stationary_witness_width": 12.345241741764976
+      }
+    ]
+  }
+}
