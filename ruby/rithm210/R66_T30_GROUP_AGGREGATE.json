@@ -1,0 +1,34 @@
+{
+  "models": [
+    {
+      "beta": 0.0,
+      "iterations": 40,
+      "sessions": 24,
+      "group_targets": 5472,
+      "session_mean": {
+        "logloss": 1.4156123150934812,
+        "actual_cost": 3.0436769005847952,
+        "predicted_cost": 3.362999011421927,
+        "occupancy_squared_error": 1.0631591640284712,
+        "independent_variance": 0.9971912026920697,
+        "pair_residual": 0.0024961684120062486
+      }
+    },
+    {
+      "beta": 0.15,
+      "iterations": 40,
+      "sessions": 24,
+      "group_targets": 5472,
+      "session_mean": {
+        "logloss": 1.4098366413809567,
+        "actual_cost": 3.0436769005847952,
+        "predicted_cost": 3.1780101242933987,
+        "occupancy_squared_error": 1.0594126217660598,
+        "independent_variance": 0.9673913924412831,
+        "pair_residual": 0.0026160750454732582
+      }
+    }
+  ],
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true
+}
