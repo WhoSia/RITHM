@@ -21,7 +21,7 @@ module RithmT30
         ev=M.events(a).each_with_index.map do |(route,d,y),i|
           event=[route,d,y,gain(rs[i]),first];first=false if y==1;event
         end
-        [id.first,[id[2],info.first,a.first],ev]
+        [id.first,[id[2],info.first,a.first],ev,id.take(3)]
       end
     end
     def probabilities(event,beta,multiplier,types=M::TYPES)
