@@ -30,6 +30,13 @@ module RithmT33
       raise ArgumentError,'positive recovery required' unless r>0
       (3*r+q.each_with_index.sum{|w,m|m==0 ? 0 : w*COST[m]})/(r+1-q[0])
     end
+    # For each admissible stationary law, compare its linear-fractional cost with baseline.
+    def crossing(q,base)
+      q=q.map{|x|Rational(x)};base=base.map{|x|Rational(x)};validate(q,1);validate(base,1)
+      a=3-q.zip(COST).sum{|w,c|w*c};b=3-base.zip(COST).sum{|w,c|w*c}
+      raise ArgumentError,'requires larger positive policy cost reduction' unless a>b && b>0
+      (b*(1-q[0])-a*(1-base[0]))/(a-b)
+    end
     def stationary_bounds(p,t,recovery)
       B.vertices(p,t,t).map{|q|stationary(q,recovery)}.minmax
     end
