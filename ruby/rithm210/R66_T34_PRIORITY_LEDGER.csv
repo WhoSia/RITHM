@@ -1,0 +1,7 @@
+candidate,topic,L_review,E,C,G,N,S,M,V,gate
+T35-A,general recurrent value-span and moment sufficiency theorem,0.97,0.97,0.92,0.55,0.65,0.99,0.96,0.55,READY
+T35-B,matched autonomous micro/aggregate/SSM/EWA comparison,0.96,0.89,0.88,0.5,0.43,0.97,0.92,0.65,READY
+T35-C,independent source admission and frozen evaluation,0.99,0.45,0.45,0.7,0.45,0.98,0.96,0.55,PREPARE
+T35-D,KSS and robust MDP theorem-level overlap,0.98,0.58,0.55,0.65,0.5,0.97,0.94,0.45,READY
+T35-E,joint sampling and identification uncertainty,0.95,0.75,0.82,0.55,0.5,0.95,0.9,0.55,READY
+T35-F,exact remote checkout and source-free CI,0.84,0.55,0.6,0.25,0.05,0.7,0.54,0.8,READY
