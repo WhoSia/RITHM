@@ -28,6 +28,15 @@ class TestR66T33Recurrent < Minitest::Test
       assert s.between?(*R.stationary_bounds(p,t,r))
     end
   end
+  def test_exact_stationary_crossings
+    p=7r/160;t=p*p;base=R::C.independent([7r/200]*5);vs=R::B.vertices(p,t,t)
+    x=vs.map{|q|R.crossing(q,base)};assert_equal 34751078369r/1753600000000,x.min;assert_equal 135887078369r/1753600000000,x.max
+    vs.zip(x).each do |q,r|
+      assert_equal R.stationary(base,r),R.stationary(q,r)
+      assert_operator R.stationary(q,r+1r/1000),:<,R.stationary(base,r+1r/1000)
+      assert_operator R.stationary(q,r-1r/1000),:>,R.stationary(base,r-1r/1000)
+    end
+  end
   def test_guards
     assert_raises(ArgumentError){R.finite([1]*6,0,2)}
     assert_raises(ArgumentError){R.stationary([1,0,0,0,0,0],0)}
