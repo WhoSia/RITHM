@@ -1,0 +1,9 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T33-A,recurrent pair-moment finite horizon bounds,DONE,0.99,0.99,0.99,0.97,0.98,0.9855,0.95,1,0.35,2026-11-27
+T33-B,exact stationary threshold and horizon reversal,DONE,0.99,0.99,0.99,0.98,0.98,0.9870,0.96,1,0.35,2026-11-27
+T33-C,direct group Markov and history rival,DONE,0.99,0.99,0.98,0.97,0.98,0.9835,0.94,0.98,0.5,2026-11-27
+T34-A,empirical recovery and prospective rollout validation,READY,0.99,0.99,0.99,0.87,0.98,0.9705,,,,2026-11-27
+T34-B,independent source admission,PREPARE,0.99,0.99,0.99,0.77,0.97,0.9540,,,,2026-11-27
+T34-C,paired Markov and micro forecast contrasts,READY,0.99,0.98,0.98,0.9,0.98,0.9705,,,,2026-11-27
+T34-D,full-text overlap,READY,0.95,0.98,0.94,0.85,0.96,0.9420,,,,2026-11-27
+T34-E,remote CI and custody,READY,0.86,0.74,0.8,0.9,0.99,0.8435,,,,2026-11-27
