@@ -1,0 +1,75 @@
+{
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true,
+  "reference": "pooled smoothed empirical Markov, only first row uncertain; fixed downstream reference",
+  "sessions": 24,
+  "transitions": 5616,
+  "results": [
+    {
+      "horizon": 2,
+      "weighted_width": {
+        "none": 0.0,
+        "third_moment": 0.0,
+        "no_net_change": 0.0,
+        "efficient_next": 0.0,
+        "low_occupancy": 0.0,
+        "high_occupancy": 0.0,
+        "value_target": 0.0
+      },
+      "state_adaptive_width": 0.0,
+      "state_adaptive_choice": [
+        "third_moment",
+        "third_moment",
+        "third_moment",
+        "third_moment",
+        "third_moment",
+        "third_moment",
+        "third_moment"
+      ]
+    },
+    {
+      "horizon": 5,
+      "weighted_width": {
+        "none": 0.564786085391758,
+        "third_moment": 0.4452422434944397,
+        "no_net_change": 0.37769891532619576,
+        "efficient_next": 0.3784684657401744,
+        "low_occupancy": 0.5112024446274648,
+        "high_occupancy": 0.2936635105654995,
+        "value_target": 0.0
+      },
+      "state_adaptive_width": 0.2893937200801762,
+      "state_adaptive_choice": [
+        "no_net_change",
+        "no_net_change",
+        "high_occupancy",
+        "high_occupancy",
+        "high_occupancy",
+        "high_occupancy",
+        "no_net_change"
+      ]
+    },
+    {
+      "horizon": 20,
+      "weighted_width": {
+        "none": 0.566774580355178,
+        "third_moment": 0.4463854034717454,
+        "no_net_change": 0.37900977851696543,
+        "efficient_next": 0.3796162297348917,
+        "low_occupancy": 0.5129091139727392,
+        "high_occupancy": 0.2948525020851539,
+        "value_target": 0.0
+      },
+      "state_adaptive_width": 0.2905725700779283,
+      "state_adaptive_choice": [
+        "no_net_change",
+        "no_net_change",
+        "high_occupancy",
+        "high_occupancy",
+        "high_occupancy",
+        "high_occupancy",
+        "no_net_change"
+      ]
+    }
+  ]
+}
