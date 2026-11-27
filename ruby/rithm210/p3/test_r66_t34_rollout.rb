@@ -3,7 +3,7 @@ require_relative 'r66_t34_rollout'
 class TestR66T34Rollout < Minitest::Test
   R=RithmT34::Rollout
   def test_forecast_against_explicit_paths
-    c=R.fit([['a','1',[4,4,5,3,4,4,5,5,4]]]);p,v=R.forecast(c,4,'1',1,3,2)
+    c=R.fit([['a','1',[4,4,5,3,4,4,5,5,4]]]);p,v=R.forecast(c,4,'1',1,3,2);assert_equal [p,v],R.forecast(c,4,'1',1,3,2,cache:{})
     e=Array.new(7,0.0);cost=0.0
     (0..6).to_a.repeated_permutation(3) do |seq|
       w=1.0;n=4;seq.each_with_index{|j,i|w*=R.row(c,n,'1',1+i,2)[j];n=j}
@@ -16,6 +16,6 @@ class TestR66T34Rollout < Minitest::Test
     r=R.evaluate(a,horizons:[1,2]);assert_equal 6,r[:results][0][:models][0][:origins];assert_equal 4,r[:results][1][:models][0][:origins]
   end
   def test_recovery_counts
-    a=R.recovery([['a','1',[4,5,4,5,3,4]]]);assert_equal [0,0,0,1,0,0,0],a[5][:counts].map.with_index{|v,i|i==3 ? v : 0};assert_equal 0.5,a[5][:return_to_four]
+    a=R.recovery([['a','1',[4,5,4,5,3,4]]]);assert_equal [0,0,0,1,0,0,0],a[5][:counts].map.with_index{|v,i|i==3 ? v : 0};assert_equal 0.5,a[5][:return_to_four];assert_nil a[0][:return_to_four]
   end
 end
