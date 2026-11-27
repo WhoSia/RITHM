@@ -1,0 +1,9 @@
+state,topic,L_review,E,C,G,N,S,M,V,gate
+T35-A,all-state all-horizon value-span criterion,0.95,0.96,1.00,0.80,0.18,0.97,0.83,0.78,MERGE
+T35-B,reset-specific minimal extra measurement,0.98,0.96,1.00,0.48,0.48,0.98,0.91,0.63,CORE
+T35-C,fixed-law versus rectangular gap,0.86,0.97,1.00,0.75,0.10,0.89,0.65,0.76,SUPPORT
+T36-A,general state-dependent measurement rank and policy constraints,0.98,0.50,0.50,0.70,0.54,0.99,0.95,0.60,READY
+T36-B,observed no-switch versus no-net-change and sampling error,0.97,0.75,0.72,0.52,0.46,0.98,0.94,0.65,READY
+T36-C,matched autonomous micro and aggregate and original model rivals,0.96,0.70,0.65,0.50,0.43,0.97,0.92,0.65,READY
+T36-D,independent source frozen evaluation,0.99,0.45,0.45,0.70,0.45,0.98,0.96,0.55,PREPARE
+T36-E,prior-art full theorem overlap and byte custody,0.98,0.60,0.55,0.65,0.40,0.97,0.94,0.55,READY
