@@ -1,0 +1,131 @@
+{
+  "source_sha256": "e6adce2da4d1c01455e912aa15144f192108394cbec0bd7f767e2732dcec9953",
+  "aggregate_only": true,
+  "sessions": 24,
+  "totals": {
+    "transitions": 5616,
+    "switches": 8909,
+    "minimum_switches": 5585,
+    "maximum_switches": 21883,
+    "hidden_turnover": 3324,
+    "unchanged_occupancy": 1847,
+    "no_switch": 1059
+  },
+  "by_start": [
+    {
+      "transitions": 2,
+      "switches": 4,
+      "minimum_switches": 4,
+      "maximum_switches": 4,
+      "hidden_turnover": 0
+    },
+    {
+      "transitions": 46,
+      "switches": 135,
+      "minimum_switches": 117,
+      "maximum_switches": 207,
+      "hidden_turnover": 18,
+      "unchanged_occupancy": 2,
+      "no_switch": 1
+    },
+    {
+      "transitions": 355,
+      "switches": 872,
+      "minimum_switches": 624,
+      "maximum_switches": 1834,
+      "hidden_turnover": 248,
+      "unchanged_occupancy": 38,
+      "no_switch": 8
+    },
+    {
+      "transitions": 1225,
+      "switches": 2319,
+      "minimum_switches": 1297,
+      "maximum_switches": 6053,
+      "hidden_turnover": 1022,
+      "unchanged_occupancy": 320,
+      "no_switch": 121
+    },
+    {
+      "transitions": 2285,
+      "switches": 2798,
+      "minimum_switches": 1444,
+      "maximum_switches": 9052,
+      "hidden_turnover": 1354,
+      "unchanged_occupancy": 1067,
+      "no_switch": 682
+    },
+    {
+      "transitions": 1413,
+      "switches": 2240,
+      "minimum_switches": 1558,
+      "maximum_switches": 4192,
+      "hidden_turnover": 682,
+      "unchanged_occupancy": 396,
+      "no_switch": 223
+    },
+    {
+      "transitions": 290,
+      "switches": 541,
+      "minimum_switches": 541,
+      "maximum_switches": 541,
+      "hidden_turnover": 0,
+      "unchanged_occupancy": 24,
+      "no_switch": 24
+    }
+  ],
+  "profiles": {
+    "pooled": {
+      "ranks": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "extra_measurements": 4
+    },
+    "treatment_indexed_open_loop": {
+      "ranks": [
+        2,
+        5,
+        7
+      ],
+      "extra_measurements": 4
+    },
+    "treatment_indexed_feedback": {
+      "ranks": [
+        2,
+        7
+      ],
+      "extra_measurements": 4
+    }
+  },
+  "individual_treatment_ranks": [
+    [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  ]
+}
