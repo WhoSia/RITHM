@@ -1,0 +1,11 @@
+id,candidate,gate,B,D,W,F,R,L,E,C,G,as_of
+T31-A,sharp marginal-constrained welfare bounds,DONE,0.99,0.99,0.99,0.98,0.99,0.9885,0.96,1,0.4,2026-11-27
+T31-B,sharp absorbing dynamics and common mixture threshold,DONE,0.99,0.99,0.99,0.97,0.98,0.9855,0.96,1,0.35,2026-11-27
+T31-C,marginal-preserving group rival audit and residual decomposition,DONE,0.99,0.99,0.99,0.96,0.98,0.9840,0.94,0.98,0.5,2026-11-27
+T31-D,prior art and central literature receipt,DONE,0.95,0.97,0.95,0.95,0.98,0.9595,0.89,0.93,0.4,2026-11-27
+T32-A,nested marginal calibration and joint forecast discrimination,READY,0.99,0.99,0.99,0.88,0.98,0.9720,,,,2026-11-27
+T32-B,strategic dependence constraints and robust intervention,READY,0.99,0.99,0.99,0.86,0.97,0.9675,,,,2026-11-27
+T32-C,independent cohort and prospective verification,PREPARE,0.99,0.99,0.99,0.77,0.97,0.9540,,,,2026-11-27
+T32-D,payoff history learning and matched support refinement,READY,0.97,0.98,0.96,0.85,0.96,0.9510,,,,2026-11-27
+T32-E,prior art full text and source overlap,READY,0.95,0.98,0.94,0.85,0.96,0.9420,,,,2026-11-27
+T32-F,remote CI and raw byte custody,READY,0.86,0.74,0.8,0.9,0.99,0.8435,,,,2026-11-27
