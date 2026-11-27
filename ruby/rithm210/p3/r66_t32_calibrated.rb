@@ -5,6 +5,7 @@ module RithmT32
   module Calibrated
     G=RithmT30::Group; P=G::P; M=G::M
     GRID=[0.0,-0.1,0.1,-0.2,0.2].product([1.0,0.75,1.25]).freeze
+    FINE_GRID=[0.0,-0.025,0.025,-0.05,0.05,-0.1,0.1].product([1.0,0.95,1.05,0.9,1.1]).freeze
     WEIGHTS=[0.0,-0.025,0.025,-0.1,0.1,-0.25,0.25].freeze
     module_function
     def split(sessions,outer,n)
@@ -76,34 +77,34 @@ module RithmT32
       end
       WEIGHTS[totals.each_index.min_by{|i|totals[i]}]
     end
-    def select(cal)
-      raise 'empty calibration' if cal.empty? || cal.any?(&:empty?)
-      m=GRID.min_by{|o,s|cal.sum{|rows|marginal_loss(rows,o,s)}}
+    def select(cal,grid:GRID)
+      raise 'empty calibration' if cal.empty? || cal.any?(&:empty?) || grid.empty?
+      m=grid.min_by{|o,s|cal.sum{|rows|marginal_loss(rows,o,s)}}
       [m,joint_choice(cal,0,1),joint_choice(cal,*m)]
     end
-    def evaluate(paths,iterations:40,calibration_sessions:8)
+    def evaluate(paths,iterations:40,calibration_sessions:8,grid:GRID)
       raise ArgumentError,'iterations' unless iterations.is_a?(Integer) && iterations>0
       data=paths.map{|sid,key,ev,g|raise 'group key' unless g && g.first==sid;[sid,key,ev,g,*P.prepare(ev,0.15,1.0)]}
       sessions=data.map(&:first).uniq.sort
       choices=Hash.new(0);folds=[]
       sessions.each do |outer|
         train,cal=split(sessions,outer,calibration_sessions);fits=fit(data,train,iterations)
-        m,w0,w1=select(cal.map{|sid|groups(data,sid,fits)})
+        m,w0,w1=select(cal.map{|sid|groups(data,sid,fits)},grid:grid)
         rows=groups(data,outer,fits)
         choices[[*m,w0,w1]]+=1
         folds<<{base:score(rows,0,1,0),marginal:score(rows,*m,0),joint:score(rows,0,1,w0),both:score(rows,*m,w1),n:rows.size}
       end
       modes=[:base,:marginal,:joint,:both]
-      {sessions:sessions.size,training_sessions:sessions.size-1-calibration_sessions,calibration_sessions:calibration_sessions,group_targets:folds.sum{|f|f[:n]},iterations:iterations,
+      {sessions:sessions.size,training_sessions:sessions.size-1-calibration_sessions,calibration_sessions:calibration_sessions,group_targets:folds.sum{|f|f[:n]},iterations:iterations,grid:grid,
        scores:modes.to_h{|mode|[mode,folds.first[mode].keys.to_h{|k|[k,folds.sum{|f|f[mode][k]}/folds.size]}]},
        group_better_than_base:modes.drop(1).to_h{|mode|[mode,folds.count{|f|f[mode][:group_logloss]<f[:base][:group_logloss]}]},
        selections:choices.map{|(o,s,w0,w1),n|{offset:o,slope:s,raw_joint:w0,calibrated_joint:w1,folds:n}}}
     end
-    def audit(path,iterations:40,calibration_sessions:8)
+    def audit(path,iterations:40,calibration_sessions:8,grid:GRID)
       s=RithmT26::SourceContract;rows=s.read_rows(path);check=s.summarize(rows)
       raise 'cohort mismatch' unless check[:rows]==34560 && check[:sessions]==24 && check[:group_transitions]==5616
-      evaluate(P.trajectories(rows),iterations:iterations,calibration_sessions:calibration_sessions).merge(source_sha256:s::SHA,aggregate_only:true)
+      evaluate(P.trajectories(rows),iterations:iterations,calibration_sessions:calibration_sessions,grid:grid).merge(source_sha256:s::SHA,aggregate_only:true)
     end
   end
 end
-puts JSON.pretty_generate(RithmT32::Calibrated.audit(ARGV.fetch(0),iterations:Integer(ARGV.fetch(1,'40')),calibration_sessions:Integer(ARGV.fetch(2,'8')))) if $PROGRAM_NAME==__FILE__
+puts JSON.pretty_generate(RithmT32::Calibrated.audit(ARGV.fetch(0),iterations:Integer(ARGV.fetch(1,'40')),calibration_sessions:Integer(ARGV.fetch(2,'8')),grid:ARGV[3]=='fine' ? RithmT32::Calibrated::FINE_GRID : RithmT32::Calibrated::GRID)) if $PROGRAM_NAME==__FILE__
