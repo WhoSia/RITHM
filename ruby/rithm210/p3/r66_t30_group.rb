@@ -30,6 +30,7 @@ module RithmT30
             a,_,y=ev[i];v=groups[g+[i]];v[0]<<(a==1 ? 1-p : p);v[1]<<(a==1 ? 1-y : y)
           end
         end
+        yield groups.values if block_given?
         values=groups.values.map{|ps,actual|metrics(ps,actual)};raise 'empty group targets' if values.empty?
         [values.size,values.first.keys.to_h{|k|[k,values.sum{|v|v[k]}.fdiv(values.size)]}]
       end
