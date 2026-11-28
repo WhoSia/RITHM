@@ -1,0 +1,10 @@
+state,topic,L,E,C,G,N,S,M,V,gate
+T38-A,exact full-fiber binary event aliasing,.98,.97,1,.48,.48,.99,.95,.72,CORE
+T38-B,exact-information regret certificates and uniform sample bound,.98,.96,1,.55,.42,.99,.94,.70,CORE
+T38-C,observed directional departures and session bootstrap,.95,.92,.96,.45,.25,.95,.83,.70,SUPPORT
+T38-D,promotion court and prior art,.98,.85,.88,.60,.44,.99,.94,.70,PREPARE
+T39-A,shared latent response across non-reset dynamics,.99,.55,.50,.72,.62,.99,.97,.58,READY
+T39-B,finite-sample full-fiber decision certificate and multiple measurements,.99,.60,.55,.67,.56,.99,.96,.62,READY
+T39-C,independent source and frozen validation,.99,.45,.45,.75,.45,.98,.96,.55,PREPARE
+T39-D,theorem-level prior art and literature custody,.98,.60,.55,.65,.40,.98,.94,.60,READY
+T39-E,matched autonomous micro and aggregate models,.96,.70,.65,.50,.43,.97,.92,.65,READY
