@@ -1,0 +1,76 @@
+{
+  "synthetic_only": true,
+  "reference": "T33 reset model, full stationary exchangeable moment fiber; cost H40",
+  "q0_crossing": 0.795627914508368,
+  "slope_bound": 375.38753062940043,
+  "witness": {
+    "event_probability": "11/1000",
+    "low": [
+      "101929/128000",
+      "24663/128000",
+      "887/128000",
+      "521/128000",
+      "0/1",
+      "0/1"
+    ],
+    "high": [
+      "152633/192000",
+      "7451/38400",
+      "1163/115200",
+      "0/1",
+      "0/1",
+      "521/576000"
+    ],
+    "improvement": 0.2509049523613859,
+    "harm": 0.23945980735468325,
+    "regret_floor": 0.12252440732401305
+  },
+  "binary_partitions": 31,
+  "sign_identifying_partition": [
+    0
+  ],
+  "nonidentifying_partitions": 30,
+  "conservative_sample_size_for_no_switch_bound": 1173342,
+  "hoeffding_upper_at_n": 0.10509699473941597,
+  "oracle_bounds": {
+    "no_switch": {
+      "exact": 0,
+      "bins256": [
+        0,
+        0.0022479297129933268
+      ]
+    },
+    "two_or_more": {
+      "bins16": [
+        0.11245264844774595,
+        0.17831858053788197
+      ],
+      "bins64": [
+        0.12279270292952095,
+        0.13746813807397365
+      ],
+      "bins256": [
+        0.12350576095898022,
+        0.12706282869019758
+      ]
+    },
+    "all_five": {
+      "bins16": [
+        0.8645966864050981,
+        0.875170827286923
+      ],
+      "bins64": [
+        0.8645966864050981,
+        0.8672649285611752
+      ],
+      "bins256": [
+        0.8645966864050981,
+        0.8652653092093995
+      ]
+    }
+  },
+  "local_full_artifact_sha256": {
+    "T38_FIBER": "405fddaa7c9ccac8eb22ee203028b490d1d39ca94ddcde3da0749a333f57515f",
+    "T38_ORACLE": "7411ddcadbd0e2375c3feb7fa6b4fe71cf4b9601b890507b88a2126768f7f70d"
+  }
+}
