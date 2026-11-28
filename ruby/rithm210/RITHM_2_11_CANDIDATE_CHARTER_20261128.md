@@ -1,0 +1,8 @@
+# RITHM-2.11 candidate — Decision-Relevant Behavioral Measurement under Dynamic Partial Identification
+
+Status PREPARE / not a version release. Date 2026-11-28 KST.
+Origin: RITHM-2.10 mechanism identifiability; keep latent revision, information/attention, inertia, strategic dependence and repeated congestion dynamics central. Distinguish actor-visible information from analyst measurement. 
+Question: Which feasible observations reduce worst-case policy regret when individual behavior and joint transition dynamics are only partially identified?
+Evidence: T24–T26 observationally equivalent response, T31–T35 higher-order and value-relevant information, T36 measurement width, T37 finite-sample two-world regret, T38 entire reset-model fiber measurement classification and oracle regret floor.
+Promotion axes (subjective, no weighted sum): origin continuity .96; research question change .88; method distinction .86; internal counterexample support .94; shared mechanism/non-reset generality .53; independent empirical evidence .27; novelty clearance .44; exact clean remote/CI .48; manuscript coherence .79.
+Decision PREPARE. Before organizational promotion, obtain non-reset shared-response bridge and matched source-compatible evaluation under sampling uncertainty, explicitly compare dynamic counterfactual identification, value equivalence, Blackwell and partial-ID decision theory. No requirement to prove a universal novel theorem merely to name a research generation, but no unfinished claims may silently become PASS. No new branch; no external intervention or participant recruitment. Keep previous charter and 2.10 OPEN.
