@@ -23,6 +23,15 @@ class TestR66T38Fiber < Minitest::Test
     assert_equal w[:improvement],s[:baseline]-R.finite(w[:low],F::REC,F::H)
     assert_equal w[:harm],R.finite(w[:high],F::REC,F::H)-s[:baseline]
     assert_equal w[:floor],F.harm_floor(w[:improvement],w[:harm])
+    (1...32).each do |mask|
+      idx=(0..5).select{|i|mask[i]==1};z=F.event(s[:interior],idx);witness=F.witness(s,idx,z)
+      assert_equal z,F.event(witness[:low],idx);assert_equal z,F.event(witness[:high],idx)
+      if idx==[0]
+        assert_equal witness[:low].first,witness[:high].first
+      else
+        assert_operator witness[:improvement],:>,0;assert_operator witness[:harm],:>,0
+      end
+    end
     z=F.audit;assert_equal [[0]],z[:all_binary_events_up_to_complement].select{|x|x[:alias_floor]==0}.map{|x|x[:indices]}
     n=z[:conservative_sample_size_for_no_switch_bound];assert_operator s[:slope]**2,:<,8*n*w[:floor]**2
   end
